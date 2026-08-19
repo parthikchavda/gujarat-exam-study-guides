@@ -1,0 +1,3969 @@
+<!DOCTYPE html>
+<html lang="gu">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>કરંટ અફેર્સ — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;600;700;800&family=Noto+Serif+Gujarati:wght@500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap");
+
+    :root {
+      --ink: #1c2b24;
+      --paper: #f6f2e8;
+      --paper2: #efe8d8;
+      --saffron: #c9622a;
+      --saffron-dark: #a34b1c;
+      --green-deep: #1f4d3a;
+      --green-line: #2f6b50;
+      --gold: #b48a2e;
+      --card: #fffdf7;
+      --line: #ddd3ba;
+      --muted: #6b6152;
+      --shadow: 0 8px 24px rgba(28, 43, 36, 0.08);
+      --radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Noto Sans Gujarati", "Noto Sans", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    ::selection {
+      background: #e7c9a8;
+    }
+
+    /* ---------- Layout ---------- */
+    .app {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 300px;
+      flex-shrink: 0;
+      background: linear-gradient(180deg, var(--green-deep), #163b2c);
+      color: #eef3ee;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      z-index: 50;
+      transition:
+        width 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.28s ease;
+      border-right: 4px solid var(--gold);
+    }
+
+    .sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      background: #3a6e57;
+      border-radius: 4px;
+    }
+
+    /* ---------- Mini (collapsed) sidebar ---------- */
+    .sidebar.mini {
+      width: 72px;
+    }
+
+    .sidebar.mini .brand {
+      padding: 20px 0 14px;
+      text-align: center;
+    }
+
+    .sidebar.mini .ashoka-row {
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .sidebar.mini .brand h1,
+    .sidebar.mini .brand p {
+      display: none;
+    }
+
+    .sidebar.mini .search-wrap .full-search {
+      display: none;
+    }
+
+    .sidebar.mini .search-wrap {
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .sidebar.mini .search-count {
+      display: none;
+    }
+
+    .sidebar.mini .search-hint {
+      display: none;
+    }
+
+    .sidebar.mini .mini-search-btn {
+      display: flex;
+    }
+
+    .sidebar.mini .cat-label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 14px 0 6px;
+      padding: 0;
+    }
+
+    .sidebar.mini .cat-label .label-text {
+      display: none;
+    }
+
+    .sidebar.mini .cat-label .cat-dot {
+      display: block;
+    }
+
+    .sidebar.mini .toc a {
+      justify-content: center;
+      padding: 9px 0;
+      gap: 0;
+    }
+
+    .sidebar.mini .toc a .label-text {
+      display: none;
+    }
+
+    .sidebar.mini .toc a .num {
+      min-width: 26px;
+    }
+
+    .sidebar.mini~.main {
+      margin-left: 72px;
+    }
+
+    .sidebar-toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 8px 10px 0;
+    }
+
+    .collapse-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #eef3ee;
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition:
+        background 0.15s,
+        transform 0.28s;
+    }
+
+    .collapse-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .sidebar.mini .sidebar-toggle-row {
+      justify-content: center;
+      padding: 8px 0 0;
+    }
+
+    .sidebar.mini .collapse-btn {
+      transform: rotate(180deg);
+    }
+
+    .mini-search-btn {
+      display: none;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #eef3ee;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mini-search-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* Tooltip shown when hovering icons in mini mode */
+    .tooltip-flyout {
+      position: fixed;
+      left: 76px;
+      background: var(--ink);
+      color: #fff;
+      font-size: 12.5px;
+      padding: 6px 11px;
+      border-radius: 6px;
+      white-space: nowrap;
+      pointer-events: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+      z-index: 200;
+      opacity: 0;
+      transform: translateX(-6px);
+      transition:
+        opacity 0.12s ease,
+        transform 0.12s ease;
+    }
+
+    .tooltip-flyout.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .brand {
+      padding: 22px 20px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      transition: padding 0.2s;
+    }
+
+    .brand .ashoka {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 2.5px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 16px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .ashoka-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .ashoka-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      opacity: 0.9;
+      white-space: nowrap;
+      user-select: none;
+      transition: opacity 0.15s ease;
+    }
+
+    .ashoka-row:hover .ashoka-label {
+      opacity: 1;
+    }
+
+    .sidebar.mini .ashoka-label {
+      display: none;
+    }
+
+    .brand h1 {
+      font-family: "Noto Serif Gujarati", serif;
+      font-size: 18px;
+      margin: 0 0 4px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.2px;
+    }
+
+    .brand p {
+      margin: 0;
+      font-size: 12px;
+      color: #b9ccc0;
+    }
+
+    .search-wrap {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .search-wrap .full-search {
+      position: relative;
+    }
+
+    .search-wrap input {
+      width: 100%;
+      padding: 10px 34px 10px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+    }
+
+    .search-wrap .clear-btn {
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #a9beb1;
+      font-size: 16px;
+      cursor: pointer;
+      display: none;
+      padding: 4px 6px;
+    }
+
+    .search-wrap .clear-btn.show {
+      display: block;
+    }
+
+    .search-wrap input::placeholder {
+      color: #a9beb1;
+    }
+
+    .search-wrap input:focus {
+      border-color: var(--gold);
+      background: rgba(255, 255, 255, 0.13);
+    }
+
+    .search-count {
+      font-size: 11px;
+      color: #9fb6a8;
+      margin-top: 6px;
+    }
+
+    .search-hint {
+      font-size: 10.5px;
+      color: #7fa091;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    nav.toc {
+      padding: 6px 10px 28px;
+    }
+
+    .cat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+      font-weight: 700;
+      margin: 16px 10px 6px;
+      opacity: 0.9;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cat-label .cat-dot {
+      display: none;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .toc a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 7px;
+      color: #dbe8e0;
+      text-decoration: none;
+      font-size: 13.5px;
+      transition: background 0.15s;
+      position: relative;
+    }
+
+    .toc a .num {
+      color: var(--gold);
+      font-size: 11px;
+      min-width: 20px;
+      font-weight: 700;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .toc a .label-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .toc a .match-score {
+      margin-left: auto;
+      font-size: 9.5px;
+      color: #7fa091;
+      flex-shrink: 0;
+    }
+
+    .toc a:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .toc a.active {
+      background: var(--saffron);
+      color: #fff;
+    }
+
+    .toc a.active .num {
+      color: #fff;
+    }
+
+    .toc a.hidden {
+      display: none;
+    }
+
+    /* ---------- Main ---------- */
+    .main {
+      margin-left: 300px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(246, 242, 232, 0.92);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .menu-btn {
+      display: none;
+      background: var(--green-deep);
+      color: #fff;
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .topbar .path {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .topbar .path b {
+      color: var(--saffron-dark);
+    }
+
+    .content {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 34px 30px 100px;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px 28px;
+      margin-bottom: 26px;
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--saffron);
+    }
+
+    .hero h2 {
+      font-family: "Noto Serif Gujarati", serif;
+      margin: 0 0 8px;
+      font-size: 26px;
+      color: var(--green-deep);
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .hero .stripe {
+      display: flex;
+      gap: 4px;
+      margin-top: 14px;
+    }
+
+    .hero .stripe span {
+      height: 4px;
+      flex: 1;
+      border-radius: 2px;
+    }
+
+    .hero .stripe span:nth-child(1) {
+      background: var(--saffron);
+    }
+
+    .hero .stripe span:nth-child(2) {
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .hero .stripe span:nth-child(3) {
+      background: var(--green-deep);
+    }
+
+    .topic {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      margin-bottom: 20px;
+      scroll-margin-top: 80px;
+      box-shadow: var(--shadow);
+    }
+
+    .topic h3 {
+      font-family: "Noto Serif Gujarati", serif;
+      font-size: 20px;
+      margin: 0 0 4px;
+      color: var(--green-deep);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .topic h3 .idx {
+      background: var(--green-deep);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: "Noto Sans Gujarati";
+    }
+
+    .topic .en {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 0 14px 36px;
+      font-style: italic;
+    }
+
+    .topic .art-badge {
+      display: inline-block;
+      background: var(--paper2);
+      color: var(--saffron-dark);
+      border: 1px solid var(--line);
+      font-size: 12px;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin: 0 0 14px 36px;
+      font-weight: 600;
+    }
+
+    .topic-body {
+      margin-left: 36px;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--ink);
+      text-align: left;
+    }
+
+    .topic-body p {
+      margin: 0 0 16px;
+      text-align: left;
+    }
+
+    .topic-body ul {
+      margin: 10px 0 22px;
+      padding-left: 22px;
+      text-align: left;
+    }
+
+    .topic-body li {
+      margin-bottom: 9px;
+      text-align: left;
+    }
+
+    .topic-body li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ---------- Section sub-headings ---------- */
+    .topic-body .sub {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--green-deep);
+      display: block;
+      margin: 28px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--paper2);
+      letter-spacing: 0.2px;
+    }
+
+    .topic-body>.sub:first-child,
+    .topic-body>p:first-child+.sub {
+      margin-top: 6px;
+    }
+
+    .topic-body>*:first-child {
+      margin-top: 0;
+    }
+
+    /* ---------- Formula blocks ---------- */
+    .formula-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 14px 0 24px;
+    }
+
+    .formula {
+      background: linear-gradient(180deg, #fffdf7, var(--paper2));
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--saffron);
+      border-radius: 8px;
+      padding: 13px 20px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--green-deep);
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      letter-spacing: 0.2px;
+    }
+
+    .formula .flabel {
+      display: block;
+      font-weight: 500;
+      color: var(--muted);
+      font-size: 12.5px;
+      margin-bottom: 5px;
+      white-space: normal;
+    }
+
+    .formula::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .formula::-webkit-scrollbar-thumb {
+      background: var(--line);
+      border-radius: 4px;
+    }
+
+    /* ---------- Tables ---------- */
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 14px 0 24px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+    }
+
+    .topic-body table {
+      width: 100%;
+      min-width: 380px;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .topic-body table th,
+    .topic-body table td {
+      border: 1px solid var(--line);
+      padding: 10px 14px;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .topic-body table th {
+      background: var(--paper2);
+      color: var(--green-deep);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .topic-body table tr:nth-child(even) td {
+      background: rgba(239, 232, 216, 0.35);
+    }
+
+    mark {
+      background: #f3d9ae;
+      color: var(--ink);
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    .note {
+      background: #fbf3e4;
+      border: 1px solid #ecd9ab;
+      border-left: 4px solid var(--gold);
+      padding: 12px 16px;
+      font-size: 13.5px;
+      line-height: 1.7;
+      margin: 20px 0 4px;
+      border-radius: 6px;
+      color: #6b5423;
+    }
+
+    .topic-body .sub+.note,
+    .topic-body ul+.note {
+      margin-top: 20px;
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+
+    footer.foot {
+      text-align: center;
+      padding: 26px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 45;
+    }
+
+    @media (max-width: 900px) {
+      .sidebar {
+        transform: translateX(-100%);
+        width: 300px !important;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .sidebar.mini {
+        width: 300px;
+      }
+
+      .sidebar.mini .brand h1,
+      .sidebar.mini .brand p {
+        display: block;
+      }
+
+      .sidebar.mini .brand {
+        padding: 22px 20px 16px;
+        text-align: left;
+      }
+
+      .sidebar.mini .ashoka-row {
+        justify-content: flex-start;
+        margin: 0 0 10px;
+      }
+
+      .sidebar.mini .ashoka-label {
+        display: inline-block;
+      }
+
+      .sidebar.mini .search-wrap .full-search {
+        display: block;
+      }
+
+      .sidebar.mini .search-wrap {
+        padding: 14px 16px;
+        display: block;
+      }
+
+      .sidebar.mini .search-count {
+        display: block;
+      }
+
+      .sidebar.mini .search-hint {
+        display: block;
+      }
+
+      .sidebar.mini .mini-search-btn {
+        display: none;
+      }
+
+      .sidebar.mini .cat-label {
+        justify-content: flex-start;
+        margin: 16px 10px 6px;
+      }
+
+      .sidebar.mini .cat-label .label-text {
+        display: inline;
+      }
+
+      .sidebar.mini .cat-label .cat-dot {
+        display: none;
+      }
+
+      .sidebar.mini .toc a {
+        justify-content: flex-start;
+        padding: 8px 10px;
+        gap: 8px;
+      }
+
+      .sidebar.mini .toc a .label-text {
+        display: inline;
+      }
+
+      .sidebar-toggle-row {
+        display: none;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+
+      .sidebar.mini~.main {
+        margin-left: 0;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .overlay.show {
+        display: block;
+      }
+
+      .content {
+        padding: 22px 16px 80px;
+      }
+
+      .topic {
+        padding: 18px 16px;
+      }
+
+      .topic-body,
+      .en,
+      .art-badge {
+        margin-left: 0;
+      }
+
+      .topic h3 {
+        font-size: 18px;
+      }
+
+      .topic-body {
+        font-size: 14.5px;
+        line-height: 1.75;
+      }
+
+      .formula {
+        font-size: 14.5px;
+        padding: 11px 14px;
+      }
+
+      .topic-body .sub {
+        font-size: 14px;
+        margin: 22px 0 10px;
+      }
+
+      .topic-body table {
+        font-size: 13px;
+        min-width: 340px;
+      }
+
+      .topic-body table th,
+      .topic-body table td {
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <div class="overlay" id="overlay"></div>
+    <div class="tooltip-flyout" id="tooltipFlyout"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-toggle-row">
+        <button class="collapse-btn" id="collapseBtn" title="સાઇડબાર સંકોચો/વિસ્તારો">
+          ◀
+        </button>
+      </div>
+      <div class="brand">
+        <div class="ashoka-row">
+          <div class="ashoka">॥</div>
+          <span class="ashoka-label" id="ashokaLabel">વિષય પસંદ કરો</span>
+        </div>
+        <h1>કરંટ અફેર્સ</h1>
+        <p>Wireless PSI 2026 / GPSC સંપૂર્ણ કરંટ અફેર્સ યાદી</p>
+      </div>
+      <div class="search-wrap">
+        <div class="full-search">
+          <input type="text" id="searchInput" placeholder="ટોપિક શોધો... (દા.ત. બજેટ, ISRO, નોબેલ)" />
+          <button class="clear-btn" id="clearSearch" title="સાફ કરો">
+            ✕
+          </button>
+        </div>
+        <button class="mini-search-btn" id="miniSearchBtn" title="શોધો">
+          🔍
+        </button>
+        <div class="search-count" id="searchCount"></div>
+        <div class="search-hint">
+          ફઝી શોધ સક્રિય — જોડણી ભૂલ / આંશિક શબ્દ પણ ચાલશે
+        </div>
+      </div>
+      <nav class="toc" id="toc"></nav>
+    </aside>
+
+    <div class="main">
+      <div class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div class="path">વર્તમાન વિભાગ: <b id="currentTitle">પરિચય</b></div>
+      </div>
+
+      <div class="content">
+        <div class="hero">
+          <h2>કરંટ અફેર્સ — સંપૂર્ણ અભ્યાસ સામગ્રી</h2>
+          <p>
+            Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ — ગુજરાત,
+            રાષ્ટ્રીય અને આંતરરાષ્ટ્રીય કરંટ અફેર્સ, યોજનાઓ, પુરસ્કારો, મહત્વના દિવસો અને બંધારણીય માળખું સાથે.
+            ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો.
+          </p>
+          <div class="stripe"><span></span><span></span><span></span></div>
+        </div>
+
+        <div id="topicsContainer"></div>
+
+        <div class="no-results" id="noResults" style="display: none">
+          આ શબ્દ સાથે મેળ ખાતું કોઈ ટોપિક મળ્યું નથી.
+        </div>
+      </div>
+
+      <footer class="foot">
+        કરંટ અફેર્સ માર્ગદર્શિકા · Wireless PSI 2026 / GPSC સ્પર્ધાત્મક પરીક્ષા તૈયારી
+        માટે
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const DATA = [
+      {
+        cat: "કરંટ અફેર્સ — સંપૂર્ણ ચકાસાયેલ યાદી",
+        items: [
+          {
+            t: "મહત્વની નોંધ અને પરીક્ષા તારીખ",
+            en: "Note & Legend",
+            art: "23 ઓગસ્ટ 2026",
+            body: `
+<div class="note"><strong>નોંધ:</strong> ⭐ ચિહ્નિત મુદ્દા વિશ્વસનીય સમાચાર સ્ત્રોતો સાથે ક્રોસ-ચેક કરી ચકાસવામાં આવ્યા છે. 🆕 ચિહ્નિત મુદ્દા આ અપડેટમાં નવા ઉમેરાયા છે. ✅ ચિહ્નિત મુદ્દા જૂની આવૃત્તિમાં ભૂલ/અધૂરી માહિતી હતી જે અહીં સુધારવામાં આવી છે. બાકીના મુદ્દા તમારી અગાઉની નોંધોમાંથી લેવામાં આવ્યા છે અને તાર્કિક રીતે યોગ્ય જણાય છે, પરંતુ ઝડપથી બદલાતી (ખાસ કરીને સંરક્ષણ, રોકાણ આંકડા) બાબતો પરીક્ષા પહેલાં એક વખત જાતે ફરી ચકાસી લેવી હિતાવહ છે.</div>
+<div class="note">📌 <strong>Wireless PSI 2026 લેખિત પરીક્ષા 23 ઓગસ્ટ 2026 (રવિવાર)ના રોજ યોજાનાર છે</strong> — તેથી આ દસ્તાવેજમાં ખાસ કરીને 🆕 અને ✅ ચિહ્નિત મુદ્દા પર છેલ્લી ઘડીએ ધ્યાન આપો.</div>
+`,
+          },
+          {
+            t: "સેમિકન્ડક્ટર ઉદ્યોગ — ગુજરાત ⭐ (સંપૂર્ણ અપડેટેડ)",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "28 ફેબ્રુઆરી 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>પ્રોજેક્ટ</th><th>સ્થળ</th><th>સ્થિતિ / તારીખ</th><th>રોકાણ</th></tr>
+<tr><td><strong>Micron ATMP</strong></td><td>સાણંદ</td><td><strong>28 ફેબ્રુઆરી 2026</strong>ના રોજ ઉદ્ઘાટન; DRAM અને NAND મેમરી મોડ્યુલનું કોમર્શિયલ શિપિંગ શરૂ</td><td>$2.75 બિલિયન</td></tr>
+<tr><td><strong>Kaynes Semicon (OSAT)</strong></td><td>સાણંદ</td><td><strong>31 માર્ચ 2026</strong>ના રોજ PM મોદી દ્વારા ઉદ્ઘાટન; પાયાથી કોમર્શિયલ પ્રોડક્શન સુધી માત્ર 14 મહિના</td><td>₹3,300 કરોડ</td></tr>
+<tr><td><strong>CG Power–Renesas (જાપાન)–Stars Microelectronics (થાઇલેન્ડ) JV</strong></td><td>સાણંદ</td><td><strong>4 જુલાઈ 2026</strong>ના રોજ કોમર્શિયલ પ્રોડક્શન શરૂ (G1 પાયલોટ લાઇન ઓગસ્ટ 2025માં શરૂ થઈ હતી)</td><td>—</td></tr>
+<tr><td><strong>Tata Electronics–PSMC (તાઇવાન) ફેબ</strong></td><td>ધોલેરા SIR</td><td>ભારતનું પ્રથમ ફ્રન્ટ-એન્ડ 28nm ફેબ્રિકેશન યુનિટ; બાંધકામ અડધાથી વધુ પૂર્ણ, ASML પાસેથી લિથોગ્રાફી સાધનો; <strong>ટ્રાયલ પ્રોડક્શન લક્ષ્યાંક: ડિસેમ્બર 2026</strong>; સંપૂર્ણ કાર્યરત: 2028</td><td>~₹91,000–91,526 કરોડ</td></tr>
+<tr><td><strong>Crystal Matrix</strong></td><td>ધોલેરા</td><td>કમ્પાઉન્ડ સેમિકન્ડક્ટર ફેબ</td><td>₹3,000+ કરોડ</td></tr>
+<tr><td><strong>Suchi Semicon (OSAT)</strong></td><td>સુરત</td><td>ડિસ્ક્રીટ સેમિકન્ડક્ટર યુનિટ</td><td>₹800+ કરોડ</td></tr>
+</table></div>
+<span class="sub">મહત્વના મુદ્દા:</span>
+<ul>
+<li>⭐ કેન્દ્ર સરકારના <strong>India Semiconductor Mission (ISM) 1.0</strong> હેઠળ કુલ <strong>12 મેન્યુફેક્ચરિંગ પ્રોજેક્ટ્સ</strong> મંજૂર થયા છે, કુલ રોકાણ <strong>₹1.64 લાખ કરોડથી વધુ</strong>, જે 6 રાજ્યોમાં ફેલાયેલા છે.</li>
+<li>⭐ <strong>જુલાઈ 2026</strong>માં કેન્દ્રીય કેબિનેટે <strong>Semicon 2.0</strong> ને ₹1,27,500 કરોડના ખર્ચે મંજૂરી આપી — ડિઝાઇન, મશીનરી-મટીરિયલ્સ, ફેબ્રિકેશન ક્ષમતા, ATMP/OSAT અને R&amp;D પર ફોકસ.</li>
+<li>⭐ <strong>ધોલેરા SIR</strong>ને <strong>9 એપ્રિલ 2026</strong>ના રોજ SEZ તરીકે નોટિફાય કરવામાં આવ્યું.</li>
+<li>⭐ કેન્દ્રીય મંત્રી અશ્વિની વૈષ્ણવે જણાવ્યું કે 2026માં કુલ <strong>4 પ્લાન્ટ્સ</strong>, 2027માં <strong>2 વધુ</strong> પ્લાન્ટ્સ કાર્યરત થશે.</li>
+<li>Micron પ્લાન્ટને OSH Code 2020 હેઠળ 12 કલાકની વર્કિંગ શિફ્ટની મંજૂરી અપાઈ છે.</li>
+<li>⭐ ગુજરાત ઉપરાંત ભારતમાં અન્ય સેમિકન્ડક્ટર સાઇટ્સ: <strong>HCL-Foxconn (જેવર, UP)</strong>, <strong>Tata Semiconductor Assembly-Test (મોરિગાંવ, આસામ)</strong>, <strong>SicSem (ઓડિશા)</strong>, <strong>Tower Semiconductor–Adani (તાલોજા, મહારાષ્ટ્ર)</strong>.</li>
+</ul>
+`,
+          },
+          {
+            t: "ગુજરાત પોલીસ AI, સાયબર અને વાયરલેસ ટેકનોલોજી",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>ટૂલ/પ્રોજેક્ટ</th><th>વિગત</th></tr>
+<tr><td><strong>NARIT AI</strong></td><td>Narcotics Analysis &amp; RAG-based Investigation Tool — NDPS કેસોના પુરાવા વિશ્લેષણ માટે દેશનું પ્રથમ RAG-આધારિત AI ટૂલ</td></tr>
+<tr><td><strong>Gujarat Police Innovation Challenge</strong></td><td>80,000+ CCTV કેમેરાને AI-આધારિત લાઈવ વિડિયો એનાલિટિક્સ સાથે જોડવા હેકાથોન; DA-IICT અને NFSU નોલેજ પાર્ટનર</td></tr>
+<tr><td><strong>VISWAS &amp; Trinetra 2.0</strong></td><td>ગુજરાત પોલીસનું સિક્યોર સર્વેલન્સ અને ડિજિટલ ક્રાઈમ રિકવરી ડેટાબેઝ સોફ્ટવેર</td></tr>
+<tr><td><strong>TETRA &amp; APCO-25</strong></td><td>આધુનિક પોલીસ વાયરલેસ કમ્યુનિકેશન માટે ડિજિટલ ટ્રંકિંગ રેડિયો સ્ટાન્ડર્ડ્સ</td></tr>
+<tr><td><strong>I4C</strong></td><td>ગૃહ મંત્રાલય (MHA) દ્વારા સંચાલિત સાયબર ક્રાઇમ ટ્રેકિંગ અને સિમ કાર્ડ બ્લોકિંગ માટે AI મોડ્યુલ્સ</td></tr>
+<tr><td><strong>Project SAMBHAV</strong></td><td>ભારતીય સેનાનું 5G આધારિત એન્ડ-ટુ-એન્ડ સુરક્ષિત વાયરલેસ કમ્યુનિકેશન નેટવર્ક</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "સ્પેસ, સેટેલાઇટ અને નેવિગેશન (ISRO)",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>મિશન/સેટેલાઇટ</th><th>વિગત</th></tr>
+<tr><td><strong>Aditya-L1</strong></td><td>સૂર્ય અભ્યાસ માટે ભારતનું પ્રથમ મિશન; L1 (Lagrange Point 1) ઓર્બિટમાં સ્થાપિત</td></tr>
+<tr><td><strong>Gaganyaan</strong></td><td>માનવસહિત અવકાશ ઉડાન મિશન; માનવરહિત ટ્રાયલ માટે 'વ્યોમમિત્ર' હ્યુમનોઇડ રોબોટ</td></tr>
+<tr><td><strong>SpaDeX</strong></td><td>બે ઉપગ્રહોના ઓટોમેટિક ડોકિંગ મિશન — રશિયા, USA, ચીન પછી ભારત આ ક્ષમતા ધરાવતો 4થો દેશ</td></tr>
+<tr><td><strong>GSAT-20 (GSAT-N2)</strong></td><td>SpaceX Falcon 9 દ્વારા લોન્ચ; ઇન-ફ્લાઇટ ઇન્ટરનેટ કનેક્ટિવિટી માટે</td></tr>
+<tr><td><strong>NavIC (IRNSS)</strong></td><td>7 સક્રિય સેટેલાઇટ્સ (3 GEO + 4 GSO); L5 અને NVS-01 દ્વારા L1 સિવિલિયન સિગ્નલ</td></tr>
+<tr><td><strong>XPoSAT</strong></td><td>બ્લેક હોલ અને ન્યુટ્રોન સ્ટાર્સ અભ્યાસ માટે ભારતનું પ્રથમ સ્પેસ ઓબ્ઝર્વેટરી</td></tr>
+<tr><td><strong>EOS-08</strong></td><td>ડિઝાસ્ટર મેનેજમેન્ટ અને નાઇટ વિઝન સર્વેલન્સ માટે માઇક્રોસેટેલાઇટ</td></tr>
+<tr><td><strong>ડિફેન્સ સેટેલાઇટ</strong></td><td>GSAT-7 (રુક્મિણી – નૌકાદળ), GSAT-7A (વાયુસેના), EMISAT (DRDO – ELINT), Cartosat (ઇમેજિંગ), RISAT (રડાર ઇમેજિંગ)</td></tr>
+</table></div>
+<p><strong>🆕 ISRO નેતૃત્વ અને મિશન ટાઈમલાઈન (અપડેટેડ):</strong></p>
+<ul>
+<li>✅ <strong>ISRO ચેરમેન:</strong> ડૉ. <strong>વી. નારાયણન</strong> (S. સોમનાથના અનુગામી)</li>
+<li><strong>Gaganyaan (માનવસહિત):</strong> પ્રથમ માનવસહિત ઉડાનનું લક્ષ્ય <strong>2027</strong> તરફ ધકેલાયું; તે પહેલાં અનક્રુડ ટેસ્ટ ફ્લાઇટ્સ (G1 વગેરે) અને ઇન-ફ્લાઇટ એબોર્ટ ટેસ્ટ થશે; અવકાશયાત્રીઓ: ગ્રુપ કેપ્ટન પ્રશાંત બાલક્રિષ્નન નાયર, અજિત કૃષ્નન, અંગદ પ્રતાપ અને વિંગ કમાન્ડર શુભાંશુ શુક્લા</li>
+<li><strong>Chandrayaan-4:</strong> ચંદ્ર પરથી નમૂના પૃથ્વી પર લાવવાનું (સેમ્પલ-રિટર્ન) મિશન; સરકારે મંજૂરી આપી; લક્ષ્ય <strong>2028</strong></li>
+<li><strong>Chandrayaan-5 (LUPEX):</strong> જાપાનની JAXA સાથે સંયુક્ત મિશન — ભારત લેન્ડર, જાપાન રોવર આપશે; 2028 પછી</li>
+<li><strong>ભારતીય સ્પેસ સ્ટેશન (BAS):</strong> 2035 સુધીમાં લક્ષ્ય</li>
+<li><strong>ચંદ્ર પર માનવ મોકલવાનું લક્ષ્ય:</strong> 2040</li>
+</ul>
+`,
+          },
+          {
+            t: "સંરક્ષણ, મિસાઇલ અને લશ્કરી ટેકનોલોજી",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "ઓગસ્ટ 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>પ્રોજેક્ટ/મિસાઇલ</th><th>વિગત</th></tr>
+<tr><td><strong>RudraM-II</strong></td><td>DRDO દ્વારા સફળ પરીક્ષણ; એર-ટુ-સરફેસ એન્ટિ-રેડિયેશન મિસાઇલ</td></tr>
+<tr><td><strong>Agni-Prime (Agni-P)</strong></td><td>કેનિસ્ટર લોન્ચિંગ સિસ્ટમ; 1,000–2,000 કિમી રેન્જ</td></tr>
+<tr><td><strong>LRLACM</strong></td><td>Long-Range Land-Attack Cruise Missile ની સફળ ટ્રાયલ</td></tr>
+<tr><td><strong>Project 75I</strong></td><td>AIP ટેકનોલોજી આધારિત સ્ટીલ્થ સબમરીન પ્રોજેક્ટ</td></tr>
+<tr><td><strong>INS Arighat &amp; INS Aridhaman</strong></td><td>અણુશસ્ત્રો છોડવા સક્ષમ SSBN શ્રેણી</td></tr>
+<tr><td><strong>Prachand (LCH)</strong></td><td>HAL દ્વારા સ્વદેશી લાઇટ કોમ્બેટ હેલિકોપ્ટર</td></tr>
+<tr><td><strong>Zorawar Light Tank</strong></td><td>DRDO અને L&amp;T દ્વારા LAC માટે ડિઝાઇન કરાયેલો સ્વદેશી લાઇટ ટેન્ક</td></tr>
+</table></div>
+<p><strong>🆕 લશ્કરી વડાઓ (સૈન્ય ચીફ) — ઓગસ્ટ 2026 મુજબ અપડેટેડ:</strong> વિગતવાર યાદી માટે §21 જુઓ — CDS, ત્રણેય સેનાના વડા 2026માં બદલાયા છે.</p>
+`,
+          },
+          {
+            t: "લશ્કરી અભ્યાસો (Military Exercises)",
+            en: "સંરક્ષણ, મિસાઇલ અને લશ્કરી ટેકનોલોજી",
+            art: "સપ્ટેમ્બર 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>અભ્યાસ</th><th>સંયુક્ત દેશ/વિગત</th></tr>
+<tr><td>Tarang Shakti</td><td>બહુરાષ્ટ્રીય (IAF આયોજિત)</td></tr>
+<tr><td>Dharma Guardian</td><td>ભારત–જાપાન</td></tr>
+<tr><td>Dustlik</td><td>ભારત–ઉઝબેકિસ્તાન</td></tr>
+<tr><td>Garuda / Varuna</td><td>ભારત–ફ્રાન્સ</td></tr>
+<tr><td>Mitra Shakti</td><td>ભારત–શ્રીલંકા</td></tr>
+<tr><td>Vajra Prahar / Yudh Abhyas</td><td>ભારત–USA; <strong>22મી આવૃત્તિ સપ્ટેમ્બર 2026માં</strong> ઔલી (ઉત્તરાખંડ) અને મહાજન (રાજસ્થાન) ખાતે યોજાશે</td></tr>
+<tr><td>Samudra Shakti</td><td>ભારત–ઇન્ડોનેશિયા</td></tr>
+<tr><td>PRAGATI 2026</td><td>બહુરાષ્ટ્રીય (13 દેશ), ઉમરોઇ (મેઘાલય), મે 2026</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "IndiaAI મિશન અને ભારતીય AI નીતિઓ",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "₹10,372 કરોડ",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>પહેલ</th><th>વિગત</th></tr>
+<tr><td><strong>IndiaAI Mission</strong></td><td>₹10,372 કરોડના બજેટ સાથે માર્ચ 2024માં મંજૂર</td></tr>
+<tr><td><strong>Sovereign GPU Compute</strong></td><td>45,000+ GPUs; 100,000 GPUs સુધી વિસ્તરણનો લક્ષ્યાંક; ~₹65/કલાકના દરે સબસિડાઇઝ્ડ કમ્પ્યુટ</td></tr>
+<tr><td><strong>Indigenous Foundation Models</strong></td><td>20 સ્વદેશી AI મોડેલ્સ (12 LMMs + 8 SLMs)</td></tr>
+<tr><td><strong>India-AI Impact Summit 2026</strong></td><td>ભારત મંડપમ, નવી દિલ્હી ખાતે — UDAAN (Global AI Pitch Fest), 30 IndiaAI Data &amp; AI Labs</td></tr>
+<tr><td><strong>Safe &amp; Trusted AI Pillar</strong></td><td>ડીપફેક ડિટેક્શન, બાયસ, પ્રાઇવસી પર 13 સંશોધન પ્રોજેક્ટ્સ</td></tr>
+<tr><td><strong>ગુજરાત Data Centre Policy (2026–29)</strong></td><td>Dholera ખાતે 7.5–8 GW ક્ષમતાનું Green AI Data Centre હબ; 51% રિન્યુએબલ પાવર ફરજિયાત</td></tr>
+<tr><td><strong>ગુજરાત STI Policy (2026–31)</strong></td><td>GUJCOST દ્વારા સંચાલિત ₹1,000 કરોડનું ઇનોવેશન ફંડ</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "કેન્દ્રીય બજેટ 2026-27 ⭐ (1 ફેબ્રુઆરી 2026, નાણામંત્રી નિર્મલા સીતારમણ — 9મી બજેટ)",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "1 એપ્રિલ 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>મથાળું</th><th>આંકડો</th></tr>
+<tr><td>કુલ ખર્ચ (Total Expenditure)</td><td>₹53.5 લાખ કરોડ</td></tr>
+<tr><td>બિન-દેવું આવક (Non-debt Receipts)</td><td>₹36.5 લાખ કરોડ</td></tr>
+<tr><td>મૂડી ખર્ચ (Capex)</td><td>₹12.2 લાખ કરોડ</td></tr>
+<tr><td>નાણાકીય ખાધ</td><td>GDPના 4.3%</td></tr>
+<tr><td><strong>સંરક્ષણ ફાળવણી</strong></td><td><strong>₹7.85 લાખ કરોડ</strong> (અત્યાર સુધીની સૌથી વધુ)</td></tr>
+<tr><td>થીમ</td><td>"Yuva Shakti–driven Budget"; 3 કર્તવ્ય — આર્થિક વૃદ્ધિ, ક્ષમતા નિર્માણ, સર્વસમાવેશક વિકાસ</td></tr>
+<tr><td>TCS (શિક્ષણ/તબીબી વિદેશ રેમિટન્સ)</td><td>5% થી ઘટાડીને 2%</td></tr>
+<tr><td>MAT (Minimum Alternate Tax)</td><td>15% થી ઘટાડીને 14%</td></tr>
+<tr><td><strong>Semiconductor Mission 2.0</strong></td><td>₹40,000 કરોડની Electronics Components Manufacturing Scheme સાથે જાહેર</td></tr>
+<tr><td><strong>Rare Earth Corridors</strong></td><td>ખનન, પ્રોસેસિંગ અને સંશોધન માટે નવા સમર્પિત કોરિડોર</td></tr>
+<tr><td>Biopharma SHAKTI</td><td>₹10,000 કરોડ (5 વર્ષ) — ગ્લોબલ બાયોફાર્મા હબ</td></tr>
+<tr><td>SME Growth Fund</td><td>₹10,000 કરોડ</td></tr>
+<tr><td>GIFT City Tax Holiday</td><td>10 થી 20 વર્ષ સુધી વિસ્તૃત</td></tr>
+<tr><td>City Economic Regions (CERs)</td><td>પ્રતિ CER 5 વર્ષમાં ₹5,000 કરોડ</td></tr>
+<tr><td>Income Tax Act, 2025</td><td>1 એપ્રિલ 2026થી અમલમાં</td></tr>
+<tr><td>GDP વૃદ્ધિ અંદાજ (FY26)</td><td>7.4%</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ગુજરાત બજેટ 2026-27 ⭐ (18 ફેબ્રુઆરી 2026, નાણામંત્રી કનુભાઈ દેસાઈ — 5મી બજેટ)",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "₹4,08,053 કરોડ",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>મથાળું</th><th>આંકડો</th></tr>
+<tr><td>કુલ ખર્ચ (Total Outlay)</td><td>₹4,08,053 કરોડ (અગાઉના વર્ષ કરતાં 10.2% / ₹37,803 કરોડ વધુ)</td></tr>
+<tr><td>અંદાજિત સરપ્લસ</td><td>₹974 કરોડ</td></tr>
+<tr><td>રેવન્યુ સરપ્લસ</td><td>₹25,587 કરોડ</td></tr>
+<tr><td>નવો કર</td><td>કોઈ નવો ટેક્સ નહીં</td></tr>
+<tr><td><strong>સ્પોર્ટ્સ ઇન્ફ્રાસ્ટ્રક્ચર</strong></td><td>₹1,278 કરોડ — <strong>2030 કોમનવેલ્થ ગેમ્સ</strong>ના યજમાનપદ માટે (⚠️ 2036 ઓલિમ્પિક્સ નહીં, 2030 CWGની તૈયારી)</td></tr>
+<tr><td>ઓલિમ્પિક/CWG રેડી સિટી (અમદાવાદ)</td><td>₹500 કરોડ — SVP સ્પોર્ટ્સ એન્ક્લેવ</td></tr>
+<tr><td>અંબાજી કોરિડોર માસ્ટરપ્લાન</td><td>₹300 કરોડ</td></tr>
+<tr><td>સ્ટેચ્યૂ ઓફ યુનિટી વિસ્તરણ</td><td>₹236 કરોડ</td></tr>
+<tr><td>ધોલેરા SIR ફેઝ-1 (Viksit Gujarat Fund)</td><td>₹610 કરોડ</td></tr>
+<tr><td>EV મોટર વ્હીકલ ટેક્સ રાહત</td><td>5% (ચાલુ)</td></tr>
+<tr><td>GSDP અંદાજ (2026-27)</td><td>₹33,24,676 કરોડ (11% વૃદ્ધિ)</td></tr>
+<tr><td>ફિસ્કલ ડેફિસિટ લક્ષ્યાંક</td><td>GSDPના 2%</td></tr>
+</table></div>
+<div class="note">⚠️ <strong>સુધારો:</strong> ગુજરાત 2036 ઓલિમ્પિક્સ નહીં પરંતુ <strong>2030 કોમનવેલ્થ ગેમ્સ</strong>નું યજમાનપદ સંભાળી રહ્યું છે — બંને અલગ-અલગ ઈવેન્ટ છે, પરીક્ષામાં ગૂંચવણ ટાળવી.</div>
+`,
+          },
+          {
+            t: "યુનિફોર્મ સિવિલ કોડ (UCC) — વર્તમાન સ્થિતિ ⭐ (સંપૂર્ણ અપડેટેડ)",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "27 જાન્યુઆરી 2025",
+            body: `
+<div class="note">✅ <strong>મહત્વનો સુધારો:</strong> અગાઉની આવૃત્તિમાં એવું જણાવાયું હતું કે ગુજરાતે માત્ર "નિષ્ણાત સમિતિ" રચી છે — પરંતુ હવે <strong>ગુજરાત વિધાનસભાએ UCC બિલ ખરેખર પસાર કરી દીધું છે</strong> અને ગુજરાત ઉત્તરાખંડ પછીનું <strong>બીજું રાજ્ય</strong> બન્યું છે જેણે UCC ઘડ્યો છે. આ પરીક્ષા માટે ખૂબ જ મહત્વનો મુદ્દો છે.</div>
+<div class="table-scroll"><table>
+<tr><th>મુદ્દો</th><th>વિગત</th></tr>
+<tr><td>બંધારણીય કલમ</td><td>અનુચ્છેદ 44 (DPSP)</td></tr>
+<tr><td>ઉત્તરાખંડ</td><td>સ્વતંત્ર ભારતનું UCC લાગુ કરનાર <strong>પ્રથમ રાજ્ય</strong> — <strong>27 જાન્યુઆરી 2025</strong>ના રોજ અમલમાં (Act પસાર: 7 ફેબ્રુઆરી 2024)</td></tr>
+<tr><td><strong>UCC (Amendment) Ordinance, 2026 (ઉત્તરાખંડ)</strong></td><td><strong>26 જાન્યુઆરી 2026</strong>ના રોજ ગવર્નર લે. જનરલ (નિવૃત્ત) ગુરમિત સિંહ દ્વારા અનુચ્છેદ 213 હેઠળ પ્રમુલગેટ; ~15-18 સુધારા (ઓળખની છેતરપિંડી લગ્ન રદ કરવાનું કારણ બને, નોંધણી પ્રક્રિયા વધુ મજબૂત)</td></tr>
+<tr><td>મેરેજ રજિસ્ટ્રેશન (ઉત્તરાખંડ)</td><td>19 જાન્યુઆરી 2026 સુધીમાં 4,74,447 લગ્ન નોંધણી ઓનલાઇન પૂર્ણ</td></tr>
+<tr><td>✅ <strong>ગુજરાત UCC બિલ, 2026</strong></td><td><strong>24 માર્ચ 2026</strong>ના રોજ ગુજરાત વિધાનસભાએ 7 કલાકથી વધુ ચાલેલી ચર્ચા બાદ બહુમતીથી પસાર કર્યું — <strong>ગુજરાત ઉત્તરાખંડ પછીનું ભારતનું બીજું UCC રાજ્ય</strong> બન્યું</td></tr>
+<tr><td>રજૂ કરનાર</td><td>મુખ્યમંત્રી ભૂપેન્દ્ર પટેલ; નાયબ મુખ્યમંત્રી હર્ષ સંઘવીએ બિલનો બચાવ કર્યો</td></tr>
+<tr><td>નિષ્ણાત સમિતિના અધ્યક્ષ</td><td>નિવૃત્ત સુપ્રીમ કોર્ટ ન્યાયાધીશ જસ્ટિસ રંજના પ્રકાશ દેસાઈ (ઉત્તરાખંડ UCC સમિતિના પણ વડા હતા); સમિતિએ 17 માર્ચ 2026ના રોજ અંતિમ અહેવાલ CMને સુપરત કર્યો; 20 લાખથી વધુ જાહેર સૂચનો મળ્યાં</td></tr>
+<tr><td>ગુજરાત UCCની મુખ્ય જોગવાઈઓ</td><td>લગ્ન નોંધણી 60 દિવસમાં ફરજિયાત (ન કરવા પર ₹10,000 સુધીનો દંડ); લિવ-ઇન સંબંધની નોંધણી 30 દિવસમાં ફરજિયાત; બહુપત્નીત્વ/બહુપતિત્વ પર સંપૂર્ણ પ્રતિબંધ; છૂટાછેડા માત્ર કોર્ટ મારફતે માન્ય; પુત્ર-પુત્રીને સંપત્તિમાં સમાન વારસાહક</td></tr>
+<tr><td>ગુજરાત UCCમાં છૂટ</td><td>અનુસૂચિત જનજાતિઓ (STs) ને બાકાત</td></tr>
+<tr><td>વિરોધ</td><td>કોંગ્રેસે વોકઆઉટ કર્યો; બિલને લઘુમતી વિરોધી અને મૂળભૂત અધિકારોનું ઉલ્લંઘન ગણાવ્યું</td></tr>
+<tr><td>અન્ય રાજ્યો</td><td>મધ્યપ્રદેશ, આસામ, રાજસ્થાને નિષ્ણાત સમિતિઓ/બિલની પ્રક્રિયા ચાલુ રાખી છે (હજુ પસાર નથી કર્યું)</td></tr>
+<tr><td>ગોવા</td><td>પોર્ટુગીઝ સિવિલ કોડ, 1867 હેઠળ પહેલેથી જ એક પ્રકારનો સામાન્ય નાગરિક કાયદો અમલમાં છે</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "રમતગમત પુરસ્કારો — National Sports Awards 2025 ⭐ (જાહેરાત: 18 ઓગસ્ટ 2026)",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "ઓગસ્ટ 2026",
+            body: `
+<div class="note">⚠️ <strong>મહત્વનો સુધારો:</strong> આ વર્ષે (2025 ના પુરસ્કારો, ઓગસ્ટ 2026માં જાહેર) <strong>કોઈ ખેલ રત્ન એવોર્ડ આપવામાં આવ્યો નથી</strong>. કુલ <strong>17 ખેલાડીઓ</strong>ને અર્જુન એવોર્ડ મળ્યો.</div>
+`,
+          },
+          {
+            t: "અર્જુન એવોર્ડ 2025 (17 ખેલાડી)",
+            en: "રમતગમત પુરસ્કારો — National Sports Awards 2025 ⭐ (જાહેરાત: 18 ઓગસ્ટ 2026)",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>ખેલાડી</th><th>રમત</th></tr>
+<tr><td>તેજસ્વિન શંકર</td><td>એથ્લેટિક્સ</td></tr>
+<tr><td>વી. મુહમ્મદ અજમલ</td><td>એથ્લેટિક્સ</td></tr>
+<tr><td>પ્રિયંકા ગોસ્વામી</td><td>એથ્લેટિક્સ</td></tr>
+<tr><td>ત્રિસા જોલી</td><td>બેડમિન્ટન</td></tr>
+<tr><td>પુલેલા ગાયત્રી ગોપીચંદ</td><td>બેડમિન્ટન</td></tr>
+<tr><td>વિદિત સંતોષ ગુજરાતી</td><td>ચેસ</td></tr>
+<tr><td>દિવ્યા જિતેન્દ્ર દેશમુખ</td><td>ચેસ</td></tr>
+<tr><td>લાલરેમસિયામી</td><td>હોકી</td></tr>
+<tr><td>રાજકુમાર પાલ</td><td>હોકી</td></tr>
+<tr><td>સુરજિત</td><td>કબડ્ડી</td></tr>
+<tr><td>પૂજા</td><td>કબડ્ડી</td></tr>
+<tr><td>નરેન્દ્ર</td><td>બોક્સિંગ</td></tr>
+<tr><td>અરવિંદ સિંહ</td><td>રોઇંગ</td></tr>
+<tr><td>અખિલ શેઓરાન</td><td>શૂટિંગ</td></tr>
+<tr><td>રુદ્રાંશ ખાંડેલવાલ</td><td>પેરા-શૂટિંગ</td></tr>
+<tr><td>એકતા ભયાન</td><td>પેરા-એથ્લેટિક્સ</td></tr>
+<tr><td>ધનુષ શ્રીકાંત</td><td>ડેફ શૂટિંગ</td></tr>
+</table></div>
+<ul>
+<li><strong>અર્જુન એવોર્ડ (લાઇફટાઇમ):</strong> આઈ. અરુમૈનાયગમ (ફૂટબોલ)</li>
+<li><strong>દ્રોણાચાર્ય એવોર્ડ (5 કોચ):</strong> પરવીર સિંહ (એથ્લેટિક્સ), છોટે લાલ યાદવ (બોક્સિંગ), નેહા નંદકુમાર ચવાણ (શૂટિંગ); લાઇફટાઇમ — ધર્મેન્દ્ર સિંહ યાદવ (બોક્સિંગ), વીરેન્દ્ર કુમાર (કુસ્તી)</li>
+<li><strong>રાષ્ટ્રિય ખેલ પ્રોત્સાહન પુરસ્કાર:</strong> આર્મી પેરાલિમ્પિક નોડ, પુણે</li>
+<li>પસંદગી સમિતિના અધ્યક્ષ: ન્યાયમૂર્તિ (નિવૃત્ત) અરુણ કુમાર મિશ્રા</li>
+</ul>
+`,
+          },
+          {
+            t: "અગાઉના વર્ષોની મહત્વની સિદ્ધિઓ (સ્ટેટિક સંદર્ભ માટે)",
+            en: "રમતગમત પુરસ્કારો — National Sports Awards 2025 ⭐ (જાહેરાત: 18 ઓગસ્ટ 2026)",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li><strong>2024 ખેલ રત્ન:</strong> ડી. ગુકેશ (ચેસ), મનુ ભાકર (શૂટિંગ), પ્રવીણ કુમાર (પેરા-એથ્લેટિક્સ), હરમનપ્રીત સિંહ (હોકી)</li>
+<li><strong>2023 ખેલ રત્ન:</strong> સાત્વિકસાઈરાજ રંકિરેડ્ડી અને ચિરાગ શેટ્ટી (બેડમિન્ટન જોડી)</li>
+<li><strong>T20 વર્લ્ડ કપ 2024:</strong> ભારતે દક્ષિણ આફ્રિકાને હરાવી બીજી વખત ટ્રોફી જીતી (કેપ્ટન: રોહિત શર્મા)</li>
+<li><strong>પેરિસ ઓલિમ્પિક્સ 2024:</strong> મનુ ભાકર (2 બ્રોન્ઝ – શૂટિંગ), નીરજ ચોપરા (સિલ્વર – જેવલિન), અમન સેહરાવત (બ્રોન્ઝ – કુસ્તી)</li>
+<li>વિરાટ કોહલી: વન-ડેમાં 50 સદી ફટકારનાર વિશ્વનો પ્રથમ બેટ્સમેન</li>
+<li><strong>પદ્મ પુરસ્કાર 2026 (સ્પોર્ટ્સ):</strong> રોહિત શર્મા (પદ્મશ્રી), સવિતા પુનિયા (પદ્મશ્રી)</li>
+</ul>
+`,
+          },
+          {
+            t: "FIFA વર્લ્ડ કપ",
+            en: "રમતગમત પુરસ્કારો — National Sports Awards 2025 ⭐ (જાહેરાત: 18 ઓગસ્ટ 2026)",
+            art: "11 જૂન 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>વર્ષ</th><th>વિજેતા/આયોજક</th></tr>
+<tr><td>FIFA 2022</td><td>વિજેતા: આર્જેન્ટિના; આયોજક: કતાર</td></tr>
+<tr><td>FIFA 2026 (આગામી, જૂન 2026)</td><td>સંયુક્ત આયોજન: USA, કેનેડા, મેક્સિકો; ઉદ્ઘાટન મેચ 11 જૂન 2026, મેક્સિકો સિટી</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ICC ODI World Cup 2027",
+            en: "રમતગમત પુરસ્કારો — National Sports Awards 2025 ⭐ (જાહેરાત: 18 ઓગસ્ટ 2026)",
+            art: "મહત્વનું",
+            body: `
+<p>10 ટીમ ક્વોલિફાય; યજમાન અને નામિબિયા ક્વોલિફાયર રૂટ ચર્ચામાં (તાજેતરની અપડેટ માટે અલગથી ચકાસવું)</p>
+`,
+          },
+          {
+            t: "યુનેસ્કો વર્લ્ડ હેરિટેજ સાઇટ્સ (ભારત)",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>સાઇટ</th><th>રાજ્ય</th><th>વર્ષ</th></tr>
+<tr><td>શાંતિનિકેતન</td><td>પશ્ચિમ બંગાળ</td><td>2023</td></tr>
+<tr><td>હોયસળ મંદિર સમૂહો</td><td>કર્ણાટક</td><td>2023</td></tr>
+<tr><td>ચાંપાનેર-પાવાગઢ</td><td>ગુજરાત</td><td>2004</td></tr>
+<tr><td>રાણી કી વાવ, પાટણ</td><td>ગુજરાત</td><td>2014</td></tr>
+<tr><td>અમદાવાદ ઐતિહાસિક શહેર</td><td>ગુજરાત</td><td>2017 (ભારતનું પ્રથમ હેરિટેજ સિટી)</td></tr>
+<tr><td>ધોળાવીરા</td><td>ગુજરાત</td><td>2021</td></tr>
+</table></div>
+<p>*(ગુજરાતની કુલ 4 યુનેસ્કો સાઇટ્સ; ભારતમાં કુલ ~42-43 સાઇટ્સ — તાજેતરના ઉમેરા માટે નજીકના સમયે ફરી ચકાસવું)*</p>
+`,
+          },
+          {
+            t: "ગુજરાતની રામસર (Wetland) સાઇટ્સ (કુલ 4)",
+            en: "યુનેસ્કો વર્લ્ડ હેરિટેજ સાઇટ્સ (ભારત)",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>સાઇટ</th><th>જિલ્લો</th><th>વિશેષતા</th></tr>
+<tr><td>નળ સરોવર</td><td>અમદાવાદ</td><td>ગુજરાતનું સૌથી મોટું ફ્રેશવોટર વેટલેન્ડ</td></tr>
+<tr><td>થોળ તળાવ</td><td>અમદાવાદ</td><td>માનવસર્જિત, ઉચ્ચ જળપક્ષી વિવિધતા</td></tr>
+<tr><td>વાધવાણા વેટલેન્ડ</td><td>વડોદરા</td><td>ફ્રેશવોટર વેટલેન્ડ</td></tr>
+<tr><td>ખીજડીયા પક્ષી અભયારણ્ય</td><td>જામનગર</td><td>કોસ્ટલ વેટલેન્ડ — મેન્ગ્રોવ, ખારા માર્શ</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "વૈશ્વિક રેન્કિંગ્સમાં ભારતનો ક્રમ",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>ઇન્ડેક્સ</th><th>ભારતનો ક્રમ</th><th>ટોચનો દેશ</th></tr>
+<tr><td>IQAir પ્રદૂષણ ઇન્ડેક્સ</td><td>3જો સૌથી પ્રદૂષિત દેશ</td><td>બાંગ્લાદેશ</td></tr>
+<tr><td>ગ્લોબલ ઇનોવેશન ઇન્ડેક્સ</td><td>39મો</td><td>સ્વિટ્ઝર્લેન્ડ</td></tr>
+<tr><td>હેનલે પાસપોર્ટ ઇન્ડેક્સ</td><td>80-85</td><td>ફ્રાન્સ, જર્મની, જાપાન, સ્પેન</td></tr>
+<tr><td>ગ્લોબલ જેન્ડર ગેપ ઇન્ડેક્સ</td><td>129મો</td><td>આઇસલેન્ડ</td></tr>
+</table></div>
+<p>*(⚠️ આ ઇન્ડેક્સ દર વર્ષે બદલાય છે — પરીક્ષા પહેલાં નવીનતમ રિપોર્ટ ચકાસવો)*</p>
+`,
+          },
+          {
+            t: "PM મોદીના મુખ્ય વિદેશ પ્રવાસો (2025-2026)",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "જુલાઈ 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>સમયગાળો</th><th>દેશ</th><th>મુખ્ય હેતુ</th></tr>
+<tr><td>જુલાઈ 2026</td><td>ઇન્ડોનેશિયા, ઓસ્ટ્રેલિયા, ન્યુઝીલેન્ડ</td><td>ઈન્ડો-પેસિફિક સુરક્ષા, MAHASAGAR વિઝન</td></tr>
+<tr><td>જૂન 2026</td><td>G7 સમિટ – એવિયન-લે-બેન્સ, ફ્રાન્સ (16-17 જૂન)</td><td>સતત 7મી વખત G7માં ભાગીદારી; સ્લોવાકિયાની પણ મુલાકાત</td></tr>
+<tr><td>જૂન 2026</td><td>સેશેલ્સ</td><td>દરિયાઈ સુરક્ષા, બ્લુ ઇકોનોમી</td></tr>
+<tr><td>મે 2026</td><td>UAE, નેધરલેન્ડ્સ, સ્વીડન, નોર્વે, ઇટાલી</td><td>ગ્રીન હાઇડ્રોજન, ફિનટેક</td></tr>
+<tr><td>ફેબ્રુઆરી 2026</td><td>ઇઝરાયેલ</td><td>ટેક, સાયબર સુરક્ષા, સંરક્ષણ નવીનતા</td></tr>
+<tr><td>ફેબ્રુઆરી 2026</td><td>મલેશિયા</td><td>સેમિકન્ડક્ટર સપ્લાય ચેઇન, ASEAN સંબંધો</td></tr>
+<tr><td>ડિસેમ્બર 2025</td><td>જોર્ડન, ઇથોપિયા, ઓમાન</td><td>ઊર્જા ભાગીદારી, ગ્લોબલ સાઉથ આઉટરીચ</td></tr>
+</table></div>
+<p><strong>મુખ્ય ફ્રેમવર્ક:</strong> MAHASAGAR વિઝન (Mutual and Holistic Advancement for Security Across the Regions) — SAGARનું વિસ્તૃત સ્વરૂપ.</p>
+`,
+          },
+          {
+            t: "સ્વતંત્રતા દિવસ 2026ની જાહેરાતો અને નવી કેન્દ્રીય યોજનાઓ",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "₹1.5",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>યોજના</th><th>વિગત</th></tr>
+<tr><td>AI સ્કિલિંગ</td><td>1 વર્ષમાં 1 કરોડ યુવાનોને AI તાલીમ</td></tr>
+<tr><td>ન્યુક્લિયર એનર્જી</td><td>2047 સુધીમાં 100 GW ક્ષમતાનો લક્ષ્યાંક; આ દાયકામાં 5 નવા રિએક્ટર</td></tr>
+<tr><td>લખપતિ દીદી 2.0</td><td>3 કરોડથી વધારીને 6 કરોડ મહિલાઓનો લક્ષ્યાંક (2029 સુધીમાં)</td></tr>
+<tr><td>PM RAHAT</td><td>રોડ અકસ્માત પીડિતો માટે ₹1.5 લાખ સુધીની કેશલેસ સારવાર</td></tr>
+<tr><td>કૃષિ ઇન્ફ્રાસ્ટ્રક્ચર ફંડ</td><td>₹1 લાખ કરોડથી વધારીને ₹2 લાખ કરોડ</td></tr>
+<tr><td>Startup India Fund of Funds 2.0</td><td>₹10,000 કરોડનો કોર્પસ</td></tr>
+<tr><td>PM-KISAN</td><td>2026-27 થી 2030-31 સુધી ચાલુ; કુલ ₹3.15 લાખ કરોડ</td></tr>
+<tr><td>GOBARdhan યોજના</td><td>₹23,731 કરોડ — CBG (Compressed Biogas) ઉત્પાદન વિસ્તરણ</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "UPI અને ડિજિટલ પેમેન્ટ્સ અપડેટ્સ",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "₹25,000",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>અપડેટ</th><th>વિગત</th></tr>
+<tr><td>ડાયનેમિક 2FA</td><td>ડિજિટલ ચુકવણી માટે ફરજિયાત ટુ-ફેક્ટર ઓથેન્ટિકેશન</td></tr>
+<tr><td>રિસીપિયન્ટ નેમ પ્રી-વેરિફિકેશન</td><td>ચુકવણી પહેલાં લાભાર્થીનું નામ ડિસ્પ્લે</td></tr>
+<tr><td>ફ્રોડ કમ્પેન્સેશન ફ્રેમવર્ક</td><td>5 દિવસમાં જાણ કરવા પર ગ્રાહકની શૂન્ય જવાબદારી; નાના ફ્રોડ માટે 85% સુધી અથવા મહત્તમ ₹25,000 વળતર</td></tr>
+<tr><td>દૈનિક બેલેન્સ એન્ક્વાયરી કેપ</td><td>દરરોજ 50 વખતથી વધુ ચેક ન કરી શકાય</td></tr>
+<tr><td>ઓફ-પીક ઓટોપે</td><td>OTT, વીમા, SIP ઓટો-ડેડિટ પીક કલાકો (10AM-1PM, 5PM-9:30PM) બહાર રૂટ થાય</td></tr>
+<tr><td>સ્ટેટસ ચેક ઈન્ટરવલ</td><td>પેન્ડિંગ ટ્રાન્ઝેક્શન સ્ટેટસ ચેક મહત્તમ 3 વખત, ન્યૂનતમ 90 સેકન્ડ ગેપ</td></tr>
+<tr><td>UPI ક્રેડિટ લાઇન</td><td>બેંકોની પૂર્વ-મંજૂર ક્રેડિટ લાઇનને UPI એપ્સ સાથે લિંક</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "નવી ટેકનોલોજીઓ (WEF Top Emerging Technologies)",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>ટેકનોલોજી</th><th>વિગત</th></tr>
+<tr><td>Agentic AI</td><td>સ્વાયત્ત AI એજન્ટ્સ મલ્ટી-સ્ટેપ વર્કફ્લો, સોફ્ટવેર ડેવલપમેન્ટ કરે છે</td></tr>
+<tr><td>Small Language Models (SLMs)</td><td>ઓન-ડિવાઇસ, ક્લાઉડ વિના ઝડપી પ્રોસેસિંગ</td></tr>
+<tr><td>પર્સનલાઇઝ્ડ mRNA વેક્સિન</td><td>ટ્યુમર મ્યુટેશન પરથી કેન્સર વેક્સિન (ફેઝ-3 ટ્રાયલ)</td></tr>
+<tr><td>Direct Lithium Extraction (DLE)</td><td>કલાકોમાં લિથિયમ રિકવરી</td></tr>
+<tr><td>પેસિવ રેડિયેટિવ કૂલિંગ</td><td>વીજળી વિના ઇમારતોને ઠંડી રાખતા પેઇન્ટ્સ/ફિલ્મ્સ</td></tr>
+<tr><td>PFAS બોન્ડ ડિસ્ટ્રક્શન</td><td>'ફોરેવર કેમિકલ્સ'નો નાશ</td></tr>
+<tr><td>Wi-Fi 7 (802.11be)</td><td>MLO દ્વારા 2.4GHz, 5GHz, 6GHz બેન્ડ્સ પર સમાંતર કનેક્શન</td></tr>
+<tr><td>LEO સેટેલાઇટ NTN</td><td>Starlink, Project Kuiper 5G સાથે એકીકરણ</td></tr>
+<tr><td>Everything-to-Grid (E2G)</td><td>EV/બેટરી સ્ટોરેજ સ્માર્ટ ગ્રીડ સાથે ડાયનેમિક એકીકરણ</td></tr>
+<tr><td>Precision Fermentation</td><td>એનિમલ-ફ્રી પ્રોટીન ઉત્પાદન</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ગુજરાતની મુખ્ય યોજનાઓ અને સહાય",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "1 જૂન 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>યોજના</th><th>હેતુ/સહાય</th></tr>
+<tr><td>NAMO સરસ્વતી વિજ્ઞાન સાધના</td><td>ધો.11-12 વિજ્ઞાનની વિદ્યાર્થિનીઓને ₹10,000/વર્ષ</td></tr>
+<tr><td>મુખ્યમંત્રી કિસાન સહાય</td><td>પાક નુકસાન પર ₹20,000-₹25,000/હેક્ટર (4 હેક્ટર સુધી)</td></tr>
+<tr><td>કિસાન સૂર્યોદય</td><td>સવારે 5 થી રાત્રે 9 સુધી સતત 3-ફેઝ વીજ પુરવઠો</td></tr>
+<tr><td>મુખ્યમંત્રી માતૃ શક્તિ</td><td>સગર્ભા માતાઓને મફત પોષણ કિટ</td></tr>
+<tr><td>શ્રમિક અન્નપૂર્ણા</td><td>શ્રમિકોને ₹5માં પૌષ્ટિક ભોજન</td></tr>
+<tr><td>દિવ્યાંગ સહાય</td><td>60%+ દિવ્યાંગતા ધરાવતાંને ₹12,000/વર્ષ</td></tr>
+<tr><td>માસિક આર્થિક સહાય યોજના</td><td>1 જૂન 2026થી શરૂ; દર મહિને ₹3,000 સીધા બેંક ખાતામાં</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ગુજરાતના મેગા ઇન્ફ્રાસ્ટ્રક્ચર પ્રોજેક્ટ્સ",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "₹1.2 લાખ કરોડ",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>પ્રોજેક્ટ</th><th>વિગત</th></tr>
+<tr><td>સુદર્શન સેતુ</td><td>ઓખા-બેટ દ્વારકા વચ્ચે ભારતનો સૌથી લાંબો કેબલ-સ્ટેડ બ્રિજ</td></tr>
+<tr><td>કલ્પસર યોજના</td><td>ખંભાતના અખાતમાં વિશ્વનું સૌથી મોટું મીઠા પાણીનું સરોવર; ~₹1.2 લાખ કરોડ; નેધરલેન્ડ્સ સાથે ટેકનિકલ સહયોગ LoI; DPR અંતિમ તબક્કામાં</td></tr>
+<tr><td>લોથલ NMHC</td><td>સિંધુ સભ્યતાના બંદર પર સૌથી મોટું મેરિટાઇમ મ્યુઝિયમ</td></tr>
+<tr><td>SAUNI યોજના</td><td>2025-26 બજેટમાં ₹813 કરોડ; પેકેજ 8-9 પૂર્ણ, 95 ગામોમાં 52,398 એકર સિંચાઈ</td></tr>
+<tr><td>રબર ડેમ (પાઠકવાડી, તાપી)</td><td>દક્ષિણ કોરિયન ટેકનોલોજી; 90% પૂર્ણ; 650 હેક્ટર સિંચાઈ</td></tr>
+<tr><td>DMIC</td><td>દિલ્હી-મુંબઈ ઈન્ડસ્ટ્રીયલ કોરિડોર ગુજરાતમાંથી પસાર</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ગુજરાતના લક્ષ્યાંક વર્ષો",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>લક્ષ્યાંક</th><th>વર્ષ</th></tr>
+<tr><td>ગુજરાત ટુરિઝમ વર્ષ</td><td>2026</td></tr>
+<tr><td>સેમિકન્ડક્ટર સ્વનિર્ભરતા (નિકાસ શરૂ)</td><td>2027</td></tr>
+<tr><td>ધોલેરા ફેબ સંપૂર્ણ કાર્યરત</td><td>2028</td></tr>
+<tr><td>ખાવડા રિન્યુએબલ પાર્ક (30,000 MW)</td><td>2030</td></tr>
+<tr><td><strong>કોમનવેલ્થ ગેમ્સ યજમાની (અમદાવાદ)</strong></td><td><strong>2030</strong></td></tr>
+<tr><td>વિકસિત ગુજરાત @ 2047</td><td>2047</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "બંધારણ, પ્રશાસન અને સ્થિર (Static) મુદ્દા",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>સંસ્થા/કલમ</th><th>વિગત</th></tr>
+<tr><td>CAT</td><td>અનુચ્છેદ 323-A (42મા સુધારા, 1976) — All India Services, કેન્દ્રીય સનદી સેવાઓ; સશસ્ત્ર દળો બાકાત</td></tr>
+<tr><td>CAG</td><td>અનુચ્છેદ 148</td></tr>
+<tr><td>UPSC/GPSC</td><td>અનુચ્છેદ 315-323</td></tr>
+<tr><td>ચૂંટણી પંચ</td><td>અનુચ્છેદ 324</td></tr>
+<tr><td>નાણા પંચ</td><td>અનુચ્છેદ 280</td></tr>
+<tr><td>NITI Aayog</td><td>બિન-બંધારણીય, કારોબારી સંસ્થા</td></tr>
+<tr><td>NHRC</td><td>વૈધાનિક સંસ્થા</td></tr>
+<tr><td>106મો સુધારો (નારી શક્તિ વંદન)</td><td>લોકસભા/વિધાનસભામાં મહિલાઓ માટે 33% અનામત — પરિસીમન પછી અમલમાં</td></tr>
+<tr><td>નવા ગુનાહિત કાયદા</td><td>BNS (IPC), BNSS (CrPC), BSA (Evidence Act) ના સ્થાને</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ઇલેક્ટ્રોનિક્સ/એન્જિનિયરિંગ (સ્ટેટિક)",
+            en: "બંધારણ, પ્રશાસન અને સ્થિર (Static) મુદ્દા",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li><strong>સૌથી ઝડપી લોજિક ફેમિલી:</strong> ECL (Emitter-Coupled Logic)</li>
+<li><strong>બ્રિજેસ:</strong> Maxwell (Inductance, મધ્યમ Q), Hay's (High Q Inductance), Schering (Capacitance/Dielectric Loss), Wheatstone (Medium Resistance), Wien (Frequency)</li>
+<li><strong>રેઝોનન્સ:</strong> XL = XC; fr = 1/(2π√LC)</li>
+<li><strong>JK ફ્લિપ-ફ્લોપ:</strong> Race Around Condition (J=K=1) → Master-Slave FF દ્વારા ઉકેલ</li>
+<li><strong>1 Neper ≈ 8.686 dB</strong></li>
+</ul>
+`,
+          },
+          {
+            t: "નેશનલ હાઇવે (સ્ટેટિક)",
+            en: "બંધારણ, પ્રશાસન અને સ્થિર (Static) મુદ્દા",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>સૌથી લાંબો: NH-44 (શ્રીનગર–કન્યાકુમારી, ~3,745 કિમી)</li>
+<li>બીજો સૌથી લાંબો: NH-27 (પોરબંદર–સિલચર)</li>
+<li>ગોલ્ડન ક્વાડ્રિલેટરલ: દિલ્હી-મુંબઈ-ચેન્નઈ-કોલકાતા, 5,846 કિમી</li>
+</ul>
+`,
+          },
+          {
+            t: "દિલ્હી એરપોર્ટ (IGIA) અને ગાંધીનગર અપડેટ",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<p><strong>IGIA નવી ટેકનોલોજી:</strong> DigiYatra (ફેસ રેકગ્નિશન), 100% ગ્રીન એનર્જી (સોલર+હાઇડ્રો), Zero Liquid Discharge, TaxiBot, LEED પ્લેટિનમ, ઓટોનોમસ એરોબ્રિજ, ડ્યુઅલ એલિવેટેડ ટેક્સીવે.</p>
+<p><strong>ગાંધીનગર:</strong> અમદાવાદ-ગાંધીનગર મેટ્રો ફેઝ-2 (GIFT City, મહાત્મા મંદિર સુધી); GUDA દ્વારા TP સ્કીમ્સ — લેન્ડ-પૂલિંગ, અંડરગ્રાઉન્ડ ડક્ટિંગ; PDPU રોડ, રાયસન, કુદાસન રિયલ એસ્ટેટ હબ; IIT ગાંધીનગર, PDPU, ગુજરાત બાયોટેક યુનિવર્સિટીની હાજરી.</p>
+`,
+          },
+          {
+            t: "મુખ્ય હોદ્દેદારો — Who's Who 2026 (ઓગસ્ટ અપડેટ)",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<div class="note">⭐ PSI/GPSC પરીક્ષામાં "વર્તમાનમાં કોણ છે" પ્રકારના પ્રશ્નો વારંવાર પુછાય છે. 2026માં સંરક્ષણ વડાઓમાં મોટા ફેરફારો થયા છે.</div>
+`,
+          },
+          {
+            t: "સંરક્ષણ વડાઓ (તમામ 2026માં બદલાયા)",
+            en: "મુખ્ય હોદ્દેદારો — Who's Who 2026 (ઓગસ્ટ અપડેટ)",
+            art: "31 મે 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>હોદ્દો</th><th>નામ</th><th>ક્યારથી</th></tr>
+<tr><td><strong>CDS (Chief of Defence Staff)</strong></td><td>જનરલ <strong>N. S. રાજા સુબ્રમણી</strong></td><td>31 મે 2026 (અગાઉ: જનરલ અનિલ ચૌહાણ)</td></tr>
+<tr><td><strong>COAS (સેનાધ્યક્ષ)</strong></td><td>લેફ્ટનન્ટ જનરલ <strong>ધીરજ સેઠ</strong></td><td>30 જૂન 2026 (અગાઉ: જનરલ ઉપેન્દ્ર દ્વિવેદી) — 31મા COAS</td></tr>
+<tr><td><strong>CNS (નૌકાદળ વડા)</strong></td><td>એડમિરલ <strong>કૃષ્ણા સ્વામિનાથન</strong></td><td>31 મે 2026 (અગાઉ: એડમિરલ દિનેશ કે. ત્રિપાઠી) — 27મા CNS</td></tr>
+<tr><td><strong>CAS (વાયુસેના વડા)</strong></td><td>એર ચીફ માર્શલ <strong>અમર પ્રીત સિંહ</strong></td><td>ચાલુ</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "બંધારણીય/વૈધાનિક હોદ્દા",
+            en: "મુખ્ય હોદ્દેદારો — Who's Who 2026 (ઓગસ્ટ અપડેટ)",
+            art: "25 જુલાઈ 2022",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>હોદ્દો</th><th>નામ</th><th>ક્યારથી</th></tr>
+<tr><td>રાષ્ટ્રપતિ</td><td>દ્રૌપદી મુર્મુ</td><td>25 જુલાઈ 2022</td></tr>
+<tr><td>ઉપરાષ્ટ્રપતિ</td><td>સી. પી. રાધાકૃષ્ણન</td><td>12 સપ્ટેમ્બર 2025</td></tr>
+<tr><td>વડાપ્રધાન</td><td>નરેન્દ્ર મોદી</td><td>26 મે 2014</td></tr>
+<tr><td>✅ <strong>CJI (ભારતના મુખ્ય ન્યાયાધીશ)</strong></td><td>જસ્ટિસ <strong>સૂર્ય કાંત</strong></td><td>24 નવેમ્બર 2025થી</td></tr>
+<tr><td>લોકસભા સ્પીકર</td><td>ઓમ બિરલા</td><td>19 જૂન 2019</td></tr>
+<tr><td><strong>CEC (મુખ્ય ચૂંટણી કમિશનર)</strong></td><td>જ્ઞાનેશ કુમાર</td><td>19 ફેબ્રુઆરી 2025</td></tr>
+<tr><td>CAG</td><td>કે. સંજય મૂર્તિ</td><td>—</td></tr>
+<tr><td>RBI ગવર્નર</td><td>સંજય મલ્હોત્રા (26મા)</td><td>11 ડિસેમ્બર 2024</td></tr>
+<tr><td>NSA (રાષ્ટ્રીય સુરક્ષા સલાહકાર)</td><td>અજિત ડોભાલ</td><td>—</td></tr>
+<tr><td>કેબિનેટ સચિવ</td><td>ડૉ. ટી. વી. સોમનાથન</td><td>—</td></tr>
+<tr><td>✅ <strong>ISRO ચેરમેન</strong></td><td>ડૉ. વી. નારાયણન</td><td>—</td></tr>
+</table></div>
+<p>*(નોંધ: ઉપરોક્ત તમામ હોદ્દા વારંવાર બદલાય છે — પરીક્ષાના થોડા દિવસ પહેલાં એક વખત ફરી ચકાસી લેવું.)*</p>
+`,
+          },
+          {
+            t: "નોબેલ પુરસ્કાર 2025",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "23 ઓગસ્ટ 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>ક્ષેત્ર</th><th>વિજેતા(ઓ)</th><th>કારણ</th></tr>
+<tr><td>ભૌતિકશાસ્ત્ર (Physics)</td><td>જોન ક્લાર્ક, મિશેલ દેવોરે, જ્હોન એમ. માર્ટિનિસ</td><td>ઇલેક્ટ્રિક સર્કિટમાં મેક્રોસ્કોપિક ક્વૉન્ટમ ટનલિંગ અને એનર્જી ક્વૉન્ટાઇઝેશનની શોધ</td></tr>
+<tr><td>રસાયણશાસ્ત્ર (Chemistry)</td><td>સુસુમુ કિટાગાવા (જાપાન), રિચાર્ડ રોબ્સન (ઓસ્ટ્રેલિયા), ઓમર એમ. યાગી (USA)</td><td>મેટલ-ઓર્ગેનિક ફ્રેમવર્ક્સ (MOFs)નો વિકાસ</td></tr>
+<tr><td>તબીબી વિજ્ઞાન (Medicine)</td><td>મેરી બ્રન્કો, ફ્રેડ રામ્સડેલ, શિમોન સાકાગુચી</td><td>પેરિફેરલ ઇમ્યુન ટોલરન્સ (રોગપ્રતિકારક તંત્ર શરીરના પોતાના પેશીઓ પર હુમલો ન કરે તે અંગેની શોધ)</td></tr>
+<tr><td>સાહિત્ય (Literature)</td><td>લાસ્લો ક્રાસ્નાહોરકાઈ (હંગેરી)</td><td>દૂરંદેશી અને પ્રભાવશાળી સાહિત્યિક કૃતિઓ માટે</td></tr>
+<tr><td>શાંતિ (Peace)</td><td>મારિયા કોરિના મચાડો (વેનેઝુએલા)</td><td>લોકશાહી અધિકારો માટેની લડત</td></tr>
+<tr><td>અર્થશાસ્ત્ર (Economics)</td><td>(સ્વતંત્ર રીતે ચકાસવું)</td><td>—</td></tr>
+</table></div>
+<p>*(નોબેલ પુરસ્કાર દર વર્ષે ઓક્ટોબરમાં જાહેર થાય છે; 2026ના વિજેતાઓ ઓક્ટોબર 2026માં જાહેર થશે — Wireless PSI પરીક્ષા (23 ઓગસ્ટ 2026) માટે ઉપરોક્ત 2025ની યાદી જ સુસંગત છે.)*</p>
+`,
+          },
+          {
+            t: "ગુજરાત સ્થાનિક સ્વરાજ્યની ચૂંટણીઓ 2026",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "26 એપ્રિલ 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>મુદ્દો</th><th>વિગત</th></tr>
+<tr><td>ચૂંટણી તારીખ</td><td><strong>26 એપ્રિલ 2026</strong></td></tr>
+<tr><td>સમાવેશ</td><td>15 મહાનગરપાલિકા, 84 નગરપાલિકા, 34 જિલ્લા પંચાયત, 260 તાલુકા પંચાયત</td></tr>
+<tr><td>ગાંધીનગર મહાનગરપાલિકા</td><td>ચૂંટણી અલગ (પાછળથી) તારીખે યોજાઈ</td></tr>
+<tr><td>પરિણામ</td><td>ભાજપ (BJP)નો ભવ્ય વિજય — તમામ 15 મહાનગરપાલિકા સહિત મોટા ભાગની નગરપાલિકા, જિલ્લા પંચાયત અને તાલુકા પંચાયતમાં જીત</td></tr>
+<tr><td>વિશેષ</td><td>9 મહાનગરપાલિકામાં પ્રથમ વખત ચૂંટણી યોજાઈ</td></tr>
+<tr><td>મહત્વ</td><td>2027ની ગુજરાત વિધાનસભા ચૂંટણી પહેલાં ભાજપની તાકાતનું પ્રદર્શન ગણાય છે</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ઓગસ્ટ 2026 ના તાજા અને મહત્વના સમાચાર",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "31 ડિસેમ્બર 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>સમાચાર</th><th>વિગત</th></tr>
+<tr><td>સ્વતંત્રતા દિવસ 2026 ભાષણ</td><td>PM મોદીએ "રક્ષા શક્તિ"ને વિકસિત ભારત @2047 માટે મહત્વની ગણાવી; સ્વદેશી સંરક્ષણ સાધનો, ડ્રોન અને હાઇપરસોનિક ટેકનોલોજી પર ભાર</td></tr>
+<tr><td>સ્પોર્ટ્સ ટેલેન્ટ હન્ટ</td><td>5-15 વર્ષના બાળકો માટે રાષ્ટ્રવ્યાપી ટેલેન્ટ હન્ટ — 2036 ઓલિમ્પિક્સની તૈયારીના ભાગરૂપે</td></tr>
+<tr><td>FAST-DS યોજના</td><td>વિદેશી સંપત્તિ જાહેર કરવા માટે — 16 ઓગસ્ટથી 31 ડિસેમ્બર 2026 સુધી કાર્યરત; ₹5 કરોડ સુધીની અઘોષિત વિદેશી સંપત્તિ માટે 30% ટેક્સ/ફી ભરી મુક્તિ</td></tr>
+<tr><td>Samudra Manthan યોજના</td><td>ઓફશોર તેલ-ગેસ સંશોધન વધારવા ₹84,084 કરોડની કેન્દ્રીય યોજના (પેટ્રોલિયમ મંત્રાલય); FY31 સુધી અમલ; વાર્ષિક ઉત્પાદન 62 થી 80 MMTOE સુધી વધારવાનું લક્ષ્ય</td></tr>
+<tr><td>BRICS યુથ એનર્જી સમિટ</td><td>ભારતના BRICS અધ્યક્ષપદ હેઠળ 17 ઓગસ્ટ 2026ના રોજ 8મી વર્ચ્યુઅલ સમિટ યોજાઈ</td></tr>
+<tr><td>કેબિનેટ મંજૂરી (19 ઓગસ્ટ 2026)</td><td>PM મોદીની અધ્યક્ષતામાં CCEA દ્વારા ₹9,450 કરોડના 4 રેલવે મલ્ટી-ટ્રેકિંગ પ્રોજેક્ટ મંજૂર</td></tr>
+<tr><td>વાહન વીમા નિયમ</td><td>4 ઓગસ્ટ 2026થી નવી ખાનગી કારો માટે 3ને બદલે 4 વર્ષ અને નવા ટુ-વ્હીલર માટે 6 વર્ષનો ફરજિયાત થર્ડ-પાર્ટી વીમો</td></tr>
+<tr><td>FASTag લોકલ પાસ</td><td>NHAI દ્વારા 121 ટોલ પ્લાઝા સુધી ડિજિટલ લોકલ પાસ સુવિધા વિસ્તૃત</td></tr>
+</table></div>
+<p>*(⚠️ આ વિભાગ ઝડપથી બદલાય છે — પરીક્ષાના આગલા દિવસ સુધી નવીનતમ સમાચાર ચકાસતા રહો.)*</p>
+`,
+          },
+          {
+            t: "Wireless PSI 2026 પરીક્ષા — ઝડપી માહિતી",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "23 ઓગસ્ટ 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>મુદ્દો</th><th>વિગત</th></tr>
+<tr><td>પરીક્ષાનું નામ</td><td>Police Sub-Inspector (Wireless) &amp; Technical Operator – 2025-26</td></tr>
+<tr><td>લેખિત પરીક્ષા તારીખ</td><td><strong>23 ઓગસ્ટ 2026 (રવિવાર)</strong></td></tr>
+<tr><td>સંચાલક સંસ્થા</td><td>ગુજરાત પોલીસ ભરતી બોર્ડ (GPRB)</td></tr>
+<tr><td>પસંદગી પ્રક્રિયા</td><td>શારીરિક કસોટી (PET/PST) → લેખિત પરીક્ષા → દસ્તાવેજ ચકાસણી</td></tr>
+<tr><td>વિષયો</td><td>જનરલ સ્ટડીઝ, ગુજરાતી, અંગ્રેજી, ટેકનિકલ (વાયરલેસ/ઇલેક્ટ્રોનિક્સ) જ્ઞાન</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "પરીક્ષા પહેલાં ફરી ચકાસવા જેવા મુદ્દા (Fast-Changing Topics)",
+            en: "PSI / GPSC સંદર્ભ",
+            art: "20 ઓગસ્ટ 2026",
+            body: `
+<p>આ યાદીમાંના નીચેના મુદ્દા ઝડપથી બદલાય છે, તેથી પરીક્ષાના થોડા દિવસ પહેલાં નવીનતમ સમાચાર સ્ત્રોત પર ફરી ચકાસવા:</p>
+<ul>
+<li>સંરક્ષણ કવાયતો અને મિસાઇલ પરીક્ષણોની નવીનતમ તારીખો</li>
+<li>સેમિકન્ડક્ટર પ્લાન્ટ્સની કમિશનિંગ સ્થિતિ (દર મહિને અપડેટ થાય છે)</li>
+<li>વૈશ્વિક રેન્કિંગ ઇન્ડેક્સ (દર વર્ષે નવો રિપોર્ટ આવે છે)</li>
+<li>PM મોદીના તાજેતરના વિદેશ પ્રવાસો</li>
+<li>ISRO ના આગામી લોન્ચ શેડ્યુલ (Gaganyaan માનવસહિત ઉડાનની ચોક્કસ તારીખ)</li>
+<li>🆕 મુખ્ય હોદ્દેદારો (§21) — સંરક્ષણ વડાઓ અને અન્ય નિમણૂકો વારંવાર બદલાય છે</li>
+<li>🆕 ઓગસ્ટ 2026ના તાજા સમાચાર (§24) — પરીક્ષાના આગલા દિવસ સુધી અપડેટ ચકાસવા</li>
+</ul>
+<p>*આ દસ્તાવેજ તમારી અગાઉની નોંધો પર આધારિત છે, જેને વેબ સર્ચ દ્વારા ક્રોસ-ચેક કરી, ડુપ્લિકેટ મુદ્દા દૂર કરી, અને ભૂલો સુધારીને ફરીથી ગોઠવવામાં આવ્યો છે. (v2 — 20 ઓગસ્ટ 2026 અપડેટ)*</p>
+`,
+          },
+        ],
+      },
+      {
+        cat: "વિષયવાર કરંટ અફેર્સ સંકલન",
+        items: [
+          {
+            t: "પરીક્ષા પેટર્ન વિશ્લેષણ",
+            en: "વિષયવાર સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<p>જૂના પ્રશ્નપત્રો (2022, 2024, 2025 ના Wireless PSI/Technical Operator પેપરો) અને GPRB ના અધિકૃત સિલેબસના વિશ્લેષણ પરથી નીચે મુજબના તારણો મળે છે:</p>
+<div class="table-scroll"><table>
+<tr><th>વિભાગ</th><th>વિગત</th></tr>
+<tr><td>કુલ પરીક્ષા</td><td>200 ગુણ, 200 MCQ, 3 કલાક (Part-A + Part-B)</td></tr>
+<tr><td>Part-A (સામાન્ય જ્ઞાન)</td><td>80 ગુણ – ગુજરાતી ભાષા, અંગ્રેજી, રિઝનિંગ, ગણિત, GK &amp; કરંટ અફેર્સ</td></tr>
+<tr><td>ક્વોલિફાઈંગ ગુણ</td><td>દરેક ભાગમાં અલગ-અલગ ઓછામાં ઓછા 40%</td></tr>
+<tr><td>નેગેટિવ માર્કિંગ</td><td>દરેક ખોટા જવાબ માટે -0.25 ગુણ</td></tr>
+<tr><td>કરંટ અફેર્સનું વેઈટેજ</td><td>Part-A માં અંદાજે 15-20 ગુણ (GK વિભાગનો મોટો હિસ્સો)</td></tr>
+</table></div>
+<p><strong>અગાઉ પુછાયેલા કરંટ અફેર્સના મુખ્ય ટોપિક-પ્રકારો:</strong></p>
+<ul>
+<li>રાજ્ય/રાષ્ટ્રીય/આંતરરાષ્ટ્રીય કરંટ અફેર્સ (તાજેતરની ઘટનાઓ)</li>
+<li>સરકારી યોજનાઓ અને નીતિઓ (ગુજરાત + કેન્દ્ર સરકાર)</li>
+<li>રમતગમત અને રમતવીરો</li>
+<li>પુરસ્કારો અને સન્માનો (પદ્મ પુરસ્કાર, અર્જુન એવોર્ડ, નોબેલ પુરસ્કાર વગેરે)</li>
+<li>મહત્વના દિવસો અને પ્રસંગો</li>
+<li>પુસ્તકો અને લેખકો</li>
+<li>મહત્વની સંસ્થાઓ અને તેમના મુખ્યાલયો</li>
+<li>નવી નિમણૂકો (રાજ્યપાલ, મંત્રીઓ, વડાઓ)</li>
+<li>સંરક્ષણ ક્ષેત્રે DRDO/ISRO ની સિદ્ધિઓ</li>
+<li>ગુજરાત પોલીસ અને વાયરલેસ વિભાગ સંબંધિત સમાચાર</li>
+</ul>
+<div class="note">💡 <strong>સ્ટ્રેટેજી:</strong> ગુજરાત-કેન્દ્રિત પ્રશ્નો (CM, રાજ્યપાલ, બજેટ, યોજનાઓ, ગુજરાત ફાઉન્ડેશન ડે) લગભગ દરેક પેપરમાં નિશ્ચિતપણે પુછાય છે, તેથી તેના પર ખાસ ધ્યાન આપો.</div>
+`,
+          },
+          {
+            t: "રાજકીય માળખું (2025-26)",
+            en: "ગુજરાત કરંટ અફેર્સ",
+            art: "13 સપ્ટેમ્બર 2021",
+            body: `
+<ul>
+<li><strong>ગુજરાતના મુખ્યમંત્રી:</strong> ભૂપેન્દ્રભાઈ પટેલ (17મા CM, પદ ગ્રહણ: 13 સપ્ટેમ્બર 2021)</li>
+<li><strong>નાયબ મુખ્યમંત્રી (Deputy CM):</strong> હર્ષ સંઘવી – 17 ઓક્ટોબર 2025થી પદ ગ્રહણ કર્યું (ગુજરાતના સૌથી નાની ઉંમરના નાયબ મુખ્યમંત્રી); તેમની પાસે ગૃહ, કાયદો અને ન્યાય, પ્રવાસન, ઉદ્યોગ, MSME અને નાગરિક ઉડ્ડયન ખાતાં છે</li>
+<li><strong>ગુજરાતના રાજ્યપાલ:</strong> આચાર્ય દેવવ્રત</li>
+<li><strong>ગુજરાત BJP પ્રદેશ પ્રમુખ:</strong> જગદીશ વિશ્વકર્મા – 4 ઓક્ટોબર 2025થી (C.R. પાટીલના સ્થાને)</li>
+<li><strong>ગુજરાત નાણાં મંત્રી:</strong> કનુભાઈ દેસાઈ</li>
+<li><strong>આરોગ્ય મંત્રી:</strong> પ્રફુલ પાનસુરિયા (ઓક્ટોબર 2025થી સ્વતંત્ર હવાલો)</li>
+<li>16 ઓક્ટોબર 2025ના રોજ સમગ્ર ગુજરાત મંત્રીમંડળનું રાજીનામું અને નવા મંત્રીમંડળની રચના (ફેરબદલ) થઈ</li>
+<li><strong>ગુજરાતના મુખ્ય સચિવ:</strong> મનોજ કુમાર દાસ</li>
+</ul>
+`,
+          },
+          {
+            t: "ગુજરાત બજેટ 2026-27",
+            en: "ગુજરાત કરંટ અફેર્સ",
+            art: "₹4,08,053 કરોડ",
+            body: `
+<ul>
+<li>નાણાં મંત્રી કનુભાઈ દેસાઈ દ્વારા રજૂ – <strong>₹4,08,053 કરોડ</strong>નું અત્યાર સુધીનું ગુજરાતના ઈતિહાસનું સૌથી મોટું બજેટ</li>
+<li>બજેટના 5 મુખ્ય સ્તંભ: સામાજિક સુરક્ષા, માનવ સંસાધન વિકાસ, માળખાગત સુવિધા, આર્થિક પ્રવૃત્તિ અને ગ્રીન ગ્રોથ</li>
+<li>2025ને "શહેરી વિકાસ વર્ષ" (Urban Development Year) જાહેર કરાયું – શહેરી વિકાસ બજેટમાં 40% વધારો</li>
+<li>2026-27ના બજેટ યોજનાઓ પૈકી 80% યોજનાઓની ઝડપી અમલવારી માટે કેબિનેટ દ્વારા મંજૂરી</li>
+</ul>
+`,
+          },
+          {
+            t: "ગુજરાત સ્થાપના દિવસ (1 મે 2026)",
+            en: "ગુજરાત કરંટ અફેર્સ",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>ગુજરાતનો <strong>66મો સ્થાપના દિવસ</strong> ઉજવાયો</li>
+<li>જ્યોતિગ્રામ યોજના હેઠળ 24 કલાક વીજળી અને 53,000 MW વીજ ક્ષમતા</li>
+<li>નવીનીકરણીય ઊર્જામાં દેશની કુલ ક્ષમતાના લગભગ 15% હિસ્સો ગુજરાત પાસે</li>
+<li>3 લાખથી વધુ ઘરોમાં સોલાર રૂફટોપ યોજના અમલી</li>
+</ul>
+`,
+          },
+          {
+            t: "ઉદ્યોગ અને સેમિકન્ડક્ટર હબ",
+            en: "ગુજરાત કરંટ અફેર્સ",
+            art: "28 ફેબ્રુઆરી 2026",
+            body: `
+<ul>
+<li>ગુજરાત ભારતનું <strong>પ્રથમ રાજ્ય</strong> છે જેણે અલગ <strong>સેમિકન્ડક્ટર પોલિસી (2022-2027)</strong> જાહેર કરી</li>
+<li>ગુજરાતમાં <strong>3 સેમિકન્ડક્ટર પ્લાન્ટ કાર્યરત</strong> થયા:</li>
+<li>– <strong>Micron Technology</strong> – સાણંદ (ATMP ફેસિલિટી) – PM મોદી દ્વારા 28 ફેબ્રુઆરી 2026ના રોજ ઉદ્ઘાટન</li>
+<li>– <strong>Kaynes Semicon</strong> – સાણંદ (OSAT) – 31 માર્ચ 2026થી વ્યાવસાયિક ઉત્પાદન શરૂ</li>
+<li>– <strong>CG Power / Renesas / STARS Microelectronics</strong> – સાણંદ OSAT</li>
+<li><strong>Tata Electronics – PSMC (Powerchip)</strong> ફેબ પ્લાન્ટ ધોલેરામાં નિર્માણાધીન (₹91,000 કરોડનું રોકાણ, 28nm ચિપ ઉત્પાદન)</li>
+<li>મે 2026માં કેન્દ્ર સરકારે ગુજરાતમાં 2 નવા સેમિકન્ડક્ટર પ્રોજેક્ટ મંજૂર કર્યા – <strong>Crystal Matrix (ધોલેરા)</strong> અને <strong>Suchi Semicon (સુરત)</strong> – કુલ રોકાણ ₹3,936 કરોડ</li>
+<li><strong>Tata Electronics અને ASML (નેધરલેન્ડ)</strong> વચ્ચે ગુજરાતમાં ભારતના પ્રથમ ફ્રન્ટ-એન્ડ સેમિકન્ડક્ટર ફેબ પ્લાન્ટ માટે કરાર (16 મે 2026)</li>
+<li><strong>ધોલેરા સ્પેશિયલ ઈન્વેસ્ટમેન્ટ રિજન (DSIR)</strong> ને "સેમિકોન સિટી" તરીકે વિકસાવવામાં આવી રહ્યું છે</li>
+<li>ગુજરાત <strong>STI (વિજ્ઞાન-ટેકનોલોજી-ઈનોવેશન) પોલિસી 2026-31</strong> જાહેર</li>
+<li>ગુજરાત <strong>AI Action Plan 2025-2030</strong> મંજૂર કરનાર દેશના પ્રથમ રાજ્યોમાંનું એક</li>
+</ul>
+`,
+          },
+          {
+            t: "GIFT City અને Viksit Gujarat Summit",
+            en: "ગુજરાત કરંટ અફેર્સ",
+            art: "$73.9",
+            body: `
+<ul>
+<li><strong>Viksit Gujarat Summit 2026</strong> – GIFT City ખાતે યોજાયો, CM ભૂપેન્દ્ર પટેલની અધ્યક્ષતામાં</li>
+<li>ગુજરાતને એપ્રિલ 2020થી 2025 સુધીમાં કુલ <strong>$73.9 અબજ (US$)નું સંચિત FDI</strong> મળ્યું – 2019થી સતત દેશમાં FDI માટે નંબર-1 રાજ્ય</li>
+<li>NITI આયોગના <strong>Investment Friendliness Index 2026</strong>માં ગુજરાત ટોચનું સ્થાન</li>
+<li>GIFT City ખાતે <strong>AI Centre of Excellence</strong> અને નવી <strong>GCC (Global Capability Centre) અને ડેટા સેન્ટર પોલિસી</strong> જાહેર</li>
+<li>GIFT City ને <strong>Global Financial Centres Index (GFCI 37)</strong>માં 46મો ક્રમાંક</li>
+<li><strong>11મી Vibrant Gujarat Global Summit 2026</strong> યોજાઈ</li>
+</ul>
+`,
+          },
+          {
+            t: "રેન્કિંગ અને પુરસ્કારો",
+            en: "ગુજરાત કરંટ અફેર્સ",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li><strong>Good Governance Index 2025</strong>માં ગુજરાત સંયુક્ત રેન્કિંગમાં ટોચનું સ્થાન</li>
+<li>NITI આયોગના <strong>Fiscal Health Index 2025</strong>માં ગુજરાતને "Achiever" કેટેગરીનો દરજ્જો</li>
+<li><strong>States' Startup Ranking 2025</strong>માં ગુજરાત, કર્ણાટક અને કેરળ ટોચના પ્રદર્શનકર્તા</li>
+<li><strong>Swachh Survekshan 2025</strong>માં સુરત ભારતના સૌથી સ્વચ્છ શહેરોમાં (ઈન્દોર સાથે ટોચનું સ્થાન)</li>
+<li>ગુજરાતે નવા વર્ષે <strong>સામૂહિક સૂર્ય નમસ્કાર</strong> માટે ગિનીસ વર્લ્ડ રેકોર્ડ બનાવ્યો</li>
+</ul>
+`,
+          },
+          {
+            t: "મહત્વના પ્રોજેક્ટ્સ અને પહેલ",
+            en: "ગુજરાત કરંટ અફેર્સ",
+            art: "22 સપ્ટેમ્બર 2025",
+            body: `
+<ul>
+<li><strong>મુંબઈ-અમદાવાદ બુલેટ ટ્રેન</strong> (508 કિમી) નું બાંધકામ ઝડપથી પ્રગતિમાં</li>
+<li><strong>ધોલેરા ઈન્ટરનેશનલ એરપોર્ટ</strong> – ફેઝ-1 નું બાંધકામ ડિસેમ્બર 2025માં પૂર્ણ, વ્યાવસાયિક કામગીરી 2026માં અપેક્ષિત</li>
+<li><strong>દ્વારકામાં ભારતનું પ્રથમ સબમરીન ટુરિઝમ</strong> શરૂ</li>
+<li><strong>કરમાયોગી સ્વાસ્થ્ય સુરક્ષા યોજના</strong> – 22 સપ્ટેમ્બર 2025ના રોજ (શારદીય નવરાત્રિના પ્રથમ દિવસે) સરકારી કર્મચારીઓ અને પેન્શનર્સ માટે ₹10 લાખ સુધીની કેશલેસ સારવાર યોજના શરૂ</li>
+<li><strong>ઈન્ટિગ્રેટેડ રિન્યુએબલ એનર્જી પોલિસી 2025</strong> – ગુડ ગવર્નન્સ ડે (25 ડિસેમ્બર, અટલ બિહારી વાજપેયીની જન્મજયંતિ) નિમિત્તે લોન્ચ</li>
+<li><strong>સુગમ ડિજિટલ ગુજરાત પોર્ટલ</strong> – ગુજરાત વહીવટી સુધારા પંચની ભલામણોના આધારે 20 મહત્વની સેવાઓ ઓનલાઈન કરાઈ</li>
+<li><strong>રાષ્ટ્રીય એકતા દિવસ (31 ઓક્ટોબર 2025)</strong> – સરદાર પટેલની 150મી જન્મજયંતિ નિમિત્તે સ્ટેચ્યુ ઓફ યુનિટી ખાતે ભવ્ય પરેડ</li>
+<li>સ્ટેચ્યુ ઓફ યુનિટી (કેવડિયા, નર્મદા) – વિશ્વની સૌથી ઊંચી પ્રતિમા (182 મીટર)</li>
+<li><strong>NAMO E-Tablet યોજના</strong> અને <strong>લેપટોપ સહાય યોજના</strong> – વિદ્યાર્થીઓ માટે ડિજિટલ શિક્ષણ યોજનાઓ</li>
+<li><strong>મુખ્યમંત્રી પૌષ્ટિક આલ્પાહાર યોજના</strong> – ડિસેમ્બર 2024થી શરૂ, 32,277 શાળાના 41 લાખ વિદ્યાર્થીઓને લાભ</li>
+<li><strong>કિસાન સૂર્ય ઊર્જા યોજના</strong> હેઠળ 19.69 લાખ ખેડૂતોને દિવસ દરમિયાન વીજળી પુરવઠો</li>
+</ul>
+`,
+          },
+          {
+            t: "મહત્વના પદો પર વર્તમાન વ્યક્તિઓ (2026)",
+            en: "રાષ્ટ્રીય કરંટ અફેર્સ",
+            art: "11 ડિસેમ્બર 2024",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>પદ</th><th>વ્યક્તિ</th></tr>
+<tr><td>ભારતના રાષ્ટ્રપતિ</td><td>દ્રૌપદી મુર્મુ</td></tr>
+<tr><td>ભારતના ઉપરાષ્ટ્રપતિ</td><td>(વર્તમાન માહિતી ચકાસવી)</td></tr>
+<tr><td>વડાપ્રધાન</td><td>નરેન્દ્ર મોદી</td></tr>
+<tr><td>RBI ગવર્નર</td><td>સંજય મલ્હોત્રા (26મા ગવર્નર, 11 ડિસેમ્બર 2024થી, 3 વર્ષની મુદત)</td></tr>
+<tr><td>RBI ડેપ્યુટી ગવર્નર</td><td>પૂનમ ગુપ્તા</td></tr>
+<tr><td>મુખ્ય ચૂંટણી કમિશનર (CEC)</td><td>જ્ઞાનેશ કુમાર</td></tr>
+<tr><td>નાણાં સચિવ</td><td>અજય સેઠ</td></tr>
+<tr><td>DRDO અધ્યક્ષ</td><td>ડૉ. સમીર વી. કામત</td></tr>
+<tr><td>BSF ડાયરેક્ટર જનરલ</td><td>પ્રવીણ કુમાર</td></tr>
+<tr><td>નેશનલ સ્ટેટિસ્ટિકલ કમિશન અધ્યક્ષ</td><td>ડૉ. સૈબલ ચટ્ટોપાધ્યાય (જૂન 2026)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "મહત્વની ઘટનાઓ (2025)",
+            en: "રાષ્ટ્રીય કરંટ અફેર્સ",
+            art: "₹1 લાખ કરોડ",
+            body: `
+<ul>
+<li><strong>ઓપરેશન સિંદૂર:</strong> પહલગામ આતંકવાદી હુમલા (એપ્રિલ 2025) બાદ ભારતે પાકિસ્તાન અને PoK સ્થિત આતંકવાદી કેમ્પ પર ચોકસાઈભરી કાર્યવાહી કરી — ભારતીય સૈન્યની મોટી સફળતા તરીકે ગણાય</li>
+<li><strong>GST સુધારા (Next-Gen GST Reforms):</strong> સપ્ટેમ્બર 2025માં નાણાં મંત્રી નિર્મલા સીતારમણ દ્વારા જાહેર – ઘણી ચીજવસ્તુઓ પર GST દર 12% થી ઘટાડીને 5% કરાયો, જેનાથી સામાન્ય માણસ, ખેડૂત, MSME અને મધ્યમ વર્ગને લાભ</li>
+<li><strong>પ્રયાગરાજ મહાકુંભ 2025:</strong> ભાગદોડની દુર્ઘટના બની, જેમાં અનેક શ્રદ્ધાળુઓના મૃત્યુ થયા</li>
+<li><strong>PM વિશ્વકર્મા યોજનાની બીજી વર્ષગાંઠ</strong> – બોધગયામાં PM વિશ્વકર્મા અને નેશનલ SC-ST હબ મેગા કોન્કલેવ યોજાયો</li>
+<li><strong>સંશોધન વિકાસ અને નવીનીકરણ (RDI) સ્કીમ ફંડ</strong> – ₹1 લાખ કરોડનું ભંડોળ, ખાનગી ક્ષેત્ર સંચાલિત R&amp;D ઈકોસિસ્ટમને પ્રોત્સાહન આપવા લોન્ચ (નવેમ્બર 2025)</li>
+<li><strong>શુભાંશુ શુક્લા</strong> આંતરરાષ્ટ્રીય અંતરિક્ષ મથક (ISS) સુધી પહોંચનાર પ્રથમ ભારતીય બન્યા (જૂન 2025)</li>
+</ul>
+`,
+          },
+          {
+            t: "મુખ્ય ટાઈમલાઈન (ઓગસ્ટ 2025 – ઓગસ્ટ 2026)",
+            en: "રાષ્ટ્રીય મહત્વની ઘટનાઓ",
+            art: "18 ઓગસ્ટ 2026",
+            body: `
+<ul>
+<li><strong>સપ્ટેમ્બર 2025:</strong> સ્વતંત્રતા દિવસના ભાષણમાં PM મોદીએ GST સુધારાની જાહેરાત કરી (12%થી 5%)</li>
+<li><strong>સપ્ટેમ્બર-ઓક્ટોબર 2025:</strong> ICC મહિલા ODI ક્રિકેટ વર્લ્ડ કપ ભારત-શ્રીલંકામાં યોજાયો</li>
+<li><strong>ઓક્ટોબર 2025:</strong> ગુજરાત મંત્રીમંડળમાં મોટા ફેરફાર – હર્ષ સંઘવી નાયબ મુખ્યમંત્રી બન્યા</li>
+<li><strong>નવેમ્બર 2025:</strong> ભારતીય મહિલા ક્રિકેટ ટીમે પ્રથમ વખત ICC મહિલા વર્લ્ડ કપ જીત્યો</li>
+<li><strong>ડિસેમ્બર 2025:</strong> G20 સમિટ જોહાનિસબર્ગ (દક્ષિણ આફ્રિકા) ખાતે – પ્રથમ વખત આફ્રિકા ખંડમાં યોજાયો</li>
+<li><strong>જાન્યુઆરી 2026:</strong> પદ્મ પુરસ્કારો 2026ની જાહેરાત (77મા ગણતંત્ર દિવસની પૂર્વસંધ્યાએ)</li>
+<li><strong>જાન્યુઆરી-ફેબ્રુઆરી 2026:</strong> ICC પુરુષ T20 વર્લ્ડ કપ ભારતમાં યોજાયો</li>
+<li><strong>ફેબ્રુઆરી 2026:</strong> AI ઈમ્પેક્ટ સમિટ નવી દિલ્હીમાં યોજાયો; Pax Silica પહેલમાં ભારત જોડાયું</li>
+<li><strong>માર્ચ-મે 2026:</strong> IPL 2026 સીઝન</li>
+<li><strong>ઓગસ્ટ 2026:</strong> રાષ્ટ્રીય રમત પુરસ્કારો 2025ની જાહેરાત (18 ઓગસ્ટ 2026)</li>
+</ul>
+`,
+          },
+          {
+            t: "કુદરતી આપત્તિ અને હવામાન",
+            en: "રાષ્ટ્રીય મહત્વની ઘટનાઓ",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>2025માં પંજાબમાં પૂર અને ભારતના દરિયાકાંઠે ચક્રવાતોની અસર</li>
+<li>હવામાન સંબંધિત આત્યંતિક ઘટનાઓએ સમુદાયો અને અર્થતંત્રને અસર કરી</li>
+</ul>
+`,
+          },
+          {
+            t: "ISRO (ભારતીય અંતરિક્ષ સંશોધન સંસ્થા)",
+            en: "સંરક્ષણ અને વિજ્ઞાન-ટેકનોલોજી",
+            art: "ડિસેમ્બર 2024",
+            body: `
+<ul>
+<li>ISRO એ <strong>2026-27માં 27 મિશન</strong> નું લક્ષ્ય રાખ્યું છે, જેમાં <strong>ગગનયાન</strong> મિશન કેન્દ્રસ્થાને</li>
+<li><strong>ગગનયાન-1</strong> (માનવરહિત ટેસ્ટ મિશન, વ્યોમમિત્ર રોબોટ સાથે) – 2026ની શરૂઆતમાં આયોજિત</li>
+<li><strong>SpaDeX (Space Docking Experiment)</strong> – ડિસેમ્બર 2024માં PSLV દ્વારા લોન્ચ, જાન્યુઆરી 2025માં સફળ સ્પેસ ડોકિંગ</li>
+<li><strong>ચંદ્રયાન-4 અને LUPEX</strong> (ભારત-જાપાન સંયુક્ત ચંદ્ર મિશન) આયોજિત</li>
+<li><strong>આદિત્ય-L1</strong> – સૂર્ય અભ્યાસ મિશન, L1 પોઈન્ટ પર કાર્યરત</li>
+<li><strong>ભારતીય અંતરિક્ષ સ્ટેશન (Bharatiya Antariksh Station)</strong> ના નિર્માણ તરફ પ્રગતિ</li>
+</ul>
+`,
+          },
+          {
+            t: "DRDO અને સંરક્ષણ સિદ્ધિઓ",
+            en: "સંરક્ષણ અને વિજ્ઞાન-ટેકનોલોજી",
+            art: "23 જુલાઈ 2026",
+            body: `
+<ul>
+<li><strong>મિશન દિવ્યાસ્ત્ર:</strong> અગ્નિ-5 મિસાઈલનું MIRV (Multiple Independently Targetable Re-entry Vehicle) ટેકનોલોજી સાથે પ્રથમ સફળ પરીક્ષણ</li>
+<li><strong>કુશા (Project Kusha):</strong> લોંગ-રેન્જ સરફેસ-ટુ-એર મિસાઈલ સિસ્ટમ – 23 જુલાઈ 2026ના રોજ ઓડિશા કિનારેથી સફળ પરીક્ષણ, S-400 જેવી સ્વદેશી હવાઈ સંરક્ષણ પ્રણાલી બનવાનું લક્ષ્ય</li>
+<li><strong>BMD (Ballistic Missile Defence) સિસ્ટમ અને NASM-MR મિસાઈલ</strong> – જૂન 2026માં ચાંદીપુર ખાતે 3 ટેસ્ટ સફળ</li>
+<li><strong>ઝોરાવર (Zorawar):</strong> DRDO અને L&amp;T દ્વારા વિકસિત સ્વદેશી લાઈટ ટેન્ક – ઊંચાઈવાળા વિસ્તારો (લદાખ) માટે</li>
+<li><strong>નાગ Mk2:</strong> ત્રીજી પેઢીની ફાયર-એન્ડ-ફોરગેટ એન્ટી-ટેન્ક ગાઈડેડ મિસાઈલ – પોખરણમાં પરીક્ષણ</li>
+<li><strong>ભાર્ગવાસ્ત્ર:</strong> ડ્રોન સ્વોર્મ સામે ભારતની પ્રથમ માઈક્રો-મિસાઈલ સિસ્ટમ</li>
+<li><strong>અસ્ત્ર Mk-1:</strong> ભારતની પ્રથમ સ્વદેશી BVR (Beyond Visual Range) એર-ટુ-એર મિસાઈલ – સુખોઈ-30 અને તેજસ પર તૈનાત</li>
+<li><strong>પ્રોજેક્ટ 15B:</strong> 4 સ્ટીલ્થ ગાઈડેડ-મિસાઈલ ડિસ્ટ્રોયર (INS વિશાખાપટ્ટનમ, INS મોરમુગાવ, INS ઈમ્ફાલ, INS સુરત)</li>
+<li><strong>ક્વોન્ટમ કી ડિસ્ટ્રિબ્યુશન (QKD) સિસ્ટમ</strong> – DRDO દ્વારા સફળ મિલિટરી ફિલ્ડ ટ્રાયલ (સ્ટ્રેટેજિક કોમ્યુનિકેશન સુરક્ષા માટે)</li>
+<li>ભારત-ફ્રાન્સ સંરક્ષણ સહયોગ કરાર 10 વર્ષ માટે નવીનીકૃત (ફેબ્રુઆરી 2026) – Joint Advanced Technology Development Group ની સ્થાપના</li>
+<li>FY 2025-26માં ભારતનું સંરક્ષણ ઉત્પાદન <strong>₹1.78 લાખ કરોડ</strong>ના વિક્રમી સ્તરે પહોંચ્યું</li>
+</ul>
+`,
+          },
+          {
+            t: "ક્રિકેટ",
+            en: "રમતગમત",
+            art: "2 નવેમ્બર 2025",
+            body: `
+<ul>
+<li><strong>ICC મહિલા ODI વર્લ્ડ કપ 2025:</strong> ભારતે (30 સપ્ટેમ્બર – 2 નવેમ્બર 2025, DY પાટીલ સ્ટેડિયમ, નવી મુંબઈ ખાતે) દક્ષિણ આફ્રિકાને 52 રનથી હરાવી <strong>પ્રથમ વખત વર્લ્ડ કપ ટાઈટલ</strong> જીત્યું</li>
+<li>– કેપ્ટન: હરમનપ્રીત કૌર</li>
+<li>– પ્લેયર ઓફ ધ મેચ (ફાઈનલ): શેફાલી વર્મા</li>
+<li>– પ્લેયર ઓફ ધ સિરીઝ: દીપ્તિ શર્મા (સૌથી વધુ 22 વિકેટ)</li>
+<li>– સૌથી વધુ રન: લૌરા વોલ્વાર્ડ (દ.આફ્રિકા, 571 રન)</li>
+<li><strong>ICC ચેમ્પિયન્સ ટ્રોફી 2025:</strong> ભારતીય પુરુષ ટીમે ટાઈટલ જીત્યું (ફેબ્રુઆરી-માર્ચ 2025, દુબઈ)</li>
+<li><strong>એશિયા કપ ક્રિકેટ:</strong> ભારત અણનમ રહી ચેમ્પિયન બન્યું</li>
+<li><strong>IPL 2026:</strong> માર્ચ-મે 2026 દરમિયાન યોજાયું</li>
+<li><strong>ICC પુરુષ T20 વર્લ્ડ કપ 2026:</strong> ભારતમાં ફેબ્રુઆરી-માર્ચ 2026માં યોજાયો, સૂર્યકુમાર યાદવની કપ્તાનીમાં ટાઈટલ ડિફેન્ડ કરવાનો પ્રયાસ</li>
+<li><strong>વૈભવ સૂર્યવંશી:</strong> IPLના સૌથી નાની ઉંમરના (14 વર્ષ) ડેબ્યુ કરનાર ખેલાડી, સૌથી ઝડપી સદી (35 બોલ) ફટકારનાર ભારતીય</li>
+</ul>
+`,
+          },
+          {
+            t: "હોકી",
+            en: "રમતગમત",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li><strong>હોકી એશિયા કપ 2025 (રાજગીર, બિહાર):</strong> ભારતે 8 વર્ષ પછી ટાઈટલ જીતી FIH હોકી વર્લ્ડ કપ 2026 (નેધરલેન્ડ-બેલ્જિયમ) માટે ક્વોલિફાય કર્યું</li>
+<li>– પ્લેયર ઓફ ધ ટુર્નામેન્ટ: અભિષેક નૈન</li>
+<li><strong>સલીમા ટેટે</strong> ને 2025 એશિયા કપ માટે મહિલા હોકી ટીમની કેપ્ટન તરીકે જાળવી રખાયા</li>
+</ul>
+`,
+          },
+          {
+            t: "અન્ય રમતો",
+            en: "રમતગમત",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li><strong>ખો-ખો વર્લ્ડ કપ 2025 (નવી દિલ્હી):</strong> પ્રથમ વખતનું આયોજન – ભારતે પુરુષ અને મહિલા બંને વિભાગમાં નેપાળને હરાવી ટાઈટલ જીત્યા</li>
+<li><strong>ડેફલિમ્પિક્સ 2025 (ટોકિયો):</strong> ભારતે 10મી એર રાઈફલ મિક્સ્ડમાં ગોલ્ડ મેડલ જીત્યો (ધનુષ શ્રીકાંત અને મહિત સંધુ)</li>
+<li><strong>વર્લ્ડ બોક્સિંગ કપ 2025:</strong> ભારત તમામ 20 કેટેગરીમાં સેમિફાઈનલમાં પહોંચ્યું</li>
+<li><strong>ખેલો ઈન્ડિયા વોટર સ્પોર્ટ્સ ફેસ્ટિવલ (KIWSF) 2025:</strong> પ્રથમ વખત ડલ લેક, જમ્મુ-કાશ્મીર ખાતે યોજાયો – 400+ ખેલાડીઓ, 36 રાજ્યો/કેન્દ્રશાસિત પ્રદેશો ભાગ લીધો</li>
+<li><strong>U20 વર્લ્ડ રેસલિંગ ચેમ્પિયનશિપ 2025 (બલ્ગેરિયા):</strong> ભારતની રીના અને પ્રિયા મલિકે સિલ્વર મેડલ જીત્યા</li>
+<li><strong>નીરજ ચોપરા:</strong> 90 મીટર જેવલિન થ્રો સિદ્ધ કરી ઇતિહાસ રચ્યો</li>
+<li><strong>દિવ્યા દેશમુખ:</strong> FIDE મહિલા વર્લ્ડ કપ (ચેસ) જીતનાર પ્રથમ ભારતીય મહિલા, ગ્રાન્ડમાસ્ટર બન્યા</li>
+<li><strong>રાષ્ટ્રમંડળ રમતો (CWG) 2026 (ગ્લાસગો):</strong> તેજસ્વિન શંકરે ડેકાથલોનમાં બ્રોન્ઝ (ડેકાથલોનમાં ભારતનો પ્રથમ CWG મેડલ), નરેન્દર બેરવાલે 90kg બોક્સિંગમાં સિલ્વર</li>
+</ul>
+`,
+          },
+          {
+            t: "રાષ્ટ્રીય રમત પુરસ્કારો 2025 (જાહેરાત: 18 ઓગસ્ટ 2026)",
+            en: "રમતગમત",
+            art: "જાન્યુઆરી 2025",
+            body: `
+<ul>
+<li><strong>મેજર ધ્યાનચંદ ખેલ રત્ન 2025:</strong> આ વર્ષે <strong>કોઈને એનાયત નહીં</strong> – 1991-92માં પુરસ્કારની સ્થાપના પછી ત્રીજી વખત આવું બન્યું</li>
+<li><strong>અર્જુન એવોર્ડ 2025:</strong> 17 ખેલાડીઓને એનાયત – તેજસ્વિન શંકર, પ્રિયંકા ગોસ્વામી (એથ્લેટિક્સ), ગાયત્રી ગોપીચંદ અને ત્રીસા જોલી (બેડમિન્ટન), નરેન્દર બેરવાલ (બોક્સિંગ), વિદિત ગુજરાતી અને દિવ્યા દેશમુખ (ચેસ), ધનુષ શ્રીકાંત (ડેફ શૂટિંગ) સહિત</li>
+<li><strong>અર્જુન એવોર્ડ (લાઈફટાઈમ):</strong> આઈ. અરુમાઈનાયગમ (ફૂટબોલ) – 1962 એશિયન ગેમ્સ ગોલ્ડ મેડલ વિજેતા ટીમના સભ્ય</li>
+<li>પસંદગી સમિતિના અધ્યક્ષ: ન્યાયમૂર્તિ (નિવૃત્ત) અરુણ કુમાર મિશ્રા</li>
+<li>(સંદર્ભ: 2024ના પુરસ્કારો જાન્યુઆરી 2025માં એનાયત થયા હતા – ગુકેશ D, મનુ ભાકર, હરમનપ્રીત સિંઘ, પ્રવીણ કુમારને ખેલ રત્ન મળ્યો હતો)</li>
+</ul>
+`,
+          },
+          {
+            t: "પદ્મ પુરસ્કારો 2026",
+            en: "પુરસ્કારો અને સન્માનો",
+            art: "26 જાન્યુઆરી 2026",
+            body: `
+<ul>
+<li>77મા ગણતંત્ર દિવસ (26 જાન્યુઆરી 2026) ની પૂર્વસંધ્યાએ <strong>131 પદ્મ પુરસ્કારો</strong> જાહેર</li>
+<li>– <strong>5 પદ્મ વિભૂષણ, 13 પદ્મ ભૂષણ, 113 પદ્મ શ્રી</strong></li>
+<li>– 19 મહિલા વિજેતાઓ, 16 મરણોપરાંત પુરસ્કારો</li>
+<li>– <strong>સ્વ. ધર્મેન્દ્ર સિંઘ દેઓલ</strong> (અભિનેતા) – પદ્મ વિભૂષણ (મરણોપરાંત), કલા ક્ષેત્રે</li>
+<li>– <strong>સ્વ. V.S. અચ્યુતાનંદન</strong> (કેરળના પૂર્વ મુખ્યમંત્રી) – પદ્મ વિભૂષણ (મરણોપરાંત)</li>
+<li>– K.T. થોમસ (કેરળ) – જાહેર બાબતો, N. રાજમ (ઉત્તર પ્રદેશ) – કલા, P. નારાયણન (કેરળ) – સાહિત્ય</li>
+<li>– પંડિરામ માંડવી – લોકકલા ક્ષેત્રે પદ્મ શ્રી</li>
+<li><strong>પદ્મ પુરસ્કાર 2025 (68/69 વ્યક્તિઓ, બીજી સિવિલ ઈન્વેસ્ટિચર સેરેમની):</strong> પૂર્વ CJI જગદીશ સિંઘ ખેહર અને કુમુદિની રજનીકાંત લાખિયાને પદ્મ વિભૂષણ (જાહેર બાબતો/કલા); લોકગાયિકા શારદા સિન્હાને પદ્મ વિભૂષણ (મરણોપરાંત); અર્થશાસ્ત્રી બિબેક દેબરોયને પદ્મ ભૂષણ (મરણોપરાંત)</li>
+<li>પદ્મ પુરસ્કારોની સ્થાપના: <strong>1954</strong>માં થઈ; દર વર્ષે ગણતંત્ર દિવસ નિમિત્તે જાહેર થાય છે</li>
+<li><strong>પદ્મ પુરસ્કાર 2027</strong> માટે નામાંકન 15 માર્ચ 2026થી શરૂ, છેલ્લી તારીખ 31 જુલાઈ 2026</li>
+</ul>
+`,
+          },
+          {
+            t: "અન્ય મહત્વના પુરસ્કારો",
+            en: "પુરસ્કારો અને સન્માનો",
+            art: "ડિસેમ્બર 2025",
+            body: `
+<ul>
+<li><strong>બુકર પ્રાઈઝ 2025:</strong> David Szalay – નવલકથા 'Flesh' માટે</li>
+<li><strong>ટર્નર પ્રાઈઝ (કલા, ડિસેમ્બર 2025):</strong> નૈના કાલૂ (દિવ્યાંગ કલાકાર, શિલ્પ અને ચિત્રકામ માટે)</li>
+<li><strong>ગેલેન્ટ્રી એવોર્ડ્સ:</strong> કુલ 125 (121 પોલીસને, 4 ફાયરફાઈટર્સને) – જમ્મુ-કાશ્મીર પોલીસને સૌથી વધુ (33) એવોર્ડ</li>
+<li><strong>સ્ટોકહોમ વોટર પ્રાઈઝ 2026 ("પાણીનું નોબેલ પ્રાઈઝ"):</strong> કાવેહ મદાની</li>
+<li><strong>મિસ યુનિવર્સ 2025:</strong> ફાતિમા બોશ (મેક્સિકો)</li>
+</ul>
+`,
+          },
+          {
+            t: "મહત્વના સમિટ અને પરિષદો",
+            en: "આંતરરાષ્ટ્રીય કરંટ અફેર્સ",
+            art: "23 નવેમ્બર 2025",
+            body: `
+<ul>
+<li><strong>G20 સમિટ 2025:</strong> જોહાનિસબર્ગ, દક્ષિણ આફ્રિકા (22-23 નવેમ્બર 2025) – આફ્રિકા ખંડમાં યોજાયેલો પ્રથમ G20 સમિટ; અધ્યક્ષ: સિરિલ રામાફોસા; અમેરિકાનો બહિષ્કાર છતાં 122-પેરેગ્રાફની ઘોષણા સર્વસંમતિથી પસાર</li>
+<li><strong>G20 સમિટ 2026:</strong> યજમાન દેશ – <strong>અમેરિકા</strong></li>
+<li><strong>BRICS સમિટ 2026:</strong> યજમાન દેશ – <strong>ભારત</strong></li>
+<li><strong>AI ઈમ્પેક્ટ સમિટ 2026:</strong> નવી દિલ્હી, ભારત ખાતે યોજાયો</li>
+<li><strong>SCO સમિટ 2026:</strong> યજમાન દેશ – કિર્ગિસ્તાન</li>
+<li><strong>ASEAN સમિટ 2026:</strong> યજમાન દેશ – ફિલિપાઈન્સ</li>
+<li><strong>COP30:</strong> બ્રાઝિલ ખાતે યોજાયો (આબોહવા પરિવર્તન અંગે)</li>
+<li><strong>Raisina મિડલ ઈસ્ટ કોન્ફરન્સ:</strong> 28-29 જાન્યુઆરી 2025, અબુ ધાબી, UAE</li>
+<li><strong>G7 સમિટ:</strong> કેનેડા દ્વારા 51મી બેઠકનું આયોજન</li>
+<li><strong>Pax Silica પહેલ:</strong> અમેરિકાની આગેવાનીમાં ક્રિટિકલ મિનરલ્સ, સેમિકન્ડક્ટર અને AI ટેકનોલોજી માટે વૈશ્વિક સપ્લાય ચેઈન પહેલ – ભારત ફેબ્રુઆરી 2026માં AI ઈમ્પેક્ટ સમિટમાં જોડાયું</li>
+</ul>
+`,
+          },
+          {
+            t: "નોબેલ પુરસ્કાર 2025 (નોંધ: 2026ના પુરસ્કારો ઓક્ટોબરમાં જાહેર થશે)",
+            en: "આંતરરાષ્ટ્રીય કરંટ અફેર્સ",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>નોબેલ પુરસ્કારો દર વર્ષે ઓક્ટોબરમાં જાહેર થાય છે અને 10 ડિસેમ્બરે (આલ્ફ્રેડ નોબેલની પુણ્યતિથિ) એનાયત થાય છે</li>
+<li>વિવિધ કેટેગરી: ભૌતિકશાસ્ત્ર, રસાયણશાસ્ત્ર, દવા/ફિઝિયોલોજી, સાહિત્ય, શાંતિ, અર્થશાસ્ત્ર</li>
+</ul>
+`,
+          },
+          {
+            t: "કેન્દ્ર સરકારની મુખ્ય યોજનાઓ (2025-26)",
+            en: "સરકારી યોજનાઓ",
+            art: "₹1 લાખ કરોડ",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>યોજના</th><th>વિગત</th></tr>
+<tr><td><strong>Next-Gen GST સુધારા</strong></td><td>GST દરોમાં ઘટાડો (12%→5%) – સપ્ટેમ્બર 2025</td></tr>
+<tr><td><strong>PM વિશ્વકર્મા યોજના</strong></td><td>પરંપરાગત કારીગરો માટે – 2જી વર્ષગાંઠ સપ્ટેમ્બર 2025માં ઉજવાઈ</td></tr>
+<tr><td><strong>સંશોધન વિકાસ અને નવીનીકરણ (RDI) સ્કીમ ફંડ</strong></td><td>₹1 લાખ કરોડનું ભંડોળ – ખાનગી ક્ષેત્ર સંચાલિત R&amp;D ને પ્રોત્સાહન (નવેમ્બર 2025)</td></tr>
+<tr><td><strong>ભારત સેમિકન્ડક્ટર મિશન (ISM) 2.0</strong></td><td>10+ પ્રોજેક્ટ મંજૂર – સાણંદથી નોઈડા અને આસામ સુધી પાન-ઈન્ડિયા ઈકોસિસ્ટમ</td></tr>
+<tr><td><strong>Kilkari (કિલકારી)</strong></td><td>મોબાઈલ હેલ્થ પહેલ – મહારાષ્ટ્ર અને ગુજરાતમાં વિસ્તૃત</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ગુજરાત સરકારની મુખ્ય યોજનાઓ (2025-26)",
+            en: "સરકારી યોજનાઓ",
+            art: "25 ડિસેમ્બર 2025",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>યોજના</th><th>વિગત</th></tr>
+<tr><td><strong>કરમાયોગી સ્વાસ્થ્ય સુરક્ષા યોજના</strong></td><td>22 સપ્ટે 2025 – સરકારી કર્મચારીઓ/પેન્શનર્સ માટે ₹10 લાખ સુધીની કેશલેસ સારવાર</td></tr>
+<tr><td><strong>ઈન્ટિગ્રેટેડ રિન્યુએબલ એનર્જી પોલિસી 2025</strong></td><td>25 ડિસેમ્બર 2025 (ગુડ ગવર્નન્સ ડે) – ક્લિન એનર્જી, બેટરી સ્ટોરેજ માટે</td></tr>
+<tr><td><strong>NAMO E-Tablet યોજના</strong></td><td>વિદ્યાર્થીઓ માટે ₹1,000માં Acer/Lenovo ટેબ્લેટ</td></tr>
+<tr><td><strong>લેપટોપ સહાય યોજના</strong></td><td>ડિજિટલ શિક્ષણ પ્રોત્સાહન માટે</td></tr>
+<tr><td><strong>AI Action Plan 2025-2030</strong></td><td>ગુજરાત AI પોલિસી અપનાવનાર દેશના પ્રથમ રાજ્યોમાં</td></tr>
+<tr><td><strong>STI પોલિસી 2026-31</strong></td><td>વિજ્ઞાન-ટેકનોલોજી-ઈનોવેશન નીતિ</td></tr>
+<tr><td><strong>સેમિકન્ડક્ટર પોલિસી (2022-2027)</strong></td><td>દેશની પ્રથમ રાજ્ય સેમિકન્ડક્ટર નીતિ</td></tr>
+<tr><td><strong>સુગમ ડિજિટલ ગુજરાત પોર્ટલ</strong></td><td>20 સેવાઓ ઓનલાઈન</td></tr>
+<tr><td><strong>મુખ્યમંત્રી પૌષ્ટિક આલ્પાહાર યોજના</strong></td><td>ડિસેમ્બર 2024થી – 41 લાખ વિદ્યાર્થીઓ લાભાર્થી</td></tr>
+<tr><td><strong>GCC અને ડેટા સેન્ટર પોલિસી</strong></td><td>હાયપરસ્કેલ ડેટા સેન્ટર માટે</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "રાષ્ટ્રીય મહત્વના દિવસો",
+            en: "મહત્વના દિવસો",
+            art: "ડિસેમ્બર 2014",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>26 જાન્યુઆરી</td><td>ગણતંત્ર દિવસ (બંધારણ અમલમાં આવ્યું – 1950)</td></tr>
+<tr><td>28 ફેબ્રુઆરી</td><td>રાષ્ટ્રીય વિજ્ઞાન દિવસ (C.V. રામનની 1928ની રમન ઈફેક્ટ શોધ)</td></tr>
+<tr><td>1 મે</td><td>ગુજરાત સ્થાપના દિવસ / મહારાષ્ટ્ર દિવસ</td></tr>
+<tr><td>21 જૂન</td><td>આંતરરાષ્ટ્રીય યોગ દિવસ (PM મોદી દ્વારા સૂચિત, UN દ્વારા ડિસેમ્બર 2014માં જાહેર, પ્રથમ ઉજવણી 2015)</td></tr>
+<tr><td>15 ઓગસ્ટ</td><td>સ્વતંત્રતા દિવસ</td></tr>
+<tr><td>29 ઓગસ્ટ</td><td>રાષ્ટ્રીય રમત દિવસ (મેજર ધ્યાનચંદની જન્મજયંતિ)</td></tr>
+<tr><td>2 ઓક્ટોબર</td><td>ગાંધી જયંતિ / આંતરરાષ્ટ્રીય અહિંસા દિવસ (UN દ્વારા 2007માં જાહેર)</td></tr>
+<tr><td>31 ઓક્ટોબર</td><td>રાષ્ટ્રીય એકતા દિવસ (સરદાર પટેલની જન્મજયંતિ, 2014થી શરૂ)</td></tr>
+<tr><td>26 નવેમ્બર</td><td>બંધારણ દિવસ (બંધારણ સ્વીકારાયું – 1949)</td></tr>
+<tr><td>25 ડિસેમ્બર</td><td>ગુડ ગવર્નન્સ ડે (અટલ બિહારી વાજપેયીની જન્મજયંતિ)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "આંતરરાષ્ટ્રીય મહત્વના દિવસો",
+            en: "મહત્વના દિવસો",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>24 માર્ચ</td><td>વિશ્વ ક્ષય રોગ (ટીબી) દિવસ – 1882માં રોબર્ટ કોચે બેક્ટેરિયાની શોધ કરી</td></tr>
+<tr><td>7 એપ્રિલ</td><td>વિશ્વ આરોગ્ય દિવસ</td></tr>
+<tr><td>5 જૂન</td><td>વિશ્વ પર્યાવરણ દિવસ</td></tr>
+<tr><td>8 સપ્ટેમ્બર</td><td>વિશ્વ સાક્ષરતા દિવસ</td></tr>
+<tr><td>10 ડિસેમ્બર</td><td>વિશ્વ માનવ અધિકાર દિવસ</td></tr>
+<tr><td>22 માર્ચ</td><td>વિશ્વ જળ દિવસ</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "પુસ્તકો અને લેખકો",
+            en: "વિષયવાર સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li><strong>બુકર પ્રાઈઝ 2025:</strong> 'Flesh' – David Szalay</li>
+<li>પરીક્ષામાં પુસ્તકો-લેખકોના પ્રશ્નો સામાન્ય રીતે તાજેતરમાં પ્રકાશિત/પુરસ્કૃત પુસ્તકો પર આધારિત હોય છે – તાજા સમાચારો પર નજર રાખવી જરૂરી</li>
+</ul>
+`,
+          },
+          {
+            t: "મહત્વની સંસ્થાઓ અને હોદ્દેદારો",
+            en: "વિષયવાર સંદર્ભ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>સંસ્થા/હોદ્દો</th><th>વર્તમાન વડા/વ્યક્તિ</th></tr>
+<tr><td>DRDO અધ્યક્ષ</td><td>ડૉ. સમીર વી. કામત</td></tr>
+<tr><td>RBI ગવર્નર</td><td>સંજય મલ્હોત્રા</td></tr>
+<tr><td>RBI ડેપ્યુટી ગવર્નર</td><td>પૂનમ ગુપ્તા</td></tr>
+<tr><td>મુખ્ય ચૂંટણી કમિશનર</td><td>જ્ઞાનેશ કુમાર</td></tr>
+<tr><td>BSF DG</td><td>પ્રવીણ કુમાર</td></tr>
+<tr><td>ગુજરાત BJP પ્રમુખ</td><td>જગદીશ વિશ્વકર્મા</td></tr>
+<tr><td>ગુજરાત મુખ્ય સચિવ</td><td>મનોજ કુમાર દાસ</td></tr>
+<tr><td>કો-કો ફેડરેશન ઓફ ઈન્ડિયા (KKFI) પ્રમુખ</td><td>સુધાંશુ મિત્તલ (પુનઃચૂંટાયા)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "રિવિઝન વન-લાઈનર ક્વિક ફેક્ટ્સ",
+            en: "વિષયવાર સંદર્ભ",
+            art: "17 ઓક્ટોબર 2025",
+            body: `
+<p>✅ ગુજરાતના નાયબ મુખ્યમંત્રી હર્ષ સંઘવી – 17 ઓક્ટોબર 2025થી, ગુજરાતના સૌથી નાની ઉંમરના DyCM ✅ ગુજરાત BJP પ્રમુખ જગદીશ વિશ્વકર્મા – 4 ઓક્ટોબર 2025થી ✅ ગુજરાત બજેટ 2026-27 – ₹4,08,053 કરોડ (અત્યાર સુધીનું સૌથી મોટું) ✅ ગુજરાત 66મો સ્થાપના દિવસ – 1 મે 2026 ✅ ભારતીય મહિલા ક્રિકેટ ટીમે પ્રથમ વખત ICC વર્લ્ડ કપ જીત્યો – 2 નવેમ્બર 2025 ✅ મેજર ધ્યાનચંદ ખેલ રત્ન 2025 – કોઈને એનાયત નહીં (ત્રીજી વખત) ✅ પદ્મ પુરસ્કાર 2026 – કુલ 131 (5 વિભૂષણ + 13 ભૂષણ + 113 શ્રી) ✅ RBI ગવર્નર – સંજય મલ્હોત્રા (26મા ગવર્નર) ✅ ઓપરેશન સિંદૂર – એપ્રિલ-મે 2025, પહલગામ હુમલા બાદ ✅ GST સુધારા – સપ્ટેમ્બર 2025, દરો 12%થી ઘટાડી 5% કરાયા ✅ G20 સમિટ 2025 – જોહાનિસબર્ગ, દક્ષિણ આફ્રિકા (પ્રથમ વખત આફ્રિકામાં) ✅ G20 સમિટ 2026 યજમાન – અમેરિકા; BRICS સમિટ 2026 યજમાન – ભારત ✅ Micron સેમિકન્ડક્ટર પ્લાન્ટ ઉદ્ઘાટન – સાણંદ, 28 ફેબ્રુઆરી 2026 ✅ Kusha મિસાઈલ સફળ પરીક્ષણ – 23 જુલાઈ 2026 ✅ મિશન દિવ્યાસ્ત્ર – અગ્નિ-5 MIRV ટેકનોલોજી ટેસ્ટ ✅ શુભાંશુ શુક્લા – ISS પહોંચનાર પ્રથમ ભારતીય (જૂન 2025) ✅ ખો-ખો વર્લ્ડ કપ 2025 – નવી દિલ્હી, ભારત બંને વિભાગમાં ચેમ્પિયન ✅ હોકી એશિયા કપ 2025 – ભારત 8 વર્ષ પછી ચેમ્પિયન</p>
+`,
+          },
+        ],
+      },
+      {
+        cat: "ગુજરાત કરંટ અફેર્સ — હાઇ પ્રાયોરિટી",
+        items: [
+          {
+            t: "Coverage: ફેબ્રુઆરી 2026 – ઓગસ્ટ 2026",
+            en: "GPSC / GSSSB / Gujarat Police Wireless PSI 2025-26 / Talati / Clerk માટે",
+            art: "મહત્વનું",
+            body: `
+<div class="note"><strong>નોંધ:</strong> આ Part 1 છે. National + International, Wireless/Tech/Defence-specific, અને Top-100 condensed revision — આ ત્રણેય આગળના ભાગોમાં અલગથી આવશે.</div>
+`,
+          },
+          {
+            t: "વિકસિત ગુજરાત ઔદ્યોગિક નીતિ-2026 (Viksit Gujarat Industrial Policy 2026)",
+            en: "ગુજરાત સંદર્ભ",
+            art: "15 જૂન 2026",
+            body: `
+<p><strong>📅 તારીખ:</strong> 15 જૂન 2026 (અમલ: 1 જૂન 2026થી)<br><strong>📍 સ્થળ:</strong> મહાત્મા મંદિર, ગાંધીનગર<br><strong>🏛️ સંબંધિત વિભાગ:</strong> ઉદ્યોગ અને ખાણ વિભાગ, ગુજરાત સરકાર</p>
+<p><strong>શું થયું?</strong> મુખ્યમંત્રી ભૂપેન્દ્ર પટેલ અને નાયબ મુખ્યમંત્રી હર્ષ સંઘવીની હાજરીમાં ગુજરાતની નવી ઔદ્યોગિક નીતિ-2026 જાહેર થઈ. આ નીતિ 5 વર્ષ (1 જૂન 2026 થી 31 મે 2031) માટે અમલમાં રહેશે અને અગાઉની Industrial Policy 2022નું સ્થાન લેશે.</p>
+<span class="sub">મુખ્ય મુદ્દા:</span>
+<ul>
+<li>વિઝન: "વિકસિત ગુજરાત સે વિકસિત ભારત @2047"</li>
+<li><strong>21 થ્રસ્ટ સેક્ટર</strong> નક્કી કરાયા — ગ્રીન હાઇડ્રોજન, સેમિકન્ડક્ટર, રોબોટિક્સ, ડ્રોન, ઇલેક્ટ્રિક મોબિલિટી, એરોસ્પેસ, ફૂટવેર, ટોય મેન્યુફેક્ચરિંગ, સ્પોર્ટ્સ ઇક્વિપમેન્ટ સહિત</li>
+<li>MSME, મહિલા ઉદ્યોગસાહસિકો, સ્ટાર્ટઅપ્સ અને R&amp;D માટે વિશેષ પેકેજ</li>
+<li>ઓછા વિકસિત વિસ્તારો માટે વધારાની સહાય (balanced regional development)</li>
+<li><strong>Project T.H.R.I.V.E.</strong> — શહેરી વિસ્તારોમાંથી ઔદ્યોગિક એકમોના સ્થળાંતર માટે પ્રોત્સાહન યોજના</li>
+<li>ચાર મુખ્ય સ્તંભ: Investment &amp; Manufacturing, Innovation &amp; Research, Skill Development, Sustainability</li>
+</ul>
+<span class="sub">📊 મહત્વપૂર્ણ આંકડા:</span>
+<ul>
+<li>5 વર્ષમાં <strong>₹10 લાખ કરોડ</strong> રોકાણનું લક્ષ્ય</li>
+<li>પ્રોત્સાહનો: સેક્ટર પ્રમાણે <strong>15% થી 45-50%</strong> સુધી</li>
+<li>લક્ષ્ય: 2047 સુધીમાં ગુજરાતને <strong>US$ 3.5 ટ્રિલિયન અર્થતંત્ર</strong> બનાવવું (14-15% CAGR 2030 સુધી, પછી 12-13%)</li>
+<li>ડિસેમ્બર 2025 સુધીમાં ગુજરાતે <strong>USD 60.6 બિલિયન FDI</strong> આકર્ષ્યું</li>
+<li>ગુજરાત હાલમાં ભારતના GDPમાં આશરે <strong>8.2%</strong> ફાળો આપે છે</li>
+</ul>
+<p><strong>🔄 Previous vs Latest:</strong> જૂની Industrial Policy 2022 → નવી Viksit Gujarat Industrial Policy 2026 (અપગ્રેડેડ સબસિડી, નવા investment threshold, નવી કેટેગરી)</p>
+<p><strong>🎯 પરીક્ષા માટે મહત્વ:</strong> નીતિનું નામ, જાહેરાત તારીખ/સ્થળ, થ્રસ્ટ સેક્ટરની સંખ્યા (21), રોકાણ લક્ષ્ય (₹10 લાખ કરોડ), અને 2047 લક્ષ્ય ($3.5 ટ્રિલિયન) — આ સીધા MCQ બની શકે છે.</p>
+<span class="sub">⭐ MUST REMEMBER:</span>
+<ul>
+<li>નામ: Viksit Gujarat Industrial Policy 2026</li>
+<li>જાહેરાત: 15 જૂન 2026, મહાત્મા મંદિર, ગાંધીનગર</li>
+<li>અમલ ગાળો: 1 જૂન 2026 – 31 મે 2031 (5 વર્ષ)</li>
+<li>21 થ્રસ્ટ સેક્ટર</li>
+<li>₹10 લાખ કરોડ રોકાણ લક્ષ્ય</li>
+<li>$3.5 ટ્રિલિયન ઇકોનોમી લક્ષ્ય (2047)</li>
+</ul>
+<span class="sub">📝 Possible MCQ Facts:</span>
+<ul>
+<li>ગુજરાતની નવી ઔદ્યોગિક નીતિ કેટલા વર્ષ માટે છે? → 5 વર્ષ</li>
+<li>કેટલા થ્રસ્ટ સેક્ટર નક્કી કરાયા? → 21</li>
+<li>Project T.H.R.I.V.E. શેના માટે છે? → ઔદ્યોગિક એકમોના સ્થળાંતર માટે પ્રોત્સાહન</li>
+</ul>
+`,
+          },
+          {
+            t: "ગુજરાત બજેટ 2026-27",
+            en: "ગુજરાત સંદર્ભ",
+            art: "18 ફેબ્રુઆરી 2026",
+            body: `
+<p><strong>📅 તારીખ:</strong> 18 ફેબ્રુઆરી 2026 (Budget Session શરૂઆત: 16 ફેબ્રુઆરી 2026)<br><strong>📍 સ્થળ:</strong> ગુજરાત વિધાનસભા, ગાંધીનગર<br><strong>🏛️ સંબંધિત મંત્રાલય:</strong> નાણાં વિભાગ (નાણામંત્રી કનુભાઈ દેસાઈ)</p>
+<p><strong>શું થયું?</strong> નાણામંત્રી કનુભાઈ દેસાઈએ ગુજરાત વિધાનસભામાં વર્ષ 2026-27 માટે ₹4.08 લાખ કરોડનું અંદાજપત્ર (Budget) રજૂ કર્યું, જે "વિકસિત ગુજરાત @2047"ના વિઝન હેઠળ તૈયાર થયું છે. બજેટ સત્રની શરૂઆત રાજ્યપાલ આચાર્ય દેવવ્રતના અભિભાષણથી થઈ હતી.</p>
+<span class="sub">મુખ્ય મુદ્દા:</span>
+<ul>
+<li>વિદ્યાર્થી કલ્યાણ માટે સ્કોલરશીપ મર્યાદામાં મોટો વધારો</li>
+<li><strong>₹50,000 કરોડનું ડેવલપમેન્ટ ફંડ</strong> ઊભું કરાયું</li>
+<li><strong>2030 કોમનવેલ્થ ગેમ્સ</strong> (અમદાવાદ) માટે તૈયારી અને ટુરિઝમ પ્રમોશન માટે જોગવાઈ</li>
+<li>કુલ બજેટ ખર્ચમાં ગત વર્ષ કરતાં <strong>10.2%નો વધારો</strong></li>
+<li>ટેક્સ દરો યથાવત્, ઇલેક્ટ્રિક વાહનો પર 5% ટેક્સ રિબેટ ચાલુ રખાયો</li>
+<li>રાજ્યપાલે જણાવ્યું કે ધોલેરા અને સાણંદમાં સેમિકન્ડક્ટર પ્રોજેક્ટ્સમાં ₹1.24 લાખ કરોડથી વધુ રોકાણ થયું છે</li>
+<li>કુદરતી આપત્તિથી અસરગ્રસ્ત ખેડૂતો માટે ₹11,000 કરોડનું રાહત પેકેજ (વિક્રમી)</li>
+</ul>
+<span class="sub">📊 મહત્વપૂર્ણ આંકડા:</span>
+<ul>
+<li>કુલ બજેટ: <strong>₹4.08 લાખ કરોડ</strong></li>
+<li>અંદાજિત સરપ્લસ: <strong>₹974 કરોડ</strong></li>
+<li>ડેવલપમેન્ટ ફંડ: <strong>₹50,000 કરોડ</strong></li>
+<li>ખેડૂત રાહત પેકેજ: <strong>₹11,000 કરોડ</strong></li>
+<li>સેમિકન્ડક્ટર રોકાણ (ધોલેરા-સાણંદ): <strong>₹1.24 લાખ કરોડ+</strong></li>
+</ul>
+<p><strong>🎯 પરીક્ષા માટે મહત્વ:</strong> બજેટનું કુલ કદ, નાણામંત્રીનું નામ, ડેવલપમેન્ટ ફંડની રકમ — ડાયરેક્ટ પ્રશ્નો બની શકે.</p>
+<span class="sub">⭐ MUST REMEMBER:</span>
+<ul>
+<li>બજેટ: ₹4.08 લાખ કરોડ (2026-27)</li>
+<li>નાણામંત્રી: કનુભાઈ દેસાઈ</li>
+<li>વિઝન: વિકસિત ગુજરાત @2047</li>
+<li>સરપ્લસ બજેટ: ₹974 કરોડ</li>
+</ul>
+`,
+          },
+          {
+            t: "ગુજરાત સ્થાનિક સ્વરાજ્યની ચૂંટણીઓ 2026",
+            en: "ગુજરાત સંદર્ભ",
+            art: "26 એપ્રિલ 2026",
+            body: `
+<p><strong>📅 તારીખ:</strong> 26 એપ્રિલ 2026<br><strong>📍 સ્થળ:</strong> સમગ્ર ગુજરાત<br><strong>🏛️ સંબંધિત સંસ્થા:</strong> રાજ્ય ચૂંટણી પંચ, ગુજરાત</p>
+<p><strong>શું થયું?</strong> 15 મહાનગરપાલિકા, 84 નગરપાલિકા, 34 જિલ્લા પંચાયત અને 260 તાલુકા પંચાયતો માટે ચૂંટણી યોજાઈ (ગાંધીનગર મહાનગરપાલિકાની ચૂંટણી અલગથી પાછળથી યોજાઈ). આમાંથી 9 મહાનગરપાલિકાઓમાં પ્રથમ વખત ચૂંટણી યોજાઈ. ભાજપે તમામ 15 મહાનગરપાલિકા સહિત મોટાભાગની નગરપાલિકા, જિલ્લા પંચાયત અને તાલુકા પંચાયતોમાં ભવ્ય વિજય મેળવ્યો — આ 2027ની વિધાનસભા ચૂંટણી પહેલાં મહત્વનું છે.</p>
+<span class="sub">⭐ MUST REMEMBER:</span>
+<ul>
+<li>તારીખ: 26 એપ્રિલ 2026</li>
+<li>15 મહાનગરપાલિકા (તમામમાં ભાજપ વિજયી)</li>
+<li>84 નગરપાલિકા, 34 જિલ્લા પંચાયત, 260 તાલુકા પંચાયત</li>
+<li>9 મહાનગરપાલિકામાં પ્રથમ વખત ચૂંટણી</li>
+</ul>
+<p><strong>🎯 પરીક્ષા માટે મહત્વ:</strong> સંખ્યાઓ (15/84/34/260) અને પરિણામ (ભાજપ ક્લીન સ્વીપ) MCQ માટે ઉપયોગી.</p>
+`,
+          },
+          {
+            t: "ગુજરાત કેબિનેટ નિર્ણયો — ચોમાસુ તૈયારી અને શાળા પ્રવેશોત્સવ 2026",
+            en: "ગુજરાત સંદર્ભ",
+            art: "25 જૂન 2026",
+            body: `
+<p><strong>📅 તારીખ:</strong> જૂન 2026 (કાર્યક્રમ: 23-25 જૂન 2026)<br><strong>📍 સ્થળ:</strong> ગાંધીનગર<br><strong>🏛️ સંબંધિત મંત્રાલય:</strong> શિક્ષણ વિભાગ, રાહત અને પુનર્વસન વિભાગ</p>
+<p><strong>શું થયું?</strong> મુખ્યમંત્રી ભૂપેન્દ્ર પટેલની અધ્યક્ષતામાં કેબિનેટ બેઠકમાં ચોમાસાની તૈયારીની સમીક્ષા કરાઈ અને રાજ્યવ્યાપી <strong>"શાળા પ્રવેશોત્સવ અને કન્યા કેળવણી મહોત્સવ-2026"</strong> ને મંજૂરી અપાઈ, જે 23થી 25 જૂન 2026 દરમિયાન યોજાયો. કેબિનેટે નવી "વિકસિત ગુજરાત ઔદ્યોગિક નીતિ 2026"ને પણ આવકારી.</p>
+<span class="sub">⭐ MUST REMEMBER:</span>
+<ul>
+<li>કાર્યક્રમ: શાળા પ્રવેશોત્સવ અને કન્યા કેળવણી મહોત્સવ-2026</li>
+<li>તારીખ: 23-25 જૂન 2026</li>
+<li>અધ્યક્ષતા: મુખ્યમંત્રી ભૂપેન્દ્ર પટેલ</li>
+</ul>
+`,
+          },
+          {
+            t: "વિદેશ અભ્યાસ લોન યોજના (Foreign Study Loan Scheme) — આવક મર્યાદામાં વધારો",
+            en: "ગુજરાત સંદર્ભ",
+            art: "₹6",
+            body: `
+<p><strong>📅 તારીખ:</strong> ઓગસ્ટ 2026<br><strong>📍 સ્થળ:</strong> ગાંધીનગર<br><strong>🏛️ સંબંધિત વિભાગ:</strong> શિક્ષણ વિભાગ, ગુજરાત સરકાર</p>
+<p><strong>શું થયું?</strong> બિનઅનામત વર્ગના વિદ્યાર્થીઓ માટે Foreign Study Loan Schemeનો લાભ મેળવવા વાર્ષિક કૌટુંબિક આવક મર્યાદા <strong>₹6 લાખથી વધારીને ₹10 લાખ</strong> કરવામાં આવી, જેથી વધુ મધ્યમ વર્ગના વિદ્યાર્થીઓ વિદેશમાં ઉચ્ચ શિક્ષણ મેળવી શકે.</p>
+<p><strong>🔄 Previous vs Latest:</strong> ₹6 લાખ → ₹10 લાખ</p>
+<p><strong>🎯 પરીક્ષા માટે મહત્વ:</strong> આવક મર્યાદાનો આંકડો (₹6 લાખ → ₹10 લાખ) સીધો MCQ પ્રશ્ન બની શકે.</p>
+`,
+          },
+          {
+            t: "અમદાવાદ-મુન્દ્રા હવાઈ જોડાણ શરૂ",
+            en: "ગુજરાત સંદર્ભ",
+            art: "17 ઓગસ્ટ 2026",
+            body: `
+<p><strong>📅 તારીખ:</strong> 17 ઓગસ્ટ 2026<br><strong>📍 સ્થળ:</strong> અમદાવાદ – મુન્દ્રા (કચ્છ)<br><strong>🏛️ સંબંધિત સંસ્થા:</strong> Star Air (Adani Airportsના સહયોગથી)</p>
+<p><strong>શું થયું?</strong> અમદાવાદ અને કચ્છના મુન્દ્રા વચ્ચે સીધી હવાઈ સેવા 17 ઓગસ્ટ 2026થી શરૂ થઈ, જે વેપાર, ઉદ્યોગ, શિક્ષણ અને સ્ટાર્ટઅપ સાથે સંકળાયેલા લોકોને ફાયદો કરાવશે અને ઝડપી કનેક્ટિવિટી પૂરી પાડશે.</p>
+<p><strong>⭐ MUST REMEMBER:</strong> સંચાલક કંપની — Star Air; ભાગીદાર — Adani Airports; તારીખ — 17 ઓગસ્ટ 2026</p>
+`,
+          },
+          {
+            t: "ગુજરાત કેબિનેટ — જમીન ફાળવણી નિર્ણયો (પાણી, ઊર્જા, પોર્ટ ઇન્ફ્રા)",
+            en: "ગુજરાત સંદર્ભ",
+            art: "19 ફેબ્રુઆરી 2026",
+            body: `
+<p><strong>📅 તારીખ:</strong> 19 ફેબ્રુઆરી 2026<br><strong>📍 સ્થળ:</strong> ગાંધીનગર</p>
+<p><strong>શું થયું?</strong> મુખ્યમંત્રી ભૂપેન્દ્ર પટેલની અધ્યક્ષતામાં કેબિનેટ બેઠકમાં પાણી પુરવઠા, ઊર્જા અને પોર્ટ ઇન્ફ્રાસ્ટ્રક્ચરને મજબૂત બનાવવા 23 જમીન ફાળવણી દરખાસ્તોને મંજૂરી અપાઈ. તેમાં ગુજરાત જળ પુરવઠા બોર્ડને 14 સ્થળોએ કુલ 1,36,291 ચોરસ મીટર જમીન ફાળવવામાં આવી.</p>
+<p><strong>⭐ MUST REMEMBER:</strong> 23 જમીન ફાળવણી દરખાસ્ત મંજૂર; 1,36,291 ચો.મી. જમીન જળ પુરવઠા બોર્ડને (14 સ્થળે)</p>
+`,
+          },
+          {
+            t: "ગુજરાત કેબિનેટ પુનર્ગઠન (પૃષ્ઠભૂમિ — મહત્વની નિમણૂકો)",
+            en: "ગુજરાત સંદર્ભ",
+            art: "17 ઓક્ટોબર 2025",
+            body: `
+<p><strong>📅 તારીખ:</strong> 17 ઓક્ટોબર 2025<br><strong>📍 સ્થળ:</strong> મહાત્મા મંદિર, ગાંધીનગર</p>
+<p><strong>શું થયું?</strong> મુખ્યમંત્રી ભૂપેન્દ્ર પટેલ સિવાય સમગ્ર મંત્રીમંડળે રાજીનામું આપ્યા બાદ મોટા પુનર્ગઠનમાં <strong>હર્ષ સંઘવીએ નાયબ મુખ્યમંત્રી</strong> તરીકે શપથ લીધા. રાજ્યપાલ આચાર્ય દેવવ્રતે 20 મંત્રીઓને શપથ લેવડાવ્યા (5 કેબિનેટ કક્ષા, 3 સ્વતંત્ર હવાલા સાથે રાજ્યકક્ષા, 12 રાજ્યકક્ષા) — કુલ મંત્રી સંખ્યા મુખ્યમંત્રી સહિત 26 થઈ, જેમાં 3 મહિલા મંત્રીઓ સામેલ.</p>
+<span class="sub">⭐ MUST REMEMBER:</span>
+<ul>
+<li>નાયબ મુખ્યમંત્રી: હર્ષ સંઘવી (17 ઓક્ટોબર 2025થી)</li>
+<li>કુલ મંત્રીઓ: 26 (CM સહિત), 3 મહિલા મંત્રી</li>
+<li>અન્ય મહત્વની નિમણૂક: અર્જુન મોઢવાડિયા — વન અને પર્યાવરણ, વિજ્ઞાન-ટેકનોલોજી, ક્લાઇમેટ ચેન્જ મંત્રી (17 ઓક્ટોબર 2025થી)</li>
+<li>જગદીશ વિશ્વકર્મા — ગુજરાત ભાજપ પ્રદેશ પ્રમુખ (4 ઓક્ટોબર 2025થી)</li>
+</ul>
+`,
+          },
+          {
+            t: "ઝડપી રિવિઝન કોષ્ટક (Quick Revision Table)",
+            en: "ગુજરાત સંદર્ભ",
+            art: "15 જૂન 2026",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>વિષય</th><th>મુખ્ય તારીખ</th><th>મુખ્ય આંકડો/નામ</th></tr>
+<tr><td>ઔદ્યોગિક નીતિ 2026</td><td>15 જૂન 2026</td><td>21 સેક્ટર, ₹10 લાખ કરોડ</td></tr>
+<tr><td>બજેટ 2026-27</td><td>18 ફેબ્રુ 2026</td><td>₹4.08 લાખ કરોડ, કનુભાઈ દેસાઈ</td></tr>
+<tr><td>સ્થાનિક સ્વરાજ્ય ચૂંટણી</td><td>26 એપ્રિલ 2026</td><td>15 મહાનગરપાલિકા, ભાજપ ક્લીન સ્વીપ</td></tr>
+<tr><td>શાળા પ્રવેશોત્સવ</td><td>23-25 જૂન 2026</td><td>કન્યા કેળવણી મહોત્સવ</td></tr>
+<tr><td>વિદેશ અભ્યાસ લોન</td><td>ઓગસ્ટ 2026</td><td>આવક મર્યાદા ₹6L → ₹10L</td></tr>
+<tr><td>અમદાવાદ-મુન્દ્રા ફ્લાઇટ</td><td>17 ઓગસ્ટ 2026</td><td>Star Air + Adani Airports</td></tr>
+<tr><td>જમીન ફાળવણી (કેબિનેટ)</td><td>19 ફેબ્રુ 2026</td><td>23 દરખાસ્ત મંજૂર</td></tr>
+<tr><td>કેબિનેટ પુનર્ગઠન</td><td>17 ઓક્ટો 2025</td><td>હર્ષ સંઘવી નાયબ CM, 26 મંત્રી</td></tr>
+</table></div>
+`,
+          },
+        ],
+      },
+      {
+        cat: "મહત્વના દિવસોની યાદી (મહિનાવાર)",
+        items: [
+          {
+            t: "Wireless PSI / GPSC / સ્પર્ધાત્મક પરીક્ષા માટે",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="note">★ = પરીક્ષામાં વારંવાર પુછાતા અતિ મહત્વના દિવસો</div>
+`,
+          },
+          {
+            t: "જાન્યુઆરી (January)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>1 જાન્યુઆરી</td><td>નવું વર્ષ (New Year)</td></tr>
+<tr><td>4 જાન્યુઆરી</td><td>વિશ્વ બ્રેઈલ દિવસ (World Braille Day)</td></tr>
+<tr><td>9 જાન્યુઆરી</td><td>★ પ્રવાસી ભારતીય દિવસ (NRI Day)</td></tr>
+<tr><td>10 જાન્યુઆરી</td><td>વિશ્વ હિન્દી દિવસ (World Hindi Day)</td></tr>
+<tr><td>12 જાન્યુઆરી</td><td>★ રાષ્ટ્રીય યુવા દિવસ (National Youth Day – સ્વામી વિવેકાનંદ જન્મદિવસ)</td></tr>
+<tr><td>15 જાન્યુઆરી</td><td>★ ભારતીય સેના દિવસ (Indian Army Day)</td></tr>
+<tr><td>23 જાન્યુઆરી</td><td>★ પરાક્રમ દિવસ (નેતાજી સુભાષચંદ્ર બોઝ જન્મદિવસ)</td></tr>
+<tr><td>24 જાન્યુઆરી</td><td>રાષ્ટ્રીય બાલિકા દિવસ (National Girl Child Day)</td></tr>
+<tr><td>25 જાન્યુઆરી</td><td>★ રાષ્ટ્રીય મતદાર દિવસ (National Voters' Day)</td></tr>
+<tr><td>26 જાન્યુઆરી</td><td>★★ ★ ગણતંત્ર દિવસ (Republic Day)</td></tr>
+<tr><td>28 જાન્યુઆરી</td><td>લાલા લજપતરાય જન્મ જયંતિ</td></tr>
+<tr><td>30 જાન્યુઆરી</td><td>★ શહીદ દિવસ (Martyrs' Day – ગાંધીજી પુણ્યતિથિ)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ફેબ્રુઆરી (February)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>4 ફેબ્રુઆરી</td><td>વિશ્વ કેન્સર દિવસ (World Cancer Day)</td></tr>
+<tr><td>20 ફેબ્રુઆરી</td><td>વિશ્વ સામાજિક ન્યાય દિવસ (World Day of Social Justice)</td></tr>
+<tr><td>21 ફેબ્રુઆરી</td><td>★ આંતરરાષ્ટ્રીય માતૃભાષા દિવસ (International Mother Language Day)</td></tr>
+<tr><td>24 ફેબ્રુઆરી</td><td>કેન્દ્રીય આબકારી દિવસ (Central Excise Day)</td></tr>
+<tr><td>28 ફેબ્રુઆરી</td><td>★ રાષ્ટ્રીય વિજ્ઞાન દિવસ (National Science Day – C.V. રમણ)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "માર્ચ (March)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>3 માર્ચ</td><td>વિશ્વ વન્યજીવ દિવસ (World Wildlife Day)</td></tr>
+<tr><td>4 માર્ચ</td><td>રાષ્ટ્રીય સુરક્ષા દિવસ (National Security Day)</td></tr>
+<tr><td>8 માર્ચ</td><td>★ આંતરરાષ્ટ્રીય મહિલા દિવસ (International Women's Day)</td></tr>
+<tr><td>15 માર્ચ</td><td>★ વિશ્વ ગ્રાહક અધિકાર દિવસ (World Consumer Rights Day)</td></tr>
+<tr><td>21 માર્ચ</td><td>વિશ્વ વન દિવસ (World Forestry Day)</td></tr>
+<tr><td>22 માર્ચ</td><td>★ વિશ્વ જળ દિવસ (World Water Day)</td></tr>
+<tr><td>23 માર્ચ</td><td>★ વિશ્વ હવામાન દિવસ (World Meteorological Day) + શહીદ દિવસ (ભગતસિંહ)</td></tr>
+<tr><td>24 માર્ચ</td><td>વિશ્વ ક્ષય રોગ દિવસ (World TB Day)</td></tr>
+<tr><td>27 માર્ચ</td><td>વિશ્વ રંગભૂમિ દિવસ (World Theatre Day)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "એપ્રિલ (April)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>5 એપ્રિલ</td><td>રાષ્ટ્રીય સમુદ્રી દિવસ (National Maritime Day)</td></tr>
+<tr><td>7 એપ્રિલ</td><td>★ વિશ્વ આરોગ્ય દિવસ (World Health Day)</td></tr>
+<tr><td>14 એપ્રિલ</td><td>★ આંબેડકર જયંતિ (Ambedkar Jayanti)</td></tr>
+<tr><td>18 એપ્રિલ</td><td>વિશ્વ ધરોહર દિવસ (World Heritage Day)</td></tr>
+<tr><td>21 એપ્રિલ</td><td>રાષ્ટ્રીય નાગરિક સેવા દિવસ (Civil Services Day)</td></tr>
+<tr><td>22 એપ્રિલ</td><td>★ પૃથ્વી દિવસ (Earth Day)</td></tr>
+<tr><td>23 એપ્રિલ</td><td>વિશ્વ પુસ્તક દિવસ (World Book Day)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "મે (May)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>1 મે</td><td>★ આંતરરાષ્ટ્રીય શ્રમિક દિવસ (Labour Day) + ગુજરાત સ્થાપના દિવસ</td></tr>
+<tr><td>3 મે</td><td>વિશ્વ પ્રેસ સ્વતંત્રતા દિવસ (World Press Freedom Day)</td></tr>
+<tr><td>8 મે</td><td>વિશ્વ રેડક્રોસ દિવસ (World Red Cross Day)</td></tr>
+<tr><td>11 મે</td><td>★ રાષ્ટ્રીય પ્રૌદ્યોગિકી દિવસ (National Technology Day)</td></tr>
+<tr><td>15 મે</td><td>આંતરરાષ્ટ્રીય પરિવાર દિવસ (International Family Day)</td></tr>
+<tr><td>17 મે</td><td>વિશ્વ દૂરસંચાર દિવસ (World Telecommunication Day)</td></tr>
+<tr><td>21 મે</td><td>આતંકવાદ વિરોધી દિવસ (Anti-Terrorism Day)</td></tr>
+<tr><td>24 મે</td><td>રાષ્ટ્રમંડળ દિવસ (Commonwealth Day)</td></tr>
+<tr><td>31 મે</td><td>વિશ્વ તમાકુ નિષેધ દિવસ (World No Tobacco Day)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "જૂન (June)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>5 જૂન</td><td>★ વિશ્વ પર્યાવરણ દિવસ (World Environment Day)</td></tr>
+<tr><td>14 જૂન</td><td>વિશ્વ રક્તદાતા દિવસ (World Blood Donor Day)</td></tr>
+<tr><td>20 જૂન</td><td>વિશ્વ શરણાર્થી દિવસ (World Refugee Day)</td></tr>
+<tr><td>21 જૂન</td><td>★ આંતરરાષ્ટ્રીય યોગ દિવસ (International Yoga Day)</td></tr>
+<tr><td>29 જૂન</td><td>રાષ્ટ્રીય આંકડાશાસ્ત્ર દિવસ (Statistics Day)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "જુલાઈ (July)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>1 જુલાઈ</td><td>★ રાષ્ટ્રીય ડોક્ટર દિવસ (National Doctor's Day)</td></tr>
+<tr><td>11 જુલાઈ</td><td>★ વિશ્વ વસ્તી દિવસ (World Population Day)</td></tr>
+<tr><td>26 જુલાઈ</td><td>★ કારગિલ વિજય દિવસ (Kargil Vijay Diwas)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ઓગસ્ટ (August)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>6 ઓગસ્ટ</td><td>હિરોશિમા દિવસ (Hiroshima Day)</td></tr>
+<tr><td>9 ઓગસ્ટ</td><td>★ ભારત છોડો આંદોલન દિવસ (Quit India Movement Day)</td></tr>
+<tr><td>12 ઓગસ્ટ</td><td>આંતરરાષ્ટ્રીય યુવા દિવસ (International Youth Day)</td></tr>
+<tr><td>15 ઓગસ્ટ</td><td>★★★ સ્વતંત્રતા દિવસ (Independence Day)</td></tr>
+<tr><td>20 ઓગસ્ટ</td><td>અક્ષય ઊર્જા દિવસ (Akshay Urja Diwas)</td></tr>
+<tr><td>29 ઓગસ્ટ</td><td>★ રાષ્ટ્રીય રમત દિવસ (National Sports Day – ધ્યાનચંદ)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "સપ્ટેમ્બર (September)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>5 સપ્ટેમ્બર</td><td>★ શિક્ષક દિવસ (Teachers' Day – ડૉ. રાધાકૃષ્ણન)</td></tr>
+<tr><td>8 સપ્ટેમ્બર</td><td>આંતરરાષ્ટ્રીય સાક્ષરતા દિવસ (International Literacy Day)</td></tr>
+<tr><td>14 સપ્ટેમ્બર</td><td>★ હિન્દી દિવસ (Hindi Diwas)</td></tr>
+<tr><td>16 સપ્ટેમ્બર</td><td>વિશ્વ ઓઝોન દિવસ (World Ozone Day)</td></tr>
+<tr><td>21 સપ્ટેમ્બર</td><td>આંતરરાષ્ટ્રીય શાંતિ દિવસ (International Day of Peace)</td></tr>
+<tr><td>27 સપ્ટેમ્બર</td><td>વિશ્વ પર્યટન દિવસ (World Tourism Day)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ઓક્ટોબર (October)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>1 ઓક્ટોબર</td><td>★ વૃદ્ધો માટે આંતરરાષ્ટ્રીય દિવસ (International Day for Older Persons)</td></tr>
+<tr><td>2 ઓક્ટોબર</td><td>★★ ગાંધી જયંતિ (Gandhi Jayanti) + લાલબહાદુર શાસ્ત્રી જયંતિ</td></tr>
+<tr><td>8 ઓક્ટોબર</td><td>★ ભારતીય વાયુસેના દિવસ (Indian Air Force Day)</td></tr>
+<tr><td>9 ઓક્ટોબર</td><td>વિશ્વ ટપાલ દિવસ (World Post Day)</td></tr>
+<tr><td>15 ઓક્ટોબર</td><td>★ વિશ્વ વિદ્યાર્થી દિવસ (વિદ્યાર્થી દિવસ – ડૉ. અબ્દુલ કલામ)</td></tr>
+<tr><td>16 ઓક્ટોબર</td><td>વિશ્વ ખાદ્ય દિવસ (World Food Day)</td></tr>
+<tr><td>24 ઓક્ટોબર</td><td>સંયુક્ત રાષ્ટ્ર દિવસ (United Nations Day)</td></tr>
+<tr><td>31 ઓક્ટોબર</td><td>★ રાષ્ટ્રીય એકતા દિવસ (National Unity Day – સરદાર પટેલ જયંતિ)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "નવેમ્બર (November)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>7 નવેમ્બર</td><td>રાષ્ટ્રીય કેન્સર જાગૃતિ દિવસ</td></tr>
+<tr><td>9 નવેમ્બર</td><td>★ ગુજરાત અને મહારાષ્ટ્ર દિવસ (ગુજરાત સ્થાપના – નોંધ: ગુજરાત સ્થાપના 1 મે)</td></tr>
+<tr><td>14 નવેમ્બર</td><td>★ બાળ દિવસ (Children's Day – નેહરુ જન્મદિવસ)</td></tr>
+<tr><td>17 નવેમ્બર</td><td>રાષ્ટ્રીય મરજીવન દિવસ</td></tr>
+<tr><td>19 નવેમ્બર</td><td>રાષ્ટ્રીય એકતા દિવસ (ઈન્દિરા ગાંધી જન્મદિવસ)</td></tr>
+<tr><td>26 નવેમ્બર</td><td>★★ બંધારણ દિવસ (Constitution Day / National Law Day)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ડિસેમ્બર (December)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>1 ડિસેમ્બર</td><td>વિશ્વ એઇડ્સ દિવસ (World AIDS Day)</td></tr>
+<tr><td>3 ડિસેમ્બર</td><td>વિશ્વ વિકલાંગ દિવસ (World Disability Day)</td></tr>
+<tr><td>4 ડિસેમ્બર</td><td>★ ભારતીય નૌસેના દિવસ (Indian Navy Day)</td></tr>
+<tr><td>7 ડિસેમ્બર</td><td>સશસ્ત્ર સેના ધ્વજ દિવસ (Armed Forces Flag Day)</td></tr>
+<tr><td>10 ડિસેમ્બર</td><td>★ માનવ અધિકાર દિવસ (Human Rights Day)</td></tr>
+<tr><td>16 ડિસેમ્બર</td><td>★ વિજય દિવસ (Vijay Diwas – 1971 યુદ્ધ)</td></tr>
+<tr><td>22 ડિસેમ્બર</td><td>★ રાષ્ટ્રીય ગણિત દિવસ (National Mathematics Day – રામાનુજન)</td></tr>
+<tr><td>23 ડિસેમ્બર</td><td>★ કિસાન દિવસ (National Farmers' Day)</td></tr>
+<tr><td>25 ડિસેમ્બર</td><td>★ સુશાસન દિવસ (Good Governance Day – વાજપેયી જન્મદિવસ) + નાતાલ</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "સૌથી વધુ પુછાતા (Top Priority for Exam)",
+            en: "મહત્વનો દિવસ",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>26 જાન્યુઆરી – ગણતંત્ર દિવસ</li>
+<li>15 ઓગસ્ટ – સ્વતંત્રતા દિવસ</li>
+<li>2 ઓક્ટોબર – ગાંધી જયંતિ</li>
+<li>31 ઓક્ટોબર – રાષ્ટ્રીય એકતા દિવસ (સરદાર પટેલ)</li>
+<li>14 નવેમ્બર – બાળ દિવસ</li>
+<li>26 નવેમ્બર – બંધારણ દિવસ</li>
+<li>5 સપ્ટેમ્બર – શિક્ષક દિવસ</li>
+<li>21 જૂન – યોગ દિવસ</li>
+<li>1 મે – ગુજરાત સ્થાપના દિવસ / શ્રમિક દિવસ</li>
+<li>12 જાન્યુઆરી – રાષ્ટ્રીય યુવા દિવસ</li>
+</ul>
+`,
+          },
+        ],
+      },
+      {
+        cat: "ભારતની શાસન વ્યવસ્થા — માસ્ટર ચાર્ટ 2026",
+        items: [
+          {
+            t: "Change Log (As of July 2026)",
+            en: "બંધારણીય માળખું",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>હોદ્દો</th><th>વર્તમાન (Updated)</th></tr>
+<tr><td>ઉપરાષ્ટ્રપતિ / રાજ્યસભા સભાપતિ</td><td>સી. પી. રાધાકૃષ્ણન (15મા)</td></tr>
+<tr><td>મુખ્ય ન્યાયાધીશ (CJI)</td><td>જસ્ટિસ સૂર્ય કાંત (53મા)</td></tr>
+<tr><td>CAG</td><td>કે. સંજય મૂર્તિ</td></tr>
+<tr><td>મુખ્ય ચૂંટણી કમિશનર</td><td>જ્ઞાનેશ કુમાર (26મા)</td></tr>
+<tr><td>UPSC અધ્યક્ષ</td><td>અજય કુમાર</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ભારતના 3 મુખ્ય અંગો",
+            en: "બંધારણીય માળખું",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>અંગ</th><th>કાર્ય</th><th>સંબંધિત કલમો</th></tr>
+<tr><td><strong>વિધાન અંગ (Legislature)</strong></td><td>કાયદા બનાવે</td><td>કલમ 79 (સંસદ) · કલમ 168 (રાજ્ય ધારાસભા)</td></tr>
+<tr><td><strong>કાર્યપાલિકા (Executive)</strong></td><td>કાયદાનો અમલ કરે</td><td>કલમ 52-78 (કેન્દ્ર) · કલમ 153-167 (રાજ્ય)</td></tr>
+<tr><td><strong>ન્યાયપાલિકા (Judiciary)</strong></td><td>બંધારણનું રક્ષણ, કાયદાનું અર્થઘટન, ન્યાય આપે</td><td>કલમ 124 (સુપ્રીમ કોર્ટ) · કલમ 214 (હાઈકોર્ટ)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "રાષ્ટ્રપતિ — કલમ 52-62",
+            en: "કેન્દ્ર સરકાર (Union Government)",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>દેશના પ્રથમ નાગરિક, બંધારણીય વડા</li>
+<li>સેનાના સર્વોચ્ચ કમાન્ડર (કલમ 53)</li>
+<li>સંસદ બોલાવે, બિલને મંજૂરી આપે (કલમ 111)</li>
+<li>ઓર્ડિનન્સ બહાર પાડે (કલમ 123)</li>
+<li>વડાપ્રધાન, રાજ્યપાલો, CJI ની નિમણૂક કરે</li>
+<li>ચૂંટણી: પરોક્ષ, ઇલેક્ટોરલ કોલેજ દ્વારા (કલમ 54-55)</li>
+<li>મહાભિયોગ (Impeachment): કલમ 61</li>
+</ul>
+<p><strong>વર્તમાન:</strong> દ્રૌપદી મુર્મુ (15મા રાષ્ટ્રપતિ · કાર્યકાળ 5 વર્ષ)</p>
+`,
+          },
+          {
+            t: "ઉપરાષ્ટ્રપતિ — કલમ 63-71",
+            en: "કેન્દ્ર સરકાર (Union Government)",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>રાજ્યસભાના પદેન સભાપતિ (Ex-officio Chairman)</li>
+<li>રાષ્ટ્રપતિ ગેરહાજર/અસમર્થ હોય ત્યારે કાર્ય કરે (કલમ 65)</li>
+<li>ચૂંટણી: સંસદના બંને ગૃહો દ્વારા (કલમ 66)</li>
+<li>કાર્યકાળ 5 વર્ષ (કલમ 67)</li>
+</ul>
+<p><strong>વર્તમાન:</strong> સી. પી. રાધાકૃષ્ણન (15મા ઉપરાષ્ટ્રપતિ · સપ્ટે. 2025માં ચૂંટાયા)</p>
+`,
+          },
+          {
+            t: "વડાપ્રધાન — કલમ 74-75",
+            en: "કેન્દ્ર સરકાર (Union Government)",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>સરકારના વાસ્તવિક વડા, મંત્રીમંડળના વડા</li>
+<li>રાષ્ટ્રપતિ દ્વારા નિમણૂક (કલમ 75)</li>
+<li>લોકસભાને સામૂહિક રીતે જવાબદાર</li>
+<li>નીતિઓ નક્કી કરે, પ્રશાસન ચલાવે</li>
+</ul>
+<p><strong>વર્તમાન:</strong> નરેન્દ્ર મોદી (ત્રીજી ટર્મ 2024થી)</p>
+`,
+          },
+          {
+            t: "કેન્દ્રીય મંત્રીમંડળ — કલમ 74-75",
+            en: "કેન્દ્ર સરકાર (Union Government)",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>પોર્ટફોલિયો</th><th>મંત્રી</th></tr>
+<tr><td>ગૃહમંત્રી</td><td>અમિત શાહ</td></tr>
+<tr><td>રક્ષામંત્રી</td><td>રાજનાથ સિંહ</td></tr>
+<tr><td>નાણામંત્રી</td><td>નિર્મલા સીતારમણ</td></tr>
+<tr><td>વિદેશમંત્રી</td><td>એસ. જયશંકર</td></tr>
+<tr><td>શિક્ષણમંત્રી</td><td>ધર્મેન્દ્ર પ્રધાન</td></tr>
+<tr><td>આરોગ્યમંત્રી</td><td>જે. પી. નડ્ડા</td></tr>
+<tr><td>કૃષિમંત્રી</td><td>શિવરાજ સિંહ ચૌહાણ</td></tr>
+<tr><td>માર્ગ પરિવહન મંત્રી</td><td>નીતિન ગડકરી</td></tr>
+</table></div>
+<div class="note"><strong>નોંધ:</strong> મંત્રીમંડળની કુલ સંખ્યા ≤ લોકસભાના 15% (91મો સુધારો)</div>
+`,
+          },
+          {
+            t: "મુખ્ય ન્યાયાધીશ (CJI) — કલમ 124",
+            en: "કેન્દ્ર સરકાર (Union Government)",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>સુપ્રીમ કોર્ટના વડા, "Master of Roster"</li>
+<li>નિવૃત્તિ વય: 65 વર્ષ</li>
+<li>નિમણૂક: રાષ્ટ્રપતિ દ્વારા, વરિષ્ઠતાના સિદ્ધાંત મુજબ</li>
+</ul>
+<p><strong>વર્તમાન:</strong> જસ્ટિસ સૂર્ય કાંત (53મા CJI · 24 નવે. 2025થી · નિવૃત્તિ: 9 ફેબ્રુ. 2027)</p>
+`,
+          },
+          {
+            t: "CAG (નિયંત્રક અને મહાલેખા પરીક્ષક) — કલમ 148-151",
+            en: "કેન્દ્ર સરકાર (Union Government)",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>સરકારી ખર્ચનું ઓડિટ, જાહેર નાણાંનું નિરીક્ષણ</li>
+<li>કાર્યકાળ: 6 વર્ષ અથવા 65 વર્ષ (જે વહેલું હોય)</li>
+<li>સંસદને અહેવાલ આપે (Public Accounts Committee મારફતે)</li>
+</ul>
+<p><strong>વર્તમાન:</strong> કે. સંજય મૂર્તિ (21 નવે. 2024થી પદભાર)</p>
+`,
+          },
+          {
+            t: "મુખ્ય ચૂંટણી કમિશનર — કલમ 324",
+            en: "કેન્દ્ર સરકાર (Union Government)",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>ચૂંટણી પંચના વડા, લોકસભા/રાજ્યસભા/રાષ્ટ્રપતિ ચૂંટણી કરાવે</li>
+<li>કાર્યકાળ: 6 વર્ષ અથવા 65 વર્ષ</li>
+<li>નિમણૂક: 2023ના કાયદા મુજબ પસંદગી સમિતિ (PM+વિપક્ષ નેતા+કેબિનેટ મંત્રી)</li>
+</ul>
+<p><strong>વર્તમાન:</strong> જ્ઞાનેશ કુમાર (26મા CEC · ફેબ્રુ. 2025થી)</p>
+`,
+          },
+          {
+            t: "UPSC અધ્યક્ષ — કલમ 315-323",
+            en: "કેન્દ્ર સરકાર (Union Government)",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>IAS, IPS, IFS, IRS વગેરે માટે પરીક્ષા લે</li>
+<li>કાર્યકાળ: 6 વર્ષ અથવા 65 વર્ષ</li>
+</ul>
+<p><strong>વર્તમાન:</strong> અજય કુમાર (પૂર્વ સંરક્ષણ સચિવ)</p>
+`,
+          },
+          {
+            t: "નાણાં પંચ (Finance Commission) — કલમ 280",
+            en: "કેન્દ્ર સરકાર (Union Government)",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>કેન્દ્ર-રાજ્ય વચ્ચે કરની આવકની વહેંચણી ભલામણ કરે</li>
+<li>દર 5 વર્ષે નવું પંચ રચાય</li>
+</ul>
+<p><strong>વર્તમાન:</strong> ડૉ. અરવિંદ પનાગરિયા (16મા નાણાં પંચના અધ્યક્ષ 2026-31)</p>
+`,
+          },
+          {
+            t: "એટોર્ની જનરલ — કલમ 76",
+            en: "કેન્દ્ર સરકાર (Union Government)",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>ભારત સરકારના મુખ્ય કાનૂની સલાહકાર</li>
+<li>સુપ્રીમ કોર્ટમાં સરકારનું પ્રતિનિધિત્વ કરે</li>
+</ul>
+<p><strong>વર્તમાન:</strong> આર. વેંકટરમણી (16મા એટોર્ની જનરલ)</p>
+`,
+          },
+          {
+            t: "લોકસભા — કલમ 81",
+            en: "સંસદ (Parliament) — કલમ 79-122",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>Lower House, સીધી ચૂંટણી</li>
+<li>મહત્તમ 552 સભ્યો, હાલમાં 543 ચૂંટાયેલા</li>
+<li>કાર્યકાળ 5 વર્ષ (કલમ 83)</li>
+<li>અવિશ્વાસ પ્રસ્તાવ અહીં લાવી શકાય</li>
+</ul>
+<span class="sub">વર્તમાન:</span>
+<ul>
+<li>સ્પીકર: ઓમ બિરલા</li>
+<li>ડેપ્યુટી સ્પીકર: ખાલી (છેલ્લા: એમ. થમ્બીદુરાઈ)</li>
+</ul>
+`,
+          },
+          {
+            t: "રાજ્યસભા — કલમ 80",
+            en: "સંસદ (Parliament) — કલમ 79-122",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>Upper House, કાયમી ગૃહ (never dissolved)</li>
+<li>મહત્તમ 250 સભ્યો, હાલમાં 245 સુધી</li>
+<li>દર 2 વર્ષે 1/3 સભ્યો નિવૃત્ત</li>
+</ul>
+<span class="sub">વર્તમાન:</span>
+<ul>
+<li>સભાપતિ (પદેન): સી.પી. રાધાકૃષ્ણન (ઉપરાષ્ટ્રપતિ)</li>
+<li>ઉપસભાપતિ: હરિવંશ નારાયણ સિંહ</li>
+</ul>
+`,
+          },
+          {
+            t: "ન્યાયપાલિકાનું માળખું",
+            en: "બંધારણીય માળખું",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><pre style="margin:0;padding:14px 16px;font-family:'Courier New',monospace;font-size:12px;line-height:1.7;white-space:pre;">સુપ્રીમ કોર્ટ (કલમ 124 · CJI: જસ્ટિસ સૂર્ય કાંત)
+         ▼
+      હાઈકોર્ટ (કલમ 214)
+         ▼
+      જિલ્લા કોર્ટ
+         ▼
+      સેશન કોર્ટ
+         ▼
+      સિવિલ કોર્ટ
+         ▼
+      જુડિશિયલ મેજિસ્ટ્રેટ
+         ▼
+લોક અદાલત / પરિવાર કોર્ટ / વિશેષ કોર્ટ</pre></div>
+`,
+          },
+          {
+            t: "રાજ્ય સરકાર (State Government) — કલમ 153-237",
+            en: "બંધારણીય માળખું",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>હોદ્દો</th><th>સંદર્ભ કલમ</th><th>કાર્ય</th></tr>
+<tr><td><strong>રાજ્યપાલ</strong></td><td>કલમ 153-162</td><td>રાજ્યના બંધારણીય વડા, રાષ્ટ્રપતિ દ્વારા નિમણૂક, કાર્યકાળ 5 વર્ષ</td></tr>
+<tr><td><strong>મુખ્યમંત્રી</strong></td><td>કલમ 163-164</td><td>રાજ્ય સરકારના વાસ્તવિક વડા, વિધાનસભાને જવાબદાર</td></tr>
+<tr><td><strong>રાજ્ય ધારાસભા</strong></td><td>કલમ 168</td><td>વિધાનસભા (સીધી ચૂંટણી, 5 વર્ષ) + વિધાન પરિષદ (6 રાજ્યોમાં)</td></tr>
+<tr><td><strong>હાઈકોર્ટ</strong></td><td>કલમ 214-231</td><td>રાજ્યની સર્વોચ્ચ કોર્ટ</td></tr>
+<tr><td><strong>એડવોકેટ જનરલ</strong></td><td>કલમ 165</td><td>રાજ્યના મુખ્ય કાનૂની સલાહકાર</td></tr>
+<tr><td><strong>રાજ્ય ચૂંટણી પંચ</strong></td><td>કલમ 243K</td><td>પંચાયત અને નગરપાલિકા ચૂંટણીઓ કરાવે</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "વિધાન પરિષદ ધરાવતા રાજ્યો (6)",
+            en: "રાજ્ય સરકાર (State Government) — કલમ 153-237",
+            art: "મહત્વનું",
+            body: `
+<ul>
+<li>ઉત્તર પ્રદેશ</li>
+<li>બિહાર</li>
+<li>મહારાષ્ટ્ર</li>
+<li>કર્ણાટક</li>
+<li>તેલંગાણા</li>
+<li>આંધ્રપ્રદેશ</li>
+</ul>
+`,
+          },
+          {
+            t: "કેન્દ્રશાસિત પ્રદેશો (8) — કલમ 239-241",
+            en: "બંધારણીય માળખું",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>ક્રમ</th><th>કેન્દ્રશાસિત પ્રદેશ</th><th>વડા</th><th>વિધાનસભા</th></tr>
+<tr><td>1</td><td>અંડમાન અને નિકોબાર દ્વીપસમૂહ</td><td>લેફ્ટનન્ટ ગવર્નર</td><td>નથી</td></tr>
+<tr><td>2</td><td>ચંદીગઢ</td><td>પ્રશાસક</td><td>નથી</td></tr>
+<tr><td>3</td><td>દાદરા-નગર હવેલી અને દમણ-દીવ</td><td>પ્રશાસક</td><td>નથી</td></tr>
+<tr><td>4</td><td>દિલ્હી (NCT)</td><td>લેફ્ટનન્ટ ગવર્નર</td><td>છે</td></tr>
+<tr><td>5</td><td>જમ્મુ અને કાશ્મીર</td><td>લેફ્ટનન્ટ ગવર્નર</td><td>છે</td></tr>
+<tr><td>6</td><td>લદ્દાખ</td><td>લેફ્ટનન્ટ ગવર્નર</td><td>નથી</td></tr>
+<tr><td>7</td><td>લક્ષદ્વીપ</td><td>પ્રશાસક</td><td>નથી</td></tr>
+<tr><td>8</td><td>પુડુચેરી</td><td>લેફ્ટનન્ટ ગવર્નર</td><td>છે</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ગ્રામ્ય (Rural) — 73મો સુધારો 1992 (કલમ 243)",
+            en: "સ્થાનિક સ્વરાજ્ય",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>સ્તર</th><th>સંસ્થા</th><th>વિગત</th></tr>
+<tr><td>1</td><td>ગ્રામસભા</td><td>ગામના તમામ મતદારો</td></tr>
+<tr><td>2</td><td>ગ્રામ પંચાયત</td><td>સરપંચ, ઉપસરપંચ, પંચ સભ્યો, ગ્રામ સેવક/તલાટી-કમ-મંત્રી</td></tr>
+<tr><td>3</td><td>તાલુકા પંચાયત</td><td>પ્રમુખ, ઉપપ્રમુખ, સભ્યો, તાલુકા વિકાસ અધિકારી (TDO)</td></tr>
+<tr><td>4</td><td>જિલ્લા પંચાયત</td><td>પ્રમુખ, ઉપપ્રમુખ, સભ્યો, જિલ્લા વિકાસ અધિકારી (DDO)</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "શહેરી (Urban) — 74મો સુધારો 1992 (કલમ 243P)",
+            en: "સ્થાનિક સ્વરાજ્ય",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>સ્તર</th><th>સંસ્થા</th><th>વિગત</th></tr>
+<tr><td>1</td><td>નગર પંચાયત</td><td>પ્રમુખ, મુખ્ય અધિકારી</td></tr>
+<tr><td>2</td><td>નગરપાલિકા</td><td>પ્રમુખ, ઉપપ્રમુખ, કાઉન્સિલરો, મુખ્ય અધિકારી</td></tr>
+<tr><td>3</td><td>મહાનગરપાલિકા</td><td>મેયર, ડેપ્યુટી મેયર, કોર્પોરેટરો, મ્યુનિસિપલ કમિશનર</td></tr>
+</table></div>
+`,
+          },
+          {
+            t: "ભારતની શાસન વ્યવસ્થાનું વૃક્ષાકાર માળખું",
+            en: "બંધારણીય માળખું",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><pre style="margin:0;padding:14px 16px;font-family:'Courier New',monospace;font-size:12px;line-height:1.7;white-space:pre;">ભારત (Republic of India)
+│
+├── 🇮🇳 કેન્દ્ર સરકાર (Central Government)
+│ │
+│ ├── રાષ્ટ્રપતિ
+│ │ └── વર્તમાન: દ્રૌપદી મુર્મુ (15મા)
+│ │
+│ ├── ઉપરાષ્ટ્રપતિ
+│ │ └── વર્તમાન: સી.પી. રાધાકૃષ્ણન (15મા) — સપ્ટે. 2025માં ચૂંટાયા
+│ │
+│ ├── વડાપ્રધાન
+│ │ └── વર્તમાન: નરેન્દ્ર મોદી (ત્રીજી ટર્મ)
+│ │
+│ ├── કેન્દ્રીય મંત્રીમંડળ
+│ │ ├── ગૃહમંત્રી → અમિત શાહ
+│ │ ├── રક્ષામંત્રી → રાજનાથ સિંહ
+│ │ ├── નાણામંત્રી → નિર્મલા સીતારમણ
+│ │ ├── વિદેશમંત્રી → એસ. જયશંકર
+│ │ ├── શિક્ષણમંત્રી → ધર્મેન્દ્ર પ્રધાન
+│ │ ├── રેલવેમંત્રી → અશ્વિની વૈષ્ણવ
+│ │ ├── કૃષિમંત્રી → શિવરાજ સિંહ ચૌહાણ
+│ │ ├── આરોગ્યમંત્રી → જે.પી. નડ્ડા
+│ │ └── અન્ય મંત્રીઓ
+│ │
+│ ├── સંસદ (Parliament)
+│ │ │
+│ │ ├── રાષ્ટ્રપતિ → દ્રૌપદી મુર્મુ
+│ │ ├── લોકસભા (Lower House)
+│ │ │ ├── સ્પીકર → ઓમ બિરલા
+│ │ │ ├── ડેપ્યુટી સ્પીકર → પદ ખાલી
+│ │ │ └── વિરોધ પક્ષના નેતા → રાહુલ ગાંધી
+│ │ │
+│ │ └── રાજ્યસભા (Upper House)
+│ │ ├── સભાપતિ → સી.પી. રાધાકૃષ્ણન (ઉપરાષ્ટ્રપતિ, પદેન)
+│ │ └── ઉપસભાપતિ → હરિવંશ નારાયણ સિંહ
+│ │
+│ ├── સુપ્રીમ કોર્ટ
+│ │ └── મુખ્ય ન્યાયાધીશ (CJI) → જસ્ટિસ સૂર્ય કાંત (53મા, 24 નવે. 2025થી)
+│ │
+│ ├── CAG
+│ │ └── Comptroller &amp; Auditor General → કે. સંજય મૂર્તિ
+│ │
+│ ├── ચૂંટણી પંચ (Election Commission)
+│ │ └── મુખ્ય ચૂંટણી કમિશનર (CEC) → જ્ઞાનેશ કુમાર (26મા)
+│ │
+│ ├── UPSC
+│ │ └── અધ્યક્ષ → અજય કુમાર
+│ │
+│ ├── નાણાં પંચ (Finance Commission)
+│ │ └── અધ્યક્ષ → ડૉ. અરવિંદ પનાગરિયા (16મા પંચ, 2026-31)
+│ │
+│ └── એટોર્ની જનરલ (Attorney General)
+│     └── આર. વેંકટરમણી (16મા)
+│
+├── 🏛️ રાજ્ય સરકાર (State Government)
+│ │
+│ ├── રાજ્યપાલ
+│ │
+│ ├── મુખ્યમંત્રી
+│ │
+│ ├── રાજ્ય મંત્રીમંડળ
+│ │ ├── ગૃહમંત્રી
+│ │ ├── નાણામંત્રી
+│ │ ├── શિક્ષણમંત્રી
+│ │ ├── આરોગ્યમંત્રી
+│ │ ├── કૃષિમંત્રી
+│ │ └── અન્ય મંત્રીઓ
+│ │
+│ ├── રાજ્ય ધારાસભા
+│ │ ├── વિધાનસભા (MLA)
+│ │ └── વિધાન પરિષદ (માત્ર 6 રાજ્યોમાં)
+│ │
+│ ├── હાઈકોર્ટ
+│ │ └── મુખ્ય ન્યાયમૂર્તિ
+│ │
+│ ├── રાજ્ય ચૂંટણી પંચ
+│ │
+│ └── રાજ્ય જાહેર સેવા આયોગ (GPSC, MPSC વગેરે)
+│
+├── 🇮🇳 કેન્દ્રશાસિત પ્રદેશો (Union Territories - કુલ 8)
+│ │
+│ ├── અંડમાન અને નિકોબાર દ્વીપસમૂહ
+│ ├── ચંદીગઢ
+│ ├── દાદરા અને નગર હવેલી અને દમણ અને દીવ
+│ ├── દિલ્હી (NCT of Delhi)
+│ ├── જમ્મુ અને કાશ્મીર
+│ ├── લદ્દાખ
+│ ├── લક્ષદ્વીપ
+│ └── પુડુચેરી
+│
+└── 🏘️ સ્થાનિક સ્વરાજ્ય (Local Self Government)
+    │
+    ├── ગ્રામ્ય વિસ્તાર (Rural)
+    │ ├── ગ્રામસભા
+    │ ├── ગ્રામ પંચાયત
+    │ │ ├── સરપંચ
+    │ │ ├── ઉપસરપંચ
+    │ │ ├── પંચ સભ્યો
+    │ │ └── ગ્રામ સેવક / તલાટી-કમ-મંત્રી
+    │ │
+    │ ├── તાલુકા પંચાયત
+    │ │ ├── પ્રમુખ
+    │ │ ├── ઉપપ્રમુખ
+    │ │ ├── સભ્યો
+    │ │ └── તાલુકા વિકાસ અધિકારી (TDO)
+    │ │
+    │ └── જિલ્લા પંચાયત
+    │     ├── પ્રમુખ
+    │     ├── ઉપપ્રમુખ
+    │     ├── સભ્યો
+    │     └── જિલ્લા વિકાસ અધિકારી (DDO)
+    │
+    └── શહેરી વિસ્તાર (Urban)
+          ├── નગર પંચાયત
+          │ ├── પ્રમુખ
+          │ └── મુખ્ય અધિકારી
+          │
+          ├── નગરપાલિકા
+          │ ├── પ્રમુખ
+          │ ├── ઉપપ્રમુખ
+          │ ├── કાઉન્સિલરો
+          │ └── મુખ્ય અધિકારી (Chief Officer)
+          │
+          └── મહાનગરપાલિકા
+                ├── મેયર
+                ├── ડેપ્યુટી મેયર
+                ├── કોર્પોરેટરો
+                └── મ્યુનિસિપલ કમિશનર</pre></div>
+`,
+          },
+          {
+            t: "મહત્વપૂર્ણ સુધારાઓ",
+            en: "બંધારણીય માળખું",
+            art: "મહત્વનું",
+            body: `
+<div class="table-scroll"><table>
+<tr><th>સુધારો</th><th>વર્ષ</th><th>વિગત</th></tr>
+<tr><td>73મો સુધારો</td><td>1992</td><td>ગ્રામ્ય સ્થાનિક સ્વરાજ્ય (પંચાયતી રાજ) — કલમ 243</td></tr>
+<tr><td>74મો સુધારો</td><td>1992</td><td>શહેરી સ્થાનિક સ્વરાજ્ય (નગરપાલિકાઓ) — કલમ 243P</td></tr>
+<tr><td>91મો સુધારો</td><td>2003</td><td>મંત્રીમંડળનું કદ ≤ લોકસભાના 15%</td></tr>
+</table></div>
+`,
+          },
+        ],
+      },
+    ];
+
+    /* ---------- Build DOM ---------- */
+    const tocEl = document.getElementById("toc");
+    const containerEl = document.getElementById("topicsContainer");
+    let flatItems = [];
+
+    let globalIdx = 0;
+    DATA.forEach((section) => {
+      const label = document.createElement("div");
+      label.className = "cat-label";
+      label.innerHTML = `<span class="cat-dot"></span><span class="label-text">${section.cat}</span>`;
+      tocEl.appendChild(label);
+
+      section.items.forEach((item) => {
+        globalIdx++;
+        const id = "topic-" + globalIdx;
+        item._id = id;
+        item._num = globalIdx;
+        flatItems.push(item);
+
+        const a = document.createElement("a");
+        a.href = "#" + id;
+        a.dataset.id = id;
+        a.innerHTML = `<span class="num">${String(globalIdx).padStart(2, "0")}</span><span class="label-text">${item.t}</span>`;
+        tocEl.appendChild(a);
+
+        const card = document.createElement("div");
+        card.className = "topic";
+        card.id = id;
+        const plainBody = item.body.replace(/<[^>]+>/g, " ");
+        item._searchText = (
+          item.t +
+          " " +
+          item.en +
+          " " +
+          item.art +
+          " " +
+          plainBody
+        )
+          .replace(/\s+/g, " ")
+          .trim();
+        card.dataset.search = item._searchText.toLowerCase();
+        card.innerHTML = `
+      <h3><span class="idx">${globalIdx}</span>${item.t}</h3>
+      <p class="en">${item.en}</p>
+      <span class="art-badge">${item.art}</span>
+      <div class="topic-body">${item.body}</div>
+    `;
+        containerEl.appendChild(card);
+      });
+    });
+
+    /* ---------- Fuzzy multilingual search engine ---------- */
+    // Levenshtein edit distance (works char-by-char for both Gujarati & English strings)
+    function editDistance(a, b) {
+      const al = a.length,
+        bl = b.length;
+      if (al === 0) return bl;
+      if (bl === 0) return al;
+      let prev = new Array(bl + 1);
+      let cur = new Array(bl + 1);
+      for (let j = 0; j <= bl; j++) prev[j] = j;
+      for (let i = 1; i <= al; i++) {
+        cur[0] = i;
+        const ac = a.charCodeAt(i - 1);
+        for (let j = 1; j <= bl; j++) {
+          const cost = ac === b.charCodeAt(j - 1) ? 0 : 1;
+          cur[j] = Math.min(
+            prev[j] + 1, // deletion
+            cur[j - 1] + 1, // insertion
+            prev[j - 1] + cost, // substitution
+          );
+        }
+        [prev, cur] = [cur, prev];
+      }
+      return prev[bl];
+    }
+
+    // similarity 0..1 between two tokens, tolerant to typos/partial words
+    function tokenSimilarity(query, token) {
+      if (!query || !token) return 0;
+      if (token === query) return 1;
+      if (token.startsWith(query) || query.startsWith(token)) {
+        // partial word match (e.g. "bandh" -> "bandharan"), score by coverage
+        const shorter = Math.min(query.length, token.length);
+        const longer = Math.max(query.length, token.length);
+        return 0.72 + 0.25 * (shorter / longer);
+      }
+      if (token.includes(query) && query.length >= 3) return 0.65;
+      const dist = editDistance(query, token);
+      const maxLen = Math.max(query.length, token.length);
+      if (maxLen === 0) return 0;
+      const sim = 1 - dist / maxLen;
+      // allow typo tolerance roughly proportional to word length
+      const allowedDist = query.length <= 3 ? 1 : query.length <= 6 ? 2 : 3;
+      if (dist <= allowedDist) return Math.max(sim, 0.55);
+      return sim > 0 ? sim * 0.4 : 0; // steep dropoff for weak/no match
+    }
+
+    // precompute tokens per item (unique words, deduped, lowercased)
+    flatItems.forEach((item) => {
+      const raw = item._searchText.toLowerCase();
+      item._fullTextLower = raw;
+      const words = raw.split(/[^\p{L}\p{N}]+/u).filter((w) => w.length > 0);
+      item._tokens = Array.from(new Set(words));
+    });
+
+    // score a single item against the (already tokenized) query
+    function scoreItem(item, queryTokens, rawQuery) {
+      if (queryTokens.length === 0) return 1; // empty query -> neutral, everything shows
+      // strong bonus: exact substring of the whole query (handles multi-word exact phrases)
+      const exactPhrase = item._fullTextLower.includes(rawQuery);
+
+      let totalScore = 0;
+      let matchedTokens = 0;
+      for (const qt of queryTokens) {
+        let best = 0;
+        for (const tk of item._tokens) {
+          const s = tokenSimilarity(qt, tk);
+          if (s > best) best = s;
+          if (best === 1) break;
+        }
+        if (best >= 0.5) matchedTokens++;
+        totalScore += best;
+      }
+      const avgScore = totalScore / queryTokens.length;
+      const coverage = matchedTokens / queryTokens.length; // fraction of query words found
+      let finalScore = avgScore * 0.7 + coverage * 0.3;
+      if (exactPhrase) finalScore = Math.min(1, finalScore + 0.35);
+      // require at least half the query words to have a reasonable match
+      if (coverage < 0.5 && !exactPhrase) finalScore *= 0.15;
+      return finalScore;
+    }
+
+    const searchInput = document.getElementById("searchInput");
+    const clearSearch = document.getElementById("clearSearch");
+    const searchCount = document.getElementById("searchCount");
+    const noResults = document.getElementById("noResults");
+    const tocLinks = Array.from(tocEl.querySelectorAll("a"));
+    const topicCards = Array.from(containerEl.querySelectorAll(".topic"));
+    const catLabels = Array.from(tocEl.querySelectorAll(".cat-label"));
+
+    // keep original DOM order so we can restore grouped-by-category view when search clears
+    const originalTocOrder = Array.from(tocEl.children);
+    const originalCardOrder = Array.from(containerEl.children);
+
+    function restoreOriginalOrder() {
+      originalTocOrder.forEach((el) => tocEl.appendChild(el));
+      originalCardOrder.forEach((el) => containerEl.appendChild(el));
+      catLabels.forEach((label) => (label.style.display = ""));
+    }
+
+    function runSearch() {
+      const rawQuery = searchInput.value.trim().toLowerCase();
+      clearSearch.classList.toggle("show", rawQuery.length > 0);
+
+      if (!rawQuery) {
+        restoreOriginalOrder();
+        tocLinks.forEach((a) => a.classList.remove("hidden"));
+        topicCards.forEach((c) => (c.style.display = ""));
+        noResults.style.display = "none";
+        searchCount.textContent = `કુલ ${flatItems.length} ટોપિક`;
+        return;
+      }
+
+      const queryTokens = rawQuery
+        .split(/[^\p{L}\p{N}]+/u)
+        .filter((w) => w.length > 0);
+
+      const scored = flatItems.map((item) => ({
+        item,
+        score: scoreItem(item, queryTokens, rawQuery),
+      }));
+
+      const THRESHOLD = 0.32;
+      scored.sort((a, b) => b.score - a.score);
+
+      let visibleCount = 0;
+      scored.forEach(({ item, score }) => {
+        const a = tocEl.querySelector(`a[data-id="${item._id}"]`);
+        const card = document.getElementById(item._id);
+        const match = score >= THRESHOLD;
+        if (match) {
+          visibleCount++;
+          tocEl.appendChild(a); // reorder: best matches first
+          containerEl.appendChild(card);
+          a.classList.remove("hidden");
+          card.style.display = "";
+          let scoreEl = a.querySelector(".match-score");
+          if (!scoreEl) {
+            scoreEl = document.createElement("span");
+            scoreEl.className = "match-score";
+            a.appendChild(scoreEl);
+          }
+          scoreEl.textContent = Math.round(score * 100) + "%";
+        } else {
+          a.classList.add("hidden");
+          card.style.display = "none";
+        }
+      });
+
+      // hide category labels entirely while searching (flat ranked list is clearer)
+      catLabels.forEach((label) => {
+        label.style.display = "none";
+      });
+
+      noResults.style.display = visibleCount === 0 ? "block" : "none";
+      searchCount.textContent = `${visibleCount} ટોપિક મળ્યા (સુસંગતતા મુજબ ક્રમાંકિત)`;
+    }
+
+    let searchDebounce;
+    searchInput.addEventListener("input", () => {
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(runSearch, 90);
+    });
+    clearSearch.addEventListener("click", () => {
+      searchInput.value = "";
+      runSearch();
+      searchInput.focus();
+    });
+    searchCount.textContent = `કુલ ${flatItems.length} ટોપિક`;
+
+    /* ---------- Active link on scroll ---------- */
+    const currentTitleEl = document.getElementById("currentTitle");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            tocLinks.forEach((a) =>
+              a.classList.toggle("active", a.dataset.id === id),
+            );
+            const item = flatItems.find((i) => i._id === id);
+            if (item) currentTitleEl.textContent = item.t;
+          }
+        });
+      },
+      { rootMargin: "-15% 0px -70% 0px", threshold: 0 },
+    );
+    topicCards.forEach((c) => observer.observe(c));
+
+    /* ---------- Mobile sidebar ---------- */
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+    const menuBtn = document.getElementById("menuBtn");
+    function closeSidebar() {
+      sidebar.classList.remove("open");
+      overlay.classList.remove("show");
+    }
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      overlay.classList.toggle("show");
+    });
+    overlay.addEventListener("click", closeSidebar);
+
+    /* ---------- Collapsible sidebar: full <-> mini, with localStorage memory ---------- */
+    const collapseBtn = document.getElementById("collapseBtn");
+    const miniSearchBtn = document.getElementById("miniSearchBtn");
+    const SIDEBAR_KEY = "currentAffairsSidebarMode";
+    const isMobile = () => window.innerWidth <= 900;
+
+    function setSidebarMode(mode, persist) {
+      if (isMobile()) return; // mobile always uses the full drawer overlay
+      sidebar.classList.toggle("mini", mode === "mini");
+      if (persist) localStorage.setItem(SIDEBAR_KEY, mode);
+    }
+
+    // restore last saved state on load (desktop only)
+    (function initSidebarMode() {
+      if (isMobile()) return;
+      const saved = localStorage.getItem(SIDEBAR_KEY);
+      if (saved === "mini") sidebar.classList.add("mini");
+    })();
+
+    collapseBtn.addEventListener("click", () => {
+      const nowMini = !sidebar.classList.contains("mini");
+      setSidebarMode(nowMini ? "mini" : "full", true);
+    });
+
+    miniSearchBtn.addEventListener("click", () => {
+      setSidebarMode("full", true);
+      setTimeout(() => searchInput.focus(), 260);
+    });
+
+    // Auto-collapse to mini sidebar once a topic is opened (from search or menu click)
+    // so the reading area gets more room — as requested: search -> click topic -> auto mini.
+    tocEl.addEventListener("click", (e) => {
+      const link = e.target.closest("a");
+      if (!link) return;
+      closeSidebar(); // for mobile drawer
+      if (!isMobile()) {
+        setSidebarMode("mini", true);
+      }
+    });
+
+    /* ---------- Tooltip flyout for mini-mode hover ---------- */
+    const tooltipFlyout = document.getElementById("tooltipFlyout");
+    function showTooltip(el, text) {
+      if (!sidebar.classList.contains("mini") || isMobile()) return;
+      const rect = el.getBoundingClientRect();
+      tooltipFlyout.textContent = text;
+      tooltipFlyout.style.top = rect.top + rect.height / 2 - 12 + "px";
+      tooltipFlyout.classList.add("show");
+    }
+    function hideTooltip() {
+      tooltipFlyout.classList.remove("show");
+    }
+
+    tocLinks.forEach((a) => {
+      const labelText =
+        a.querySelector(".label-text")?.textContent || a.textContent.trim();
+      a.addEventListener("mouseenter", () => showTooltip(a, labelText));
+      a.addEventListener("mouseleave", hideTooltip);
+    });
+    catLabels.forEach((label) => {
+      label.addEventListener("mouseenter", () =>
+        showTooltip(label, label.textContent.trim()),
+      );
+      label.addEventListener("mouseleave", hideTooltip);
+    });
+    document
+      .querySelector(".brand .ashoka")
+      .addEventListener("mouseenter", (e) => {
+        showTooltip(
+          e.currentTarget,
+          "વિષય પસંદ કરો",
+        );
+      });
+    document
+      .querySelector(".brand .ashoka")
+      .addEventListener("mouseleave", hideTooltip);
+
+    window.addEventListener("resize", () => {
+      if (isMobile()) hideTooltip();
+    });
+  </script>
+
+
+  <!-- ================= MASTER SUBJECT NAVIGATION ================= -->
+
+  <!-- Subject Selector Modal -->
+  <div class="master-subject-overlay" id="masterSubjectOverlay" aria-hidden="true">
+    <div class="master-subject-modal" role="dialog" aria-modal="true" aria-label="Subjects">
+
+      <div class="master-subject-header">
+        <div class="master-subject-title">📚 Subjects</div>
+
+        <button class="master-subject-close" id="masterSubjectClose" type="button"
+          aria-label="Close subjects">×</button>
+      </div>
+
+      <div class="master-subject-list" id="masterSubjectList"></div>
+
+    </div>
+  </div>
+
+
+  <style>
+    /* =========================================================
+   MASTER SUBJECT NAVIGATION
+   ========================================================= */
+
+    .master-subject-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 16px;
+
+      background: rgba(28, 43, 36, 0.55);
+
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+
+      opacity: 0;
+      visibility: hidden;
+
+      transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+    }
+
+    .master-subject-overlay.master-subject-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+
+    /* Modal */
+
+    .master-subject-modal {
+      width: 100%;
+      max-width: 440px;
+
+      max-height: min(80vh, 700px);
+
+      display: flex;
+      flex-direction: column;
+
+      overflow: hidden;
+
+      background: var(--card, #fffdf7);
+
+      border: 1px solid var(--line, #ddd3ba);
+      border-radius: 12px;
+
+      box-shadow:
+        0 16px 40px rgba(28, 43, 36, 0.22);
+
+      transform: scale(0.95) translateY(10px);
+
+      transition:
+        transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .master-subject-overlay.master-subject-open .master-subject-modal {
+      transform: scale(1) translateY(0);
+    }
+
+
+    /* Header */
+
+    .master-subject-header {
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 18px 22px;
+
+      background: var(--paper2, #efe8d8);
+
+      border-bottom: 1px solid var(--line, #ddd3ba);
+    }
+
+    .master-subject-title {
+      font-family: "Noto Serif Gujarati", serif;
+
+      font-size: 18px;
+      font-weight: 700;
+
+      color: var(--green-deep, #1f4d3a);
+
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+
+    /* Close button */
+
+    .master-subject-close {
+      width: 34px;
+      height: 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0;
+
+      border: 0;
+      border-radius: 50%;
+
+      background: transparent;
+
+      color: var(--muted, #6b6152);
+
+      font-size: 22px;
+      line-height: 1;
+
+      cursor: pointer;
+
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .master-subject-close:hover {
+      background: rgba(0, 0, 0, 0.07);
+      color: var(--ink, #1c2b24);
+    }
+
+    .master-subject-close:active {
+      transform: scale(0.9);
+    }
+
+
+    /* Scrollable subject list */
+
+    .master-subject-list {
+      min-height: 0;
+
+      overflow-y: auto;
+
+      padding: 12px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      max-height: calc(min(80vh, 700px) - 73px);
+
+      -webkit-overflow-scrolling: touch;
+
+      overscroll-behavior: contain;
+    }
+
+    .master-subject-list::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .master-subject-list::-webkit-scrollbar-thumb {
+      background: var(--line, #ddd3ba);
+      border-radius: 4px;
+    }
+
+    .master-subject-list::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+
+    /* Subject item */
+
+    .master-subject-item {
+      min-height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 10px 14px;
+
+      border: 1px solid transparent;
+      border-radius: 8px;
+
+      background: transparent;
+
+      color: var(--ink, #1c2b24);
+
+      font-size: 15px;
+      font-weight: 500;
+
+      text-decoration: none;
+
+      cursor: pointer;
+
+      transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.1s ease;
+    }
+
+    .master-subject-item:hover {
+      background: var(--paper2, #efe8d8);
+      border-color: var(--line, #ddd3ba);
+    }
+
+    .master-subject-item:active {
+      transform: scale(0.98);
+    }
+
+
+    /* Left side */
+
+    .master-subject-item-left {
+      min-width: 0;
+
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+    }
+
+    .master-subject-icon {
+      width: 28px;
+
+      flex-shrink: 0;
+
+      text-align: center;
+
+      font-size: 18px;
+    }
+
+    .master-subject-name {
+      overflow: hidden;
+
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+
+    /* Active subject */
+
+    .master-subject-item.master-subject-is-active {
+      background: var(--paper2, #efe8d8);
+
+      border-color: var(--saffron, #c9622a);
+
+      font-weight: 700;
+    }
+
+    .master-subject-active-badge {
+      flex-shrink: 0;
+
+      margin-left: 10px;
+
+      padding: 2px 8px;
+
+      border-radius: 12px;
+
+      background: #fdf2e9;
+
+      border: 1px solid #f5cba7;
+
+      color: var(--saffron-dark, #a34b1c);
+
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+
+    /* Existing Ashoka button */
+
+    .ashoka {
+      cursor: pointer;
+
+      user-select: none;
+
+      transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+    }
+
+    .ashoka:hover {
+      transform: scale(1.08);
+      opacity: 0.9;
+    }
+
+    .ashoka:active {
+      transform: scale(0.95);
+    }
+
+
+    /* Mobile */
+
+    @media (max-width: 600px) {
+
+      .master-subject-overlay {
+        padding: 12px;
+      }
+
+      .master-subject-modal {
+        max-width: 100%;
+
+        max-height: 84vh;
+
+        border-radius: 14px;
+      }
+
+      .master-subject-header {
+        padding: 15px 17px;
+      }
+
+      .master-subject-title {
+        font-size: 17px;
+      }
+
+      .master-subject-list {
+        padding: 10px;
+
+        max-height: calc(84vh - 65px);
+      }
+
+      .master-subject-item {
+        min-height: 50px;
+
+        padding: 10px 12px;
+
+        font-size: 14.5px;
+      }
+
+      .master-subject-icon {
+        font-size: 17px;
+      }
+    }
+  </style>
+
+
+  <script>
+    /* =========================================================
+       MASTER SUBJECT CONFIGURATION
+    
+       ONLY EDIT THIS LIST WHEN ADDING / REMOVING SUBJECTS
+       ========================================================= */
+
+          const MASTER_SUBJECTS = [
+
+        {
+          name: "ગણિત",
+          icon: "🧮",
+          url: "/gujarat-exam-study-guides/maths-guide.html"
+        },
+
+        {
+          name: "Reasoning",
+          icon: "🧠",
+          url: "/gujarat-exam-study-guides/reasoning-guide.html"
+        },
+
+        {
+          name: "ભારતીય બંધારણ",
+          icon: "📜",
+          url: "/gujarat-exam-study-guides/indian-constitution-guide.html"
+        },
+
+        {
+          name: "Geography",
+          icon: "🌍",
+          url: ""
+          // url: "/gujarat-exam-study-guides/geography-guide.html"
+        },
+
+        {
+          name: "History",
+          icon: "📚",
+          url: ""
+          // url: "/gujarat-exam-study-guides/history-guide.html"
+        },
+
+        {
+          name: "Science",
+          icon: "🔬",
+          url: ""
+          // url: "/gujarat-exam-study-guides/science-guide.html"
+        },
+
+        {
+          name: "Computer",
+          icon: "💻",
+          url: ""
+          //  url: "/gujarat-exam-study-guides/computer-guide.html"
+        },
+
+        {
+          name: "English Grammar",
+          icon: "🇬🇧",
+          url: ""
+          //  url: "/gujarat-exam-study-guides/english-grammar-guide.html"
+        },
+
+        {
+          name: "ગુજરાતી વ્યાકરણ",
+          icon: "અ",
+          url: ""
+          //  url: "/gujarat-exam-study-guides/gujarati-grammar-guide.html"
+        },
+
+        {
+          name: "Current Affairs",
+          icon: "📰",
+          url: "/gujarat-exam-study-guides/current-affairs-guide.html"
+        }
+
+      ];
+
+
+
+    /* =========================================================
+       MASTER SUBJECT NAVIGATION LOGIC
+       ========================================================= */
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const overlay =
+        document.getElementById("masterSubjectOverlay");
+
+      const closeButton =
+        document.getElementById("masterSubjectClose");
+
+      const subjectList =
+        document.getElementById("masterSubjectList");
+
+      const ashokaButtons =
+        document.querySelectorAll(".ashoka, .ashoka-label");
+
+
+      if (!overlay || !closeButton || !subjectList) {
+        return;
+      }
+
+
+      /* Current website path */
+
+      const currentPath =
+        window.location.pathname.replace(/\/+$/, "") || "/";
+
+
+      /* Render subjects */
+
+      subjectList.innerHTML = "";
+
+      MASTER_SUBJECTS.forEach(function (subject) {
+
+        const subjectPath =
+          new URL(subject.url, window.location.origin)
+            .pathname
+            .replace(/\/+$/, "") || "/";
+
+
+        const isCurrent =
+          currentPath === subjectPath;
+
+
+        const link =
+          document.createElement("a");
+
+
+        link.href = subject.url;
+
+        link.className =
+          "master-subject-item" +
+          (isCurrent
+            ? " master-subject-is-active"
+            : "");
+
+
+        link.innerHTML = `
+      <span class="master-subject-item-left">
+
+        <span class="master-subject-icon">
+          ${subject.icon}
+        </span>
+
+        <span class="master-subject-name">
+          ${subject.name}
+        </span>
+
+      </span>
+
+      ${isCurrent
+            ? '<span class="master-subject-active-badge">Active</span>'
+            : ""
+          }
+    `;
+
+
+        subjectList.appendChild(link);
+
+      });
+
+
+      /* Open modal */
+
+      function openMasterSubjectModal() {
+
+        overlay.classList.add(
+          "master-subject-open"
+        );
+
+        overlay.setAttribute(
+          "aria-hidden",
+          "false"
+        );
+
+        document.body.style.overflow = "hidden";
+
+      }
+
+
+      /* Close modal */
+
+      function closeMasterSubjectModal() {
+
+        overlay.classList.remove(
+          "master-subject-open"
+        );
+
+        overlay.setAttribute(
+          "aria-hidden",
+          "true"
+        );
+
+        document.body.style.overflow = "";
+
+      }
+
+
+      /* Ashoka click */
+
+      ashokaButtons.forEach(function (button) {
+
+        button.addEventListener(
+          "click",
+          openMasterSubjectModal
+        );
+
+      });
+
+
+      /* Close button */
+
+      closeButton.addEventListener(
+        "click",
+        closeMasterSubjectModal
+      );
+
+
+      /* Click outside modal */
+
+      overlay.addEventListener(
+        "click",
+        function (event) {
+
+          if (event.target === overlay) {
+
+            closeMasterSubjectModal();
+
+          }
+
+        }
+      );
+
+
+      /* Escape key */
+
+      document.addEventListener(
+        "keydown",
+        function (event) {
+
+          if (
+            event.key === "Escape" &&
+            overlay.classList.contains(
+              "master-subject-open"
+            )
+          ) {
+
+            closeMasterSubjectModal();
+
+          }
+
+        }
+      );
+
+
+    });
+
+    /* ---------- Mobile: hold menu button 2s -> fullscreen, hold again 2s -> normal ---------- */
+(function () {
+  const HOLD_MS = 2000;
+  let pressTimer = null;
+  let longPressFired = false;
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen?.();
+    } else {
+      document.exitFullscreen?.();
+    }
+  }
+
+  function startPress() {
+    longPressFired = false;
+    pressTimer = setTimeout(() => {
+      longPressFired = true;
+      toggleFullscreen();
+    }, HOLD_MS);
+  }
+
+  function cancelPress() {
+    clearTimeout(pressTimer);
+  }
+
+  menuBtn.addEventListener("touchstart", startPress, { passive: true });
+  menuBtn.addEventListener("touchend", cancelPress);
+  menuBtn.addEventListener("touchcancel", cancelPress);
+  menuBtn.addEventListener("mousedown", startPress);
+  menuBtn.addEventListener("mouseup", cancelPress);
+  menuBtn.addEventListener("mouseleave", cancelPress);
+
+  /* Block the normal open/close click right after a long-press fires */
+  menuBtn.addEventListener(
+    "click",
+    (e) => {
+      if (longPressFired) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        longPressFired = false;
+      }
+    },
+    true,
+  );
+})();
+    
+  </script>
+
+  <!-- ================= END MASTER SUBJECT NAVIGATION ================= -->
+
+</body>
+
+</html>
