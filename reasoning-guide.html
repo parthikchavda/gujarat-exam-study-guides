@@ -2152,6 +2152,54 @@
 
 
     });
+
+    /* ---------- Mobile: hold menu button 2s -> fullscreen, hold again 2s -> normal ---------- */
+(function () {
+  const HOLD_MS = 2000;
+  let pressTimer = null;
+  let longPressFired = false;
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen?.();
+    } else {
+      document.exitFullscreen?.();
+    }
+  }
+
+  function startPress() {
+    longPressFired = false;
+    pressTimer = setTimeout(() => {
+      longPressFired = true;
+      toggleFullscreen();
+    }, HOLD_MS);
+  }
+
+  function cancelPress() {
+    clearTimeout(pressTimer);
+  }
+
+  menuBtn.addEventListener("touchstart", startPress, { passive: true });
+  menuBtn.addEventListener("touchend", cancelPress);
+  menuBtn.addEventListener("touchcancel", cancelPress);
+  menuBtn.addEventListener("mousedown", startPress);
+  menuBtn.addEventListener("mouseup", cancelPress);
+  menuBtn.addEventListener("mouseleave", cancelPress);
+
+  /* Block the normal open/close click right after a long-press fires */
+  menuBtn.addEventListener(
+    "click",
+    (e) => {
+      if (longPressFired) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        longPressFired = false;
+      }
+    },
+    true,
+  );
+})();
+    
   </script>
 
   <!-- ================= END MASTER SUBJECT NAVIGATION ================= -->
