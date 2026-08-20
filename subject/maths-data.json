@@ -1,0 +1,280 @@
+[
+  {
+    "cat": "સંખ્યા પદ્ધતિ અને વિભાજ્યતા",
+    "items": [
+      {
+        "t": "સંખ્યાના પ્રકારો",
+        "en": "Types of Numbers",
+        "art": "પાયાની વ્યાખ્યાઓ",
+        "body": "\n<p>ગણિતના લગભગ તમામ પ્રકરણોનો પાયો સંખ્યા પદ્ધતિ છે. પરીક્ષામાં વ્યાખ્યા આધારિત સીધા પ્રશ્નો પુછાય છે.</p><span class=\"sub\">મુખ્ય પ્રકારો</span><ul><li>પ્રાકૃતિક સંખ્યા (N): 1, 2, 3, 4... (0 સમાવેશ નહીં)</li><li>પૂર્ણ સંખ્યા (W): 0, 1, 2, 3...</li><li>પૂર્ણાંક સંખ્યા (I/Z): ...−2, −1, 0, 1, 2...</li><li>સંમેય સંખ્યા (Q): જે p/q સ્વરૂપે લખી શકાય (q ≠ 0)</li><li>અસંમેય સંખ્યા: p/q સ્વરૂપે ન લખાય તેવી — દા.ત. √2, √3, π</li><li>વાસ્તવિક સંખ્યા (R): સંમેય + અસંમેય સંખ્યાઓનો સમૂહ</li><li>અવિભાજ્ય સંખ્યા (Prime): માત્ર 1 અને પોતાનાથી જ ભાગી શકાય — 2, 3, 5, 7, 11, 13...</li><li>સંયુક્ત સંખ્યા (Composite): 1 થી વધુ અવયવ ધરાવતી સંખ્યા — 4, 6, 8, 9...</li><li>સહ-અવિભાજ્ય સંખ્યા (Co-prime): બે સંખ્યાનો ગ.સા.અ. 1 હોય — દા.ત. (8, 15)</li></ul><span class=\"sub\">મહત્વના તથ્યો</span><ul><li>1 એ ન તો અવિભાજ્ય છે ન તો સંયુક્ત</li><li>2 એકમાત્ર યુગ્મ (even) અવિભાજ્ય સંખ્યા છે</li><li>1 થી 100 વચ્ચે કુલ 25 અવિભાજ્ય સંખ્યાઓ છે</li><li>0 એ પૂર્ણ સંખ્યા છે પરંતુ પ્રાકૃતિક સંખ્યા નથી</li></ul><div class=\"note\">GPSC ટીપ: \"સૌથી નાની અવિભાજ્ય સંખ્યા કઈ?\" — જવાબ 2 (0 કે 1 નહીં) — આ ભૂલ વારંવાર થાય છે.</div>\n"
+      },
+      {
+        "t": "વિભાજ્યતાના નિયમો",
+        "en": "Divisibility Rules",
+        "art": "2 થી 11",
+        "body": "\n<p>સંખ્યાને ભાગ્યા વગર જ તે કઈ સંખ્યાથી ભાગી શકાય તે નક્કી કરવાના નિયમો — ઝડપી ગણતરી માટે અતિ ઉપયોગી.</p><span class=\"sub\">સંખ્યા પ્રમાણે નિયમો</span><div class=\"table-scroll\"><table><tr><th>સંખ્યા</th><th>નિયમ</th></tr><tr><td>2</td><td>એકમનો અંક 0, 2, 4, 6, 8 હોય</td></tr><tr><td>3</td><td>અંકોનો સરવાળો 3 થી ભાગી શકાય</td></tr><tr><td>4</td><td>છેલ્લા બે અંક (દહાઈ-એકમ) 4 થી ભાગી શકાય</td></tr><tr><td>5</td><td>એકમનો અંક 0 અથવા 5 હોય</td></tr><tr><td>6</td><td>સંખ્યા 2 અને 3 બંનેથી ભાગી શકાય</td></tr><tr><td>8</td><td>છેલ્લા ત્રણ અંક 8 થી ભાગી શકાય</td></tr><tr><td>9</td><td>અંકોનો સરવાળો 9 થી ભાગી શકાય</td></tr><tr><td>10</td><td>એકમનો અંક 0 હોય</td></tr><tr><td>11</td><td>એકી સ્થાનના અંકોનો સરવાળો − બેકી સ્થાનના અંકોનો સરવાળો = 0 અથવા 11 નો ગુણક</td></tr></table></div><div class=\"note\">GPSC ટીપ: 7 અને 13 માટે સીધો સરળ નિયમ નથી — સીધો ભાગાકાર કરવો વધુ ઝડપી પડે છે.</div>\n"
+      },
+      {
+        "t": "એકમનો અંક શોધવો",
+        "en": "Unit Digit / Cyclicity",
+        "art": "ચક્ર પદ્ધતિ (4 ચક્ર)",
+        "body": "\n<p>મોટા ઘાતાંકવાળી સંખ્યાનો એકમનો અંક શોધવા માટે ચક્ર (cyclicity) પદ્ધતિ વપરાય છે — દરેક અંકનું ચક્ર મહત્તમ 4 ઘાત પછી પુનરાવર્તિત થાય છે.</p><span class=\"sub\">અંક પ્રમાણે ચક્ર</span><ul><li>0, 1, 5, 6 — હંમેશા એ જ અંક રહે (ચક્ર = 1)</li><li>4, 9 — ચક્ર = 2 (દા.ત. 4¹ = 4, 4² = 6, 4³ = 4, 4⁴ = 6 ...)</li><li>2, 3, 7, 8 — ચક્ર = 4</li></ul><span class=\"sub\">રીત</span><ul><li>ઘાતાંકને ચક્ર-સંખ્યાથી ભાગો, શેષ મેળવો</li><li>શેષ = 0 હોય તો ચક્રનો છેલ્લો ઘાત વાપરો</li><li>ઉદાહરણ: 7²³ નો એકમનો અંક — 7 નું ચક્ર 7, 9, 3, 1 (4 લાંબુ) — 23 ÷ 4 = શેષ 3 → ત્રીજું પદ = 3</li></ul><div class=\"note\">શોર્ટકટ: સંખ્યાનો છેલ્લો અંક જ ધ્યાનમાં લો, પૂરી સંખ્યાની જરૂર નથી.</div>\n"
+      },
+      {
+        "t": "ભાગાકાર અને શેષ સિદ્ધાંત",
+        "en": "Remainder Theorem Basics",
+        "art": "ભાજ્ય = ભાજક × ભાગફળ + શેષ",
+        "body": "\n<p>ભાગાકારને લગતું પાયાનું સૂત્ર દરેક દાખલાનો આધાર છે.</p><span class=\"sub\">મૂળભૂત સૂત્ર</span><div class=\"formula-group\"><div class=\"formula\"><span class=\"flabel\">Dividend = Divisor × Quotient + Remainder</span>ભાજ્ય = ભાજક × ભાગફળ + શેષ</div></div><p>શેષ હંમેશા ભાજક કરતાં નાનો હોય — 0 ≤ શેષ &lt; ભાજક</p><span class=\"sub\">ઉપયોગી નિયમો</span><ul><li>સંપૂર્ણ ભાગી શકે તેવી નાનામાં નાની સંખ્યા ઉમેરવી હોય તો: ભાજક − શેષ ઉમેરો</li><li>સંપૂર્ણ ભાગી શકે તે માટે બાદ કરવી હોય તો: શેષ બાદ કરો</li><li>a અને b બંનેથી ભાગી શકાય તેવી નાનામાં નાની સંખ્યા = LCM(a, b)</li></ul><div class=\"note\">GPSC ટીપ: \"કઈ નાનામાં નાની સંખ્યા x થી ભાગતાં y શેષ વધે\" પ્રકારના પ્રશ્નોમાં આ સૂત્ર સીધું લાગુ પડે છે.</div>\n"
+      }
+    ]
+  },
+  {
+    "cat": "લ.સા.અ. (LCM) અને ગ.સા.અ. (HCF)",
+    "items": [
+      {
+        "t": "HCF અને LCM ના મૂળભૂત સૂત્રો",
+        "en": "HCF & LCM Basics",
+        "art": "HCF × LCM = a × b",
+        "body": "\n<p>ગ.સા.અ. (મહત્તમ સામાન્ય અવયવ / HCF) અને લ.સા.અ. (લઘુત્તમ સામાન્ય ગુણક / LCM) બંને સંખ્યાઓ વચ્ચેના સંબંધો દર્શાવે છે.</p><span class=\"sub\">પદ્ધતિઓ</span><ul><li>અવયવીકરણ પદ્ધતિ (Prime Factorization): HCF = સામાન્ય અવયવોનો સૌથી નાનો ઘાત; LCM = બધા અવયવોનો સૌથી મોટો ઘાત</li><li>ભાગાકાર પદ્ધતિ (Division Method) — મોટી સંખ્યાઓ માટે ઝડપી</li></ul><span class=\"sub\">મુખ્ય સૂત્ર</span><div class=\"formula-group\"><div class=\"formula\">HCF(a, b) × LCM(a, b) = a × b</div></div><ul><li>HCF હંમેશા બંને સંખ્યાઓનો અવયવ હોય છે (સંખ્યા કરતાં નાનો કે બરાબર)</li><li>LCM હંમેશા બંને સંખ્યાઓનો ગુણક હોય છે (સંખ્યા કરતાં મોટો કે બરાબર)</li><li>સહ-અવિભાજ્ય સંખ્યાઓનું HCF = 1 અને LCM = બંનેનો ગુણાકાર</li></ul>\n"
+      },
+      {
+        "t": "અપૂર્ણાંકોના HCF અને LCM",
+        "en": "HCF/LCM of Fractions",
+        "art": "અંશ/છેદનો નિયમ",
+        "body": "\n<p>અપૂર્ણાંકોમાં HCF-LCM શોધવા માટે અલગ સૂત્ર વપરાય છે.</p><span class=\"sub\">સૂત્રો</span><div class=\"formula-group\"><div class=\"formula\"><span class=\"flabel\">= અંશોનું HCF ÷ છેદોનું LCM</span>HCF of Fractions</div><div class=\"formula\"><span class=\"flabel\">= અંશોનું LCM ÷ છેદોનું HCF</span>LCM of Fractions</div></div><div class=\"note\">ઉદાહરણ: 2/3 અને 4/9 નું LCM = LCM(2,4)/HCF(3,9) = 4/3</div>\n"
+      },
+      {
+        "t": "HCF-LCM આધારિત પ્રશ્ન પ્રકારો",
+        "en": "Applications of HCF & LCM",
+        "art": "ઘંટડી, ટાઇલ્સ, ટ્રાફિક લાઇટ",
+        "body": "\n<p>પરીક્ષામાં પુછાતા લાક્ષણિક પ્રશ્ન પ્રકારો અને તેમની ચાવી.</p><span class=\"sub\">પ્રશ્ન પ્રકાર → વાપરવાનું સૂત્ર</span><ul><li>એકસાથે વાગતી ઘંટડીઓ / ટ્રાફિક લાઇટ ફરી એકસાથે ક્યારે → <mark>LCM</mark></li><li>સૌથી મોટા માપની ટાઇલ્સ/વસ્તુ વડે ક્ષેત્ર બરાબર માપવું → <mark>HCF</mark></li><li>અમુક સંખ્યાથી ભાગતાં ચોક્કસ શેષ વધે તેવી નાનામાં નાની સંખ્યા → LCM + શેષ</li><li>ત્રણ પાત્રોમાં સૌથી વધુ માપનું પ્રવાહી ભરવું (સંપૂર્ણ ભાગ પડે તે રીતે) → HCF</li></ul><div class=\"note\">GPSC ટીપ: \"મહત્તમ ક્ષમતા/માપ\" શબ્દ દેખાય તો HCF, અને \"ફરી એકસાથે/ન્યૂનતમ સમય\" શબ્દ દેખાય તો LCM વાપરો.</div>\n"
+      }
+    ]
+  },
+  {
+    "cat": "સરળીકરણ, ઘાત અને વર્ગમૂળ",
+    "items": [
+      {
+        "t": "BODMAS નિયમ",
+        "en": "BODMAS Rule",
+        "art": "ક્રમ: (), of, ÷, ×, +, −",
+        "body": "\n<p>સરળીકરણના દાખલા ઉકેલવા માટેનો ક્રમ — ખોટા ક્રમથી જવાબ ખોટો આવે છે.</p><span class=\"sub\">ક્રમ (અગ્રતા)</span><ul><li><b>B</b> — Bracket (કૌંસ): ( ), { }, [ ]</li><li><b>O</b> — Of (નો/ની — ટકાવારી/અપૂર્ણાંક)</li><li><b>D</b> — Division (ભાગાકાર)</li><li><b>M</b> — Multiplication (ગુણાકાર)</li><li><b>A</b> — Addition (સરવાળો)</li><li><b>S</b> — Subtraction (બાદબાકી)</li></ul><span class=\"sub\">કૌંસનો ક્રમ</span><ul><li>પ્રથમ: — (વિનક્યુલમ / રેખા)</li><li>પછી: ( ) નાનો કૌંસ</li><li>પછી: { } મધ્યમ કૌંસ</li><li>છેલ્લે: [ ] મોટો કૌંસ</li></ul>\n"
+      },
+      {
+        "t": "ઘાત અને ઘાતાંકના નિયમો",
+        "en": "Laws of Indices",
+        "art": "aᵐ × aⁿ = aᵐ⁺ⁿ",
+        "body": "\n<p>ઘાતાંક (Exponent/Indices) ના નિયમો બીજગણિત અને સરળીકરણ બંનેમાં વપરાય છે.</p><div class=\"table-scroll\"><table><tr><th>નિયમ</th><th>સૂત્ર</th></tr><tr><td>ગુણાકાર</td><td>aᵐ × aⁿ = aᵐ⁺ⁿ</td></tr><tr><td>ભાગાકાર</td><td>aᵐ ÷ aⁿ = aᵐ⁻ⁿ</td></tr><tr><td>ઘાતનો ઘાત</td><td>(aᵐ)ⁿ = aᵐⁿ</td></tr><tr><td>શૂન્ય ઘાત</td><td>a⁰ = 1  (a ≠ 0)</td></tr><tr><td>ઋણ ઘાત</td><td>a⁻ⁿ = 1/aⁿ</td></tr><tr><td>ભિન્નાત્મક ઘાત</td><td>a^(1/n) = ⁿ√a</td></tr><tr><td>ગુણાકારનો ઘાત</td><td>(ab)ⁿ = aⁿ × bⁿ</td></tr><tr><td>ભાગાકારનો ઘાત</td><td>(a/b)ⁿ = aⁿ/bⁿ</td></tr></table></div>\n"
+      },
+      {
+        "t": "વર્ગમૂળ અને ઘનમૂળ",
+        "en": "Square Root & Cube Root",
+        "art": "√ અને ∛",
+        "body": "\n<p>વર્ગમૂળ-ઘનમૂળ ઝડપથી શોધવાની રીતો અને યાદ રાખવા જેવા વર્ગ-ઘન.</p><span class=\"sub\">યાદ રાખવા જેવા વર્ગ (1–30)</span><div class=\"formula-group\"><div class=\"formula\">1² = 1, 2² = 4, 5² = 25, 10² = 100, 12² = 144</div><div class=\"formula\">15² = 225, 20² = 400, 25² = 625, 30² = 900</div></div><span class=\"sub\">યાદ રાખવા જેવા ઘન (1–15)</span><div class=\"formula-group\"><div class=\"formula\">2³ = 8, 3³ = 27, 4³ = 64, 5³ = 125</div><div class=\"formula\">6³ = 216, 10³ = 1000, 12³ = 1728, 15³ = 3375</div></div><span class=\"sub\">ઉપયોગી નિયમો</span><ul><li>પૂર્ણ વર્ગ સંખ્યાનો એકમનો અંક ક્યારેય 2, 3, 7, 8 ન હોય</li><li>√(a×b) = √a × √b</li><li>√(a/b) = √a / √b</li><li>પરિમેયીકરણ (Rationalization): 1/√a = √a/a</li></ul>\n"
+      },
+      {
+        "t": "અપૂર્ણાંક અને દશાંશ સંખ્યા",
+        "en": "Fractions & Decimals",
+        "art": "રૂપાંતરણ",
+        "body": "\n<p>અપૂર્ણાંક ↔ ટકાવારી ↔ દશાંશ વચ્ચે ઝડપી રૂપાંતરણ પરીક્ષામાં સમય બચાવે છે.</p><div class=\"table-scroll\"><table><tr><th>અપૂર્ણાંક</th><th>ટકાવારી</th></tr><tr><td>1/2</td><td>50%</td></tr><tr><td>1/3</td><td>33.33%</td></tr><tr><td>1/4</td><td>25%</td></tr><tr><td>1/5</td><td>20%</td></tr><tr><td>1/6</td><td>16.67%</td></tr><tr><td>1/7</td><td>14.28%</td></tr><tr><td>1/8</td><td>12.5%</td></tr><tr><td>1/9</td><td>11.11%</td></tr><tr><td>1/10</td><td>10%</td></tr><tr><td>1/12</td><td>8.33%</td></tr></table></div><div class=\"note\">GPSC ટીપ: 1 થી 20 સુધીના અપૂર્ણાંક-ટકાવારી ટેબલ ગોખી રાખવાથી ટકાવારીના દાખલા સેકન્ડોમાં ઉકલે છે.</div>\n"
+      }
+    ]
+  },
+  {
+    "cat": "ટકાવારી, નફો-ખોટ અને વ્યાજ",
+    "items": [
+      {
+        "t": "ટકાવારી — મૂળભૂત સૂત્રો",
+        "en": "Percentage Basics",
+        "art": "ટકા = (ભાગ/કુલ) × 100",
+        "body": "\n<p>ટકાવારી એટલે \"સો દીઠ\" પ્રમાણ — Percentage શબ્દ Latin \"Per Centum\" પરથી આવ્યો.</p><span class=\"sub\">મૂળભૂત સૂત્રો</span><div class=\"formula-group\"><div class=\"formula\">ટકાવારી = (ભાગ / કુલ) × 100</div><div class=\"formula\">x નો y% = (x × y) / 100</div></div><ul><li>જો A એ B કરતાં x% વધુ હોય, તો B એ A કરતાં [x/(100+x)] × 100 % ઓછું</li><li>જો A એ B કરતાં x% ઓછું હોય, તો B એ A કરતાં [x/(100−x)] × 100 % વધુ</li></ul><span class=\"sub\">વસ્તીવધારો/ઘટાડો અને ક્રમિક ફેરફાર</span><div class=\"formula-group\"><div class=\"formula\"><span class=\"flabel\">r% વાર્ષિક વધારો, n વર્ષ</span>અંતિમ = મૂળ × (1 + r/100)ⁿ</div><div class=\"formula\"><span class=\"flabel\">r% વાર્ષિક ઘટાડો, n વર્ષ</span>અંતિમ = મૂળ × (1 − r/100)ⁿ</div></div><p>ક્રમિક બે ટકાવારી ફેરફાર (x% અને y%) નું ચોખ્ખું અસર:</p><div class=\"formula-group\"><div class=\"formula\">ચોખ્ખું ફેરફાર = x + y + (xy/100) %</div></div><div class=\"note\">GPSC ટીપ: ભાવ વધારો → વપરાશ ઘટાડો (ખર્ચ સમાન રાખવો) ના પ્રશ્નોમાં ઘટાડો% = [વધારો/(100+વધારો)] × 100 સૂત્ર સીધું વાપરો.</div>\n"
+      },
+      {
+        "t": "નફો અને ખોટ",
+        "en": "Profit & Loss",
+        "art": "નફો% = (નફો/ખરીદકિંમત) × 100",
+        "body": "\n<p>વ્યાપારિક ગણિતનું સૌથી વધુ પુછાતું પ્રકરણ.</p><span class=\"sub\">પાયાની સંજ્ઞાઓ</span><ul><li>ખરીદકિંમત (Cost Price - CP), વેચાણકિંમત (Selling Price - SP)</li><li>નફો (Profit) = SP − CP  (જ્યારે SP &gt; CP)</li><li>ખોટ (Loss) = CP − SP  (જ્યારે CP &gt; SP)</li></ul><span class=\"sub\">મુખ્ય સૂત્રો</span><div class=\"formula-group\"><div class=\"formula\">નફો% = (નફો / CP) × 100</div><div class=\"formula\">ખોટ% = (ખોટ / CP) × 100</div><div class=\"formula\">SP = CP × (100 + નફો%) / 100</div><div class=\"formula\">SP = CP × (100 − ખોટ%) / 100</div><div class=\"formula\">CP = SP × 100 / (100 + નફો%)</div><div class=\"formula\">CP = SP × 100 / (100 − ખોટ%)</div></div><span class=\"sub\">ખાસ કિસ્સા</span><ul><li>ખોટા વજન/માપથી વેચાણ: નફો% = ભૂલ% / (100 − ભૂલ%) × 100</li><li>બે વસ્તુ સમાન કિંમતે વેચી, એક પર x% નફો બીજી પર x% ખોટ → હંમેશા ચોખ્ખી ખોટ થાય</li></ul><div class=\"formula-group\"><div class=\"formula\">ચોખ્ખી ખોટ = (x/10)²  %</div></div><div class=\"note\">GPSC ટીપ: \"સમાન SP પર x% નફો, x% ખોટ\" — હંમેશા ખોટ જ થાય, નફો ક્યારેય નહીં — (x²/100)% ખોટ.</div>\n"
+      },
+      {
+        "t": "સાદું વ્યાજ (Simple Interest)",
+        "en": "Simple Interest",
+        "art": "SI = PRT/100",
+        "body": "\n<p>મુદ્દલ પર જ સ્થિર દરે ગણાતું વ્યાજ.</p><span class=\"sub\">સૂત્રો</span><div class=\"formula-group\"><div class=\"formula\"><span class=\"flabel\">SI = PRT / 100</span>SI = (મુદ્દલ × દર × સમય) / 100</div><div class=\"formula\">રકમ A = P + SI = P(1 + RT/100)</div><div class=\"formula\">P = 100 × SI / (R × T)</div><div class=\"formula\">R = 100 × SI / (P × T)</div><div class=\"formula\">T = 100 × SI / (P × R)</div></div><div class=\"note\">સાદા વ્યાજમાં દર વર્ષે વ્યાજની રકમ સરખી જ રહે છે (સ્થિર).</div>\n"
+      },
+      {
+        "t": "ચક્રવૃદ્ધિ વ્યાજ (Compound Interest)",
+        "en": "Compound Interest",
+        "art": "A = P(1+R/100)ⁿ",
+        "body": "\n<p>વ્યાજ પર પણ વ્યાજ ગણાય એ ચક્રવૃદ્ધિ વ્યાજ — બેંક/લોન ગણતરીમાં વપરાય છે.</p><span class=\"sub\">મુખ્ય સૂત્ર</span><div class=\"formula-group\"><div class=\"formula\"><span class=\"flabel\">n = વર્ષોની સંખ્યા</span>રકમ A = P (1 + R/100)ⁿ</div><div class=\"formula\">CI = A − P = P [(1 + R/100)ⁿ − 1]</div></div><span class=\"sub\">સમય-ગાળા પ્રમાણે ફેરફાર</span><div class=\"table-scroll\"><table><tr><th>ચક્રવૃદ્ધિનો ગાળો</th><th>ફોર્મ્યુલામાં ફેરફાર</th></tr><tr><td>અર્ધવાર્ષિક (Half-yearly)</td><td>R/2 અને n × 2</td></tr><tr><td>ત્રિમાસિક (Quarterly)</td><td>R/4 અને n × 4</td></tr></table></div><span class=\"sub\">ઉપયોગી સંબંધો</span><div class=\"formula-group\"><div class=\"formula\">2 વર્ષ માટે: CI − SI = P (R/100)²</div><div class=\"formula\">3 વર્ષ માટે: CI − SI = P (R/100)² × [(300+R)/100]</div></div><div class=\"note\">GPSC ટીપ: \"2 વર્ષ માટે CI અને SI વચ્ચેનો તફાવત આપેલ છે, દર/મુદ્દલ શોધો\" પ્રકારના પ્રશ્નોમાં CI − SI = P(R/100)² સીધું વાપરો.</div>\n"
+      },
+      {
+        "t": "ડિસ્કાઉન્ટ (વટાવ)",
+        "en": "Discount",
+        "art": "MP પર આધારિત",
+        "body": "\n<p>અંકિત કિંમત (Marked Price) પર આપવામાં આવતું વળતર.</p><span class=\"sub\">સૂત્રો</span><div class=\"formula-group\"><div class=\"formula\">ડિસ્કાઉન્ટ = MP − SP</div><div class=\"formula\">ડિસ્કાઉન્ટ% = (ડિસ્કાઉન્ટ / MP) × 100</div><div class=\"formula\">SP = MP × (100 − ડિસ્કાઉન્ટ%) / 100</div></div><p>ક્રમિક બે ડિસ્કાઉન્ટ (x% પછી y%) નું ચોખ્ખું ડિસ્કાઉન્ટ:</p><div class=\"formula-group\"><div class=\"formula\">ચોખ્ખું ડિસ્કાઉન્ટ% = x + y − (xy/100)</div></div><div class=\"note\">GPSC ટીપ: \"30% અને 10%\" ડિસ્કાઉન્ટ ભેગું 40% નથી — ક્રમિક સૂત્ર x+y−xy/100 = 37% વાપરવું.</div>\n"
+      }
+    ]
+  },
+  {
+    "cat": "ગુણોત્તર, પ્રમાણ, સરેરાશ અને ભાગીદારી",
+    "items": [
+      {
+        "t": "ગુણોત્તર અને પ્રમાણ",
+        "en": "Ratio & Proportion",
+        "art": "a:b = a/b",
+        "body": "\n<p>બે અથવા વધુ રાશિઓ વચ્ચેની તુલના.</p><span class=\"sub\">મૂળભૂત ખ્યાલો</span><div class=\"formula-group\"><div class=\"formula\"><span class=\"flabel\">b ≠ 0</span>ગુણોત્તર a : b = a / b</div><div class=\"formula\"><span class=\"flabel\">તિરછો ગુણાકાર બરાબર</span>પ્રમાણ: a:b = c:d ⇒ a × d = b × c</div><div class=\"formula\">મધ્યગુણોત્તર: b² = a × c ⇒ b = √(ac)</div><div class=\"formula\">ત્રીજું પ્રમાણ: a:b = b:c ⇒ c = b²/a</div></div><span class=\"sub\">ઉપયોગી નિયમો</span><ul><li>a:b અને b:c આપેલ હોય તો a:b:c = a×b : b×b : b×c (LCM પદ્ધતિ)</li><li>Componendo-Dividendo: જો a/b = c/d તો (a+b)/(a−b) = (c+d)/(c−d)</li></ul>\n"
+      },
+      {
+        "t": "સરેરાશ (Average)",
+        "en": "Average",
+        "art": "સરેરાશ = સરવાળો/સંખ્યા",
+        "body": "\n<p>અંકગણિતીય મધ્ય — રોજિંદા તથા પરીક્ષા બંનેમાં ઉપયોગી.</p><span class=\"sub\">મૂળભૂત સૂત્ર</span><div class=\"formula-group\"><div class=\"formula\">સરેરાશ = (તમામ રાશિઓનો સરવાળો) / (રાશિઓની સંખ્યા)</div><div class=\"formula\">સરવાળો = સરેરાશ × સંખ્યા</div></div><span class=\"sub\">વિશેષ કિસ્સા</span><div class=\"formula-group\"><div class=\"formula\">1 થી n સળંગ સંખ્યાની સરેરાશ = (n+1)/2</div><div class=\"formula\">સરેરાશ ઝડપ (સમાન અંતર) = 2xy / (x+y)</div></div><ul><li>જૂથમાં એક નવું સભ્ય ઉમેરાતાં સરેરાશમાં ફેરફાર: નવું સભ્ય = જૂની સરેરાશ + (વધારો × નવી કુલ સંખ્યા)</li></ul><div class=\"note\">GPSC ટીપ: સરેરાશ ઝડપ ક્યારેય સાદી (x+y)/2 નથી થતી જ્યારે અંતર સમાન હોય — હાર્મોનિક મધ્ય 2xy/(x+y) જ વાપરવું.</div>\n"
+      },
+      {
+        "t": "મિશ્રણ અને એલિગેશન",
+        "en": "Mixture & Alligation",
+        "art": "એલિગેશનનો નિયમ",
+        "body": "\n<p>બે અલગ-અલગ ભાવ/ગુણવત્તાની વસ્તુઓ ભેગી કરી સરેરાશ ભાવ મેળવવાની પદ્ધતિ.</p><span class=\"sub\">એલિગેશનનો નિયમ</span><div class=\"formula-group\"><div class=\"formula\">સસ્તાનું પ્રમાણ : મોંઘાનું પ્રમાણ = (મોંઘો ભાવ − સરેરાશ ભાવ) : (સરેરાશ ભાવ − સસ્તો ભાવ)</div></div><span class=\"sub\">પાણી ભેળવવા/કાઢવાના દાખલા</span><p>n વખત, દર વખતે x લિટર દૂધ કાઢી પાણી ઉમેરવામાં આવે (કુલ જથ્થો = V):</p><div class=\"formula-group\"><div class=\"formula\">બાકી રહેલ દૂધ = V × (1 − x/V)ⁿ</div></div><div class=\"note\">એલિગેશન ટેબલ યાદ રાખો: ક્રોસ પદ્ધતિ (cross method) થી ઝડપથી ઉકેલી શકાય.</div>\n"
+      },
+      {
+        "t": "ભાગીદારી (Partnership)",
+        "en": "Partnership",
+        "art": "નફો ∝ મૂડી × સમય",
+        "body": "\n<p>વ્યાપારમાં રોકેલી મૂડી અને સમયના આધારે નફાની વહેંચણી.</p><span class=\"sub\">મુખ્ય સિદ્ધાંત</span><ul><li>સાદી ભાગીદારી (સમાન સમય): નફાની વહેંચણી મૂડીના ગુણોત્તરમાં</li><li>સંયુક્ત ભાગીદારી (જુદો સમય): નફાની વહેંચણી (મૂડી × સમય) ના ગુણોત્તરમાં</li></ul><div class=\"formula-group\"><div class=\"formula\">A નો હિસ્સો = કુલ નફો × [A ની મૂડી×સમય] / [બધાની મૂડી×સમય નો સરવાળો]</div></div><div class=\"note\">સક્રિય ભાગીદાર (working partner) ને વધારાનું મેનેજમેન્ટ ભથ્થું અલગથી કપાય, બાકીની રકમ ગુણોત્તરમાં વહેંચાય.</div>\n"
+      },
+      {
+        "t": "ઉંમર આધારિત દાખલા",
+        "en": "Problems on Ages",
+        "art": "ચલ (variable) પદ્ધતિ",
+        "body": "\n<p>વર્તમાન, ભૂતકાળ અને ભવિષ્યની ઉંમર વચ્ચેના સંબંધો.</p><span class=\"sub\">પદ્ધતિ</span><ul><li>વર્તમાન ઉંમરને x અથવા ગુણોત્તર (દા.ત. 4x, 3x) તરીકે લો</li><li>\"x વર્ષ પહેલાં\" → ઉંમરમાંથી x બાદ કરો</li><li>\"x વર્ષ પછી\" → ઉંમરમાં x ઉમેરો</li><li>સમીકરણ બનાવી x ની કિંમત શોધો</li></ul><div class=\"note\">GPSC ટીપ: ઉંમરના પ્રશ્નોમાં \"ગુણોત્તર\" અને \"તફાવત (ઉંમરનો તફાવત હંમેશા સ્થિર રહે છે)\" — બંને શરતો એકસાથે વાપરવાથી ઝડપથી ઉકેલ મળે.</div>\n"
+      }
+    ]
+  },
+  {
+    "cat": "સમય, કાર્ય અને ગતિ",
+    "items": [
+      {
+        "t": "સમય અને કાર્ય (Time & Work)",
+        "en": "Time & Work",
+        "art": "કાર્ય = 1 એકમ",
+        "body": "\n<p>વ્યક્તિ/મશીનની કાર્યક્ષમતા અને સમય વચ્ચેનો સંબંધ.</p><span class=\"sub\">પાયાનો સિદ્ધાંત</span><div class=\"formula-group\"><div class=\"formula\"><span class=\"flabel\">A, n દિવસમાં કામ પૂરું કરે</span>A નું 1 દિવસનું કામ = 1/n</div><div class=\"formula\">સંયુક્ત 1 દિવસનું કામ = 1/a + 1/b</div><div class=\"formula\">સાથે કામ પૂરું કરવાનો સમય = (a × b) / (a + b)</div></div><span class=\"sub\">કાર્યક્ષમતા (Efficiency) આધારિત</span><ul><li>કાર્યક્ષમતા ∝ 1/સમય (વ્યસ્ત પ્રમાણ)</li><li>જો A, B કરતાં x ગણો કાર્યક્ષમ હોય તો A નો સમય = B નો સમય / x</li></ul><span class=\"sub\">મજૂરી વહેંચણી</span><ul><li>કુલ મજૂરી, દરેકના કામના પ્રમાણમાં વહેંચાય (કામ ∝ કાર્યક્ષમતા ∝ મજૂરી)</li></ul><div class=\"note\">GPSC ટીપ: \"MDH\" પદ્ધતિ યાદ રાખો — M₁D₁H₁/W₁ = M₂D₂H₂/W₂ (માણસ × દિવસ × કલાક / કામ સ્થિર રહે)</div>\n"
+      },
+      {
+        "t": "પાઇપ અને ટાંકી",
+        "en": "Pipes & Cisterns",
+        "art": "ભરવું (+) vs ખાલી કરવું (−)",
+        "body": "\n<p>Time & Work નો જ પ્રકાર — પાણી ભરવા/ખાલી કરવાની નળીઓ સાથે.</p><span class=\"sub\">નિયમો</span><ul><li>ભરવાની નળી (Inlet): ધન (+) કાર્ય કરે</li><li>ખાલી કરવાની નળી (Outlet): ઋણ (−) કાર્ય કરે</li></ul><div class=\"formula-group\"><div class=\"formula\"><span class=\"flabel\">બે ભરવાની + એક ખાલી કરવાની નળી</span>સંયુક્ત દર = 1/a + 1/b − 1/c</div><div class=\"formula\">ટાંકી ભરાવાનો સમય = 1 / (સંયુક્ત દર)</div></div><div class=\"note\">જો સંયુક્ત દર ઋણ આવે, તો ટાંકી ખાલી થાય છે, ભરાતી નથી — ચિહ્નનું ખાસ ધ્યાન રાખવું.</div>\n"
+      },
+      {
+        "t": "સમય, ઝડપ અને અંતર",
+        "en": "Time, Speed & Distance",
+        "art": "અંતર = ઝડપ × સમય",
+        "body": "\n<p>ગતિ-સંબંધિત તમામ દાખલાનો પાયો.</p><span class=\"sub\">મૂળભૂત સૂત્ર</span><div class=\"formula-group\"><div class=\"formula\">અંતર = ઝડપ × સમય</div><div class=\"formula\">ઝડપ = અંતર / સમય</div><div class=\"formula\">1 કિમી/કલાક = 5/18 મીટર/સેકન્ડ</div><div class=\"formula\">1 મીટર/સેકન્ડ = 18/5 કિમી/કલાક</div></div><span class=\"sub\">સરેરાશ ઝડપ</span><div class=\"formula-group\"><div class=\"formula\">સમાન અંતર: સરેરાશ ઝડપ = 2xy / (x + y)</div><div class=\"formula\">સમાન સમય: સરેરાશ ઝડપ = (x + y) / 2</div></div><span class=\"sub\">સંબંધિત ઝડપ (Relative Speed)</span><div class=\"formula-group\"><div class=\"formula\">સામસામે (Opposite): સંબંધિત ઝડપ = ઝડપ₁ + ઝડપ₂</div><div class=\"formula\">એક દિશામાં (Same): સંબંધિત ઝડપ = ઝડપ₁ − ઝડપ₂</div></div>\n"
+      },
+      {
+        "t": "ટ્રેન આધારિત દાખલા",
+        "en": "Problems on Trains",
+        "art": "ટ્રેનની લંબાઈ ધ્યાનમાં",
+        "body": "\n<p>ટ્રેન સંબંધિત દાખલા Time-Speed-Distance નો ખાસ પ્રકાર — ટ્રેનની લંબાઈ પણ ગણતરીમાં લેવાય.</p><span class=\"sub\">મુખ્ય સૂત્રો</span><div class=\"formula-group\"><div class=\"formula\">સ્થિર થાંભલો પસાર કરવો: સમય = ટ્રેનની લંબાઈ / ઝડપ</div><div class=\"formula\">પ્લેટફોર્મ પસાર કરવું: સમય = (ટ્રેન + પ્લેટફોર્મની લંબાઈ) / ઝડપ</div><div class=\"formula\">સામસામે પસાર થવાનો સમય = (બંનેની લંબાઈનો સરવાળો) / (ઝડપનો સરવાળો)</div><div class=\"formula\">ઓવરટેક કરવાનો સમય = (બંનેની લંબાઈનો સરવાળો) / (ઝડપનો તફાવત)</div></div>\n"
+      },
+      {
+        "t": "હોડી અને પ્રવાહ",
+        "en": "Boats & Streams",
+        "art": "પ્રવાહ સાથે/વિરુદ્ધ",
+        "body": "\n<p>નદીના પ્રવાહની અસર હેઠળ હોડીની ઝડપના દાખલા. સ્થિર પાણીમાં હોડીની ઝડપ = b, પ્રવાહની ઝડપ = s.</p><span class=\"sub\">સૂત્રો</span><div class=\"formula-group\"><div class=\"formula\">પ્રવાહ સાથે (Downstream) ઝડપ = b + s</div><div class=\"formula\">પ્રવાહ વિરુદ્ધ (Upstream) ઝડપ = b − s</div><div class=\"formula\">હોડીની ઝડપ b = ½ (Downstream + Upstream)</div><div class=\"formula\">પ્રવાહની ઝડપ s = ½ (Downstream − Upstream)</div></div>\n"
+      }
+    ]
+  },
+  {
+    "cat": "ક્ષેત્રમિતિ (Mensuration)",
+    "items": [
+      {
+        "t": "દ્વિ-પરિમાણીય આકારો (2D)",
+        "en": "Area & Perimeter (2D)",
+        "art": "ક્ષેત્રફળ અને પરિમિતિ",
+        "body": "\n<p>સપાટ આકારોના ક્ષેત્રફળ (Area) અને પરિમિતિ (Perimeter) ના સૂત્રો.</p><div class=\"table-scroll\"><table><tr><th>આકાર</th><th>ક્ષેત્રફળ</th><th>પરિમિતિ</th></tr><tr><td>ચોરસ</td><td>બાજુ²</td><td>4 × બાજુ</td></tr><tr><td>લંબચોરસ</td><td>લંબાઈ × પહોળાઈ</td><td>2 (લંબાઈ + પહોળાઈ)</td></tr><tr><td>ત્રિકોણ</td><td>½ × પાયો × ઊંચાઈ</td><td>ત્રણ બાજુનો સરવાળો</td></tr><tr><td>સમબાજુ ત્રિકોણ</td><td>(√3/4) × બાજુ²</td><td>3 × બાજુ</td></tr><tr><td>વર્તુળ</td><td>π r²</td><td>2π r  (પરિઘ)</td></tr><tr><td>સમાંતરબાજુ ચતુષ્કોણ</td><td>પાયો × ઊંચાઈ</td><td>2 (બાજુઓનો સરવાળો)</td></tr><tr><td>સમલંબ ચતુષ્કોણ</td><td>½ × (સમાંતર બાજુનો સરવાળો) × ઊંચાઈ</td><td>બધી બાજુનો સરવાળો</td></tr><tr><td>સમચતુષ્કોણ (Rhombus)</td><td>½ × d₁ × d₂</td><td>4 × બાજુ</td></tr></table></div><span class=\"sub\">હેરોનનું સૂત્ર (Heron's Formula)</span><p>ત્રિકોણનું ક્ષેત્રફળ (ત્રણ બાજુ a, b, c જ્ઞાત હોય):</p><div class=\"formula-group\"><div class=\"formula\"><span class=\"flabel\">s = (a+b+c)/2</span>ક્ષેત્રફળ = √[s(s−a)(s−b)(s−c)]</div></div><div class=\"note\">GPSC ટીપ: π = 22/7 અથવા 3.14 — પ્રશ્નમાં આપેલ મુજબ વાપરવું.</div>\n"
+      },
+      {
+        "t": "ત્રિ-પરિમાણીય આકારો (3D)",
+        "en": "Volume & Surface Area (3D)",
+        "art": "ઘનફળ અને પૃષ્ઠફળ",
+        "body": "\n<p>ઘન આકારોના ઘનફળ (Volume), વક્ર પૃષ્ઠફળ (CSA) અને કુલ પૃષ્ઠફળ (TSA) ના સૂત્રો.</p><div class=\"table-scroll\"><table><tr><th>આકાર</th><th>ઘનફળ</th><th>વક્ર/કુલ પૃષ્ઠફળ</th></tr><tr><td>ઘન (Cube)</td><td>બાજુ³</td><td>TSA = 6 × બાજુ²</td></tr><tr><td>ઘનાકાર (Cuboid)</td><td>લંબાઈ × પહોળાઈ × ઊંચાઈ</td><td>TSA = 2 (lb + bh + hl)</td></tr><tr><td>નળાકાર (Cylinder)</td><td>π r² h</td><td>CSA = 2π rh, TSA = 2π r(r+h)</td></tr><tr><td>શંકુ (Cone)</td><td>⅓ π r² h</td><td>CSA = π rl, TSA = π r(r+l)</td></tr><tr><td>ગોળો (Sphere)</td><td>4/3 π r³</td><td>પૃષ્ઠફળ = 4π r²</td></tr><tr><td>અર્ધગોળો (Hemisphere)</td><td>2/3 π r³</td><td>CSA = 2π r², TSA = 3π r²</td></tr></table></div><div class=\"note\">શંકુમાં l = ત્રાંસી ઊંચાઈ (slant height) = √(r² + h²) — ઊંચાઈ h સાથે ગૂંચવવું નહીં.</div>\n"
+      }
+    ]
+  },
+  {
+    "cat": "બીજગણિત (Algebra)",
+    "items": [
+      {
+        "t": "બીજગણિતીય સૂત્રો (Identities)",
+        "en": "Algebraic Identities",
+        "art": "(a+b)², (a−b)² વગેરે",
+        "body": "\n<p>સૌથી વધુ વપરાતા બીજગણિતીય નિત્યસમો — સરળીકરણ અને બીજગણિત બંનેમાં પાયારૂપ.</p><div class=\"table-scroll\"><table><tr><th>નિત્યસમ</th><th>સૂત્ર</th></tr><tr><td>વર્ગનો સરવાળો</td><td>(a+b)² = a² + 2ab + b²</td></tr><tr><td>વર્ગનો તફાવત</td><td>(a−b)² = a² − 2ab + b²</td></tr><tr><td>વર્ગનો તફાવત (ગુણાકાર)</td><td>a² − b² = (a+b)(a−b)</td></tr><tr><td>ઘનનો સરવાળો</td><td>a³ + b³ = (a+b)(a² − ab + b²)</td></tr><tr><td>ઘનનો તફાવત</td><td>a³ − b³ = (a−b)(a² + ab + b²)</td></tr><tr><td>(a+b)³</td><td>a³ + 3a²b + 3ab² + b³</td></tr><tr><td>(a−b)³</td><td>a³ − 3a²b + 3ab² − b³</td></tr><tr><td>ત્રણ પદનો વર્ગ</td><td>(a+b+c)² = a²+b²+c² + 2(ab+bc+ca)</td></tr></table></div><span class=\"sub\">ઉપયોગી સંબંધો</span><div class=\"formula-group\"><div class=\"formula\">જો a+b = x અને ab = y જ્ઞાત → a² + b² = x² − 2y</div><div class=\"formula\">જો a − 1/a = x જ્ઞાત → a² + 1/a² = x² + 2</div><div class=\"formula\">જો a + 1/a = x જ્ઞાત → a² + 1/a² = x² − 2</div></div>\n"
+      },
+      {
+        "t": "વર્ગ સમીકરણ (Quadratic Equations)",
+        "en": "Quadratic Equations",
+        "art": "ax² + bx + c = 0",
+        "body": "\n<p>દ્વિઘાત સમીકરણ ઉકેલવાની પદ્ધતિઓ.</p><span class=\"sub\">શ્રીધરાચાર્યનું સૂત્ર (Quadratic Formula)</span><div class=\"formula-group\"><div class=\"formula\">x = [−b ± √(b² − 4ac)] / 2a</div></div><span class=\"sub\">બીજ (Roots) સંબંધિત</span><ul><li>વિભેદક (Discriminant) D = b² − 4ac</li><li>D &gt; 0 → બે અલગ વાસ્તવિક બીજ</li><li>D = 0 → બે સરખા વાસ્તવિક બીજ</li><li>D &lt; 0 → બીજ કાલ્પનિક (વાસ્તવિક નહીં)</li></ul><div class=\"formula-group\"><div class=\"formula\">બીજનો સરવાળો (α+β) = −b/a</div><div class=\"formula\">બીજનો ગુણાકાર (αβ) = c/a</div></div>\n"
+      },
+      {
+        "t": "ઘાત શ્રેણી — AP અને GP",
+        "en": "Progressions (AP & GP)",
+        "art": "શ્રેઢી સૂત્રો",
+        "body": "\n<p>સમાંતર શ્રેઢી (Arithmetic Progression) અને ગુણોત્તર શ્રેઢી (Geometric Progression).</p><span class=\"sub\">સમાંતર શ્રેઢી (AP)</span><div class=\"formula-group\"><div class=\"formula\">nમું પદ: aₙ = a + (n−1)d</div><div class=\"formula\">n પદોનો સરવાળો: Sₙ = n/2 [2a + (n−1)d]</div></div><span class=\"sub\">ગુણોત્તર શ્રેઢી (GP)</span><div class=\"formula-group\"><div class=\"formula\">nમું પદ: aₙ = a × rⁿ⁻¹</div><div class=\"formula\">n પદોનો સરવાળો (r≠1): Sₙ = a(rⁿ−1) / (r−1)</div><div class=\"formula\">અનંત GP નો સરવાળો (|r|&lt;1): S∞ = a / (1−r)</div></div><div class=\"note\">GPSC ટીપ: \"1 થી n કુદરતી સંખ્યાનો સરવાળો\" = n(n+1)/2, \"વર્ગોનો સરવાળો\" = n(n+1)(2n+1)/6, \"ઘનનો સરવાળો\" = [n(n+1)/2]² — વારંવાર પુછાય છે.</div>\n"
+      }
+    ]
+  },
+  {
+    "cat": "ભૂમિતિ અને ત્રિકોણમિતિ",
+    "items": [
+      {
+        "t": "ત્રિકોણને લગતા સૂત્રો",
+        "en": "Triangle Properties",
+        "art": "ખૂણા, બાજુ સંબંધો",
+        "body": "\n<p>ત્રિકોણના ખૂણા, બાજુ અને વિશેષ રેખાઓના નિયમો.</p><span class=\"sub\">પાયાના નિયમો</span><div class=\"formula-group\"><div class=\"formula\">ત્રિકોણના ત્રણ ખૂણાનો સરવાળો = 180°</div><div class=\"formula\">બાહ્ય ખૂણો = બે અંતર્ગત વિરુદ્ધ ખૂણાનો સરવાળો</div><div class=\"formula\">પાયથાગોરસનું પ્રમેય: (કર્ણ)² = (પાયો)² + (લંબ)²</div></div><p>કોઈપણ બે બાજુનો સરવાળો હંમેશા ત્રીજી બાજુ કરતાં મોટો હોય.</p><span class=\"sub\">વિશેષ બિંદુઓ</span><ul><li>પરિકેન્દ્ર (Circumcentre): ત્રણ લંબદ્વિભાજકોનું છેદબિંદુ — પરિવર્તુળનું કેન્દ્ર</li><li>અંતઃકેન્દ્ર (Incentre): ત્રણ ખૂણાના દ્વિભાજકોનું છેદબિંદુ — અંતવર્તુળનું કેન્દ્ર</li><li>કેન્દ્રક/મધ્યકેન્દ્ર (Centroid): ત્રણ મધ્યગાનું છેદબિંદુ — બાજુને 2:1 ગુણોત્તરમાં વિભાજિત કરે</li><li>લંબકેન્દ્ર (Orthocentre): ત્રણ ઊંચાઈ (altitude) નું છેદબિંદુ</li></ul><div class=\"note\">પાયથાગોરસ ટ્રિપલેટ યાદ રાખો: (3,4,5), (5,12,13), (8,15,17), (7,24,25) — ઝડપી ગણતરી માટે ઉપયોગી.</div>\n"
+      },
+      {
+        "t": "વર્તુળને લગતા સૂત્રો",
+        "en": "Circle Properties",
+        "art": "જીવા, ચાપ, સ્પર્શક",
+        "body": "\n<p>વર્તુળના ખૂણા અને રેખાઓના મહત્વના પ્રમેયો.</p><ul><li>વર્તુળના કેન્દ્ર પર બનતો ખૂણો = પરિઘ પર બનતા ખૂણાનો બમણો</li><li>અર્ધવર્તુળમાં બનતો ખૂણો હંમેશા 90° હોય</li><li>એક જ ચાપ પર બનતા બધા પરિઘકોણ સરખા હોય</li><li>સ્પર્શક (Tangent) સ્પર્શબિંદુ પાસેની ત્રિજ્યાને લંબ હોય</li><li>બાહ્ય બિંદુથી દોરેલ બે સ્પર્શકની લંબાઈ સરખી હોય</li><li>ચક્રીય ચતુષ્કોણ (Cyclic Quadrilateral) ના સામસામેના ખૂણાનો સરવાળો = 180°</li></ul>\n"
+      },
+      {
+        "t": "ત્રિકોણમિતિ ગુણોત્તર અને સૂત્રો",
+        "en": "Trigonometric Ratios",
+        "art": "sin, cos, tan",
+        "body": "\n<p>કાટકોણ ત્રિકોણમાં ખૂણા અને બાજુઓ વચ્ચેના ગુણોત્તર.</p><span class=\"sub\">મૂળભૂત ગુણોત્તર</span><div class=\"formula-group\"><div class=\"formula\">sin θ = સામેની બાજુ / કર્ણ</div><div class=\"formula\">cos θ = સંલગ્ન બાજુ / કર્ણ</div><div class=\"formula\">tan θ = સામેની બાજુ / સંલગ્ન બાજુ = sin θ / cos θ</div><div class=\"formula\">cosec θ = 1/sin θ,  sec θ = 1/cos θ,  cot θ = 1/tan θ</div></div><span class=\"sub\">પ્રમાણભૂત ખૂણાના મૂલ્યો</span><div class=\"table-scroll\"><table><tr><th>θ</th><th>0°</th><th>30°</th><th>45°</th><th>60°</th><th>90°</th></tr><tr><td>sin</td><td>0</td><td>1/2</td><td>1/√2</td><td>√3/2</td><td>1</td></tr><tr><td>cos</td><td>1</td><td>√3/2</td><td>1/√2</td><td>1/2</td><td>0</td></tr><tr><td>tan</td><td>0</td><td>1/√3</td><td>1</td><td>√3</td><td>∞</td></tr></table></div><span class=\"sub\">પાયાના નિત્યસમો (Identities)</span><div class=\"formula-group\"><div class=\"formula\">sin²θ + cos²θ = 1</div><div class=\"formula\">1 + tan²θ = sec²θ</div><div class=\"formula\">1 + cot²θ = cosec²θ</div></div>\n"
+      },
+      {
+        "t": "ઊંચાઈ અને અંતર",
+        "en": "Heights & Distances",
+        "art": "ઉન્નતિકોણ / અવનતિકોણ",
+        "body": "\n<p>ત્રિકોણમિતિનો વ્યવહારિક ઉપયોગ — ઊંચી વસ્તુની ઊંચાઈ કે અંતર માપવા.</p><span class=\"sub\">પાયાની સંજ્ઞાઓ</span><ul><li>ઉન્નતિકોણ (Angle of Elevation): નિરીક્ષકની આંખની ઉપર તરફ જોવાનો ખૂણો</li><li>અવનતિકોણ (Angle of Depression): નિરીક્ષકની આંખની નીચે તરફ જોવાનો ખૂણો</li></ul><span class=\"sub\">પદ્ધતિ</span><div class=\"formula-group\"><div class=\"formula\">tan θ = ઊંચાઈ / અંતર</div></div><p>ચિત્ર દોરીને કાટકોણ ત્રિકોણ બનાવવો અને યોગ્ય ગુણોત્તર પસંદ કરવો.</p><div class=\"note\">GPSC ટીપ: 30°, 45°, 60° ના પ્રમાણભૂત મૂલ્યો યાદ હોય તો આ પ્રકારના તમામ પ્રશ્નો ઝડપથી ઉકલે છે.</div>\n"
+      }
+    ]
+  },
+  {
+    "cat": "આંકડાશાસ્ત્ર અને સંભાવના",
+    "items": [
+      {
+        "t": "મધ્ય, મધ્યક અને બહુલક",
+        "en": "Mean, Median, Mode",
+        "art": "કેન્દ્રીય વલણનાં માપ",
+        "body": "\n<p>માહિતીના કેન્દ્રીય વલણ (Central Tendency) દર્શાવતાં ત્રણ મુખ્ય માપ.</p><span class=\"sub\">મધ્ય (Mean/Average)</span><div class=\"formula-group\"><div class=\"formula\">મધ્ય = (તમામ અવલોકનોનો સરવાળો) / (અવલોકનોની સંખ્યા)</div></div><span class=\"sub\">મધ્યક (Median)</span><ul><li>માહિતીને ચઢતા ક્રમમાં ગોઠવો</li><li>એકી સંખ્યા (n) હોય તો: [(n+1)/2] મું પદ</li><li>બેકી સંખ્યા (n) હોય તો: (n/2) મા અને (n/2 + 1) મા પદની સરેરાશ</li></ul><span class=\"sub\">બહુલક (Mode)</span><p>જે કિંમત સૌથી વધુ વખત આવે તે — સૌથી વધુ frequency ધરાવતું અવલોકન.</p><div class=\"note\">સંબંધ (સામાન્ય રીતે): મધ્ય − બહુલક = 3 (મધ્ય − મધ્યક) — સામાન્ય/નજીકના સપ્રમાણ વિતરણ માટે વપરાય છે.</div>\n"
+      },
+      {
+        "t": "સંભાવના (Probability)",
+        "en": "Probability",
+        "art": "P(E) = અનુકૂળ/કુલ",
+        "body": "\n<p>કોઈ ઘટના બનવાની શક્યતાનું માપ.</p><span class=\"sub\">મૂળભૂત સૂત્ર</span><div class=\"formula-group\"><div class=\"formula\">P(ઘટના) = અનુકૂળ પરિણામોની સંખ્યા / કુલ શક્ય પરિણામોની સંખ્યા</div><div class=\"formula\">0 ≤ P(E) ≤ 1</div><div class=\"formula\">P(E) + P(not E) = 1</div></div><p>અશક્ય ઘટનાની સંભાવના = 0, નિશ્ચિત ઘટનાની સંભાવના = 1</p><span class=\"sub\">સિક્કા અને પાસાના પ્રમાણભૂત ઉદાહરણ</span><ul><li>એક સિક્કો ઉછાળતાં: કુલ પરિણામ = 2 (છાપ/કાંટો)</li><li>એક પાસો ફેંકતાં: કુલ પરિણામ = 6</li><li>બે સિક્કા સાથે ઉછાળતાં: કુલ પરિણામ = 4 = 2²</li><li>52 પત્તાની થોકડીમાં: 4 એક્કા, 13 દરેક રંગના (♠♥♦♣), 12 ચિત્રપત્તા (face cards)</li></ul>\n"
+      },
+      {
+        "t": "ક્રમચય અને સંચય",
+        "en": "Permutation & Combination",
+        "art": "nPr અને nCr",
+        "body": "\n<p>વસ્તુઓની ગોઠવણી (ક્રમ મહત્વનો) અને પસંદગી (ક્રમ મહત્વનો નથી) ગણવાની પદ્ધતિ.</p><span class=\"sub\">સૂત્રો</span><div class=\"formula-group\"><div class=\"formula\"><span class=\"flabel\">0! = 1</span>n! = n × (n−1) × (n−2) × ... × 1</div><div class=\"formula\">nPr = n! / (n−r)!</div><div class=\"formula\">nCr = n! / [r! × (n−r)!]</div><div class=\"formula\">nPr = nCr × r!</div><div class=\"formula\">nCr = nC(n−r)</div><div class=\"formula\">nC0 = nCn = 1</div></div><span class=\"sub\">ક્યારે શું વાપરવું</span><ul><li>ગોઠવણી/ક્રમ મહત્વનો હોય (દા.ત. બેઠક વ્યવસ્થા, રેન્ક) → Permutation</li><li>માત્ર પસંદગી, ક્રમ મહત્વનો નહીં (દા.ત. સમિતિની રચના) → Combination</li></ul>\n"
+      }
+    ]
+  }
+]

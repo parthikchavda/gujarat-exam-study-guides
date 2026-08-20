@@ -1,0 +1,137 @@
+{
+  "default": "current-affairs",
+  "subjects": [
+    {
+      "id": "maths",
+      "name": "ગણિત",
+      "gujName": "ગણિત",
+      "icon": "🧮",
+      "dataFile": "subject/maths-data.json",
+      "pageTitle": "ગણિત — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા",
+      "sidebarTitle": "ગણિત",
+      "sidebarSubtitle": "Wireless PSI 2026 / GPSC સંપૂર્ણ ગણિત યાદી",
+      "heroTitle": "ગણિત — સંપૂર્ણ અભ્યાસ સામગ્રી",
+      "heroDesc": "Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ ગણિત અભ્યાસ સામગ્રી. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો."
+    },
+    {
+      "id": "reasoning",
+      "name": "Reasoning",
+      "gujName": "Reasoning",
+      "icon": "🧠",
+      "dataFile": "subject/reasoning-data.json",
+      "pageTitle": "Reasoning — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા",
+      "sidebarTitle": "Reasoning",
+      "sidebarSubtitle": "Wireless PSI 2026 / GPSC સંપૂર્ણ Reasoning યાદી",
+      "heroTitle": "Reasoning — સંપૂર્ણ અભ્યાસ સામગ્રી",
+      "heroDesc": "Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ Reasoning અભ્યાસ સામગ્રી. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો."
+    },
+    {
+      "id": "bandharan",
+      "name": "ભારતીય બંધારણ",
+      "gujName": "ભારતીય બંધારણ",
+      "icon": "📜",
+      "dataFile": "subject/bandharan-data.json",
+      "pageTitle": "ભારતીય બંધારણ — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા",
+      "sidebarTitle": "ભારતીય બંધારણ",
+      "sidebarSubtitle": "Wireless PSI 2026 / GPSC સંપૂર્ણ ભારતીય બંધારણ યાદી",
+      "heroTitle": "ભારતીય બંધારણ — સંપૂર્ણ અભ્યાસ સામગ્રી",
+      "heroDesc": "Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ ભારતીય બંધારણ અભ્યાસ સામગ્રી. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો."
+    },
+    {
+      "id": "public-administration",
+      "name": "જાહેર વહીવટ",
+      "gujName": "જાહેર વહીવટ",
+      "icon": "🏛️",
+      "dataFile": "subject/public-administration-data.json",
+      "pageTitle": "જાહેર વહીવટ — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા",
+      "sidebarTitle": "જાહેર વહીવટ",
+      "sidebarSubtitle": "Wireless PSI 2026 / GPSC સંપૂર્ણ જાહેર વહીવટ યાદી",
+      "heroTitle": "જાહેર વહીવટ — સંપૂર્ણ અભ્યાસ સામગ્રી",
+      "heroDesc": "Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ જાહેર વહીવટ અભ્યાસ સામગ્રી. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો."
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "gujName": "Geography",
+      "icon": "🌍",
+      "dataFile": "subject/geography-data.json",
+      "pageTitle": "Geography — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા",
+      "sidebarTitle": "Geography",
+      "sidebarSubtitle": "Wireless PSI 2026 / GPSC સંપૂર્ણ Geography યાદી",
+      "heroTitle": "Geography — સંપૂર્ણ અભ્યાસ સામગ્રી",
+      "heroDesc": "Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ Geography અભ્યાસ સામગ્રી. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો."
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "gujName": "History",
+      "icon": "📚",
+      "dataFile": "subject/history-data.json",
+      "pageTitle": "History — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા",
+      "sidebarTitle": "History",
+      "sidebarSubtitle": "Wireless PSI 2026 / GPSC સંપૂર્ણ History યાદી",
+      "heroTitle": "History — સંપૂર્ણ અભ્યાસ સામગ્રી",
+      "heroDesc": "Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ History અભ્યાસ સામગ્રી. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો."
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "gujName": "Science",
+      "icon": "🔬",
+      "dataFile": "subject/science-data.json",
+      "pageTitle": "Science — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા",
+      "sidebarTitle": "Science",
+      "sidebarSubtitle": "Wireless PSI 2026 / GPSC સંપૂર્ણ Science યાદી",
+      "heroTitle": "Science — સંપૂર્ણ અભ્યાસ સામગ્રી",
+      "heroDesc": "Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ Science અભ્યાસ સામગ્રી. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો."
+    },
+    {
+      "id": "computer",
+      "name": "Computer",
+      "gujName": "Computer",
+      "icon": "💻",
+      "dataFile": "subject/computer-data.json",
+      "pageTitle": "Computer — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા",
+      "sidebarTitle": "Computer",
+      "sidebarSubtitle": "Wireless PSI 2026 / GPSC સંપૂર્ણ Computer યાદી",
+      "heroTitle": "Computer — સંપૂર્ણ અભ્યાસ સામગ્રી",
+      "heroDesc": "Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ Computer અભ્યાસ સામગ્રી. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો."
+    },
+    {
+      "id": "english-grammar",
+      "name": "English Grammar",
+      "gujName": "English Grammar",
+      "icon": "🇬🇧",
+      "dataFile": "subject/english-grammar-data.json",
+      "pageTitle": "English Grammar — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા",
+      "sidebarTitle": "English Grammar",
+      "sidebarSubtitle": "Wireless PSI 2026 / GPSC સંપૂર્ણ English Grammar યાદી",
+      "heroTitle": "English Grammar — સંપૂર્ણ અભ્યાસ સામગ્રી",
+      "heroDesc": "Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ English Grammar અભ્યાસ સામગ્રી. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો."
+    },
+    {
+      "id": "gujarati-grammar",
+      "name": "ગુજરાતી વ્યાકરણ",
+      "gujName": "ગુજરાતી વ્યાકરણ",
+      "icon": "અ",
+      "dataFile": "subject/gujarati-grammar-data.json",
+      "pageTitle": "ગુજરાતી વ્યાકરણ — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા",
+      "sidebarTitle": "ગુજરાતી વ્યાકરણ",
+      "sidebarSubtitle": "Wireless PSI 2026 / GPSC સંપૂર્ણ ગુજરાતી વ્યાકરણ યાદી",
+      "heroTitle": "ગુજરાતી વ્યાકરણ — સંપૂર્ણ અભ્યાસ સામગ્રી",
+      "heroDesc": "Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ ગુજરાતી વ્યાકરણ અભ્યાસ સામગ્રી. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો."
+    },
+    {
+      "id": "current-affairs",
+      "name": "Current Affairs",
+      "gujName": "કરંટ અફેર્સ",
+      "icon": "📰",
+      "dataFile": "subject/current-affairs-data.json",
+      "pageTitle": "કરંટ અફેર્સ — Wireless PSI 2026 સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા",
+      "sidebarTitle": "કરંટ અફેર્સ",
+      "sidebarSubtitle": "Wireless PSI 2026 / GPSC સંપૂર્ણ કરંટ અફેર્સ યાદી",
+      "heroTitle": "કરંટ અફેર્સ — સંપૂર્ણ અભ્યાસ સામગ્રી",
+      "heroDesc": "Wireless PSI 2026, GPSC, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ — ગુજરાત, રાષ્ટ્રીય અને આંતરરાષ્ટ્રીય કરંટ અફેર્સ, યોજનાઓ, પુરસ્કારો, મહત્વના દિવસો અને બંધારણીય માળખું સાથે. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો."
+    }
+  ]
+}

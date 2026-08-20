@@ -1,0 +1,317 @@
+[
+  {
+    "cat": "Parts of Speech — શબ્દોના પ્રકાર",
+    "items": [
+      {
+        "t": "8 Parts of Speech — સંપૂર્ણ પરિચય",
+        "en": "The 8 Parts of Speech",
+        "art": "Noun to Interjection",
+        "body": "<p>અંગ્રેજી ભાષામાં દરેક શબ્દ વાક્યમાં ભજવે તે ભૂમિકા પ્રમાણે 8 વર્ગમાં વહેંચાય છે — આ પાયો સમજ્યા વિના Grammar ના બીજા નિયમો સમજવા મુશ્કેલ છે.</p><div class=\"table-scroll\"><table><tr><th>Part of Speech</th><th>ગુજરાતી અર્થ</th><th>ઉદાહરણ</th></tr><tr><td>Noun</td><td>નામ (વ્યક્તિ, વસ્તુ, સ્થળ)</td><td>Ram, book, Ahmedabad, honesty</td></tr><tr><td>Pronoun</td><td>સર્વનામ (નામને બદલે વપરાય)</td><td>He, she, it, they, who</td></tr><tr><td>Verb</td><td>ક્રિયાપદ (ક્રિયા દર્શાવે)</td><td>run, is, has, write</td></tr><tr><td>Adjective</td><td>વિશેષણ (નામનું વર્ણન કરે)</td><td>beautiful, tall, three</td></tr><tr><td>Adverb</td><td>ક્રિયાવિશેષણ (verb/adjective નું વર્ણન)</td><td>quickly, very, well, here</td></tr><tr><td>Preposition</td><td>નામયોગી અવ્યય (સ્થાન/સમય દર્શાવે)</td><td>in, on, at, under, before</td></tr><tr><td>Conjunction</td><td>સંયોજક (શબ્દો/વાક્યો જોડે)</td><td>and, but, or, because</td></tr><tr><td>Interjection</td><td>ઉદ્‌ગારવાચક (લાગણી દર્શાવે)</td><td>Wow!, Alas!, Oh!</td></tr></table></div><div class=\"note\">GPSC/PSI ટીપ: એક જ શબ્દ વાક્યમાં અલગ-અલગ Part of Speech તરીકે વપરાઈ શકે — દા.ત. \"Round\" noun (a round of golf), adjective (a round table), verb (to round a corner), preposition (round the corner) બની શકે. વાક્યમાં કાર્ય જોઈને જ ઓળખવું.</div>"
+      },
+      {
+        "t": "Noun ના પ્રકારો",
+        "en": "Types of Nouns",
+        "art": "Common, Proper, Collective...",
+        "body": "<div class=\"table-scroll\"><table><tr><th>પ્રકાર</th><th>અર્થ</th><th>ઉદાહરણ</th></tr><tr><td>Common Noun</td><td>સામાન્ય નામ</td><td>boy, city, book</td></tr><tr><td>Proper Noun</td><td>વિશેષ નામ (હંમેશા Capital Letter)</td><td>Rahul, Gandhinagar, India</td></tr><tr><td>Collective Noun</td><td>સમૂહવાચક નામ</td><td>team, family, army, herd</td></tr><tr><td>Abstract Noun</td><td>ભાવવાચક નામ (સ્પર્શી ન શકાય તેવું)</td><td>honesty, beauty, happiness</td></tr><tr><td>Material Noun</td><td>દ્રવ્યવાચક નામ</td><td>gold, water, wood, iron</td></tr><tr><td>Countable Noun</td><td>ગણી શકાય તેવું નામ</td><td>book(s), chair(s), apple(s)</td></tr><tr><td>Uncountable Noun</td><td>ગણી ન શકાય તેવું નામ</td><td>water, sugar, information, advice</td></tr></table></div><div class=\"note\">GPSC ટીપ: Uncountable Nouns (advice, information, furniture, news) સાથે \"a/an\" કે plural \"-s\" ક્યારેય ન વાપરવું — \"an advice\" ❌, \"a piece of advice\" ✅.</div>"
+      },
+      {
+        "t": "Pronoun ના પ્રકારો",
+        "en": "Types of Pronouns",
+        "art": "He, Him, His, Himself",
+        "body": "<div class=\"table-scroll\"><table><tr><th>પ્રકાર</th><th>ઉદાહરણ</th></tr><tr><td>Personal Pronoun</td><td>I, you, he, she, it, we, they</td></tr><tr><td>Possessive Pronoun</td><td>mine, yours, his, hers, ours, theirs</td></tr><tr><td>Reflexive Pronoun</td><td>myself, yourself, himself, themselves</td></tr><tr><td>Demonstrative Pronoun</td><td>this, that, these, those</td></tr><tr><td>Interrogative Pronoun</td><td>who, whom, whose, which, what</td></tr><tr><td>Relative Pronoun</td><td>who, whom, whose, which, that</td></tr><tr><td>Indefinite Pronoun</td><td>someone, anybody, everyone, none, each</td></tr></table></div><span class=\"sub\">Personal Pronoun ના 3 સ્વરૂપ (Case)</span><div class=\"table-scroll\"><table><tr><th>Subjective</th><th>Objective</th><th>Possessive</th></tr><tr><td>I</td><td>me</td><td>my/mine</td></tr><tr><td>he</td><td>him</td><td>his</td></tr><tr><td>she</td><td>her</td><td>her/hers</td></tr><tr><td>they</td><td>them</td><td>their/theirs</td></tr></table></div><div class=\"note\">GPSC ટીપ: \"Who\" subject માટે, \"Whom\" object માટે વપરાય — \"Who is calling?\" (subject) vs \"To whom did you speak?\" (object).</div>"
+      },
+      {
+        "t": "Adjective અને Adverb — તફાવત",
+        "en": "Adjective vs Adverb",
+        "art": "Describes Noun vs Verb",
+        "body": "<p>Adjective નામ (Noun) નું વર્ણન કરે છે, જ્યારે Adverb ક્રિયાપદ (Verb), Adjective અથવા બીજા Adverb નું વર્ણન કરે છે.</p><div class=\"table-scroll\"><table><tr><th>Adjective (વિશેષણ)</th><th>Adverb (ક્રિયાવિશેષણ)</th></tr><tr><td>She is a <strong>quick</strong> runner.</td><td>She runs <strong>quickly</strong>.</td></tr><tr><td>He is a <strong>careful</strong> driver.</td><td>He drives <strong>carefully</strong>.</td></tr><tr><td>This is a <strong>good</strong> book.</td><td>She sings <strong>well</strong>.</td></tr></table></div><span class=\"sub\">Adverb ના પ્રકારો</span><ul><li><strong>Adverb of Manner:</strong> slowly, carefully, happily (કેવી રીતે?)</li><li><strong>Adverb of Time:</strong> now, yesterday, soon (ક્યારે?)</li><li><strong>Adverb of Place:</strong> here, there, everywhere (ક્યાં?)</li><li><strong>Adverb of Frequency:</strong> always, often, never (કેટલી વાર?)</li><li><strong>Adverb of Degree:</strong> very, too, quite, almost (કેટલું?)</li></ul><div class=\"note\">GPSC ટીપ: મોટાભાગના Adverb, Adjective + \"-ly\" ઉમેરીને બને છે (quick→quickly), પરંતુ \"good→well\", \"fast→fast\" જેવા અપવાદો પણ યાદ રાખવા.</div>"
+      }
+    ]
+  },
+  {
+    "cat": "Tenses — કાળ (સંપૂર્ણ માર્ગદર્શિકા)",
+    "items": [
+      {
+        "t": "Tenses નું માળખું — 12 Tenses ચાર્ટ",
+        "en": "The 12 Tenses Overview",
+        "art": "3 Time × 4 Aspect",
+        "body": "<p>અંગ્રેજીમાં કુલ 12 Tenses છે — 3 મુખ્ય કાળ (Present, Past, Future) × 4 સ્વરૂપ (Simple, Continuous, Perfect, Perfect Continuous).</p><div class=\"table-scroll\"><table><tr><th>સ્વરૂપ</th><th>Present</th><th>Past</th><th>Future</th></tr><tr><td>Simple</td><td>I write</td><td>I wrote</td><td>I will write</td></tr><tr><td>Continuous</td><td>I am writing</td><td>I was writing</td><td>I will be writing</td></tr><tr><td>Perfect</td><td>I have written</td><td>I had written</td><td>I will have written</td></tr><tr><td>Perfect Continuous</td><td>I have been writing</td><td>I had been writing</td><td>I will have been writing</td></tr></table></div><div class=\"note\">GPSC ટીપ: આ 4×3 ચાર્ટ ધ્યાનમાં રાખો — પરીક્ષામાં \"Fill in the blanks\" અને \"Error spotting\" પ્રશ્નો મોટેભાગે આ 12 Tenses પરથી જ પુછાય છે.</div>"
+      },
+      {
+        "t": "Present Tense — 4 સ્વરૂપ",
+        "en": "Present Tense Forms",
+        "art": "do/does, is/am/are + ing",
+        "body": "<div class=\"table-scroll\"><table><tr><th>પ્રકાર</th><th>રચના (Structure)</th><th>ઉદાહરણ</th><th>ઉપયોગ</th></tr><tr><td>Simple Present</td><td>Subject + V1(s/es)</td><td>He plays cricket.</td><td>રોજિંદી ટેવ, સામાન્ય સત્ય</td></tr><tr><td>Present Continuous</td><td>Subject + is/am/are + V-ing</td><td>He is playing cricket.</td><td>અત્યારે ચાલી રહેલી ક્રિયા</td></tr><tr><td>Present Perfect</td><td>Subject + has/have + V3</td><td>He has played cricket.</td><td>તાજેતરમાં પૂરી થયેલી ક્રિયા, જેની અસર હાલ છે</td></tr><tr><td>Present Perfect Continuous</td><td>Subject + has/have been + V-ing</td><td>He has been playing cricket since morning.</td><td>ક્રિયા ભૂતકાળમાં શરૂ થઈ, હજુ ચાલુ છે</td></tr></table></div><div class=\"note\">GPSC ટીપ: Simple Present માં He/She/It સાથે verb ને \"s/es\" લાગે (He plays, She goes) — I/You/We/They સાથે verb મૂળ સ્વરૂપમાં જ રહે (I play, They go).</div>"
+      },
+      {
+        "t": "Past Tense — 4 સ્વરૂપ",
+        "en": "Past Tense Forms",
+        "art": "V2, was/were + ing",
+        "body": "<div class=\"table-scroll\"><table><tr><th>પ્રકાર</th><th>રચના (Structure)</th><th>ઉદાહરણ</th><th>ઉપયોગ</th></tr><tr><td>Simple Past</td><td>Subject + V2</td><td>He played cricket.</td><td>ભૂતકાળમાં પૂરી થયેલી ક્રિયા</td></tr><tr><td>Past Continuous</td><td>Subject + was/were + V-ing</td><td>He was playing cricket.</td><td>ભૂતકાળમાં ચાલી રહેલી ક્રિયા</td></tr><tr><td>Past Perfect</td><td>Subject + had + V3</td><td>He had played cricket (before it rained).</td><td>બે ભૂતકાળની ક્રિયામાંથી પહેલા બનેલી ક્રિયા</td></tr><tr><td>Past Perfect Continuous</td><td>Subject + had been + V-ing</td><td>He had been playing cricket for 2 hours.</td><td>ભૂતકાળમાં ચાલુ રહેલી ક્રિયા, જે બીજી ક્રિયા પહેલા શરૂ થઈ</td></tr></table></div><div class=\"note\">GPSC ટીપ: \"Since\" ચોક્કસ સમય-બિંદુ સાથે વપરાય (since 2020, since morning), \"For\" સમયગાળા સાથે વપરાય (for 2 hours, for 3 years).</div>"
+      },
+      {
+        "t": "Future Tense — 4 સ્વરૂપ",
+        "en": "Future Tense Forms",
+        "art": "will/shall + V1",
+        "body": "<div class=\"table-scroll\"><table><tr><th>પ્રકાર</th><th>રચના (Structure)</th><th>ઉદાહરણ</th><th>ઉપયોગ</th></tr><tr><td>Simple Future</td><td>Subject + will/shall + V1</td><td>He will play cricket.</td><td>ભવિષ્યની ક્રિયા</td></tr><tr><td>Future Continuous</td><td>Subject + will be + V-ing</td><td>He will be playing cricket.</td><td>ભવિષ્યમાં ચોક્કસ સમયે ચાલી રહેલી ક્રિયા</td></tr><tr><td>Future Perfect</td><td>Subject + will have + V3</td><td>He will have played cricket by 5 PM.</td><td>ભવિષ્યના ચોક્કસ સમય પહેલા પૂરી થનારી ક્રિયા</td></tr><tr><td>Future Perfect Continuous</td><td>Subject + will have been + V-ing</td><td>He will have been playing for 2 hours by 5 PM.</td><td>ભવિષ્યમાં ચોક્કસ સમય સુધી સતત ચાલુ રહેલી ક્રિયા</td></tr></table></div><div class=\"note\">GPSC ટીપ: \"Shall\" ફક્ત I/We સાથે ઔપચારિક ભાષામાં વપરાય છે; સામાન્ય રીતે \"will\" તમામ subjects સાથે વપરાય છે.</div>"
+      },
+      {
+        "t": "Verb ના 3 મુખ્ય સ્વરૂપ (V1, V2, V3)",
+        "en": "Regular & Irregular Verbs",
+        "art": "go–went–gone",
+        "body": "<p>દરેક Verb ના 3 મુખ્ય સ્વરૂપ હોય છે — V1 (Base Form), V2 (Past Form), V3 (Past Participle) — Tense બનાવવા આ જ સ્વરૂપો વપરાય છે.</p><div class=\"table-scroll\"><table><tr><th>V1 (Base)</th><th>V2 (Past)</th><th>V3 (Past Participle)</th></tr><tr><td>go</td><td>went</td><td>gone</td></tr><tr><td>eat</td><td>ate</td><td>eaten</td></tr><tr><td>write</td><td>wrote</td><td>written</td></tr><tr><td>take</td><td>took</td><td>taken</td></tr><tr><td>see</td><td>saw</td><td>seen</td></tr><tr><td>do</td><td>did</td><td>done</td></tr><tr><td>play (Regular)</td><td>played</td><td>played</td></tr></table></div><div class=\"note\">GPSC ટીપ: Regular Verbs માં V2 અને V3 સરખા હોય છે (+ed), પરંતુ Irregular Verbs (go, eat, write વગેરે) ના ત્રણેય સ્વરૂપ અલગ-અલગ હોય શકે — આ યાદી ગોખવી પરીક્ષા માટે અનિવાર્ય છે.</div>"
+      }
+    ]
+  },
+  {
+    "cat": "Articles — A, An, The",
+    "items": [
+      {
+        "t": "A અને An — ક્યારે વાપરવું?",
+        "en": "Indefinite Articles",
+        "art": "Sound-based rule",
+        "body": "<p>\"A\" અને \"An\" ને Indefinite Article કહેવાય — તે કોઈ ચોક્કસ નહીં પણ સામાન્ય વ્યક્તિ/વસ્તુ માટે વપરાય. પસંદગીનો આધાર શબ્દની જોડણી (spelling) નહીં પણ ઉચ્ચાર (sound) પર છે!</p><div class=\"table-scroll\"><table><tr><th>નિયમ</th><th>ઉદાહરણ</th></tr><tr><td>Consonant sound પહેલા \"A\"</td><td>a book, a university (yoo સાઉન્ડ), a European</td></tr><tr><td>Vowel sound (a,e,i,o,u) પહેલા \"An\"</td><td>an apple, an hour (h મૂંગો), an honest man</td></tr></table></div><div class=\"note\">GPSC ટીપ: \"University\" spelling vowel \"u\" થી શરૂ થાય પણ ઉચ્ચાર \"yoo-niversity\" (consonant sound) છે, તેથી \"a university\" ✅ સાચું, \"an university\" ❌ ખોટું. તેવી જ રીતે \"hour\" માં \"h\" મૂંગો છે તેથી \"an hour\" ✅.</div>"
+      },
+      {
+        "t": "The — Definite Article",
+        "en": "Definite Article Rules",
+        "art": "Specific reference",
+        "body": "<p>\"The\" એ Definite Article છે — કોઈ ચોક્કસ, ખાસ વ્યક્તિ/વસ્તુ/સ્થળનો ઉલ્લેખ કરવા વપરાય છે.</p><span class=\"sub\">\"The\" ક્યાં વપરાય</span><ul><li>અગાઉ ઉલ્લેખ થયેલી વસ્તુ ફરી બોલવી: \"I saw a dog. The dog was black.\"</li><li>અનન્ય (Unique) વસ્તુઓ: the sun, the moon, the earth, the sky</li><li>નદીઓ, સમુદ્રો, પર્વતમાળા: the Ganga, the Pacific, the Himalayas</li><li>અખબારો: the Times of India, the Hindu</li><li>Superlative Degree સાથે: the best, the tallest, the most beautiful</li><li>Ordinal numbers સાથે: the first, the second</li></ul><span class=\"sub\">\"The\" ક્યાં ન વપરાય</span><ul><li>વ્યક્તિઓના નામ: Ram (not \"the Ram\")</li><li>દેશો (મોટાભાગે): India, Gujarat (અપવાદ: the USA, the UK, the Netherlands)</li><li>ભાષાઓ: Gujarati, English (not \"the Gujarati\")</li><li>Uncountable/Plural નામ સામાન્ય અર્થમાં: \"Milk is white\" (not \"the milk\")</li></ul><div class=\"note\">GPSC ટીપ: પર્વત શિખરો (Mount Everest) અને સરોવરો (Lake Victoria) સાથે \"the\" નથી વપરાતું, પણ પર્વતમાળા (the Himalayas) અને નદીઓ (the Nile) સાથે \"the\" વપરાય છે.</div>"
+      }
+    ]
+  },
+  {
+    "cat": "Prepositions — નામયોગી અવ્યય",
+    "items": [
+      {
+        "t": "Prepositions of Time — In, On, At",
+        "en": "Time Prepositions",
+        "art": "in/on/at",
+        "body": "<div class=\"table-scroll\"><table><tr><th>Preposition</th><th>ઉપયોગ</th><th>ઉદાહરણ</th></tr><tr><td><strong>At</strong></td><td>ચોક્કસ સમય</td><td>at 5 o'clock, at noon, at night</td></tr><tr><td><strong>On</strong></td><td>દિવસ/તારીખ</td><td>on Monday, on 15th August, on my birthday</td></tr><tr><td><strong>In</strong></td><td>મહિનો/વર્ષ/ઋતુ/લાંબો સમયગાળો</td><td>in June, in 2026, in winter, in the morning</td></tr></table></div><div class=\"note\">GPSC ટીપ: \"at night\" પણ \"in the morning/afternoon/evening\" — આ અપવાદ ખાસ યાદ રાખવો.</div>"
+      },
+      {
+        "t": "Prepositions of Place — In, On, At",
+        "en": "Place Prepositions",
+        "art": "in/on/at",
+        "body": "<div class=\"table-scroll\"><table><tr><th>Preposition</th><th>ઉપયોગ</th><th>ઉદાહરણ</th></tr><tr><td><strong>At</strong></td><td>ચોક્કસ બિંદુ</td><td>at the door, at the bus stop, at home</td></tr><tr><td><strong>On</strong></td><td>સપાટી પર</td><td>on the table, on the wall, on the road</td></tr><tr><td><strong>In</strong></td><td>અંદર, બંધ જગ્યામાં</td><td>in the room, in Gujarat, in the box</td></tr></table></div><span class=\"sub\">અન્ય મહત્વના Prepositions</span><ul><li><strong>Under/Below:</strong> નીચે — under the table</li><li><strong>Over/Above:</strong> ઉપર — above the clouds</li><li><strong>Between:</strong> બે વસ્તુ વચ્ચે — between you and me</li><li><strong>Among:</strong> ઘણી વસ્તુ વચ્ચે — among the crowd</li><li><strong>Beside:</strong> બાજુમાં — beside the river</li></ul><div class=\"note\">GPSC ટીપ: \"Between\" બે (2) વસ્તુ/વ્યક્તિ માટે, \"Among\" ત્રણ કે વધુ માટે વપરાય — \"Between the two brothers\" vs \"Among the five friends\".</div>"
+      },
+      {
+        "t": "સામાન્ય ભૂલો — Prepositions સાથે Verbs",
+        "en": "Common Preposition Errors",
+        "art": "married to, good at",
+        "body": "<p>ઘણા Verb/Adjective ચોક્કસ Preposition સાથે જ વપરાય — આ જોડ (Collocation) ગોખવી પડે.</p><div class=\"table-scroll\"><table><tr><th>સાચું</th><th>ખોટું</th></tr><tr><td>married to (someone)</td><td>married with ❌</td></tr><tr><td>good at (maths)</td><td>good in ❌ (context પ્રમાણે \"in\" પણ ક્યારેક ચાલે)</td></tr><tr><td>afraid of</td><td>afraid from ❌</td></tr><tr><td>depend on/upon</td><td>depend to ❌</td></tr><tr><td>angry with (person) / angry at (situation)</td><td>angry on ❌</td></tr><tr><td>congratulate on</td><td>congratulate for ❌</td></tr><tr><td>interested in</td><td>interested on ❌</td></tr><tr><td>proud of</td><td>proud on ❌</td></tr></table></div><div class=\"note\">GPSC ટીપ: \"Error Spotting\" પ્રશ્નોમાં ખોટા Preposition સૌથી વધુ પુછાય છે — ઉપરની જોડ ગોખી રાખવી ફાયદાકારક.</div>"
+      }
+    ]
+  },
+  {
+    "cat": "Subject-Verb Agreement — કર્તા-ક્રિયાપદ સંવાદિતા",
+    "items": [
+      {
+        "t": "મૂળભૂત નિયમ અને અપવાદો",
+        "en": "Basic Rule & Exceptions",
+        "art": "Singular ↔ Singular",
+        "body": "<p>Subject Singular હોય તો Verb પણ Singular, Subject Plural હોય તો Verb પણ Plural હોવું જોઈએ.</p><div class=\"table-scroll\"><table><tr><th>નિયમ</th><th>ઉદાહરણ</th></tr><tr><td>Singular Subject → Singular Verb</td><td>He goes to school. / The boy plays.</td></tr><tr><td>Plural Subject → Plural Verb</td><td>They go to school. / The boys play.</td></tr><tr><td>Each/Every/Either/Neither + Singular Verb</td><td>Each student has a book. / Every boy is present.</td></tr><tr><td>Two Subjects joined by \"and\" → Plural Verb</td><td>Ram and Shyam are friends.</td></tr><tr><td>Subjects joined by \"or/nor\" → Verb nearest subject પ્રમાણે</td><td>Either he or they are wrong.</td></tr></table></div><span class=\"sub\">Collective Nouns સાથે</span><p>Collective Noun (team, family, group) ને એકમ તરીકે લેવાય ત્યારે Singular Verb, અને સભ્યોને અલગ-અલગ ગણવામાં આવે ત્યારે Plural Verb — \"The team is playing well\" (એકમ) vs \"The team are arguing among themselves\" (વ્યક્તિગત).</p><div class=\"note\">GPSC ટીપ: \"The police have arrived\" — Police હંમેશા Plural Verb લે છે (Plural noun ગણાય).</div>"
+      },
+      {
+        "t": "Tricky Subject-Verb Agreement નિયમો",
+        "en": "Tricky Cases",
+        "art": "News, Mathematics, Everyone",
+        "body": "<div class=\"table-scroll\"><table><tr><th>પ્રકાર</th><th>નિયમ</th><th>ઉદાહરણ</th></tr><tr><td>Uncountable/Subject-like Plurals</td><td>Singular Verb લે (News, Mathematics, Physics, Economics)</td><td>The news is good. / Mathematics is difficult.</td></tr><tr><td>Indefinite Pronouns (everyone, someone, nobody)</td><td>હંમેશા Singular Verb</td><td>Everyone is happy. / Nobody knows the answer.</td></tr><tr><td>\"A number of\" + Plural Noun</td><td>Plural Verb</td><td>A number of students are absent.</td></tr><tr><td>\"The number of\" + Plural Noun</td><td>Singular Verb</td><td>The number of students is increasing.</td></tr><tr><td>Distance/Money/Time (એકમ તરીકે)</td><td>Singular Verb</td><td>Ten kilometers is a long distance. / Five hundred rupees is enough.</td></tr></table></div><div class=\"note\">GPSC ટીપ: \"A number of\" vs \"The number of\" નો ભેદ Error Spotting માં અવારનવાર પુછાય છે — \"A number of\" = ઘણા (Many), \"The number of\" = સંખ્યા પોતે.</div>"
+      }
+    ]
+  },
+  {
+    "cat": "Voice — Active અને Passive",
+    "items": [
+      {
+        "t": "Active vs Passive Voice — પરિચય",
+        "en": "Active vs Passive",
+        "art": "Subject acts vs receives",
+        "body": "<p><strong>Active Voice</strong> માં Subject પોતે ક્રિયા કરે છે. <strong>Passive Voice</strong> માં Subject ક્રિયા સહન કરે છે (ક્રિયા તેના પર થાય છે).</p><div class=\"table-scroll\"><table><tr><th>Active Voice</th><th>Passive Voice</th></tr><tr><td>Ram writes a letter.</td><td>A letter is written by Ram.</td></tr><tr><td>Ram wrote a letter.</td><td>A letter was written by Ram.</td></tr><tr><td>Ram will write a letter.</td><td>A letter will be written by Ram.</td></tr></table></div><span class=\"sub\">રૂપાંતરના 3 પગલાં</span><ul><li>1. Object (letter) ને Subject બનાવો</li><li>2. Verb ને \"be + V3\" સ્વરૂપમાં ફેરવો (Tense એ જ રાખો)</li><li>3. મૂળ Subject (Ram) ને \"by\" સાથે અંતે મૂકો</li></ul><div class=\"note\">GPSC ટીપ: Passive Voice માં Tense એ જ રહેવો જોઈએ — ફક્ત Active નો Present Simple Tense હોય તો Passive પણ Present Simple જ રહેશે (is/am/are + V3).</div>"
+      },
+      {
+        "t": "Tense પ્રમાણે Passive Voice ચાર્ટ",
+        "en": "Passive Voice by Tense",
+        "art": "12 Tense conversions",
+        "body": "<div class=\"table-scroll\"><table><tr><th>Tense</th><th>Active</th><th>Passive</th></tr><tr><td>Simple Present</td><td>He writes a letter.</td><td>A letter is written by him.</td></tr><tr><td>Present Continuous</td><td>He is writing a letter.</td><td>A letter is being written by him.</td></tr><tr><td>Present Perfect</td><td>He has written a letter.</td><td>A letter has been written by him.</td></tr><tr><td>Simple Past</td><td>He wrote a letter.</td><td>A letter was written by him.</td></tr><tr><td>Past Continuous</td><td>He was writing a letter.</td><td>A letter was being written by him.</td></tr><tr><td>Past Perfect</td><td>He had written a letter.</td><td>A letter had been written by him.</td></tr><tr><td>Simple Future</td><td>He will write a letter.</td><td>A letter will be written by him.</td></tr><tr><td>Modal (can/should)</td><td>He can write a letter.</td><td>A letter can be written by him.</td></tr></table></div><div class=\"note\">GPSC ટીપ: Perfect Continuous Tenses (has been writing) અને Future Continuous સામાન્ય રીતે Passive Voice માં બનાવાતા નથી — આ યાદ રાખવું.</div>"
+      },
+      {
+        "t": "Imperative Sentences નું Passive",
+        "en": "Passive of Commands",
+        "art": "Let + Object + be + V3",
+        "body": "<p>આદેશવાચક વાક્યો (Imperative Sentences) નું Passive Voice બનાવવા ખાસ નિયમ વપરાય છે.</p><div class=\"table-scroll\"><table><tr><th>પ્રકાર</th><th>Active</th><th>Passive</th></tr><tr><td>સાદો આદેશ</td><td>Close the door.</td><td>Let the door be closed.</td></tr><tr><td>વિનંતી</td><td>Please help me.</td><td>You are requested to help me.</td></tr><tr><td>નિષેધ (Negative)</td><td>Do not open the window.</td><td>Let the window not be opened.</td></tr></table></div><div class=\"note\">GPSC ટીપ: \"Let\" થી શરૂ થતું Passive ફક્ત Imperative Sentences માટે જ વપરાય — સામાન્ય વાક્યો માટે નહીં.</div>"
+      }
+    ]
+  },
+  {
+    "cat": "Narration — Direct અને Indirect Speech",
+    "items": [
+      {
+        "t": "Direct vs Indirect Speech — પરિચય",
+        "en": "Direct vs Indirect Speech",
+        "art": "\"...\" vs that...",
+        "body": "<p><strong>Direct Speech</strong> માં વ્યક્તિના શબ્દો બરાબર Quotation Marks (\"...\") માં લખાય. <strong>Indirect/Reported Speech</strong> માં તે શબ્દોનો સાર આપણી પોતાની ભાષામાં (વગર Quotation Marks) આપાય.</p><div class=\"table-scroll\"><table><tr><th>Direct Speech</th><th>Indirect Speech</th></tr><tr><td>He said, \"I am happy.\"</td><td>He said that he was happy.</td></tr><tr><td>She said, \"I will go tomorrow.\"</td><td>She said that she would go the next day.</td></tr></table></div><span class=\"sub\">રૂપાંતરના મુખ્ય નિયમો</span><ul><li>Reporting Verb Past હોય તો Tense એક પગલું પાછળ જાય (Backshift): is→was, will→would, has→had</li><li>Pronoun બદલાય: I→he/she, we→they (context પ્રમાણે)</li><li>Quotation Marks દૂર થાય, \"that\" ઉમેરાય</li></ul>"
+      },
+      {
+        "t": "સમય અને સ્થળના શબ્દોમાં ફેરફાર",
+        "en": "Time & Place Word Changes",
+        "art": "now→then, here→there",
+        "body": "<div class=\"table-scroll\"><table><tr><th>Direct</th><th>Indirect</th></tr><tr><td>now</td><td>then</td></tr><tr><td>today</td><td>that day</td></tr><tr><td>tomorrow</td><td>the next day / the following day</td></tr><tr><td>yesterday</td><td>the previous day / the day before</td></tr><tr><td>here</td><td>there</td></tr><tr><td>this</td><td>that</td></tr><tr><td>these</td><td>those</td></tr><tr><td>ago</td><td>before</td></tr><tr><td>next week</td><td>the following week</td></tr></table></div><div class=\"note\">GPSC ટીપ: આ Word-changes ચાર્ટ Narration ના પ્રશ્નોમાં સૌથી વધુ ઉપયોગી છે — ગોખી રાખવો.</div>"
+      },
+      {
+        "t": "Questions અને Commands નું Narration",
+        "en": "Interrogative & Imperative Narration",
+        "art": "asked if/whether, told to",
+        "body": "<span class=\"sub\">Questions (પ્રશ્નાર્થ વાક્યો)</span><div class=\"table-scroll\"><table><tr><th>Direct</th><th>Indirect</th></tr><tr><td>He said, \"Do you like tea?\"</td><td>He asked if/whether I liked tea.</td></tr><tr><td>He said, \"Where do you live?\"</td><td>He asked where I lived.</td></tr></table></div><p>Yes/No Question માટે \"if/whether\" વપરાય; Wh-Question માટે Question Word (where, why, how) જ જળવાય, \"that/if\" નહીં.</p><span class=\"sub\">Commands (આદેશવાચક વાક્યો)</span><div class=\"table-scroll\"><table><tr><th>Direct</th><th>Indirect</th></tr><tr><td>He said, \"Close the door.\"</td><td>He told/ordered me to close the door.</td></tr><tr><td>He said, \"Please help me.\"</td><td>He requested me to help him.</td></tr><tr><td>He said, \"Don't make noise.\"</td><td>He told me not to make noise.</td></tr></table></div><div class=\"note\">GPSC ટીપ: Reporting Verb \"said\" ને context પ્રમાણે બદલવો — Question માટે \"asked\", Command માટે \"told/ordered/requested\".</div>"
+      }
+    ]
+  },
+  {
+    "cat": "Sentence Structure — વાક્ય રચના",
+    "items": [
+      {
+        "t": "વાક્યના પ્રકારો — અર્થ પ્રમાણે",
+        "en": "Sentence Types by Function",
+        "art": "Assertive, Interrogative...",
+        "body": "<div class=\"table-scroll\"><table><tr><th>પ્રકાર</th><th>લક્ષણ</th><th>ઉદાહરણ</th></tr><tr><td>Assertive/Declarative</td><td>સામાન્ય વિધાન</td><td>She is a teacher.</td></tr><tr><td>Interrogative</td><td>પ્રશ્નાર્થ, \"?\" સાથે</td><td>Is she a teacher?</td></tr><tr><td>Imperative</td><td>આદેશ/વિનંતી</td><td>Close the door. / Please sit down.</td></tr><tr><td>Exclamatory</td><td>લાગણી, \"!\" સાથે</td><td>What a beautiful day!</td></tr><tr><td>Optative</td><td>ઈચ્છા/આશીર્વાદ</td><td>May you live long!</td></tr></table></div>"
+      },
+      {
+        "t": "વાક્યના પ્રકારો — રચના પ્રમાણે",
+        "en": "Sentence Types by Structure",
+        "art": "Simple, Compound, Complex",
+        "body": "<div class=\"table-scroll\"><table><tr><th>પ્રકાર</th><th>લક્ષણ</th><th>ઉદાહરણ</th></tr><tr><td>Simple Sentence</td><td>એક Subject + એક Verb (એક Clause)</td><td>He runs fast.</td></tr><tr><td>Compound Sentence</td><td>બે Independent Clauses, Coordinating Conjunction (and, but, or) થી જોડાયેલા</td><td>He runs fast, but he gets tired.</td></tr><tr><td>Complex Sentence</td><td>એક Independent + એક કે વધુ Dependent Clause (because, if, when, that, which)</td><td>He runs fast because he wants to win.</td></tr><tr><td>Compound-Complex</td><td>2+ Independent Clauses + 1+ Dependent Clause</td><td>He runs fast because he wants to win, but he often gets tired.</td></tr></table></div><div class=\"note\">GPSC ટીપ: Coordinating Conjunctions યાદ રાખવા \"FANBOYS\" — For, And, Nor, But, Or, Yet, So.</div>"
+      },
+      {
+        "t": "Clauses — Independent vs Dependent",
+        "en": "Types of Clauses",
+        "art": "Noun, Adjective, Adverb Clause",
+        "body": "<p>Clause એટલે Subject અને Verb ધરાવતો શબ્દસમૂહ. બે મુખ્ય પ્રકાર: Independent (પોતે જ સંપૂર્ણ વાક્ય બની શકે) અને Dependent (અધૂરું, Independent Clause પર આધારિત).</p><span class=\"sub\">Dependent Clauses ના 3 પ્રકાર</span><div class=\"table-scroll\"><table><tr><th>પ્રકાર</th><th>કાર્ય</th><th>ઉદાહરણ</th></tr><tr><td>Noun Clause</td><td>Noun તરીકે કાર્ય કરે</td><td>I know that he is honest.</td></tr><tr><td>Adjective Clause</td><td>Noun નું વર્ણન કરે (who, which, that)</td><td>The man who came here is my friend.</td></tr><tr><td>Adverb Clause</td><td>Verb નું વર્ણન કરે (when, because, if, although)</td><td>I will go if it stops raining.</td></tr></table></div>"
+      }
+    ]
+  },
+  {
+    "cat": "Degrees of Comparison — સરખામણી",
+    "items": [
+      {
+        "t": "Positive, Comparative, Superlative — પરિચય",
+        "en": "The 3 Degrees",
+        "art": "tall, taller, tallest",
+        "body": "<p>Adjective/Adverb ની સરખામણી કરવા 3 Degrees વપરાય છે.</p><div class=\"table-scroll\"><table><tr><th>Positive</th><th>Comparative (+er/more)</th><th>Superlative (+est/most)</th></tr><tr><td>tall</td><td>taller</td><td>tallest</td></tr><tr><td>beautiful</td><td>more beautiful</td><td>most beautiful</td></tr><tr><td>good</td><td>better</td><td>best</td></tr><tr><td>bad</td><td>worse</td><td>worst</td></tr><tr><td>little</td><td>less</td><td>least</td></tr><tr><td>much/many</td><td>more</td><td>most</td></tr><tr><td>far</td><td>farther/further</td><td>farthest/furthest</td></tr></table></div><span class=\"sub\">નિયમો</span><ul><li>1-2 syllable શબ્દો: \"-er/-est\" ઉમેરાય (tall→taller→tallest)</li><li>2+ syllable શબ્દો: \"more/most\" વપરાય (beautiful→more beautiful→most beautiful)</li><li>Comparative સાથે \"than\" વપરાય: \"He is taller than me.\"</li><li>Superlative સાથે \"the\" વપરાય: \"He is the tallest boy.\"</li></ul><div class=\"note\">GPSC ટીપ: \"Good/Bad/Little/Much\" ના Comparative-Superlative અનિયમિત (Irregular) છે — ગોખવા જરૂરી.</div>"
+      },
+      {
+        "t": "સામાન્ય ભૂલો — Degrees of Comparison",
+        "en": "Common Comparison Errors",
+        "art": "Double Comparative Error",
+        "body": "<div class=\"table-scroll\"><table><tr><th>ખોટું ❌</th><th>સાચું ✅</th></tr><tr><td>more taller</td><td>taller (Double Comparative ટાળવું)</td></tr><tr><td>most tallest</td><td>tallest (Double Superlative ટાળવું)</td></tr><tr><td>She is more elder than me.</td><td>She is elder than me.</td></tr><tr><td>This is more better.</td><td>This is better.</td></tr></table></div><div class=\"note\">GPSC ટીપ: \"-er/-est\" પહેલેથી Comparative/Superlative દર્શાવે છે, તેથી \"more/most\" સાથે ફરી ન વાપરવું — આ Error Spotting માં વારંવાર પુછાય છે.</div>"
+      }
+    ]
+  },
+  {
+    "cat": "Synonyms & Antonyms — સમાનાર્થી-વિરોધી શબ્દો",
+    "items": [
+      {
+        "t": "મહત્વના Synonyms (સમાનાર્થી શબ્દો)",
+        "en": "Common Exam Synonyms",
+        "art": "Word = Similar meaning",
+        "body": "<div class=\"table-scroll\"><table><tr><th>શબ્દ</th><th>Synonym</th></tr><tr><td>Happy</td><td>Glad, Cheerful, Joyful</td></tr><tr><td>Sad</td><td>Unhappy, Sorrowful, Gloomy</td></tr><tr><td>Big</td><td>Large, Huge, Enormous</td></tr><tr><td>Beautiful</td><td>Pretty, Lovely, Gorgeous</td></tr><tr><td>Intelligent</td><td>Clever, Smart, Bright</td></tr><tr><td>Angry</td><td>Furious, Irritated, Annoyed</td></tr><tr><td>Brave</td><td>Courageous, Bold, Fearless</td></tr><tr><td>Honest</td><td>Truthful, Sincere, Genuine</td></tr><tr><td>Poor</td><td>Needy, Impoverished, Destitute</td></tr><tr><td>Begin</td><td>Start, Commence, Initiate</td></tr></table></div><div class=\"note\">GPSC ટીપ: Synonym પ્રશ્નોમાં \"closest meaning\" પસંદ કરવાનું હોય છે — context ધ્યાનમાં રાખવો, કારણ કે એક શબ્દના જુદા-જુદા સંદર્ભમાં જુદા Synonyms હોઈ શકે.</div>"
+      },
+      {
+        "t": "મહત્વના Antonyms (વિરોધી શબ્દો)",
+        "en": "Common Exam Antonyms",
+        "art": "Word ≠ Opposite meaning",
+        "body": "<div class=\"table-scroll\"><table><tr><th>શબ્દ</th><th>Antonym</th></tr><tr><td>Happy</td><td>Sad, Unhappy</td></tr><tr><td>Ancient</td><td>Modern</td></tr><tr><td>Generous</td><td>Stingy, Miserly</td></tr><tr><td>Victory</td><td>Defeat</td></tr><tr><td>Increase</td><td>Decrease</td></tr><tr><td>Praise</td><td>Criticize, Condemn</td></tr><tr><td>Optimistic</td><td>Pessimistic</td></tr><tr><td>Permanent</td><td>Temporary</td></tr><tr><td>Include</td><td>Exclude</td></tr><tr><td>Voluntary</td><td>Compulsory</td></tr></table></div><span class=\"sub\">Antonym બનાવવાના Prefix</span><ul><li><strong>Un-:</strong> happy→unhappy, kind→unkind</li><li><strong>Dis-:</strong> honest→dishonest, agree→disagree</li><li><strong>Im-/In-:</strong> possible→impossible, correct→incorrect</li><li><strong>Ir-:</strong> regular→irregular</li><li><strong>Il-:</strong> legal→illegal</li></ul>"
+      }
+    ]
+  },
+  {
+    "cat": "One Word Substitution — એક શબ્દ અવેજી",
+    "items": [
+      {
+        "t": "વ્યક્તિ સંબંધિત One Word Substitution",
+        "en": "Person-related Words",
+        "art": "One phrase = One word",
+        "body": "<div class=\"table-scroll\"><table><tr><th>વાક્યાંશ</th><th>એક શબ્દ</th></tr><tr><td>One who loves books</td><td>Bibliophile</td></tr><tr><td>One who cannot read or write</td><td>Illiterate</td></tr><tr><td>One who knows everything</td><td>Omniscient</td></tr><tr><td>One who is present everywhere</td><td>Omnipresent</td></tr><tr><td>One who studies birds</td><td>Ornithologist</td></tr><tr><td>One who does not believe in God</td><td>Atheist</td></tr><tr><td>A person who leaves his own country to settle in another</td><td>Emigrant</td></tr><tr><td>A person who eats too much</td><td>Glutton</td></tr><tr><td>One who loves mankind</td><td>Philanthropist</td></tr><tr><td>A doctor who treats teeth</td><td>Dentist</td></tr></table></div>"
+      },
+      {
+        "t": "સ્થળ અને પરિસ્થિતિ સંબંધિત One Word",
+        "en": "Place & Situation Words",
+        "art": "Words for places/situations",
+        "body": "<div class=\"table-scroll\"><table><tr><th>વાક્યાંશ</th><th>એક શબ્દ</th></tr><tr><td>A place where birds are kept</td><td>Aviary</td></tr><tr><td>A place where books are kept</td><td>Library</td></tr><tr><td>A place where dead bodies are kept</td><td>Mortuary</td></tr><tr><td>A journey by sea</td><td>Voyage</td></tr><tr><td>Government by the people</td><td>Democracy</td></tr><tr><td>Handwriting that cannot be read</td><td>Illegible</td></tr><tr><td>A statement that cannot be understood</td><td>Ambiguous</td></tr><tr><td>Words written on someone's tomb</td><td>Epitaph</td></tr><tr><td>A short poem expressing sorrow for someone's death</td><td>Elegy</td></tr><tr><td>Life history of a person written by himself</td><td>Autobiography</td></tr></table></div><div class=\"note\">GPSC ટીપ: One Word Substitution ના પ્રશ્નો GPSC/PSI પરીક્ષામાં નિયમિત આવે છે — રોજ 5-10 નવા શબ્દો ગોખવાની ટેવ રાખવી.</div>"
+      }
+    ]
+  },
+  {
+    "cat": "Idioms & Phrasal Verbs — રૂઢિપ્રયોગો",
+    "items": [
+      {
+        "t": "મહત્વના Idioms (રૂઢિપ્રયોગો)",
+        "en": "Common Idioms with Meaning",
+        "art": "Figurative expressions",
+        "body": "<div class=\"table-scroll\"><table><tr><th>Idiom</th><th>અર્થ (ગુજરાતી)</th></tr><tr><td>Break the ice</td><td>વાતચીતની શરૂઆત કરવી (ખચકાટ દૂર કરવો)</td></tr><tr><td>Once in a blue moon</td><td>ભાગ્યે જ, ક્યારેક-ક્યારેક</td></tr><tr><td>Kick the bucket</td><td>મૃત્યુ પામવું</td></tr><tr><td>Piece of cake</td><td>ખૂબ સરળ કામ</td></tr><tr><td>Burn the midnight oil</td><td>મોડી રાત સુધી અભ્યાસ/કામ કરવું</td></tr><tr><td>A blessing in disguise</td><td>ખરાબ લાગતી ઘટના જે અંતે સારી નીવડે</td></tr><tr><td>Add fuel to the fire</td><td>પરિસ્થિતિ વધુ બગાડવી</td></tr><tr><td>Beat around the bush</td><td>સીધી વાત ન કરવી, આડી-અવળી વાત કરવી</td></tr><tr><td>Hit the nail on the head</td><td>ચોક્કસ મુદ્દા પર બોલવું</td></tr><tr><td>Let the cat out of the bag</td><td>ગુપ્ત વાત જાહેર કરી દેવી</td></tr></table></div><div class=\"note\">GPSC ટીપ: Idioms નો શાબ્દિક (Literal) અર્થ ન લેવો — તેમનો ભાવાર્થ (Figurative meaning) જ સાચો જવાબ ગણાય છે.</div>"
+      },
+      {
+        "t": "મહત્વના Phrasal Verbs",
+        "en": "Common Phrasal Verbs",
+        "art": "Verb + Preposition/Adverb",
+        "body": "<div class=\"table-scroll\"><table><tr><th>Phrasal Verb</th><th>અર્થ</th></tr><tr><td>Give up</td><td>છોડી દેવું, હાર માનવી</td></tr><tr><td>Look after</td><td>સંભાળ રાખવી</td></tr><tr><td>Look for</td><td>શોધવું</td></tr><tr><td>Put off</td><td>મુલતવી રાખવું</td></tr><tr><td>Bring up</td><td>ઉછેરવું, ઉછેર કરવો</td></tr><tr><td>Call off</td><td>રદ કરવું</td></tr><tr><td>Carry on</td><td>ચાલુ રાખવું</td></tr><tr><td>Come across</td><td>અચાનક મળી જવું</td></tr><tr><td>Get along with</td><td>સાથે સારી રીતે રહેવું</td></tr><tr><td>Turn down</td><td>નકારવું, અસ્વીકાર કરવો</td></tr><tr><td>Run out of</td><td>ખૂટી જવું</td></tr><tr><td>Set up</td><td>સ્થાપવું, શરૂ કરવું</td></tr></table></div>"
+      }
+    ]
+  },
+  {
+    "cat": "Common Errors — સામાન્ય ભૂલો (Error Spotting)",
+    "items": [
+      {
+        "t": "Countable-Uncountable સાથે સામાન્ય ભૂલો",
+        "en": "Much/Many, Few/Little",
+        "art": "much vs many",
+        "body": "<div class=\"table-scroll\"><table><tr><th>Uncountable Noun સાથે</th><th>Countable Noun સાથે</th></tr><tr><td>much (water, time, money)</td><td>many (books, students, cars)</td></tr><tr><td>little / a little (less water)</td><td>few / a few (less books)</td></tr><tr><td>amount of</td><td>number of</td></tr></table></div><div class=\"note\">GPSC ટીપ: \"Few\" = લગભગ કંઈ નહીં (negative meaning), \"A few\" = થોડું પણ પૂરતું (positive meaning) — \"I have few friends\" (ઉદાસી) vs \"I have a few friends\" (સંતોષ).</div>"
+      },
+      {
+        "t": "Confusing Word Pairs",
+        "en": "Words Often Confused",
+        "art": "affect/effect, its/it's",
+        "body": "<div class=\"table-scroll\"><table><tr><th>શબ્દ</th><th>અર્થ/ઉપયોગ</th></tr><tr><td>Affect (verb)</td><td>અસર કરવી — \"Smoking affects health.\"</td></tr><tr><td>Effect (noun)</td><td>પરિણામ — \"The effect was positive.\"</td></tr><tr><td>Its (possessive)</td><td>તેનું — \"The dog wagged its tail.\"</td></tr><tr><td>It's (it is/has)</td><td>તે છે — \"It's raining.\"</td></tr><tr><td>Your (possessive)</td><td>તમારું — \"This is your book.\"</td></tr><tr><td>You're (you are)</td><td>તમે છો — \"You're late.\"</td></tr><tr><td>Than (સરખામણી માટે)</td><td>\"She is taller than him.\"</td></tr><tr><td>Then (સમય માટે)</td><td>\"First eat, then study.\"</td></tr><tr><td>Loose (ઢીલું - adjective)</td><td>\"The rope is loose.\"</td></tr><tr><td>Lose (ગુમાવવું - verb)</td><td>\"Don't lose hope.\"</td></tr></table></div><div class=\"note\">GPSC ટીપ: આ Confusing Pairs Error Spotting અને Fill-in-the-blanks બંનેમાં વારંવાર પુછાય છે.</div>"
+      },
+      {
+        "t": "Double Negative અને અન્ય સામાન્ય ભૂલો",
+        "en": "Double Negatives & Other Errors",
+        "art": "I don't have no...",
+        "body": "<div class=\"table-scroll\"><table><tr><th>ખોટું ❌</th><th>સાચું ✅</th></tr><tr><td>I don't have no money.</td><td>I don't have any money.</td></tr><tr><td>He is one of the best player.</td><td>He is one of the best players. (plural noun જરૂરી)</td></tr><tr><td>Each of the boys have a book.</td><td>Each of the boys has a book. (Each = Singular)</td></tr><tr><td>Neither of them are right.</td><td>Neither of them is right. (Neither = Singular)</td></tr><tr><td>I am knowing the answer.</td><td>I know the answer. (Stative Verbs Continuous માં ન વપરાય)</td></tr><tr><td>He is having a car.</td><td>He has a car. (Possession માટે \"having\" ખોટું)</td></tr></table></div><div class=\"note\">GPSC ટીપ: Stative Verbs (know, have-possession, like, want, believe, understand) Continuous Tense (is/am/are + ing) માં સામાન્ય રીતે ન વપરાય.</div>"
+      }
+    ]
+  },
+  {
+    "cat": "Punctuation — વિરામચિહ્નો",
+    "items": [
+      {
+        "t": "મુખ્ય Punctuation Marks અને નિયમો",
+        "en": "Punctuation Rules",
+        "art": ". , ; : ' \" ! ?",
+        "body": "<div class=\"table-scroll\"><table><tr><th>ચિહ્ન</th><th>નામ</th><th>ઉપયોગ</th></tr><tr><td>.</td><td>Full Stop</td><td>વાક્યના અંતે (Assertive Sentence)</td></tr><tr><td>,</td><td>Comma</td><td>યાદી, વાક્યના ભાગ અલગ પાડવા</td></tr><tr><td>;</td><td>Semicolon</td><td>બે સંબંધિત Independent Clauses જોડવા</td></tr><tr><td>:</td><td>Colon</td><td>યાદી/સમજૂતી પહેલા</td></tr><tr><td>'</td><td>Apostrophe</td><td>Possession (Ram's book) અથવા Contraction (don't)</td></tr><tr><td>\" \"</td><td>Quotation Marks</td><td>સીધા શબ્દો (Direct Speech) દર્શાવવા</td></tr><tr><td>!</td><td>Exclamation Mark</td><td>લાગણી/આશ્ચર્ય દર્શાવવા</td></tr><tr><td>?</td><td>Question Mark</td><td>પ્રશ્નાર્થ વાક્યના અંતે</td></tr></table></div><div class=\"note\">GPSC ટીપ: Apostrophe (') Plural Noun બનાવવા ક્યારેય ન વપરાય — \"apple's\" ❌ (as plural), ફક્ત Possession/Contraction માટે જ સાચું.</div>"
+      },
+      {
+        "t": "Capitalization Rules",
+        "en": "Capital Letters — Rules",
+        "art": "Proper Nouns, Sentence start",
+        "body": "<ul><li>દરેક વાક્યનો પ્રથમ શબ્દ Capital Letter થી શરૂ થાય</li><li>Proper Nouns (નામ, સ્થળ, દેશ, ભાષા) હંમેશા Capital: India, Gujarati, Monday, January</li><li>\"I\" (હું) હંમેશા Capital લખાય, વાક્યમાં ગમે ત્યાં હોય</li><li>Titles (Mr., Dr., President) Capital થી શરૂ થાય</li><li>પુસ્તકો/ફિલ્મોના શીર્ષકના મુખ્ય શબ્દો Capital (The Lord of the Rings)</li></ul><div class=\"note\">GPSC ટીપ: ઋતુઓ (summer, winter) Capital નથી લખાતી, પરંતુ મહિનાઓ (January) અને દિવસો (Monday) હંમેશા Capital લખાય.</div>"
+      }
+    ]
+  },
+  {
+    "cat": "Vocabulary Building — શબ્દભંડોળ",
+    "items": [
+      {
+        "t": "Homophones — સરખો ઉચ્ચાર, અલગ અર્થ",
+        "en": "Words that Sound Alike",
+        "art": "there/their/they're",
+        "body": "<div class=\"table-scroll\"><table><tr><th>શબ્દ</th><th>અર્થ</th></tr><tr><td>There</td><td>ત્યાં (સ્થળ) — \"Put it there.\"</td></tr><tr><td>Their</td><td>તેમનું (Possessive) — \"That is their house.\"</td></tr><tr><td>They're</td><td>તેઓ છે (they are) — \"They're coming.\"</td></tr><tr><td>To</td><td>તરફ — \"Go to school.\"</td></tr><tr><td>Too</td><td>પણ/ખૂબ — \"Me too.\" / \"Too hot.\"</td></tr><tr><td>Two</td><td>બે (સંખ્યા) — \"I have two books.\"</td></tr><tr><td>Write</td><td>લખવું — \"Write a letter.\"</td></tr><tr><td>Right</td><td>સાચું/જમણું — \"That's right.\"</td></tr><tr><td>Peace</td><td>શાંતિ</td></tr><tr><td>Piece</td><td>ટુકડો</td></tr></table></div><div class=\"note\">GPSC ટીપ: Homophones (સરખો ઉચ્ચાર) Spelling-based પ્રશ્નોમાં ગૂંચવણ ઊભી કરે છે — spelling અને context બંને ધ્યાનમાં રાખવા.</div>"
+      },
+      {
+        "t": "Prefix અને Suffix — શબ્દ નિર્માણ",
+        "en": "Word Formation",
+        "art": "re-, -tion, -able",
+        "body": "<p>Prefix (શબ્દની આગળ) અને Suffix (શબ્દની પાછળ) ઉમેરીને નવા શબ્દો બનાવી શકાય.</p><span class=\"sub\">સામાન્ય Prefixes</span><div class=\"table-scroll\"><table><tr><th>Prefix</th><th>અર્થ</th><th>ઉદાહરણ</th></tr><tr><td>Re-</td><td>ફરીથી</td><td>rewrite, redo, return</td></tr><tr><td>Pre-</td><td>પહેલા</td><td>prepare, predict, preview</td></tr><tr><td>Mis-</td><td>ખોટું</td><td>misunderstand, mislead</td></tr><tr><td>Sub-</td><td>નીચે</td><td>submarine, subway</td></tr></table></div><span class=\"sub\">સામાન્ય Suffixes</span><div class=\"table-scroll\"><table><tr><th>Suffix</th><th>Part of Speech</th><th>ઉદાહરણ</th></tr><tr><td>-tion/-sion</td><td>Noun</td><td>education, decision</td></tr><tr><td>-ful</td><td>Adjective</td><td>beautiful, careful</td></tr><tr><td>-less</td><td>Adjective (વગર)</td><td>careless, hopeless</td></tr><tr><td>-able/-ible</td><td>Adjective (શક્ય)</td><td>comfortable, possible</td></tr><tr><td>-ize/-ise</td><td>Verb</td><td>modernize, realize</td></tr></table></div>"
+      }
+    ]
+  }
+]
