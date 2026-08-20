@@ -142,7 +142,11 @@
       gap: 0;
     }
 
-    .sidebar.mini .toc a .label-text {
+       .sidebar.mini .toc a .label-text {
+      display: none;
+    }
+
+    .sidebar.mini .toc a .match-score {
       display: none;
     }
 
@@ -154,11 +158,15 @@
       margin-left: 72px;
     }
 
-    .sidebar-toggle-row {
+       .sidebar-toggle-row {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       padding: 8px 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--green-deep);
     }
 
     .collapse-btn {
@@ -453,7 +461,7 @@
       gap: 14px;
     }
 
-    .menu-btn {
+      .menu-btn {
       display: none;
       background: var(--green-deep);
       color: #fff;
