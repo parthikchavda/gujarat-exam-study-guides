@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>જાહેર વહીવટ (Public Administration) — તમામ સરકારી પરીક્ષાઓ માટે સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા</title>
+  <title>જાહેર વહીવટ — Public Administration સંપૂર્ણ અભ્યાસ માર્ગદર્શિકા</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;600;700;800&family=Noto+Serif+Gujarati:wght@500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap");
 
@@ -900,88 +900,84 @@
 </head>
 
 <body>
- <div class="app">
-  <div class="overlay" id="overlay"></div>
-  <div class="tooltip-flyout" id="tooltipFlyout"></div>
+  <div class="app">
+    <div class="overlay" id="overlay"></div>
+    <div class="tooltip-flyout" id="tooltipFlyout"></div>
 
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-toggle-row">
-      <button class="collapse-btn" id="collapseBtn" title="સાઇડબાર સંકોચો/વિસ્તારો">
-        ◀
-      </button>
-    </div>
-
-    <div class="brand">
-      <div class="ashoka-row">
-        <div class="ashoka">॥</div>
-        <span class="ashoka-label" id="ashokaLabel">વિષય પસંદ કરો</span>
-      </div>
-      <h1>જાહેર વહીવટ</h1>
-      <p>Public Administration / GPSC અને સ્પર્ધાત્મક પરીક્ષા સંપૂર્ણ અભ્યાસ સામગ્રી</p>
-    </div>
-
-    <div class="search-wrap">
-      <div class="full-search">
-        <input type="text" id="searchInput" placeholder="ટોપિક શોધો... (દા.ત. વહીવટ, પંચાયત, નીતિ)" />
-        <button class="clear-btn" id="clearSearch" title="સાફ કરો">
-          ✕
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-toggle-row">
+        <button class="collapse-btn" id="collapseBtn" title="સાઇડબાર સંકોચો/વિસ્તારો">
+          ◀
         </button>
       </div>
-
-      <button class="mini-search-btn" id="miniSearchBtn" title="શોધો">
-        🔍
-      </button>
-
-      <div class="search-count" id="searchCount"></div>
-
-      <div class="search-hint">
-        ફઝી શોધ સક્રિય — જોડણી ભૂલ / આંશિક શબ્દ પણ ચાલશે
+      <div class="brand">
+        <div class="ashoka-row">
+          <div class="ashoka">॥</div>
+          <span class="ashoka-label" id="ashokaLabel">વિષય પસંદ કરો</span>
+        </div>
+        <h1>જાહેર વહીવટ</h1>
+        <p>Public Administration — GPSC / Wireless PSI સંપૂર્ણ યાદી</p>
       </div>
-    </div>
+      <div class="search-wrap">
+        <div class="full-search">
+          <input type="text" id="searchInput" placeholder="ટોપિક શોધો... (દા.ત. POSDCORB, પંચાયત, UPSC)" />
+          <button class="clear-btn" id="clearSearch" title="સાફ કરો">
+            ✕
+          </button>
+        </div>
+        <button class="mini-search-btn" id="miniSearchBtn" title="શોધો">
+          🔍
+        </button>
+        <div class="search-count" id="searchCount"></div>
+        <div class="search-hint">
+          ફઝી શોધ સક્રિય — જોડણી ભૂલ / આંશિક શબ્દ પણ ચાલશે
+        </div>
+      </div>
+      <nav class="toc" id="toc"></nav>
+    </aside>
 
-    <nav class="toc" id="toc"></nav>
-  </aside>
-
-  <div class="main">
-    <div class="topbar">
-      <button class="menu-btn" id="menuBtn">☰</button>
-      <div class="path">વર્તમાન વિભાગ: <b id="currentTitle">પરિચય</b></div>
-    </div>
-
-    <div class="content">
-      <div class="hero">
-        <h2>જાહેર વહીવટ — સંપૂર્ણ અભ્યાસ સામગ્રી</h2>
-        <p>
-          GPSC, Wireless PSI અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ — જાહેર વહીવટના મૂળભૂત સિદ્ધાંતો,
-          વહીવટી માળખું, સરકારી સંસ્થાઓ, નીતિ નિર્માણ, પંચાયતી રાજ, સુશાસન અને વહીવટી વ્યવસ્થાને આવરી લેતી
-          સંપૂર્ણ અભ્યાસ સામગ્રી. ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો.
-        </p>
-        <div class="stripe"><span></span><span></span><span></span></div>
+    <div class="main">
+      <div class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div class="path">વર્તમાન વિભાગ: <b id="currentTitle">પરિચય</b></div>
       </div>
 
-      <div id="topicsContainer"></div>
+      <div class="content">
+        <div class="hero">
+          <h2>જાહેર વહીવટ — સંપૂર્ણ અભ્યાસ સામગ્રી</h2>
+          <p>
+            GPSC, Wireless PSI, તલાટી અને અન્ય સ્પર્ધાત્મક પરીક્ષાઓ માટે તૈયાર કરેલ — સિદ્ધાંતો, વિચારકો,
+            સંગઠન, કર્મચારી-નાણાકીય વહીવટ, પંચાયતી રાજ અને બંધારણીય-વૈધાનિક આયોગો સાથે.
+            ડાબી બાજુ મેનુમાંથી ટોપિક પસંદ કરો અથવા સર્ચ કરો.
+          </p>
+          <div class="stripe"><span></span><span></span><span></span></div>
+        </div>
 
-      <div class="no-results" id="noResults" style="display: none">
-        આ શબ્દ સાથે મેળ ખાતું કોઈ ટોપિક મળ્યું નથી.
+        <div id="topicsContainer"></div>
+
+        <div class="no-results" id="noResults" style="display: none">
+          આ શબ્દ સાથે મેળ ખાતું કોઈ ટોપિક મળ્યું નથી.
+        </div>
       </div>
-    </div>
 
-    <footer class="foot">
-      જાહેર વહીવટ માર્ગદર્શિકા · GPSC / Wireless PSI અને અન્ય સ્પર્ધાત્મક પરીક્ષા તૈયારી માટે
-    </footer>
+      <footer class="foot">
+        જાહેર વહીવટ માર્ગદર્શિકા · GPSC / Wireless PSI સ્પર્ધાત્મક પરીક્ષા તૈયારી
+        માટે
+      </footer>
+    </div>
   </div>
-</div>
 
   <script>
-     const DATA = [
-        {
-    "cat": "જાહેર વહીવટ: પરિચય, અર્થ અને વ્યાપ",
-    "items": [
+    const DATA = [
       {
-        "t": "જાહેર વહીવટની વ્યાખ્યા અને અર્થ",
-        "en": "Meaning & Definition",
-        "art": "Woodrow Wilson (1887)",
-        "body": `
+        cat: "જાહેર વહીવટ: પરિચય, અર્થ અને વ્યાપ",
+        items: [
+          {
+            t: "જાહેર વહીવટની વ્યાખ્યા અને અર્થ",
+            en: "Meaning & Definition",
+            art: "Woodrow Wilson (1887)",
+            body: `
+
 <p>જાહેર વહીવટ (Public Administration) એટલે સરકારની નીતિઓ અને કાયદાઓનો અમલ કરવા માટેની સંગઠિત પ્રવૃત્તિ. તે રાજ્યશાસ્ત્ર અને વ્યવસ્થાપન વિજ્ઞાન બંનેની કડી છે.</p>
 <span class="sub">મહત્વની વ્યાખ્યાઓ</span>
 <ul>
@@ -992,13 +988,15 @@
 <li><strong>ફેલિક્સ નાઇગ્રો:</strong> જાહેર વહીવટ એ સહકારી જૂથ પ્રયાસ છે જે જાહેર ક્ષેત્રમાં થાય છે.</li>
 </ul>
 <div class="note">GPSC ટીપ: "જાહેર વહીવટના પિતા કોણ?" — જવાબ: વુડ્રો વિલ્સન (નિબંધ: The Study of Administration, 1887). "પ્રથમ જાહેર વહીવટની પાઠ્યપુસ્તક કોણે લખી?" — L.D. વ્હાઇટ (Introduction to the Study of Public Administration, 1926).</div>
+
 `,
-      },
-      {
-        "t": "જાહેર વહીવટની પ્રકૃતિ: કળા કે વિજ્ઞાન?",
-        "en": "Nature: Integral vs Managerial View",
-        "art": "Integral vs Managerial",
-        "body": `
+          },
+          {
+            t: "જાહેર વહીવટની પ્રકૃતિ: કળા કે વિજ્ઞાન?",
+            en: "Nature: Integral vs Managerial View",
+            art: "Integral vs Managerial",
+            body: `
+
 <p>જાહેર વહીવટની પ્રકૃતિ અંગે બે મુખ્ય મત-પ્રવાહો છે — સંકલિત દૃષ્ટિકોણ (Integral View) અને વ્યવસ્થાપકીય દૃષ્ટિકોણ (Managerial View).</p>
 <span class="sub">બે મુખ્ય દૃષ્ટિકોણ</span>
 <div class="table-scroll"><table>
@@ -1012,13 +1010,15 @@
 <li>કળા તરીકે: અમલીકરણમાં કૌશલ્ય, અનુભવ અને પરિસ્થિતિ પ્રમાણે નિર્ણય જરૂરી — "ચોક્કસ વિજ્ઞાન" નહીં પરંતુ "સામાજિક વિજ્ઞાન"</li>
 </ul>
 <div class="note">GPSC ટીપ: સાયમન અને ગુલિકનો દૃષ્ટિકોણ સાંકડો (Narrow/Managerial) છે જ્યારે L.D. વ્હાઇટનો દૃષ્ટિકોણ વ્યાપક (Integral) છે — આ બંને વચ્ચેનો ભેદ વારંવાર પુછાય છે.</div>
+
 `,
-      },
-      {
-        "t": "જાહેર વહીવટનો વ્યાપ (Scope)",
-        "en": "Scope of Public Administration",
-        "art": "POSDCORB",
-        "body": `
+          },
+          {
+            t: "જાહેર વહીવટનો વ્યાપ (Scope)",
+            en: "Scope of Public Administration",
+            art: "POSDCORB",
+            body: `
+
 <p>જાહેર વહીવટના વ્યાપને સામાન્ય રીતે ત્રણ પરિમાણોમાં જોવામાં આવે છે — વિષય-વસ્તુ (Subject Matter), માળખું (Structure) અને પ્રક્રિયા (Process).</p>
 <span class="sub">મુખ્ય ઘટકો</span>
 <ul>
@@ -1042,13 +1042,15 @@
 <tr><td>B</td><td>Budgeting</td><td>અંદાજપત્ર</td></tr>
 </table></div>
 <div class="note">GPSC ટીપ: POSDCORB શબ્દ સૌપ્રથમ લ્યુથર ગુલિકે તેમના પુસ્તક "Papers on the Science of Administration" (1937)માં આપ્યો — આ MCQ માટે અતિ મહત્વનું છે.</div>
+
 `,
-      },
-      {
-        "t": "જાહેર વિ ખાનગી વહીવટ",
-        "en": "Public vs Private Administration",
-        "art": "તફાવત કોષ્ટક",
-        "body": `
+          },
+          {
+            t: "જાહેર વિ ખાનગી વહીવટ",
+            en: "Public vs Private Administration",
+            art: "તફાવત કોષ્ટક",
+            body: `
+
 <p>જાહેર અને ખાનગી વહીવટ બંને વ્યવસ્થાપકીય સિદ્ધાંતો વહેંચે છે, પરંતુ ધ્યેય, જવાબદારી અને કાર્યપદ્ધતિમાં નોંધપાત્ર ફેર છે.</p>
 <div class="table-scroll"><table>
 <tr><th>મુદ્દો</th><th>જાહેર વહીવટ</th><th>ખાનગી વહીવટ</th></tr>
@@ -1061,13 +1063,15 @@
 </table></div>
 <span class="sub">સામ્યતાઓ (સાયમનનો મત)</span>
 <p>હર્બર્ટ સાયમનના મતે બંનેમાં આયોજન, સંગઠન, નિર્ણય-પ્રક્રિયા સમાન સિદ્ધાંતો પર આધારિત છે — તેથી તેને "Politics-Administration Dichotomy" સાથે જોડીને અભ્યાસ કરવો.</p>
+
 `,
-      },
-      {
-        "t": "જાહેર વહીવટનું મહત્વ અને પડકારો",
-        "en": "Importance & Challenges",
-        "art": "Instrument of governance",
-        "body": `
+          },
+          {
+            t: "જાહેર વહીવટનું મહત્વ અને પડકારો",
+            en: "Importance & Challenges",
+            art: "Instrument of governance",
+            body: `
+
 <p>આધુનિક કલ્યાણકારી રાજ્ય (Welfare State)માં જાહેર વહીવટ સરકારના "હાથ-પગ" સમાન છે — નીતિ ઘડતરથી લઈને છેલ્લા વ્યક્તિ સુધી લાભ પહોંચાડવા સુધીની કડી.</p>
 <span class="sub">મહત્વ</span>
 <ul>
@@ -1086,69 +1090,20 @@
 <li>સંસાધનોની મર્યાદા</li>
 </ul>
 <div class="note">GPSC ટીપ: 2જા વહીવટી સુધારા પંચ (2nd ARC) એ આમાંના ઘણા પડકારોના ઉકેલ માટે ભલામણો આપી છે — વિભાગ 9 જુઓ.</div>
+
 `,
+          },
+        ],
       },
       {
-        "t": "વહીવટના સ્તરો",
-        "en": "Levels of Administration",
-        "art": "Top, Middle, Lower",
-        "body": `
-<p>જાહેર વહીવટને સામાન્ય રીતે ત્રણ સ્તરોમાં વિભાજિત કરવામાં આવે છે — ટોચનું, મધ્યમ અને નીચલું.</p>
-<div class="table-scroll"><table>
-<tr><th>સ્તર</th><th>કાર્યો</th><th>ઉદાહરણ</th></tr>
-<tr><td><strong>ટોચનું (Top)</strong></td><td>નીતિ ઘડતર, સુયોજન, નિર્દેશન</td><td>મંત્રી, કેબિનેટ સચિવ, વિભાગના વડા</td></tr>
-<tr><td><strong>મધ્યમ (Middle)</strong></td><td>નીતિ અમલીકરણ, સંકલન, દેખરેખ</td><td>સંયુક્ત સચિવ, નિયામક, વિભાગના ડિરેક્ટર</td></tr>
-<tr><td><strong>નીચલું (Lower)</strong></td><td>દૈનંદિન કામકાજ, અમલ, અહેવાલ</td><td>કારકૂન, તલાટી, આસિસ્ટન્ટ</td></tr>
-</table></div>
-`,
-      },
-      {
-        "t": "જાહેર વહીવટની સ્થિતિ (Status)",
-        "en": "Status of Public Administration",
-        "art": "Politics-Administration Dichotomy",
-        "body": `
-<p>જાહેર વહીવટની સ્થિતિ અંગે બે અલગ-અલગ મંતવ્યો છે:</p>
-<ul>
-<li><strong>એક વિજ્ઞાન તરીકે:</strong> પદ્ધતિસરનો અભ્યાસ, સિદ્ધાંતો, સાધનો — ઉદાહરણ: POSDCORB, બજેટિંગ, સ્ટાફિંગ</li>
-<li><strong>એક કળા તરીકે:</strong> અમલીકરણમાં કૌશલ્ય અને અનુભવ આવશ્યક, પરિસ્થિતિ પ્રમાણે નિર્ણય — "ચોક્કસ વિજ્ઞાન" નહીં પણ "સામાજિક વિજ્ઞાન"</li>
-</ul>
-<p>વુડ્રો વિલ્સને "Politics-Administration Dichotomy" આપી — રાજકારણ (Politics) નીતિ ઘડે, વહીવટ (Administration) તેનો અમલ કરે. પણ ફ્રેન્ક ગુડનો, ડ્વાઇટ વાલ્ડો જેવા વિદ્વાનોએ આ ભેદને વ્યવહારમાં અશક્ય ગણાવ્યો.</p>
-<div class="note">GPSC ટીપ: 2જા ARC એ "Politics-Administration Dichotomy"ના વ્યવહારુ અભિગમની તરફેણ કરી.</div>
-`,
-      },
-      {
-        "t": "જાહેર નીતિ (Public Policy)",
-        "en": "Public Policy",
-        "art": "Meaning, Nature, Process",
-        "body": `
-<p>જાહેર નીતિ એટલે સરકાર દ્વારા જાહેર સમસ્યાઓના ઉકેલ માટે અપનાવવામાં આવતા કાર્યક્રમો અને નિર્ણયોનો સમૂહ.</p>
-<span class="sub">વ્યાખ્યા</span>
-<ul>
-<li><strong>થોમસ ડાય:</strong> "જાહેર નીતિ એટલે સરકાર જે કરવાનું પસંદ કરે છે અથવા કરવાનું નક્કી કરે છે."</li>
-<li><strong>ડેવિડ ઈસ્ટન:</strong> "જાહેર નીતિ એ સત્તાવાર રીતે મૂલ્યોની વહેંચણી છે."</li>
-</ul>
-<span class="sub">નીતિ પ્રક્રિયાના તબક્કા (જેમ્સ ઈ. એન્ડરસન)</span>
-<ol>
-<li>સમસ્યા ઓળખ (Problem Identification)</li>
-<li>એજેન્ડા સેટિંગ (Agenda Setting)</li>
-<li>નીતિ ઘડતર (Policy Formulation)</li>
-<li>નીતિ દત્તકીકરણ (Policy Adoption)</li>
-<li>નીતિ અમલીકરણ (Policy Implementation)</li>
-<li>નીતિ મૂલ્યાંકન (Policy Evaluation)</li>
-</ol>
-<div class="note">GPSC ટીપ: ભારતમાં "આયોજન" (Planning) અને "નીતિ ઘડતર" NITI Aayog (પહેલાં Planning Commission) દ્વારા થાય છે.</div>
-`,
-      },
-    ],
-  },
-  {
-    "cat": "વહીવટી સિદ્ધાંતો — શાસ્ત્રીય અભિગમ",
-    "items": [
-      {
-        "t": "વૈજ્ઞાનિક વ્યવસ્થાપન સિદ્ધાંત (F.W. Taylor)",
-        "en": "Scientific Management",
-        "art": "F.W. Taylor, 1911",
-        "body": `
+        cat: "વહીવટી સિદ્ધાંતો — શાસ્ત્રીય અભિગમ",
+        items: [
+          {
+            t: "વૈજ્ઞાનિક વ્યવસ્થાપન સિદ્ધાંત (F.W. Taylor)",
+            en: "Scientific Management",
+            art: "F.W. Taylor, 1911",
+            body: `
+
 <p>ફ્રેડરિક વિન્સલો ટેલર (અમેરિકા)ને "વૈજ્ઞાનિક વ્યવસ્થાપનના પિતા" ગણવામાં આવે છે. તેમનું પુસ્તક "Principles of Scientific Management" (1911) કારખાના-સ્તરની કાર્યક્ષમતા પર કેન્દ્રિત છે.</p>
 <span class="sub">મુખ્ય સિદ્ધાંતો</span>
 <ul>
@@ -1159,13 +1114,15 @@
 <li><strong>Functional Foremanship:</strong> એક કામદાર પર 8 નિષ્ણાત ફોરમેનનું નિરીક્ષણ</li>
 </ul>
 <div class="note">GPSC ટીપ: ટેલરનો અભિગમ "Micro/Shop-level" છે (કારખાનાના તળિયે કાર્યક્ષમતા), જ્યારે ફેયોલનો અભિગમ "Macro/Top-level" છે (સમગ્ર સંસ્થાનું સંચાલન) — આ ભેદ મહત્વનો છે.</div>
+
 `,
-      },
-      {
-        "t": "ફેયોલના 14 વહીવટી સિદ્ધાંતો",
-        "en": "Henri Fayol's 14 Principles",
-        "art": "Henri Fayol, 1916",
-        "body": `
+          },
+          {
+            t: "ફેયોલના 14 વહીવટી સિદ્ધાંતો",
+            en: "Henri Fayol's 14 Principles",
+            art: "Henri Fayol, 1916",
+            body: `
+
 <p>ફ્રેન્ચ ખાણ-ઈજનેર હેન્રી ફેયોલને "આધુનિક વ્યવસ્થાપન સિદ્ધાંતના પિતા" ગણવામાં આવે છે. તેમનું પુસ્તક "Administration Industrielle et Générale" (1916) એ ટોચના સ્તરના સંચાલન પર ધ્યાન કેન્દ્રિત કરે છે.</p>
 <span class="sub">14 સિદ્ધાંતો</span>
 <div class="table-scroll"><table>
@@ -1186,13 +1143,15 @@
 <tr><td>14</td><td>સંઘભાવના (Esprit de Corps)</td><td>ટીમ ભાવના અને એકતા</td></tr>
 </table></div>
 <div class="note">GPSC ટીપ: ફેયોલે 5 વ્યવસ્થાપકીય કાર્યો પણ આપ્યાં — Planning, Organizing, Command, Coordination, Control (POCCC) — POSDCORB પહેલાનું મોડેલ.</div>
+
 `,
-      },
-      {
-        "t": "મેક્સ વેબરનો અમલદારશાહી સિદ્ધાંત",
-        "en": "Max Weber's Bureaucracy",
-        "art": "Ideal Type Bureaucracy",
-        "body": `
+          },
+          {
+            t: "મેક્સ વેબરનો અમલદારશાહી સિદ્ધાંત",
+            en: "Max Weber's Bureaucracy",
+            art: "Ideal Type Bureaucracy",
+            body: `
+
 <p>જર્મન સમાજશાસ્ત્રી મેક્સ વેબરે "આદર્શ પ્રકારની અમલદારશાહી" (Ideal Type Bureaucracy)નો સિદ્ધાંત આપ્યો, જે તર્કસંગત-કાયદેસર સત્તા (Legal-Rational Authority) પર આધારિત છે.</p>
 <span class="sub">સત્તાના 3 પ્રકાર (વેબર)</span>
 <ul>
@@ -1211,13 +1170,15 @@
 <li>લેખિત રેકોર્ડ-રાખવાની પદ્ધતિ (Files & documentation)</li>
 </ul>
 <div class="note">GPSC ટીપ: વેબરની અમલદારશાહીની ટીકા — વધુ પડતી ઔપચારિકતા "Red-tapism" અને કઠોરતા (Rigidity) તરફ દોરી શકે છે, જેને રોબર્ટ મર્ટને "Trained Incapacity" કહી.</div>
+
 `,
-      },
-      {
-        "t": "POSDCORB — ગુલિક અને ઉર્વિક",
-        "en": "Luther Gulick & Lyndall Urwick",
-        "art": "7 Functions, 1937",
-        "body": `
+          },
+          {
+            t: "POSDCORB — ગુલિક અને ઉર્વિક",
+            en: "Luther Gulick & Lyndall Urwick",
+            art: "7 Functions, 1937",
+            body: `
+
 <p>લ્યુથર ગુલિક અને લિન્ડલ ઉર્વિકે "Papers on the Science of Administration" (1937)માં વડા વહીવટકર્તાના 7 મુખ્ય કાર્યો રજૂ કર્યાં, જેને POSDCORB કહેવાય છે (વ્યાપ વિભાગમાં વિગતવાર જુઓ).</p>
 <span class="sub">ઉર્વિકના સંગઠન સિદ્ધાંતો</span>
 <ul>
@@ -1236,33 +1197,20 @@
 <li><strong>Place (સ્થળ):</strong> દા.ત. જિલ્લા મુજબ વિભાગો</li>
 </ul>
 <div class="note">GPSC ટીપ: આ 4-આધારો "POPC" તરીકે યાદ રાખો — સંગઠન રચનાના પ્રશ્નોમાં સીધા ઉપયોગી.</div>
+
 `,
+          },
+        ],
       },
       {
-        "t": "મેરી પાર્કર ફોલેટનો સંગઠન સિદ્ધાંત",
-        "en": "Mary Parker Follett",
-        "art": "Constructive Conflict",
-        "body": `
-<p>મેરી પાર્કર ફોલેટ (1868-1933) એક અમેરિકન સામાજિક કાર્યકર્તા અને વ્યવસ્થાપન વિચારક હતાં. તેમણે "સંકલન" (Coordination)ને સંગઠનનો પ્રથમ સિદ્ધાંત ગણાવ્યો.</p>
-<span class="sub">મુખ્ય વિચારો</span>
-<ul>
-<li><strong>રચનાત્મક સંઘર્ષ (Constructive Conflict):</strong> સંઘર્ષનો સીધો સામનો કરી શકાય, તેને દબાવવો નહીં — "Conflict is not a waste, it is a process."</li>
-<li><strong>અધિકારનો કાયદો (Law of Situation):</strong> નિર્ણય વ્યક્તિના અધિકારને બદલે પરિસ્થિતિની જરૂરિયાતો પર આધારિત હોવો જોઈએ.</li>
-<li><strong>Power-with વિ Power-over:</strong> "Power-over" (અન્ય પર સત્તા) ને બદલે "Power-with" (સહયોગી સત્તા) પર ભાર.</li>
-</ul>
-<div class="note">GPSC ટીપ: ફોલેટે "સ્પર્ધા" (Competition) અને "સંઘર્ષ" (Conflict) વચ્ચે ભેદ સ્પષ્ટ કર્યો.</div>
-`,
-      },
-    ],
-  },
-  {
-    "cat": "વહીવટી સિદ્ધાંતો — આધુનિક અભિગમો",
-    "items": [
-      {
-        "t": "માનવ સંબંધ અભિગમ (Elton Mayo)",
-        "en": "Human Relations Approach",
-        "art": "Hawthorne Studies (1924-32)",
-        "body": `
+        cat: "વહીવટી સિદ્ધાંતો — આધુનિક અભિગમો",
+        items: [
+          {
+            t: "માનવ સંબંધ અભિગમ (Elton Mayo)",
+            en: "Human Relations Approach",
+            art: "Hawthorne Studies (1924-32)",
+            body: `
+
 <p>એલ્ટન મેયો અને સાથીઓએ શિકાગોના Hawthorne પ્લાન્ટ (Western Electric Company) ખાતે કરેલા પ્રયોગોના આધારે "માનવ સંબંધ સિદ્ધાંત" વિકસાવ્યો — શાસ્ત્રીય સિદ્ધાંતોની યાંત્રિક (Mechanical) દૃષ્ટિની સામે.</p>
 <span class="sub">Hawthorne પ્રયોગોના તારણો</span>
 <ul>
@@ -1272,13 +1220,15 @@
 <li>કર્મચારીની ભાવનાત્મક જરૂરિયાતો અને સામાજિક માન્યતા મહત્વની છે</li>
 </ul>
 <div class="note">GPSC ટીપ: Hawthorne પ્રયોગો 1924-1932 વચ્ચે થયા — શાસ્ત્રીય સિદ્ધાંત (Taylor, Fayol) અને નિયો-ક્લાસિકલ સિદ્ધાંત વચ્ચેની કડી છે.</div>
+
 `,
-      },
-      {
-        "t": "વર્તનવાદી અભિગમ (Herbert Simon)",
-        "en": "Behavioral Approach & Decision Theory",
-        "art": "Administrative Behavior, 1947",
-        "body": `
+          },
+          {
+            t: "વર્તનવાદી અભિગમ (Herbert Simon)",
+            en: "Behavioral Approach & Decision Theory",
+            art: "Administrative Behavior, 1947",
+            body: `
+
 <p>હર્બર્ટ સાયમને તેમના પુસ્તક "Administrative Behavior" (1947)માં નિર્ણય-પ્રક્રિયા (Decision-Making)ને વહીવટના કેન્દ્રમાં મૂકી — તેમને 1978માં નોબેલ પુરસ્કાર (અર્થશાસ્ત્ર) મળ્યો.</p>
 <span class="sub">મુખ્ય વિચારો</span>
 <ul>
@@ -1287,13 +1237,15 @@
 <li>સાયમને શાસ્ત્રીય "સિદ્ધાંતો" (Principles)ને "કહેવત" (Proverbs) ગણાવી ટીકા કરી — કારણ કે એક સિદ્ધાંતની વિરુદ્ધ સિદ્ધાંત પણ મળે છે</li>
 </ul>
 <div class="note">GPSC ટીપ: સાયમનનો ગ્રંથ "Administrative Behavior" ને જાહેર વહીવટમાં "વર્તનવાદી ક્રાંતિ" (Behavioral Revolution) લાવનાર ગણવામાં આવે છે.</div>
+
 `,
-      },
-      {
-        "t": "સિસ્ટમ સિદ્ધાંત અને આકસ્મિકતા સિદ્ધાંત",
-        "en": "System & Contingency Theory",
-        "art": "Von Bertalanffy",
-        "body": `
+          },
+          {
+            t: "સિસ્ટમ સિદ્ધાંત અને આકસ્મિકતા સિદ્ધાંત",
+            en: "System & Contingency Theory",
+            art: "Von Bertalanffy",
+            body: `
+
 <p>સિસ્ટમ સિદ્ધાંત સંગઠનને એક ખુલ્લી પ્રણાલી (Open System) તરીકે જુએ છે જે પર્યાવરણ સાથે સતત આદાનપ્રદાન કરે છે (Input-Process-Output-Feedback).</p>
 <span class="sub">સિસ્ટમ સિદ્ધાંતના મુખ્ય ઘટકો</span>
 <ul>
@@ -1305,13 +1257,15 @@
 <p>ડેવિડ ઈસ્ટને રાજકીય-વ્યવસ્થા વિશ્લેષણમાં આ મોડેલ લાગુ કર્યું.</p>
 <span class="sub">આકસ્મિકતા સિદ્ધાંત (Contingency Theory)</span>
 <p>"એક શ્રેષ્ઠ પદ્ધતિ" (One Best Way) નથી હોતી — સંગઠનનું માળખું અને શૈલી પરિસ્થિતિ (કદ, ટેકનોલોજી, પર્યાવરણ) પ્રમાણે બદલાવી જોઈએ. મુખ્ય પ્રણેતાઓ: ટોમ બર્ન્સ, જી.એમ. સ્ટોકર, પોલ લોરેન્સ.</p>
+
 `,
-      },
-      {
-        "t": "નવું જાહેર વહીવટ (New Public Administration)",
-        "en": "NPA — Minnowbrook Conference",
-        "art": "Minnowbrook I, 1968",
-        "body": `
+          },
+          {
+            t: "નવું જાહેર વહીવટ (New Public Administration)",
+            en: "NPA — Minnowbrook Conference",
+            art: "Minnowbrook I, 1968",
+            body: `
+
 <p>1968માં ડ્વાઇટ વાલ્ડોના નેતૃત્વમાં "Minnowbrook Conference" (સિરાક્યુઝ યુનિવર્સિટી, ન્યુયોર્ક)માં યુવા વિદ્વાનોએ પરંપરાગત જાહેર વહીવટ સામે નવો અભિગમ રજૂ કર્યો.</p>
 <span class="sub">મુખ્ય લક્ષણો</span>
 <ul>
@@ -1321,13 +1275,15 @@
 <li>પરિવર્તનલક્ષી અને Anti-bureaucratic વલણ</li>
 </ul>
 <div class="note">GPSC ટીપ: Minnowbrook II (1988) અને Minnowbrook III (2008) પણ યોજાયા — સામાજિક સમાનતા + વૈશ્વિકરણ/ટેકનોલોજી પર ભાર સાથે.</div>
+
 `,
-      },
-      {
-        "t": "નવું જાહેર વ્યવસ્થાપન (New Public Management)",
-        "en": "NPM — 1980s, UK/NZ",
-        "art": "Market-Based Reforms",
-        "body": `
+          },
+          {
+            t: "નવું જાહેર વ્યવસ્થાપન (NPM)",
+            en: "New Public Management",
+            art: "1980s, UK/NZ",
+            body: `
+
 <p>1980ના દાયકામાં બ્રિટન (માર્ગારેટ થેચર) અને ન્યુઝીલેન્ડમાં શરૂ થયેલો અભિગમ, જે ખાનગી ક્ષેત્રની વ્યવસ્થાપન પદ્ધતિઓને જાહેર ક્ષેત્રમાં લાવવા માંગે છે.</p>
 <span class="sub">મુખ્ય લક્ષણો (ક્રિસ્ટોફર હૂડ, 1991)</span>
 <ul>
@@ -1339,13 +1295,15 @@
 <li>નાગરિકને "ગ્રાહક" (Customer) તરીકે જોવો</li>
 </ul>
 <div class="note">GPSC ટીપ: ભારતમાં NPM અસર — 1991ના આર્થિક સુધારા, ખાનગીકરણ, વિનિવેશ (Disinvestment), Citizen's Charter, e-ગવર્નન્સ પહેલ.</div>
+
 `,
-      },
-      {
-        "t": "શાસન અને સુશાસન (Governance & Good Governance)",
-        "en": "Governance & Good Governance",
-        "art": "World Bank, 1992",
-        "body": `
+          },
+          {
+            t: "શાસન અને સુશાસન (Governance & Good Governance)",
+            en: "Governance & Good Governance",
+            art: "World Bank, 1992",
+            body: `
+
 <p>"શાસન" (Governance) ની વિભાવના સરકારથી આગળ વધીને સરકાર, ખાનગી ક્ષેત્ર અને નાગરિક સમાજ વચ્ચેની ભાગીદારીને સમાવે છે. વિશ્વ બેંકે 1992માં "Governance and Development" રિપોર્ટમાં આ ખ્યાલને લોકપ્રિય બનાવ્યો.</p>
 <span class="sub">સુશાસનના 8 લક્ષણો (UNESCAP)</span>
 <div class="table-scroll"><table>
@@ -1360,18 +1318,20 @@
 <tr><td>જવાબદારી (Accountability)</td><td>નિર્ણય લેનારા જવાબદાર રહે</td></tr>
 </table></div>
 <div class="note">GPSC ટીપ: ભારતમાં સુશાસન દિવસ 25 ડિસેમ્બર (અટલ બિહારી વાજપેયીની જન્મજયંતિ) ઉજવાય છે.</div>
+
 `,
+          },
+        ],
       },
-    ],
-  },
-  {
-    "cat": "સંગઠન સિદ્ધાંત (Organization Theory)",
-    "items": [
       {
-        "t": "સંગઠનના મૂળભૂત સિદ્ધાંતો",
-        "en": "Principles of Organization",
-        "art": "Hierarchy, Span, Unity",
-        "body": `
+        cat: "સંગઠન સિદ્ધાંત (Organization Theory)",
+        items: [
+          {
+            t: "સંગઠનના મૂળભૂત સિદ્ધાંતો",
+            en: "Principles of Organization",
+            art: "Hierarchy, Span, Unity",
+            body: `
+
 <p>સંગઠન એટલે ધ્યેય-પ્રાપ્તિ માટે વ્યક્તિઓ અને સંસાધનોની માળખાગત ગોઠવણી.</p>
 <span class="sub">મુખ્ય સિદ્ધાંતો</span>
 <ul>
@@ -1385,13 +1345,15 @@
 <div class="formula"><span class="flabel">Graicunas નું સૂત્ર</span>R = n(2ⁿ⁻¹ + n − 1)</div>
 </div>
 <div class="note">GPSC ટીપ: R = સંબંધોની સંખ્યા, n = ગૌણ કર્મચારીઓની સંખ્યા — ગૌણોની સંખ્યા વધતાં સંબંધો ઝડપથી (ભૌમિતિક શ્રેણીમાં) વધે છે.</div>
+
 `,
-      },
-      {
-        "t": "કેન્દ્રીકરણ અને વિકેન્દ્રીકરણ",
-        "en": "Centralization vs Decentralization",
-        "art": "Delegation of Authority",
-        "body": `
+          },
+          {
+            t: "કેન્દ્રીકરણ અને વિકેન્દ્રીકરણ",
+            en: "Centralization vs Decentralization",
+            art: "Delegation of Authority",
+            body: `
+
 <p>સત્તાની વહેંચણી કેવી રીતે થાય તેના આધારે સંગઠન કેન્દ્રિત (Centralized) અથવા વિકેન્દ્રિત (Decentralized) હોઈ શકે.</p>
 <div class="table-scroll"><table>
 <tr><th>મુદ્દો</th><th>કેન્દ્રીકરણ</th><th>વિકેન્દ્રીકરણ</th></tr>
@@ -1405,13 +1367,15 @@
 <li><strong>Delegation:</strong> ઉપરી અધિકારી પોતાની સત્તા ગૌણને સોંપે, પરંતુ અંતિમ જવાબદારી ઉપરી પાસે જ રહે છે</li>
 <li><strong>Decentralization:</strong> સત્તા કાયમી ધોરણે નીચલા સ્તર/એકમને સોંપાય છે (દા.ત. 73મો-74મો બંધારણીય સુધારો)</li>
 </ul>
+
 `,
-      },
-      {
-        "t": "લાઈન, સ્ટાફ અને સહાયક એજન્સીઓ",
-        "en": "Line, Staff & Auxiliary Agencies",
-        "art": "Advisory vs Executive",
-        "body": `
+          },
+          {
+            t: "લાઈન, સ્ટાફ અને સહાયક એજન્સીઓ",
+            en: "Line, Staff & Auxiliary Agencies",
+            art: "Advisory vs Executive",
+            body: `
+
 <p>સંગઠનમાં કાર્યોના પ્રકાર પ્રમાણે એજન્સીઓને ત્રણ વર્ગમાં વહેંચવામાં આવે છે.</p>
 <div class="table-scroll"><table>
 <tr><th>પ્રકાર</th><th>લક્ષણ</th><th>ઉદાહરણ</th></tr>
@@ -1420,13 +1384,15 @@
 <tr><td><strong>સહાયક/આનુષંગિક એજન્સી</strong></td><td>અન્ય વિભાગોને સેવા/સહાય પૂરી પાડે</td><td>PWD, પ્રિન્ટિંગ પ્રેસ, ભંડાર વિભાગ</td></tr>
 </table></div>
 <div class="note">GPSC ટીપ: લાઈન-સ્ટાફ વચ્ચે ઘર્ષણ (Line-Staff Conflict) એક સામાન્ય વહીવટી સમસ્યા છે — સ્ટાફ એજન્સી પાસે "સલાહ" આપવાની સત્તા છે પણ "આદેશ" આપવાની નહીં.</div>
+
 `,
-      },
-      {
-        "t": "સંગઠનના પ્રકારો",
-        "en": "Types of Organization",
-        "art": "Formal, Informal, Matrix",
-        "body": `
+          },
+          {
+            t: "સંગઠનના પ્રકારો",
+            en: "Types of Organization",
+            art: "Formal, Informal, Matrix",
+            body: `
+
 <p>સંગઠનોને માળખા અને પ્રકૃતિ પ્રમાણે વર્ગીકૃત કરી શકાય.</p>
 <span class="sub">ઔપચારિક vs અનૌપચારિક</span>
 <ul>
@@ -1440,423 +1406,1015 @@
 <li><strong>રેખા-સ્ટાફ સંગઠન:</strong> બંનેનું મિશ્રણ — સૌથી વધુ પ્રચલિત</li>
 <li><strong>મેટ્રિક્સ સંગઠન:</strong> કાર્યલક્ષી અને પ્રોજેક્ટલક્ષી માળખાનું સંયોજન — બે ઉપરી અધિકારીઓ</li>
 </ul>
+
 `,
-      },
-    ],
-  },
-  {
-    "cat": "બજેટ અને નાણાકીય વહીવટ",
-    "items": [
-      {
-        "t": "બજેટ: અર્થ, લક્ષણો અને પ્રકારો",
-        "en": "Budget: Meaning, Features & Types",
-        "art": "Budget — Public Finance",
-        "body": `
-<p>બજેટ (Budget) એટલે ચોક્કસ સમયગાળા (સામાન્ય રીતે એક વર્ષ) માટે સરકારની આવક અને ખર્ચનો અંદાજિત લેખો.</p>
-<span class="sub">લક્ષણો</span>
-<ul>
-<li>નાણાકીય વર્ષ (Financial Year): 1 એપ્રિલથી 31 માર્ચ</li>
-<li>તે વિવિધ કાર્યક્રમો માટે ફાળવણી દર્શાવે છે</li>
-<li>સરકારની નીતિઓ અને પ્રાથમિકતાઓ પ્રતિબિંબિત કરે છે</li>
-<li>સરકારી કામગીરી માટે કાનૂની મંજૂરી</li>
-</ul>
-<span class="sub">બજેટના પ્રકારો</span>
-<ul>
-<li><strong>સંતુલિત બજેટ (Balanced Budget):</strong> આવક = ખર્ચ</li>
-<li><strong>ખાધ બજેટ (Deficit Budget):</strong> ખર્ચ > આવક (ભારત સહિત મોટાભાગના દેશો)</li>
-<li><strong>શેષ/સરપ્લસ બજેટ (Surplus Budget):</strong> આવક > ખર્ચ</li>
-</ul>
-<span class="sub">ભારતીય બજેટ શબ્દો</span>
-<ul>
-<li><strong>આવક ખર્ચ (Revenue Expenditure):</strong> દૈનંદિન કામકાજ માટે</li>
-<li><strong>મૂડી ખર્ચ (Capital Expenditure):</strong> સંપત્તિ નિર્માણ માટે</li>
-<li><strong>આવક પ્રાપ્તિ (Revenue Receipts):</strong> કર, ફી, દંડ</li>
-<li><strong>મૂડી પ્રાપ્તિ (Capital Receipts):</strong> ઉધાર, વિનિવેશ</li>
-</ul>
-<div class="note">GPSC ટીપ: Budget 2026-27 Gujarat — કુલ કદ ₹4.08 લાખ કરોડ, 10.2% વધારો, ખેડૂતો માટે ₹11,000 કરોડ રાહત.</div>
-`,
+          },
+        ],
       },
       {
-        "t": "ભારતીય બજેટ પ્રક્રિયા",
-        "en": "Budget Process in India",
-        "art": "Constitutional Provisions",
-        "body": `
-<p>ભારતની બજેટ પ્રક્રિયા બંધારણ અને સંસદીય વ્યવસ્થા પર આધારિત છે.</p>
-<span class="sub">મુખ્ય તબક્કાઓ</span>
-<ol>
-<li><strong>બજેટ તૈયારી:</strong> નાણા મંત્રાલય અને વિવિધ વિભાગો દ્વારા</li>
-<li><strong>બજેટ રજૂઆત:</strong> 1 ફેબ્રુઆરી (નાણામંત્રી દ્વારા લોકસભામાં)</li>
-<li><strong>સામાન્ય ચર્ચા:</strong> સંસદમાં વિપક્ષ અને સરકાર વચ્ચે</li>
-<li><strong>વિભાગીય ચર્ચા:</strong> વિભાગો કક્ષાએ ચર્ચા</li>
-<li><strong>વોટ ઑન એકાઉન્ટ:</strong> અસ્થાયી અનુમતિ (1 એપ્રિલ પહેલાં)</li>
-<li><strong>અંતિમ પસાર:</strong> લોકસભા દ્વારા મંજૂરી</li>
-</ol>
-<span class="sub">બંધારણીય જોગવાઈઓ</span>
-<ul>
-<li><strong>કલમ 112:</strong> વાર્ષિક નાણાકીય વિવરણ (Annual Financial Statement) — "બજેટ"</li>
-<li><strong>કલમ 113:</strong> અનુમાન મત (Demand for Grants)</li>
-<li><strong>કલમ 114:</strong> ઉપબંધ — ખાધ બજેટ માટે</li>
-<li><strong>કલમ 115:</strong> પૂરક/વધારાના અનુમાન</li>
-<li><strong>કલમ 116:</strong> વોટ ઑન એકાઉન્ટ</li>
-</ul>
-<div class="note">GPSC ટીપ: કલમ 112 "Annual Financial Statement" નામે જાણીતો છે, જેમાં સરકારી આવક-ખર્ચ દર્શાવાય છે. વાર્ષિક બજેટ સત્રની શરૂઆત રાષ્ટ્રપતિના અભિભાષણથી થાય છે.</div>
+        cat: "જાહેર વહીવટનો વિકાસ અને તબક્કાઓ",
+        items: [
+          {
+            t: "જાહેર વહીવટના વિકાસના તબક્કાઓ",
+            en: "Evolution of Public Administration",
+            art: "1887 – વર્તમાન",
+            body: `
+
+<p>નિકોલસ હેન્રીના મતે જાહેર વહીવટના વિકાસને 5-6 તબક્કાઓમાં વહેંચી શકાય છે.</p>
+<div class="table-scroll"><table>
+<tr><th>તબક્કો</th><th>સમયગાળો</th><th>મુખ્ય લક્ષણ</th></tr>
+<tr><td>1. રાજકારણ-વહીવટ દ્વૈત (Politics-Administration Dichotomy)</td><td>1887-1926</td><td>વિલ્સન, ગુડનાઉ — વહીવટ રાજકારણથી અલગ છે</td></tr>
+<tr><td>2. વહીવટના સિદ્ધાંતો (Principles of Administration)</td><td>1927-1937</td><td>ગુલિક, ઉર્વિક, ફેયોલ — POSDCORB, સાર્વત્રિક સિદ્ધાંતો</td></tr>
+<tr><td>3. પડકારનો યુગ (Challenge/Crisis Era)</td><td>1938-1947</td><td>સાયમનની ટીકા — સિદ્ધાંતો "કહેવત" સમાન; રાજકારણ-વહીવટ ભેદનો અસ્વીકાર</td></tr>
+<tr><td>4. વ્યવસ્થાપન વિજ્ઞાન તરીકે (Public Administration as Management)</td><td>1956-1970</td><td>સંચાલન વિજ્ઞાન સાથે ભળી ગયું; તુલનાત્મક વહીવટની શરૂઆત</td></tr>
+<tr><td>5. જાહેર વહીવટ પોતે જ (Public Administration as Public Administration)</td><td>1970-પછી</td><td>નવું જાહેર વહીવટ (NPA), સામાજિક સમાનતા, પછી NPM અને Governance</td></tr>
+</table></div>
+<div class="note">GPSC ટીપ: પ્રથમ તબક્કામાં ફ્રેન્ક ગુડનાઉનું પુસ્તક "Politics and Administration" (1900) મહત્વનું છે — તેમાં રાજકારણ (નીતિ ઘડતર) અને વહીવટ (અમલીકરણ)ને અલગ પાડ્યા.</div>
+
 `,
+          },
+          {
+            t: "રાજકારણ-વહીવટ દ્વૈતવાદ",
+            en: "Politics-Administration Dichotomy",
+            art: "Wilson & Goodnow",
+            body: `
+
+<p>આ સિદ્ધાંત મુજબ નીતિ ઘડવી (Policy-making, રાજકારણનું કાર્ય) અને નીતિનો અમલ કરવો (Policy implementation, વહીવટનું કાર્ય) — આ બંને સ્પષ્ટ રીતે અલગ પ્રવૃત્તિઓ છે.</p>
+<ul>
+<li><strong>વુડ્રો વિલ્સન:</strong> વહીવટ એ "વ્યવસાય" (Business) જેવો છે અને તેને રાજકારણના ધમાલ-ધમાસાણથી દૂર રાખવો જોઈએ</li>
+<li><strong>ફ્રેન્ક ગુડનાઉ:</strong> "Politics and Administration" (1900)માં રાજ્યની ઈચ્છા (Will) = રાજકારણ, અને તેનું અમલીકરણ (Execution) = વહીવટ</li>
+</ul>
+<span class="sub">ટીકા</span>
+<p>વ્યવહારમાં વહીવટકર્તાઓ પણ નિર્ણય-પ્રક્રિયામાં સામેલ હોય છે (નિયમો ઘડવા, વિવેકાધિકાર વાપરવો) — તેથી સંપૂર્ણ ભેદ શક્ય નથી. પોલ એપલ્બી અને હર્બર્ટ સાયમને આ દ્વૈતવાદનો સખત વિરોધ કર્યો.</p>
+<div class="note">GPSC ટીપ: પોલ એપ્પલ્બીનું પુસ્તક "Policy and Administration" (1949) આ દ્વૈતવાદને પડકારે છે — વહીવટ પોતે "નીતિ ઘડતરની પ્રક્રિયા" છે.</div>
+
+`,
+          },
+        ],
       },
       {
-        "t": "ગુજરાત રાજ્ય બજેટ",
-        "en": "Gujarat State Budget",
-        "art": "Gujarat Budget 2026-27",
-        "body": `
-<p>ગુજરાત વિધાનસભા દ્વારા રાજ્યનું બજેટ રજૂ થાય છે. 2026-27નું બજેટ 18 ફેબ્રુઆરી 2026ના રોજ નાણામંત્રી કનુભાઈ દેસાઈએ રજૂ કર્યું.</p>
-<span class="sub">આંકડા (વિગતો)</span>
-<ul>
-<li><strong>કુલ બજેટ:</strong> ₹4.08 લાખ કરોડ (અત્યાર સુધીનું સૌથી મોટું)</li>
-<li><strong>અંદાજિત સરપ્લસ:</strong> ₹974 કરોડ</li>
-<li><strong>રેવન્યુ સરપ્લસ:</strong> ₹25,587 કરોડ</li>
-<li><strong>ડેવલપમેન્ટ ફંડ:</strong> ₹50,000 કરોડ</li>
-<li><strong>ખેડૂત રાહત:</strong> ₹11,000 કરોડ (કુદરતી આપત્તિથી અસરગ્રસ્ત)</li>
-<li><strong>વિકાસ વૃદ્ધિ:</strong> 10.2% (અગાઉના વર્ષ કરતાં)</li>
-<li><strong>GSDP અંદાજ (2026-27):</strong> ₹33,24,676 કરોડ (11% વૃદ્ધિ)</li>
-<li><strong>ફિસ્કલ ડેફિસિટ લક્ષ્યાંક:</strong> GSDPના 2%</li>
-</ul>
-<div class="note">GPSC ટીપ: "વિકસિત ગુજરાત @2047" વિઝન હેઠળ બજેટ — નવો કર નથી, EV પર 5% ટેક્સ રિબેટ ચાલુ, 2030 કોમનવેલ્થ ગેમ્સ માટે તૈયારી.</div>
+        cat: "વહીવટી વિચારકો — ઝડપી સંદર્ભ કોષ્ટક",
+        items: [
+          {
+            t: "મુખ્ય વિચારકો અને તેમનું પ્રદાન (ભાગ 1)",
+            en: "Key Thinkers Reference — Part 1",
+            art: "Wilson to Weber",
+            body: `
+
+<div class="table-scroll"><table>
+<tr><th>વિચારક</th><th>દેશ</th><th>મુખ્ય પ્રદાન</th></tr>
+<tr><td>વુડ્રો વિલ્સન</td><td>અમેરિકા</td><td>"The Study of Administration" (1887) — જાહેર વહીવટના પિતા, રાજકારણ-વહીવટ દ્વૈત</td></tr>
+<tr><td>ફ્રેન્ક ગુડનાઉ</td><td>અમેરિકા</td><td>"Politics and Administration" (1900)</td></tr>
+<tr><td>L.D. વ્હાઇટ</td><td>અમેરિકા</td><td>પ્રથમ પાઠ્યપુસ્તક "Introduction to the Study of Public Administration" (1926); Integral View</td></tr>
+<tr><td>F.W. ટેલર</td><td>અમેરિકા</td><td>વૈજ્ઞાનિક વ્યવસ્થાપન, Time-Motion Study</td></tr>
+<tr><td>હેન્રી ફેયોલ</td><td>ફ્રાન્સ</td><td>14 વ્યવસ્થાપકીય સિદ્ધાંતો, POCCC કાર્યો</td></tr>
+<tr><td>મેક્સ વેબર</td><td>જર્મની</td><td>આદર્શ અમલદારશાહી (Ideal Bureaucracy), Legal-Rational Authority</td></tr>
+<tr><td>લ્યુથર ગુલિક</td><td>અમેરિકા</td><td>POSDCORB, વિભાગીકરણના 4 આધાર (POPC)</td></tr>
+<tr><td>લિન્ડલ ઉર્વિક</td><td>બ્રિટન</td><td>Span of Control, Unity of Command</td></tr>
+</table></div>
+
 `,
-      },
-    ],
-  },
-  {
-    "cat": "ભારતીય બંધારણ — નાગરિક-કેન્દ્રિત શાસન",
-    "items": [
-      {
-        "t": "RTI Act 2005 (માહિતી અધિકાર)",
-        "en": "Right to Information Act 2005",
-        "art": "Transparency & Accountability",
-        "body": `
-<p>માહિતી અધિકાર (RTI) Act 2005 નાગરિકોને જાહેર સત્તાધિકારીઓ પાસેથી માહિતી મેળવવાનો અધિકાર આપે છે. તે 12 ઓક્ટોબર 2005ના રોજ અમલમાં આવ્યો.</p>
-<span class="sub">મુખ્ય પાસાઓ</span>
-<ul>
-<li>માહિતી માટે 30 દિવસ (વ્યક્તિગત બાબત 48 કલાક)</li>
-<li>માહિતી અધિકારી (PIO) ની નિમણૂક</li>
-<li>અસ્વીકાર પર પ્રથમ અપીલ (30 દિવસ)</li>
-<li>બીજી અપીલ — માહિતી આયોગ (CIC/SIC)</li>
-<li>દંડ: ₹250/દિવસ (મહત્તમ ₹25,000)</li>
-<li>બિન-લાભકારી સંસ્થાઓ અને ફાઇલ-ઓફિસર</li>
-</ul>
-<span class="sub">અપવાદો (કલમ 8)</span>
-<ul>
-<li>રાષ્ટ્રીય સુરક્ષા, વિદેશ સંબંધો, તપાસ રેકોર્ડ</li>
-<li>વ્યાપારી ગુપ્તતા, કેબિનેટ ચર્ચા</li>
-<li>વ્યક્તિગત ગુપ્તતા</li>
-</ul>
-<div class="note">GPSC ટીપ: RTI એ ભારતમાં પારદર્શિતા માટે સૌથી અસરકારક સાધન છે — 2જા ARC દ્વારા આ યોજનાની ભલામણ કરાઈ હતી.</div>
+          },
+          {
+            t: "મુખ્ય વિચારકો અને તેમનું પ્રદાન (ભાગ 2)",
+            en: "Key Thinkers Reference — Part 2",
+            art: "Mayo to Riggs",
+            body: `
+
+<div class="table-scroll"><table>
+<tr><th>વિચારક</th><th>દેશ</th><th>મુખ્ય પ્રદાન</th></tr>
+<tr><td>એલ્ટન મેયો</td><td>અમેરિકા/ઓસ્ટ્રેલિયા</td><td>Hawthorne પ્રયોગો, માનવ સંબંધ સિદ્ધાંત</td></tr>
+<tr><td>મેરી પાર્કર ફોલેટ</td><td>અમેરિકા</td><td>સંકલન (Coordination)ને સંગઠનનો પ્રથમ સિદ્ધાંત ગણાવ્યો</td></tr>
+<tr><td>ચેસ્ટર બર્નાર્ડ</td><td>અમેરિકા</td><td>"The Functions of the Executive" (1938) — સંગઠન એ "સહકારી પ્રણાલી" (Cooperative System)</td></tr>
+<tr><td>હર્બર્ટ સાયમન</td><td>અમેરિકા</td><td>"Administrative Behavior" (1947), Bounded Rationality, નોબેલ પુરસ્કાર (1978)</td></tr>
+<tr><td>ડ્વાઇટ વાલ્ડો</td><td>અમેરિકા</td><td>Minnowbrook Conference (1968), નવું જાહેર વહીવટ (NPA)</td></tr>
+<tr><td>H. જ્યોર્જ ફ્રેડરિકસન</td><td>અમેરિકા</td><td>સામાજિક સમાનતાનો "ત્રીજો સ્તંભ" (Social Equity)</td></tr>
+<tr><td>ફ્રેડ રિગ્સ</td><td>અમેરિકા</td><td>તુલનાત્મક જાહેર વહીવટ, Prismatic-Sala મોડેલ</td></tr>
+<tr><td>પોલ એપલ્બી</td><td>અમેરિકા</td><td>"Policy and Administration" (1949) — વહીવટ પોતે નીતિ ઘડતર છે; ભારતમાં વહીવટી સુધારા અંગે અહેવાલ પણ આપ્યો</td></tr>
+</table></div>
+<div class="note">GPSC ટીપ: પોલ એપલ્બીએ 1953માં ભારત સરકારને વહીવટી સુધારા અંગે અહેવાલ ("Public Administration in India: Report of a Survey") આપ્યો હતો.</div>
+
 `,
+          },
+        ],
       },
       {
-        "t": "જનહિત દાવો (Public Interest Litigation)",
-        "en": "Public Interest Litigation (PIL)",
-        "art": "Judicial Activism",
-        "body": `
-<p>PIL એટલે સામાન્ય લોકો, સંસ્થાઓ દ્વારા જાહેર હિતમાં કોર્ટમાં દાવો (કલમ 32 અથવા 226). તે ન્યાયપાલિકાની સક્રિયતા (Judicial Activism)નું એક મહત્વનું સાધન છે.</p>
-<span class="sub">PIL ના ઉદભવ</span>
+        cat: "નોકરશાહી અને નાગરિક સેવાઓ (Bureaucracy & Civil Services)",
+        items: [
+          {
+            t: "નોકરશાહી: અર્થ, લક્ષણો અને ટીકા",
+            en: "Bureaucracy — Meaning & Critique",
+            art: "Weber's Model",
+            body: `
+
+<p>નોકરશાહી (Bureaucracy) એટલે કાયમી, વ્યવસાયિક અને વંશવેલા-આધારિત સરકારી કર્મચારીતંત્ર જે નીતિનો અમલ કરે છે.</p>
+<span class="sub">હકારાત્મક પાસાં</span>
 <ul>
-<li>1970-80ના દાયકામાં સુપ્રીમ કોર્ટે (જસ્ટિસ પી.એન. ભગવતી, જસ્ટિસ કૃષ્ણ અય્યર) PIL નો ખ્યાલ વિકસાવ્યો</li>
-<li>તે મૂળભૂત અધિકારો (Part III) ના અમલ માટે</li>
-</ul>
-<span class="sub">લાભ</span>
-<ul>
-<li>અશક્ત/વંચિત વર્ગો માટે ન્યાયિક દ્વાર ખુલ્લું</li>
-<li>સરકારી ગેરરીતિઓ ઉજાગર કરે</li>
-<li>જાહેર મહત્વની બાબતો પર ધ્યાન દોરે</li>
+<li>સાતત્ય અને સ્થિરતા (સરકારો બદલાય તો પણ વહીવટ ચાલુ રહે)</li>
+<li>નિષ્પક્ષતા અને યોગ્યતા આધારિત કામગીરી</li>
+<li>નિષ્ણાત જ્ઞાન અને અનુભવ</li>
 </ul>
 <span class="sub">ટીકા</span>
 <ul>
-<li>ન્યાયપાલિકાના અધિકાર-ક્ષેત્રનું ઉલ્લંઘન (Judicial Overreach)</li>
-<li>ખોટા દાવાઓ (Bogus PILs)</li>
-<li>વિલંબ અને ખર્ચ</li>
+<li><strong>રોબર્ટ મર્ટન:</strong> "Trained Incapacity" — વધુ પડતી નિયમ-પાલનની આદત નવીનતાને અવરોધે</li>
+<li><strong>લાલ ફીતાશાહી (Red-tapism):</strong> વધુ પડતી ઔપચારિકતાથી વિલંબ</li>
+<li><strong>Goal Displacement:</strong> નિયમોનું પાલન પોતે જ ધ્યેય બની જાય, મૂળ ઉદ્દેશ્ય ભુલાય</li>
+<li>પરિવર્તન સામે પ્રતિકાર, કેન્દ્રીકરણનું વલણ</li>
 </ul>
-<div class="note">GPSC ટીપ: PIL દ્વારા ભારતમાં પર્યાવરણ, આરોગ્ય, ગેરકાયદે ઘરબાંધણી, માનવ અધિકારો જેવી અનેક બાબતો સામે આવી.</div>
+
 `,
+          },
+          {
+            t: "ભારતની નાગરિક સેવાઓનું માળખું",
+            en: "Structure of Indian Civil Services",
+            art: "AIS, Central, State",
+            body: `
+
+<p>ભારતની નાગરિક સેવાઓને ત્રણ મુખ્ય વર્ગમાં વહેંચવામાં આવે છે.</p>
+<div class="table-scroll"><table>
+<tr><th>પ્રકાર</th><th>ઉદાહરણ</th><th>વિશેષતા</th></tr>
+<tr><td><strong>અખિલ ભારતીય સેવાઓ (AIS)</strong></td><td>IAS, IPS, IFoS (વન સેવા)</td><td>કલમ 312 — કેન્દ્ર ભરતી કરે, રાજ્યોમાં સેવા આપે; સંયુક્ત નિયંત્રણ (કેન્દ્ર+રાજ્ય)</td></tr>
+<tr><td><strong>કેન્દ્રીય સેવાઓ (Central Services)</strong></td><td>IRS, IFS (વિદેશ સેવા), IDAS, IPoS</td><td>Group A અને B — ફક્ત કેન્દ્ર સરકારના વિભાગોમાં કામ</td></tr>
+<tr><td><strong>રાજ્ય સેવાઓ (State Services)</strong></td><td>ગુજરાત વહીવટી સેવા (GAS), GPSC દ્વારા ભરતી</td><td>ફક્ત તે રાજ્ય પૂરતી મર્યાદિત</td></tr>
+</table></div>
+<span class="sub">નાગરિક સેવાની તટસ્થતા (Civil Service Neutrality)</span>
+<p>ભારતીય નાગરિક સેવક રાજકીય રીતે તટસ્થ હોવો જોઈએ — કોઈપણ સરકારને વફાદારીથી સેવા આપે, વ્યક્તિગત રાજકીય મંતવ્યો જાહેર કાર્યમાં ન લાવે. આ બ્રિટિશ પરંપરા (Whitehall Model) પરથી લેવાયેલ સિદ્ધાંત છે.</p>
+<div class="note">GPSC ટીપ: અખિલ ભારતીય સેવાઓની સ્થાપના બંધારણના અનુચ્છેદ 312 હેઠળ રાજ્યસભાના ઠરાવ દ્વારા થાય છે (2/3 બહુમતી જરૂરી).</div>
+
+`,
+          },
+          {
+            t: "નાગરિક સેવાઓનું વર્ગીકરણ (Class I-IV)",
+            en: "Classification — Group A/B/C/D",
+            art: "Group A, B, C, D",
+            body: `
+
+<div class="table-scroll"><table>
+<tr><th>વર્ગ</th><th>જૂનું નામ</th><th>ઉદાહરણ</th></tr>
+<tr><td>Group A</td><td>Class I (ગેઝેટેડ)</td><td>IAS, IPS અધિકારીઓ, વર્ગ-1 અધિકારીઓ</td></tr>
+<tr><td>Group B</td><td>Class II (ગેઝેટેડ/નોન-ગેઝેટેડ)</td><td>વિભાગીય મુખ્ય કચેરીના અધિકારીઓ, TDO</td></tr>
+<tr><td>Group C</td><td>Class III</td><td>તલાટી-કમ-મંત્રી, ક્લાર્ક, PSI/ASI</td></tr>
+<tr><td>Group D</td><td>Class IV</td><td>પટાવાળા, સફાઈ કામદાર (હવે મોટાભાગે આઉટસોર્સ)</td></tr>
+</table></div>
+<div class="note">GPSC ટીપ: Wireless PSI ભરતી "Group C/Class III" કક્ષાની જગ્યા છે — સ્પર્ધાત્મક પરીક્ષા દ્વારા ભરતી.</div>
+
+`,
+          },
+        ],
       },
       {
-        "t": "લોકપાલ અને લોકાયુક્ત",
-        "en": "Lokpal & Lokayukta",
-        "art": "Anti-Corruption Ombudsman",
-        "body": `
-<p>લોકપાલ એટલે "જનતા માટે રક્ષક" — ભારતની સંસદીય લોકપાલ અને લોકાયુક્ત અધિનિયમ 2013 દ્વારા સ્થાપિત, જે સરકારી અધિકારીઓ સામે ભ્રષ્ટાચારની ફરિયાદો તપાસે છે.</p>
-<span class="sub">બંધારણીય સ્થિતિ</span>
+        cat: "કર્મચારી વહીવટ અને ભરતી પ્રક્રિયા (Personnel Administration)",
+        items: [
+          {
+            t: "ભરતી પ્રક્રિયા (Recruitment)",
+            en: "Recruitment Process",
+            art: "Direct & Indirect",
+            body: `
+
+<p>કર્મચારી વહીવટ એટલે યોગ્ય વ્યક્તિની પસંદગી, વિકાસ અને જાળવણી કરવાની પ્રક્રિયા.</p>
+<span class="sub">ભરતીના પ્રકારો</span>
 <ul>
-<li>વૈધાનિક સંસ્થા (Statutory Body) — બંધારણીય નહીં</li>
-<li>અધ્યક્ષ: ભારતના પૂર્વ CJI અથવા સુપ્રીમ કોર્ટના ન્યાયાધીશ</li>
-<li>સભ્યો: મહત્તમ 8 (50% ન્યાયાધીશ/ન્યાયિક પૃષ્ઠભૂમિના)</li>
-<li>કાર્યકાળ: 5 વર્ષ અથવા 70 વર્ષ</li>
+<li><strong>સીધી ભરતી (Direct Recruitment):</strong> ખુલ્લી સ્પર્ધાત્મક પરીક્ષા દ્વારા — UPSC/GPSC મારફતે</li>
+<li><strong>પ્રમોશન દ્વારા ભરતી (Promotion):</strong> વરિષ્ઠતા અથવા યોગ્યતા-કમ-વરિષ્ઠતાના આધારે</li>
+<li><strong>ડેપ્યુટેશન/ટ્રાન્સફર:</strong> અન્ય વિભાગ/સેવામાંથી કામચલાઉ કે કાયમી બદલી</li>
 </ul>
-<span class="sub">અધિકાર-ક્ષેત્ર</span>
+<span class="sub">ભરતી પ્રક્રિયાના તબક્કા</span>
 <ul>
-<li>વડાપ્રધાન (સિવાય કે સંરક્ષણ, વિદેશ, આંતરિક સુરક્ષા)</li>
-<li>કેન્દ્રીય મંત્રીઓ, લોકસભા/રાજ્યસભા સભ્યો (જ્યાં લોકપાલ લાગુ)</li>
-<li>સમૂહ A, B, C, D અધિકારીઓ</li>
+<li>જગ્યાની જાહેરાત → અરજી → પ્રિલિમિનરી પરીક્ષા → મુખ્ય પરીક્ષા → ઇન્ટરવ્યૂ (વ્યક્તિત્વ કસોટી) → દસ્તાવેજ ચકાસણી → મેડિકલ → નિમણૂક</li>
 </ul>
-<span class="sub">રાજ્ય સ્તર: લોકાયુક્ત</span>
-<p>રાજ્ય સરકાર દ્વારા રાજ્ય સ્તરે સ્થાપિત — મુખ્યમંત્રી, રાજ્ય મંત્રીઓ, અધિકારીઓ સામે.</p>
-<div class="note">GPSC ટીપ: ભારતની લોકપાલ વ્યવસ્થા સ્વીડનના Ombudsman સિસ્ટમ પર આધારિત છે. ગુજરાત લોકાયુક્ત અધિનિયમ 1986 હેઠળ કાર્યરત છે.</div>
+<div class="note">GPSC ટીપ: UPSC/GPSC બંધારણીય સંસ્થાઓ છે (અનુચ્છેદ 315-323) — તેમની સ્વતંત્રતા જાળવવા સભ્યોને હટાવવાની સત્તા મર્યાદિત છે.</div>
+
 `,
+          },
+          {
+            t: "તાલીમ અને વિકાસ (Training)",
+            en: "Training & Development",
+            art: "LBSNAA, SPIPA",
+            body: `
+
+<p>નાગરિક સેવકોની કાર્યક્ષમતા વધારવા માટે તાલીમ અનિવાર્ય છે.</p>
+<span class="sub">તાલીમના પ્રકારો</span>
+<ul>
+<li><strong>પ્રવેશ-પૂર્વ તાલીમ (Induction Training):</strong> નવી ભરતી થયેલા અધિકારીઓ માટે — દા.ત. LBSNAA (મસૂરી) ખાતે IAS તાલીમ</li>
+<li><strong>સેવા-દરમિયાન તાલીમ (In-service/Refresher Training):</strong> સમયાંતરે કૌશલ્ય અપગ્રેડ</li>
+<li><strong>વ્યવસાયિક/ટેકનિકલ તાલીમ:</strong> વિશિષ્ટ કૌશલ્ય માટે</li>
+</ul>
+<span class="sub">ગુજરાતની તાલીમ સંસ્થાઓ</span>
+<ul>
+<li><strong>SPIPA</strong> (Sardar Patel Institute of Public Administration) — ગુજરાત સરકારના અધિકારીઓ માટે</li>
+<li><strong>GPSC ભરતી પછીની તાલીમ</strong> — સંબંધિત વિભાગ દ્વારા</li>
+</ul>
+
+`,
+          },
+          {
+            t: "બઢતી, બદલી અને શિસ્ત",
+            en: "Promotion, Transfer & Discipline",
+            art: "Article 311",
+            body: `
+
+<p>સેવા-શરતોમાં બઢતી, બદલી અને શિસ્તભંગની કાર્યવાહી મહત્વના પાસાં છે.</p>
+<span class="sub">બઢતીના આધાર</span>
+<ul>
+<li><strong>વરિષ્ઠતા (Seniority):</strong> સેવાના વર્ષોના આધારે</li>
+<li><strong>યોગ્યતા (Merit):</strong> કામગીરીના મૂલ્યાંકનના આધારે</li>
+<li><strong>યોગ્યતા-કમ-વરિષ્ઠતા:</strong> બંનેનું મિશ્રણ — ભારતમાં સૌથી પ્રચલિત</li>
+</ul>
+<span class="sub">બંધારણીય રક્ષણ — અનુચ્છેદ 311</span>
+<ul>
+<li>સિવિલ સેવકને હોદ્દા પરથી બરતરફ/પદભ્રષ્ટ કરતાં પહેલાં યોગ્ય તપાસ અને સાંભળવાની તક (Reasonable Opportunity) આપવી ફરજિયાત</li>
+<li>રાષ્ટ્રપતિ/રાજ્યપાલથી નીચેના અધિકારી દ્વારા બરતરફી ન થઈ શકે</li>
+<li>અપવાદ: ફોજદારી ગુના સાબિત થાય, રાષ્ટ્રીય સુરક્ષા સંકટ, અથવા તપાસ યોગ્ય ન હોય તેવા સંજોગોમાં</li>
+</ul>
+<div class="note">GPSC ટીપ: અનુચ્છેદ 311 એ ભાગ-14 (સેવાઓ) હેઠળ આવે છે અને સિવિલ સેવકોના રક્ષણનું મુખ્ય બંધારણીય સાધન છે.</div>
+
+`,
+          },
+        ],
       },
       {
-        "t": "Citizen's Charter (નાગરિકનો અધિકારપત્ર)",
-        "en": "Citizen's Charter",
-        "art": "Citizen-Centric Governance",
-        "body": `
-<p>Citizen's Charter એટલે જાહેર સેવા સંસ્થાઓ (Govt. Departments, PSUs) દ્વારા તેમના સેવા ધોરણો, સમય-મર્યાદા અને જવાબદારીને જાહેર કરવામાં આવેલો ઘોષણાપત્ર.</p>
-<span class="sub">ઉદ્દેશો</span>
+        cat: "નાણાકીય વહીવટ અને અંદાજપત્ર (Financial Administration)",
+        items: [
+          {
+            t: "બજેટ: અર્થ, પ્રકારો અને સિદ્ધાંતો",
+            en: "Budget — Meaning & Types",
+            art: "Article 112",
+            body: `
+
+<p>બજેટ (અંદાજપત્ર) એટલે સરકારની આવક અને ખર્ચનું વાર્ષિક નાણાકીય નિવેદન. ભારતમાં તેને "વાર્ષિક નાણાકીય નિવેદન" (Annual Financial Statement) કહેવાય છે — અનુચ્છેદ 112 (કેન્દ્ર) અને અનુચ્છેદ 202 (રાજ્ય).</p>
+<span class="sub">બજેટના પ્રકારો</span>
+<div class="table-scroll"><table>
+<tr><th>પ્રકાર</th><th>લક્ષણ</th></tr>
+<tr><td>લાઇન-આઇટમ બજેટ (Line-item)</td><td>ખર્ચની વસ્તુ-વાર વિગત — સૌથી જૂની પદ્ધતિ</td></tr>
+<tr><td>કામગીરી બજેટ (Performance Budgeting)</td><td>ખર્ચને કાર્યક્રમો/પ્રવૃત્તિઓ સાથે જોડે</td></tr>
+<tr><td>શૂન્ય-આધારિત બજેટ (Zero-Based Budgeting - ZBB)</td><td>દર વર્ષે તમામ ખર્ચનું નવેસરથી સમર્થન જરૂરી; પીટર પિર દ્વારા વિકસિત</td></tr>
+<tr><td>પરિણામ બજેટ (Outcome Budgeting)</td><td>ખર્ચના વાસ્તવિક પરિણામો માપે — ભારતમાં 2005થી અમલ</td></tr>
+<tr><td>જેન્ડર બજેટ (Gender Budgeting)</td><td>મહિલા-કેન્દ્રિત યોજનાઓ માટે અલગ ફાળવણી</td></tr>
+</table></div>
+<span class="sub">બજેટ પ્રક્રિયાના 4 તબક્કા</span>
 <ul>
-<li>સેવાઓની ગુણવત્તા સુધારવી</li>
-<li>પારદર્શિતા અને જવાબદારી વધારવી</li>
-<li>નાગરિકોને તેમના અધિકારોની જાણકારી આપવી</li>
-<li>લાલ ફીતાશાહી ઘટાડવી</li>
+<li>1. બજેટ તૈયાર કરવું (Formulation) — નાણાં મંત્રાલય/વિભાગ</li>
+<li>2. બજેટ પસાર કરવું (Enactment) — સંસદ/વિધાનસભા</li>
+<li>3. બજેટનો અમલ (Execution) — વિવિધ વિભાગો</li>
+<li>4. ઓડિટ (Audit) — CAG</li>
 </ul>
-<span class="sub">ભારતમાં શરૂઆત</span>
-<ul>
-<li>પ્રથમ વખત: 1996 (PM નરસિમ્હા રાવ)</li>
-<li>નીતિ આયોગ: 2015માં સુધારા</li>
-<li>Sevottam મોડેલ: DARPG (ડિપાર્ટમેન્ટ ઑફ એડમિનિસ્ટ્રેટિવ રિફોર્મ્સ એન્ડ પબ્લિક ગ્રીવન્સ) દ્વારા</li>
-</ul>
-<div class="note">GPSC ટીપ: ગુજરાત સરકારે ઘણી સેવાઓ માટે Citizen's Charter લાગુ કર્યા છે — "સુગમ ડિજિટલ ગુજરાત" પોર્ટલ 20 સેવાઓ માટે.</div>
+
 `,
+          },
+          {
+            t: "હિસાબ અને ઑડિટ પદ્ધતિ",
+            en: "Accounts & Audit",
+            art: "CAG — Art 148-151",
+            body: `
+
+<p>સરકારી નાણાંનો હિસાબ અને તેનું સ્વતંત્ર ઑડિટ લોકશાહી જવાબદારીનું મહત્વનું સાધન છે.</p>
+<span class="sub">ઑડિટના પ્રકારો</span>
+<ul>
+<li><strong>નિયમિતતા ઑડિટ (Regularity Audit):</strong> નિયમો પ્રમાણે ખર્ચ થયો કે નહીં</li>
+<li><strong>કાર્યક્ષમતા ઑડિટ (Efficiency Audit):</strong> ખર્ચનું પરિણામ કેટલું અસરકારક</li>
+<li><strong>પ્રદર્શન ઑડિટ (Performance Audit):</strong> યોજનાના ધ્યેયો સિદ્ધ થયા કે નહીં</li>
+</ul>
+<span class="sub">CAG (નિયંત્રક અને મહાલેખા પરીક્ષક)</span>
+<ul>
+<li>અનુચ્છેદ 148-151 (ભાગ-5) — "ભારતના જાહેર નાણાંનો રખેવાળ" (Guardian of Public Purse)</li>
+<li>રાષ્ટ્રપતિ દ્વારા નિમણૂક, કાર્યકાળ 6 વર્ષ અથવા 65 વર્ષ</li>
+<li>અહેવાલ રાષ્ટ્રપતિ/રાજ્યપાલને સુપરત → PAC (જાહેર હિસાબ સમિતિ)ને મોકલાય</li>
+</ul>
+<div class="note">GPSC ટીપ: CAGનો હોદ્દો બંધારણમાં "ન્યાયિક" (Quasi-judicial) ગણાય છે — સુપ્રીમ કોર્ટના જજ જેટલું જ રક્ષણ મળે છે.</div>
+
+`,
+          },
+          {
+            t: "PAC અને નાણાકીય સંસદીય નિયંત્રણ",
+            en: "Public Accounts Committee",
+            art: "PAC, Estimates Committee",
+            body: `
+
+<p>સંસદ નાણાકીય બાબતોમાં કારોબારી પર નિયંત્રણ રાખવા વિવિધ સમિતિઓનો ઉપયોગ કરે છે.</p>
+<div class="table-scroll"><table>
+<tr><th>સમિતિ</th><th>સભ્યો</th><th>કાર્ય</th></tr>
+<tr><td>જાહેર હિસાબ સમિતિ (PAC)</td><td>22 (15 લોકસભા + 7 રાજ્યસભા)</td><td>CAGના અહેવાલોની ચકાસણી; અધ્યક્ષ સામાન્ય રીતે વિપક્ષમાંથી</td></tr>
+<tr><td>અંદાજ સમિતિ (Estimates Committee)</td><td>30 (ફક્ત લોકસભા)</td><td>બજેટ અંદાજોની કરકસર અને કાર્યક્ષમતા તપાસે — "સતત કરકસર સમિતિ"</td></tr>
+<tr><td>જાહેર સાહસો સમિતિ (COPU)</td><td>22 (15 લોકસભા + 7 રાજ્યસભા)</td><td>જાહેર ક્ષેત્રના સાહસોના અહેવાલો અને હિસાબોની તપાસ</td></tr>
+</table></div>
+<div class="note">GPSC ટીપ: ત્રણેય નાણાકીય સમિતિઓને સંસદની "ત્રિપુટી" (Financial Committees Triad) કહેવાય છે.</div>
+
+`,
+          },
+        ],
       },
       {
-        "t": "2જા વહીવટી સુધારા પંચ (2nd ARC)",
-        "en": "2nd Administrative Reforms Commission",
-        "art": "Ethics, Accountability, Citizen-Centric",
-        "body": `
-<p>2જા ARC ની સ્થાપના 2005માં ડૉ. એસ.આર. ગોપાલન (પૂર્વ કેબિનેટ સચિવ)ની અધ્યક્ષતામાં કરાઈ. 2006-2008 દરમિયાન 15 રિપોર્ટ/અહેવાલ આપ્યા.</p>
-<span class="sub">મુખ્ય ભલામણો</span>
+        cat: "કેન્દ્ર, રાજ્ય અને જિલ્લા વહીવટી તંત્ર",
+        items: [
+          {
+            t: "કેન્દ્રીય સચિવાલય અને કેબિનેટ સચિવાલય",
+            en: "Central & Cabinet Secretariat",
+            art: "Cabinet Secretary",
+            body: `
+
+<p>કેન્દ્ર સરકારના વહીવટી માળખાનું હૃદય કેન્દ્રીય સચિવાલય અને કેબિનેટ સચિવાલય છે.</p>
+<span class="sub">કેન્દ્રીય સચિવાલય (Central Secretariat)</span>
 <ul>
-<li><strong>RTI Act નો અસરકારક અમલ</strong> — PIOs ને ફરજિયાત તાલીમ</li>
-<li><strong>લોકપાલ/લોકાયુક્ત</strong> માટે એકરૂપ કાયદો</li>
-<li><strong>પ્રતિબંધિત અખબારો અને સત્તાવાર ગુપ્તતા</strong> — સમીક્ષા</li>
-<li><strong>જાહેર સેવા ધોરણો</strong> — Sevottam મોડેલ લાગુ</li>
-<li><strong>ઈ-ગવર્નન્સ</strong> અને ડિજિટલ સેવાઓનો વિસ્તાર</li>
-<li><strong>કર્મચારી વ્યવસ્થાપન</strong>માં સુધારા (બઢતી, તાલીમ, પ્રદર્શન મૂલ્યાંકન)</li>
+<li>તમામ મંત્રાલયો/વિભાગોનું નીતિ-ઘડતર એકમ — નવી દિલ્હીમાં સ્થિત</li>
+<li>વંશવેલો: મંત્રી → સચિવ → અધિક સચિવ → સંયુક્ત સચિવ → નિયામક → અંડર સેક્રેટરી</li>
 </ul>
-<div class="note">GPSC ટીપ: ARC એ "સત્તા" અને "જવાબદારી" વચ્ચે સંતુલન પર ભાર મૂક્યો — "Good Governance" નો સિદ્ધાંત.</div>
+<span class="sub">કેબિનેટ સચિવાલય</span>
+<ul>
+<li>વડાપ્રધાન કાર્યાલય હેઠળ કાર્ય કરે, વડો: કેબિનેટ સચિવ (ભારતના સૌથી વરિષ્ઠ IAS અધિકારી)</li>
+<li>કેબિનેટની બેઠકોનું સંચાલન, વિવિધ મંત્રાલયો વચ્ચે સંકલન</li>
+<li>ભારત સરકારના "Business Rules" અને "Allocation of Business Rules" નું સંચાલન કરે</li>
+</ul>
+<div class="note">GPSC ટીપ: કેબિનેટ સચિવ એ ભારતીય નાગરિક સેવાનું સર્વોચ્ચ પદ છે — સીધા વડાપ્રધાનને જવાબદાર.</div>
+
 `,
-      },
-    ],
-  },
-  {
-    "cat": "ઇ-ગવર્નન્સ અને ટેકનોલોજી ઇન જાહેર વહીવટ",
-    "items": [
-      {
-        "t": "ઇ-ગવર્નન્સ — અર્થ અને મહત્વ",
-        "en": "E-Governance",
-        "art": "ICT in Government",
-        "body": `
-<p>ઇ-ગવર્નન્સ એટલે સરકાર અને નાગરિકો/ઉદ્યોગ વચ્ચેના આદાનપ્રદાન માટે સૂચના-ટેકનોલોજી (ICT) નો ઉપયોગ.</p>
-<span class="sub">ઇ-ગવર્નન્સનાં ઘટકો</span>
+          },
+          {
+            t: "રાજ્ય સચિવાલય (ગુજરાત)",
+            en: "State Secretariat",
+            art: "Chief Secretary",
+            body: `
+
+<p>રાજ્ય કક્ષાએ કેન્દ્રીય સચિવાલયને સમકક્ષ માળખું "રાજ્ય સચિવાલય" તરીકે ઓળખાય છે — ગુજરાતમાં ગાંધીનગર ખાતે.</p>
+<span class="sub">વંશવેલો</span>
 <ul>
-<li><strong>G2C (Government to Citizen):</strong> ઓનલાઈન સેવાઓ</li>
-<li><strong>G2B (Government to Business):</strong> લાયસન્સ, ટેક્સ</li>
-<li><strong>G2G (Government to Government):</strong> વિભાગો વચ્ચે માહિતી</li>
-<li><strong>G2E (Government to Employee):</strong> HRM/તાલીમ</li>
+<li><strong>મુખ્ય સચિવ (Chief Secretary):</strong> રાજ્યના સૌથી વરિષ્ઠ IAS અધિકારી — મુખ્યમંત્રીના મુખ્ય સલાહકાર</li>
+<li><strong>અધિક મુખ્ય સચિવ / અગ્ર સચિવ / સચિવ:</strong> વિવિધ વિભાગોના વડા</li>
+<li><strong>નાયબ સચિવ, અંડર સેક્રેટરી:</strong> ફાઈલોનું સંચાલન</li>
 </ul>
-<span class="sub">લાભો</span>
-<ul>
-<li>પારદર્શિતા, જવાબદારી વધારે</li>
-<li>ઝડપી સેવા, કરકસર</li>
-<li>લાલ ફીતાશાહી ઘટાડે</li>
-<li>નાગરિક-ભાગીદારી વધારે</li>
-</ul>
-<span class="sub">મુખ્ય પહેલો</span>
-<ul>
-<li><strong>ડિજિટલ ઈન્ડિયા (2015)</strong> — ઈન્ફ્રાસ્ટ્રક્ચર, સેવાઓ, ડિજિટલ સાક્ષરતા</li>
-<li><strong>માય ગવ. ઇન</strong> — સિંગલ પોર્ટલ</li>
-<li><strong>e-ઑફિસ, e-પ્રોક્યોરમેન્ટ</strong> — આંતરિક પ્રક્રિયાઓ</li>
-<li><strong>ગુજરાત:</strong> સુગમ ડિજિટલ ગુજરાત પોર્ટલ, 20+ સેવાઓ ઓનલાઈન</li>
-</ul>
-<div class="note">GPSC ટીપ: "ડિજિટલ ગુજરાત" 2025-26માં 80% શહેરી વિસ્તાર કવરેજ લક્ષ્ય.</div>
+<p>રાજ્ય સચિવાલય નીતિ ઘડે છે, જ્યારે તેનું ક્ષેત્રીય અમલીકરણ જિલ્લા/તાલુકા વહીવટીતંત્ર દ્વારા થાય છે.</p>
+
 `,
-      },
-      {
-        "t": "ભારતીય AI ઇન જાહેર વહીવટ",
-        "en": "AI in Public Administration",
-        "art": "IndiaAI Mission",
-        "body": `
-<p>ભારત સરકારે 2024માં IndiaAI Mission (₹10,372 કરોડ) મંજૂર કર્યો — AI ઇનોવેશન, GPU કમ્પ્યુટ, ડેટા લેબ્સ, ડીપફેક ડિટેક્શન વગેરે.</p>
-<span class="sub">જાહેર વહીવટમાં AI નો ઉપયોગ</span>
-<ul>
-<li>અનુમાનક વિશ્લેષણ (Predictive Analytics) — ગુનાઓ, આપત્તિઓ</li>
-<li>દસ્તાવેજ પ્રક્રિયા (જીએસટી, પેન્શન)</li>
-<li>ગ્રાહક સેવા — ચેટબોટ્સ (દા.ત. ઇન્ડિયા AI)</li>
-<li>ભાષા અનુવાદ (Bhashini)</li>
-<li>ભ્રષ્ટાચાર શોધ (ડેટા માઇનિંગ)</li>
-</ul>
-<div class="note">GPSC ટીપ: ગુજરાત AI Action Plan (2025-30) અને STI Policy (2026-31) અપનાવનાર પ્રથમ રાજ્યોમાંનું એક છે.</div>
+          },
+          {
+            t: "જિલ્લા વહીવટ — કલેક્ટર/જિલ્લા મેજિસ્ટ્રેટ",
+            en: "District Collector / Magistrate",
+            art: "British-era institution",
+            body: `
+
+<p>જિલ્લા કલેક્ટર (District Collector) એ બ્રિટિશ કાળથી ચાલી આવતું સૌથી મહત્વનું ક્ષેત્રીય વહીવટી પદ છે — ભારતીય વહીવટની કરોડરજ્જુ ગણાય છે.</p>
+<span class="sub">ત્રિવિધ ભૂમિકા</span>
+<div class="table-scroll"><table>
+<tr><th>ભૂમિકા</th><th>કાર્ય</th></tr>
+<tr><td>કલેક્ટર (મહેસૂલ)</td><td>જમીન મહેસૂલ ઉઘરાવવો, જમીન રેકોર્ડ, આપત્તિ વ્યવસ્થાપન</td></tr>
+<tr><td>જિલ્લા મેજિસ્ટ્રેટ (DM)</td><td>કાયદો-વ્યવસ્થા, ફોજદારી ન્યાય (CrPC હેઠળ સત્તા)</td></tr>
+<tr><td>વિકાસ અધિકારી</td><td>કેન્દ્ર/રાજ્ય યોજનાઓનું જિલ્લા કક્ષાએ અમલીકરણ, ચૂંટણી અધિકારી</td></tr>
+</table></div>
+<p>ગુજરાતમાં કલેક્ટર IAS કેડરના અધિકારી હોય છે અને જિલ્લા વિકાસ અધિકારી (DDO) પંચાયતી રાજના વહીવટી વડા તરીકે કામ કરે છે (વિગત માટે પંચાયતી રાજ વિભાગ જુઓ).</p>
+
 `,
-      },
-    ],
-  },
-  {
-    "cat": "ગુજરાત જાહેર વહીવટ",
-    "items": [
-      {
-        "t": "ગુજરાત સરકાર — માળખું અને વિભાગો",
-        "en": "Gujarat Government Structure",
-        "art": "State Administration",
-        "body": `
-<p>ગુજરાત સરકાર બંધારણીય વ્યવસ્થા મુજબ કાર્યરત છે, જેમાં રાજ્યપાલ, મુખ્યમંત્રી, મંત્રીમંડળ, ધારાસભા, હાઈકોર્ટ અને GPSC (જાહેર સેવા આયોગ) સામેલ છે.</p>
-<span class="sub">મુખ્ય હોદ્દાઓ</span>
-<ul>
-<li><strong>રાજ્યપાલ:</strong> આચાર્ય દેવવ્રત</li>
-<li><strong>મુખ્યમંત્રી:</strong> ભૂપેન્દ્રભાઈ પટેલ (17મા CM, 13 સપ્ટે. 2021થી)</li>
-<li><strong>નાયબ મુખ્યમંત્રી:</strong> હર્ષ સંઘવી (17 ઓક્ટો. 2025થી)</li>
-<li><strong>મુખ્ય સચિવ:</strong> મનોજ કુમાર દાસ</li>
-</ul>
-<span class="sub">વિભાગો</span>
-<ul>
-<li>ગૃહ, નાણાં, શિક્ષણ, આરોગ્ય, કૃષિ, ઉદ્યોગ, જળ સંપદા, સ્વરાજ્ય, વન, સૌર ઊર્જા, ગ્રામ વિકાસ, શહેરી વિકાસ, રાહત અને પુનર્વસન, વિજ્ઞાન-ટેકનોલોજી, સેમિકન્ડક્ટર</li>
-</ul>
-<div class="note">GPSC ટીપ: ગુજરાતની કેબિનેટ પુનર્ગઠન — 16 ઓક્ટો. 2025, 26 મંત્રીઓ, 3 મહિલા મંત્રીઓ.</div>
-`,
+          },
+        ],
       },
       {
-        "t": "ગુજરાત પોલીસ સંગઠન",
-        "en": "Gujarat Police Organization",
-        "art": "For PSI Exam",
-        "body": `
-<p>ગુજરાત પોલીસ રાજ્યના ગૃહ વિભાગ હેઠળ કાર્ય કરે છે, જેમાં તમામ જિલ્લાઓ, નગરો અને સ્થાનિક પોલીસ સ્ટેશનો સામેલ છે.</p>
-<span class="sub">માળખું</span>
+        cat: "જાહેર સાહસો અને નિગમો (Public Enterprises)",
+        items: [
+          {
+            t: "જાહેર સાહસોના પ્રકારો",
+            en: "Types of Public Enterprises",
+            art: "Departmental, Corp, Company",
+            body: `
+
+<p>જાહેર સાહસો (Public Sector Undertakings - PSUs) સરકારની આર્થિક પ્રવૃત્તિઓ ચલાવવાનું માધ્યમ છે. તેમના 3 મુખ્ય સ્વરૂપ છે.</p>
+<div class="table-scroll"><table>
+<tr><th>સ્વરૂપ</th><th>લક્ષણ</th><th>ઉદાહરણ</th></tr>
+<tr><td><strong>વિભાગીય સાહસ (Departmental Undertaking)</strong></td><td>સરકારી વિભાગનો જ ભાગ, બજેટમાંથી ભંડોળ, સિવિલ સર્વિસ નિયમો લાગુ</td><td>રેલવે, ટપાલ વિભાગ (Post Office)</td></tr>
+<tr><td><strong>વૈધાનિક નિગમ (Statutory/Public Corporation)</strong></td><td>વિશેષ કાયદા દ્વારા સ્થાપના, સ્વતંત્ર કાનૂની અસ્તિત્વ, પોતાનું ભંડોળ</td><td>LIC, RBI, ONGC (શરૂઆતમાં), ગુજરાત રાજ્ય માર્ગ વાહનવ્યવહાર નિગમ (GSRTC)</td></tr>
+<tr><td><strong>સરકારી કંપની (Government Company)</strong></td><td>કંપની અધિનિયમ હેઠળ સ્થાપના, 51%+ સરકારી શેરહોલ્ડિંગ</td><td>ONGC, SAIL, BHEL, GAIL</td></tr>
+</table></div>
+<span class="sub">ફાયદા vs મર્યાદાઓ</span>
 <ul>
-<li><strong>DGP (Director General of Police):</strong> ગુજરાતના પોલીસ વડા</li>
-<li><strong>ADG / IG:</strong> ઝોન-સ્તર (દા.ત. Surat Range, Ahmedabad Range)</li>
-<li><strong>DIG / SP:</strong> જિલ્લા-સ્તર (Superintendent of Police)</li>
-<li><strong>Additional SP / DSP / PI / PSI:</strong> થાણા/વિભાગ સ્તર</li>
-<li>Wireless/Technical Operators: જુદા વિભાગ</li>
+<li><strong>ફાયદા:</strong> સામાજિક કલ્યાણ ધ્યેય, વ્યૂહાત્મક ક્ષેત્રો પર નિયંત્રણ, રોજગારી</li>
+<li><strong>મર્યાદાઓ:</strong> અમલદારશાહી વિલંબ, રાજકીય હસ્તક્ષેપ, નફા-નુકસાનની જવાબદારીનો અભાવ</li>
 </ul>
-<span class="sub">ગુજરાત પોલીસ ભરતી બોર્ડ (GPRB)</span>
-<ul>
-<li>PSI, ASI, Wireless Operator, Constable ભરતી માટે</li>
-<li>લેખિત + શારીરિક (PET/PST) + દસ્તાવેજ ચકાસણી</li>
-<li>પરીક્ષા: 23 ઓગસ્ટ 2026</li>
-</ul>
-<div class="note">GPSC ટીપ: ગુજરાત પોલીસ AI ટૂલ્સ (NARIT, VISWAS, Trinetra) અને ડિજિટલ ટ્રંકિંગ (TETRA/APCO-25) સાથે આધુનિક થઈ રહી છે.</div>
+<div class="note">GPSC ટીપ: વૈધાનિક નિગમને "Statutory Corporation" કહેવાય કારણ કે તે સંસદ/વિધાનસભાના વિશેષ અધિનિયમ (Act) દ્વારા સ્થપાય છે, જ્યારે સરકારી કંપની સામાન્ય કંપની અધિનિયમ, 2013 હેઠળ સ્થપાય છે.</div>
+
 `,
+          },
+          {
+            t: "વિનિવેશ અને ખાનગીકરણ",
+            en: "Disinvestment & Privatization",
+            art: "NITI Aayog, DIPAM",
+            body: `
+
+<p>1991ના આર્થિક સુધારા બાદ સરકારે જાહેર સાહસોમાં વિનિવેશ (Disinvestment) અને ખાનગીકરણની નીતિ અપનાવી.</p>
+<ul>
+<li><strong>વિનિવેશ (Disinvestment):</strong> સરકારી હિસ્સાનું આંશિક વેચાણ, માલિકી સરકાર પાસે જ રહે</li>
+<li><strong>ખાનગીકરણ (Privatization):</strong> સંપૂર્ણ માલિકી ખાનગી ક્ષેત્રને તબદીલ</li>
+<li><strong>વ્યૂહાત્મક વેચાણ (Strategic Sale):</strong> 50%+ હિસ્સો અને સંચાલન નિયંત્રણ ખાનગી ક્ષેત્રને</li>
+</ul>
+<p><strong>DIPAM</strong> (Department of Investment and Public Asset Management) — નાણાં મંત્રાલય હેઠળ વિનિવેશની નીતિ અમલ કરતો વિભાગ.</p>
+<div class="note">GPSC ટીપ: NPM (New Public Management) અભિગમ સાથે વિનિવેશ-ખાનગીકરણ સીધું જોડાયેલું છે — અગાઉના વિભાગમાં જુઓ.</div>
+
+`,
+          },
+        ],
       },
       {
-        "t": "ગુજરાતની સ્થાનિક સ્વરાજ્ય સંસ્થાઓ",
-        "en": "Local Self Government in Gujarat",
-        "art": "Panchayati Raj & Urban Local Bodies",
-        "body": `
-<p>ગુજરાત 73મા અને 74મા સુધારા મુજબ ગ્રામ્ય અને શહેરી સ્થાનિક સ્વરાજ્ય ધરાવે છે.</p>
-<span class="sub">ગ્રામ્ય (Rural)</span>
+        cat: "વહીવટી નિયંત્રણ અને જવાબદારી (Control & Accountability)",
+        items: [
+          {
+            t: "વહીવટી નિયંત્રણના પ્રકારો",
+            en: "Types of Administrative Control",
+            art: "Legislative, Executive, Judicial",
+            body: `
+
+<p>લોકશાહીમાં કારોબારી/વહીવટીતંત્ર પર નિયંત્રણ રાખવા 3 મુખ્ય માધ્યમો છે.</p>
+<div class="table-scroll"><table>
+<tr><th>નિયંત્રણનો પ્રકાર</th><th>સાધનો</th></tr>
+<tr><td><strong>ધારાકીય નિયંત્રણ (Legislative)</strong></td><td>પ્રશ્નકાળ, ચર્ચા, બજેટ મંજૂરી, PAC/Estimates/COPU સમિતિઓ, અવિશ્વાસ પ્રસ્તાવ</td></tr>
+<tr><td><strong>કારોબારી નિયંત્રણ (Executive)</strong></td><td>વંશવેલો દેખરેખ, નિયમો/પરિપત્રો, CVC, વિભાગીય તપાસ</td></tr>
+<tr><td><strong>ન્યાયિક નિયંત્રણ (Judicial)</strong></td><td>ન્યાયિક પુનરાવલોકન (Judicial Review), Writs (રિટ), PIL</td></tr>
+</table></div>
+<span class="sub">ન્યાયિક પુનરાવલોકનની 5 મુખ્ય રિટ</span>
 <ul>
-<li>ગ્રામ પંચાયત (સરપંચ, ગ્રામ સેવક)</li>
-<li>તાલુકા પંચાયત (TDO, પ્રમુખ)</li>
-<li>જિલ્લા પંચાયત (DDO, પ્રમુખ)</li>
+<li>Habeas Corpus (બંદી પ્રત્યક્ષીકરણ), Mandamus (પરમાદેશ), Prohibition (પ્રતિષેધ), Certiorari (ઉત્પ્રેક્ષણ), Quo-Warranto (અધિકાર પૃચ્છા) — અનુચ્છેદ 32 (સુપ્રીમ કોર્ટ) અને 226 (હાઈકોર્ટ)</li>
 </ul>
-<span class="sub">શહેરી (Urban)</span>
+
+`,
+          },
+          {
+            t: "વહીવટી જવાબદારીના પ્રકારો",
+            en: "Types of Accountability",
+            art: "Political, Legal, Social",
+            body: `
+
 <ul>
-<li>નગર પંચાયત</li>
-<li>નગરપાલિકા (મુનિસિપાલિટી)</li>
-<li>મહાનગરપાલિકા (કોર્પોરેશન) — AMC, SMC, VMC, BMC, RMC વગેરે</li>
+<li><strong>રાજકીય જવાબદારી:</strong> મંત્રીઓ સંસદ/વિધાનસભાને જવાબદાર (સામૂહિક જવાબદારીનો સિદ્ધાંત — અનુચ્છેદ 75(3)/164(2))</li>
+<li><strong>કાનૂની જવાબદારી:</strong> અદાલતોમાં જવાબદારી, ટોર્ટ/ફોજદારી કાયદા હેઠળ</li>
+<li><strong>વહીવટી જવાબદારી:</strong> ઉપરી અધિકારીઓને જવાબદારી, વિભાગીય તપાસ</li>
+<li><strong>સામાજિક જવાબદારી:</strong> નાગરિક સમાજ, મીડિયા, RTI દ્વારા જવાબદારી</li>
 </ul>
-<span class="sub">2026 સ્થાનિક ચૂંટણીઓ</span>
+<div class="note">GPSC ટીપ: "જવાબદારી વિનાની સત્તા ભ્રષ્ટાચારને નોતરે છે" — આ સિદ્ધાંત પર આધારિત CVC, Lokpal, RTI જેવી સંસ્થાઓ કાર્યરત છે (વિગત માટે આયોગોનો વિભાગ જુઓ).</div>
+
+`,
+          },
+        ],
+      },
+      {
+        cat: "વહીવટી કાયદો અને સુધારણાઓ (Administrative Law & Reforms)",
+        items: [
+          {
+            t: "વહીવટી કાયદો: અર્થ અને Droit Administratif",
+            en: "Administrative Law — Meaning",
+            art: "A.V. Dicey vs Droit Administratif",
+            body: `
+
+<p>વહીવટી કાયદો (Administrative Law) એટલે વહીવટી તંત્રની સત્તા, કાર્યપદ્ધતિ અને તેના પર નિયંત્રણને લગતો કાયદાનો ભાગ.</p>
+<span class="sub">A.V. Dicey નો "Rule of Law" સિદ્ધાંત</span>
 <ul>
-<li>15 મહાનગરપાલિકા, 84 નગરપાલિકા, 34 જિલ્લા પંચાયત, 260 તાલુકા પંચાયત</li>
-<li>તારીખ: 26 એપ્રિલ 2026</li>
-<li>પરિણામ: ભાજપ ક્લીન સ્વીપ</li>
+<li>બ્રિટિશ ન્યાયવિદ ડાયસીએ શરૂઆતમાં કહ્યું કે ઈંગ્લેન્ડમાં "વહીવટી કાયદો" જેવું કંઈ નથી — તમામ (સરકાર સહિત) સામાન્ય કાયદા અને સામાન્ય અદાલતોને આધીન છે (Rule of Law)</li>
+<li>ફ્રાન્સમાં "Droit Administratif" — સરકારી અધિકારીઓ માટે અલગ વહીવટી અદાલતો (Conseil d'État) છે</li>
 </ul>
-<div class="note">GPSC ટીપ: ગાંધીનગર મહાનગરપાલિકાની ચૂંટણી અલગથી યોજાઈ.</div>
+<span class="sub">ભારતમાં સ્થિતિ</span>
+<p>ભારત મિશ્ર પદ્ધતિ અપનાવે છે — સામાન્ય અદાલતો ઉપરાંત વહીવટી ટ્રિબ્યુનલ્સ (દા.ત. Central Administrative Tribunal - CAT, National Green Tribunal - NGT) પણ કાર્યરત છે.</p>
+<div class="note">GPSC ટીપ: CAT ની સ્થાપના અનુચ્છેદ 323-A હેઠળ, Administrative Tribunals Act, 1985 દ્વારા થઈ — સરકારી કર્મચારીઓની સેવા-શરતોના વિવાદો માટે.</div>
+
 `,
-      },
-    ],
-  },
-  {
-    "cat": "ઝડપી રિવિઝન — Top 50 MCQs",
-    "items": [
-      {
-        "t": "મુખ્ય વ્યાખ્યાઓ અને સિદ્ધાંતો",
-        "en": "Quick Revision: Definitions & Theories",
-        "art": "Must-Know for Exam",
-        "body": `
-<p><strong>1. જાહેર વહીવટના પિતા કોણ?</strong> — વુડ્રો વિલ્સન (1887)</p>
-<p><strong>2. પ્રથમ જાહેર વહીવટની પાઠ્યપુસ્તક કોણે લખી?</strong> — L.D. વ્હાઇટ (1926)</p>
-<p><strong>3. POSDCORB નું સંક્ષિપ્ત સ્વરૂપ શું છે?</strong> — Planning, Organizing, Staffing, Directing, Co-Ordinating, Reporting, Budgeting</p>
-<p><strong>4. ફેયોલના 14 સિદ્ધાંતોમાંથી મુખ્ય કયા?</strong> — Division of Work, Unity of Command, Unity of Direction, Scalar Chain, Esprit de Corps</p>
-<p><strong>5. સાયમનનો "મર્યાદિત તર્કબદ્ધતા" સિદ્ધાંત શું કહે છે?</strong> — માનવી સંપૂર્ણ તર્કબદ્ધ નથી; "Satisficing" નિર્ણય લે છે.</p>
-<p><strong>6. એલ્ટન મેયો કયા પ્રયોગો માટે જાણીતા છે?</strong> — Hawthorne Studies (1924-32)</p>
-<p><strong>7. મેક્સ વેબરની "આદર્શ અમલદારશાહી" શેના પર આધારિત છે?</strong> — Legal-Rational Authority</p>
-<p><strong>8. સુશાસનના 8 લક્ષણો કયા છે?</strong> — Participation, Rule of Law, Transparency, Responsiveness, Consensus, Equity, Efficiency, Accountability (UNESCAP)</p>
-<p><strong>9. RTI Act ક્યારે અમલમાં આવ્યો?</strong> — 12 ઓક્ટોબર 2005</p>
-<p><strong>10. 2જા ARC ના અધ્યક્ષ કોણ હતા?</strong> — ડૉ. એસ.આર. ગોપાલન</p>
-`,
-      },
-      {
-        "t": "મહત્વના આંકડાઓ અને તારીખો",
-        "en": "Quick Revision: Figures & Dates",
-        "art": "Exam-Specific Facts",
-        "body": `
-<p><strong>11. ગુજરાત બજેટ 2026-27 (₹):</strong> ₹4.08 લાખ કરોડ</p>
-<p><strong>12. 2030 કોમનવેલ્થ ગેમ્સ યજમાન શહેર:</strong> અમદાવાદ</p>
-<p><strong>13. ગુજરાતના નાયબ મુખ્યમંત્રી:</strong> હર્ષ સંઘવી (17 ઓક્ટો. 2025થી)</p>
-<p><strong>14. નાણામંત્રી (ગુજરાત):</strong> કનુભાઈ દેસાઈ</p>
-<p><strong>15. સ્વતંત્રતા દિવસ 2026: 80મો (ભારતનો 80મો સ્વતંત્રતા દિવસ)</strong></p>
-<p><strong>16. સુશાસન દિવસ:</strong> 25 ડિસેમ્બર</p>
-<p><strong>17. ભારતીય બંધારણની કલમ 112:</strong> Annual Financial Statement (બજેટ)</p>
-<p><strong>18. ગુજરાત સ્થાપના દિવસ:</strong> 1 મે 1960</p>
-<p><strong>19. 73મો સુધારો (ગ્રામ્ય સ્વરાજ્ય):</strong> 1992</p>
-<p><strong>20. 74મો સુધારો (શહેરી સ્વરાજ્ય):</strong> 1992</p>
-`,
-      },
-      {
-        "t": "બંધારણ — કલમો અને હોદ્દાઓ",
-        "en": "Quick Revision: Articles & Positions",
-        "art": "GPSC Static",
-        "body": `
-<p><strong>21. રાષ્ટ્રપતિની ચૂંટણી માટેની કલમ:</strong> 54</p>
-<p><strong>22. રાષ્ટ્રપતિ (મહાભિયોગ):</strong> 61</p>
-<p><strong>23. ઉપરાષ્ટ્રપતિ — રાજ્યસભાના સભાપતિ:</strong> 64, 89-92</p>
-<p><strong>24. CAG: 148</strong></p>
-<p><strong>25. મુખ્ય ચૂંટણી કમિશનર: 324</strong></p>
-<p><strong>26. નાણા પંચ: 280</strong></p>
-<p><strong>27. રાજ્ય સ્થાનિક સ્વરાજ્ય: 243 (73મો), 243P (74મો)</strong></p>
-<p><strong>28. ભારતીય મૂળભૂત અધિકારો:</strong> Part III, કલમ 12-35</p>
-<p><strong>29. મૂળભૂત ફરજો:</strong> Part IVA, કલમ 51A (42મો સુધારો 1976)</p>
-<p><strong>30. RTI:</strong> લોકપાલ/લોકાયુક્ત (વૈધાનિક)</p>
-`,
-      },
-      {
-        "t": "મહત્વની પરીક્ષા-લક્ષી ટીપ્સ",
-        "en": "Quick Revision: Exam Tips",
-        "art": "Smart Approach",
-        "body": `
+          },
+          {
+            t: "વહીવટી સુધારા પંચ (ARC)",
+            en: "Administrative Reforms Commission",
+            art: "1st ARC 1966, 2nd ARC 2005",
+            body: `
+
+<p>ભારતમાં વહીવટી તંત્રને વધુ કાર્યક્ષમ, પારદર્શક અને જવાબદાર બનાવવા બે વહીવટી સુધારા પંચ રચાયા.</p>
+<div class="table-scroll"><table>
+<tr><th>વિગત</th><th>1લું ARC</th><th>2જું ARC</th></tr>
+<tr><td>સ્થાપના</td><td>1966</td><td>2005</td></tr>
+<tr><td>અધ્યક્ષ</td><td>મોરારજી દેસાઈ (બાદમાં કે. હનુમંતૈયા)</td><td>વીરપ્પા મોઈલી</td></tr>
+<tr><td>અહેવાલોની સંખ્યા</td><td>20 અહેવાલો</td><td>15 અહેવાલો</td></tr>
+<tr><td>ફોકસ</td><td>જિલ્લા વહીવટ, રાજ્ય વહીવટ, કર્મચારી પ્રશાસન</td><td>e-ગવર્નન્સ, RTI, કટોકટી વ્યવસ્થાપન, નૈતિકતા, સંઘીય માળખું</td></tr>
+</table></div>
+<span class="sub">2જા ARC ના મહત્વના અહેવાલો (ઉદાહરણ)</span>
 <ul>
-<li><strong>GPSC માં "નાગરિક કેન્દ્રિત સુધારા" પર વિશેષ ધ્યાન:</strong> RTI, Citizen's Charter, Sevottam, PIL, લોકપાલ, સુશાસન</li>
-<li><strong>ગુજરાત-કેન્દ્રિત પ્રશ્નો:</strong> બજેટ, યોજનાઓ, CM, ડેપ્યુટી CM, પોલીસ AI, સ્થાનિક ચૂંટણીઓ</li>
-<li><strong>આંતરરાષ્ટ્રીય:</strong> G20, BRICS, COP, સ્પોર્ટ્સ (CWG, ઓલિમ્પિક્સ, ક્રિકેટ)</li>
-<li><strong>નિયંત્રણ-વ્યાપ (Span of Control):</strong> સામાન્ય રીતે 4-8 — Graicunas સૂત્ર યાદ રાખો</li>
-<li><strong>લાઈન-સ્ટાફ વચ્ચે ઘર્ષણ (Line-Staff Conflict):</strong> સ્ટાફ એજન્સી પાસે "સલાહ" આપવાની સત્તા છે, "આદેશ" નહીં</li>
-<li><strong>હોથોર્ન પ્રભાવ (Hawthorne Effect):</strong> કર્મચારી પર ધ્યાન અપાય ત્યારે ઉત્પાદકતા સુધરે છે</li>
+<li>અહેવાલ 1: RTI — "Right to Information: Master Key to Good Governance"</li>
+<li>અહેવાલ 4: "Ethics in Governance"</li>
+<li>અહેવાલ 12: "Citizen Centric Administration"</li>
 </ul>
+
 `,
+          },
+          {
+            t: "e-ગવર્નન્સ",
+            en: "e-Governance",
+            art: "G2C, G2B, G2G",
+            body: `
+
+<p>e-ગવર્નન્સ એટલે માહિતી-સંચાર ટેકનોલોજી (ICT) ના ઉપયોગથી સરકારી સેવાઓને કાર્યક્ષમ, પારદર્શક અને નાગરિક-મૈત્રીપૂર્ણ બનાવવી.</p>
+<span class="sub">e-ગવર્નન્સના 4 મોડેલ</span>
+<ul>
+<li><strong>G2C (Government to Citizen):</strong> દા.ત. ડિજિલોકર, e-ડિસ્ટ્રિક્ટ, જન્મ-મરણ પ્રમાણપત્ર ઓનલાઇન</li>
+<li><strong>G2B (Government to Business):</strong> દા.ત. GST પોર્ટલ, ઉદ્યોગ સાહસિક નોંધણી</li>
+<li><strong>G2G (Government to Government):</strong> વિભાગો વચ્ચે ડેટા આદાનપ્રદાન</li>
+<li><strong>G2E (Government to Employee):</strong> કર્મચારી માટે ઓનલાઇન સેવાઓ (પગાર, રજા)</li>
+</ul>
+<span class="sub">ગુજરાત અને ભારતની મુખ્ય પહેલ</span>
+<ul>
+<li>ડિજિટલ ઈન્ડિયા (2015), ડિજિટલ ગુજરાત પોર્ટલ, e-મમતા (આરોગ્ય), VCE (Village Computer Entrepreneur)</li>
+</ul>
+
+`,
+          },
+        ],
       },
       {
-        "t": "ગુજરાત બજેટ 2026-27 — મુખ્ય આંકડાઓ",
-        "en": "Quick Revision: Gujarat Budget 2026-27",
-        "art": "Quick Stats",
-        "body": `
-<p><strong>કુલ:</strong> ₹4.08 લાખ કરોડ</p>
-<p><strong>સરપ્લસ:</strong> ₹974 કરોડ</p>
-<p><strong>રેવન્યુ સરપ્લસ:</strong> ₹25,587 કરોડ</p>
-<p><strong>ડેવલપમેન્ટ ફંડ:</strong> ₹50,000 કરોડ</p>
-<p><strong>ખેડૂત રાહત:</strong> ₹11,000 કરોડ</p>
-<p><strong>વૃદ્ધિ (અગાઉના વર્ષ કરતાં):</strong> 10.2%</p>
-<p><strong>GSDP અંદાજ:</strong> ₹33,24,676 કરોડ (11% વૃદ્ધિ)</p>
-<p><strong>ફિસ્કલ ડેફિસિટ:</strong> GSDPના 2%</p>
+        cat: "નાગરિક અધિકાર પત્ર અને RTI (Citizens' Charter & RTI)",
+        items: [
+          {
+            t: "નાગરિક અધિકાર પત્ર (Citizens' Charter)",
+            en: "Citizens' Charter, 1997",
+            art: "1997 — India",
+            body: `
+
+<p>નાગરિક અધિકાર પત્ર એ સરકારી વિભાગ દ્વારા સ્વૈચ્છિક રીતે જાહેર કરાયેલ દસ્તાવેજ છે જે નાગરિકોને મળવાપાત્ર સેવાઓના ધોરણો, સમય-મર્યાદા અને ફરિયાદ-નિવારણની ખાતરી આપે છે.</p>
+<span class="sub">પૃષ્ઠભૂમિ</span>
+<ul>
+<li>સૌપ્રથમ બ્રિટનમાં 1991માં જ્હોન મેજર સરકારે "Citizen's Charter" શરૂ કર્યું</li>
+<li>ભારતમાં 1997માં "Conference of Chief Ministers"માં આ ખ્યાલ અપનાવાયો</li>
+</ul>
+<span class="sub">6 મુખ્ય ઘટકો</span>
+<ul>
+<li>વિભાગનું વિઝન/મિશન, સેવાઓની યાદી, ધોરણો/સમય-મર્યાદા, ફરિયાદ-નિવારણ પદ્ધતિ, નાગરિકોની અપેક્ષાઓ, સંપર્ક વિગતો</li>
+</ul>
+<div class="note">GPSC ટીપ: નાગરિક અધિકાર પત્ર કાયદેસર રીતે બંધનકર્તા (Legally binding) નથી — તે એક નૈતિક પ્રતિબદ્ધતા છે, જ્યારે RTI એ કાયદેસર અધિકાર છે.</div>
+
 `,
+          },
+          {
+            t: "માહિતીનો અધિકાર અધિનિયમ (RTI Act, 2005)",
+            en: "Right to Information Act",
+            art: "RTI Act, 12 Oct 2005",
+            body: `
+
+<p>માહિતીનો અધિકાર અધિનિયમ, 2005 નાગરિકોને સરકારી માહિતી મેળવવાનો કાયદેસર અધિકાર આપે છે — પારદર્શિતા અને જવાબદારીનું શક્તિશાળી સાધન.</p>
+<span class="sub">મુખ્ય જોગવાઈઓ</span>
+<ul>
+<li><strong>અમલ:</strong> 12 ઓક્ટોબર 2005 (સંપૂર્ણ દેશમાં, J&K સિવાય — હવે J&K પણ આવરી લેવાયું)</li>
+<li><strong>PIO (Public Information Officer):</strong> દરેક જાહેર સત્તામંડળે નિયુક્ત કરવો ફરજિયાત</li>
+<li><strong>સમય-મર્યાદા:</strong> સામાન્ય રીતે 30 દિવસ; જીવન-સ્વતંત્રતા સંબંધિત માહિતી માટે 48 કલાક</li>
+<li><strong>ફી:</strong> અરજી ફી ₹10 (સામાન્ય રીતે), BPL માટે મફત</li>
+<li><strong>અપીલ માળખું:</strong> પ્રથમ અપીલ અધિકારી (વિભાગની અંદર) → દ્વિતીય અપીલ (CIC/SIC)</li>
+</ul>
+<span class="sub">અપવાદ (કલમ 8)</span>
+<p>રાષ્ટ્રીય સુરક્ષા, વ્યાપારી ગુપ્તતા, વ્યક્તિગત ગોપનીયતા સંબંધિત માહિતી અપવાદરૂપે નકારી શકાય.</p>
+<div class="note">GPSC ટીપ: CIC અને SIC ની વિગતો (સભ્યો, નિમણૂક, કાર્યકાળ) માટે "બંધારણીય અને બિન-બંધારણીય આયોગો" વિભાગ જુઓ.</div>
+
+`,
+          },
+        ],
       },
-    ],
-  },
-];
+      {
+        cat: "તુલનાત્મક જાહેર વહીવટ (Comparative Public Administration)",
+        items: [
+          {
+            t: "તુલનાત્મક જાહેર વહીવટ અને ફ્રેડ રિગ્સ",
+            en: "Fred Riggs — Prismatic-Sala Model",
+            art: "Fred Riggs, 1961",
+            body: `
+
+<p>તુલનાત્મક જાહેર વહીવટ (CPA) એટલે વિવિધ દેશો/સંસ્કૃતિઓની વહીવટી પ્રણાલીઓનો તુલનાત્મક અભ્યાસ — બીજા વિશ્વયુદ્ધ પછી નવા સ્વતંત્ર દેશોના વિકાસ સાથે તેનું મહત્વ વધ્યું.</p>
+<span class="sub">ફ્રેડ રિગ્સનું Prismatic-Sala મોડેલ (1961)</span>
+<div class="table-scroll"><table>
+<tr><th>સમાજનો પ્રકાર</th><th>લક્ષણ</th><th>ઉદાહરણ</th></tr>
+<tr><td>Fused Society (સંલયિત)</td><td>પરંપરાગત, કૃષિ-આધારિત, ભૂમિકાઓ ભળેલી</td><td>પરંપરાગત ગ્રામીણ સમાજ</td></tr>
+<tr><td>Prismatic Society (પ્રિઝમેટિક)</td><td>સંક્રમણશીલ — પરંપરા અને આધુનિકતાનું મિશ્રણ; "Sala" (વહીવટી તંત્ર) અહીં કાર્યરત</td><td>વિકાસશીલ દેશો (ભારત સહિત)</td></tr>
+<tr><td>Diffracted Society (વિભાજિત)</td><td>સંપૂર્ણ આધુનિક, ભૂમિકાઓ સ્પષ્ટ રીતે અલગ</td><td>વિકસિત પશ્ચિમી દેશો</td></tr>
+</table></div>
+<div class="note">GPSC ટીપ: "Sala" શબ્દ સ્પેનિશ છે, જેનો અર્થ "ઓફિસ" થાય — રિગ્સે પ્રિઝમેટિક સમાજની અમલદારશાહીને "Sala Model" કહી, જ્યાં ઔપચારિક નિયમો અને અનૌપચારિક પ્રથાઓ સાથે-સાથે ચાલે.</div>
+
+`,
+          },
+          {
+            t: "વિકાસલક્ષી વહીવટ (Development Administration)",
+            en: "Development Administration",
+            art: "Post-1950s, Third World",
+            body: `
+
+<p>વિકાસલક્ષી વહીવટ એટલે વહીવટીતંત્રનો ઉપયોગ આર્થિક-સામાજિક વિકાસના ધ્યેયો હાંસલ કરવા માટે — ખાસ કરીને નવા સ્વતંત્ર/વિકાસશીલ દેશોમાં.</p>
+<span class="sub">પરંપરાગત વહીવટ vs વિકાસલક્ષી વહીવટ</span>
+<div class="table-scroll"><table>
+<tr><th>મુદ્દો</th><th>પરંપરાગત વહીવટ</th><th>વિકાસલક્ષી વહીવટ</th></tr>
+<tr><td>ધ્યેય</td><td>કાયદો-વ્યવસ્થા જાળવવી</td><td>સામાજિક-આર્થિક પરિવર્તન લાવવું</td></tr>
+<tr><td>અભિગમ</td><td>નિયમ-કેન્દ્રિત (Rule-bound)</td><td>ધ્યેય-કેન્દ્રિત (Goal-oriented), લવચીક</td></tr>
+<tr><td>ઉદાહરણ</td><td>મહેસૂલ વસૂલાત, પોલીસ</td><td>પંચવર્ષીય યોજનાઓ, ગ્રામીણ વિકાસ કાર્યક્રમો</td></tr>
+</table></div>
+<p>ભારતમાં પંચવર્ષીય યોજનાઓ, NITI આયોગ, અને ગ્રામીણ વિકાસ કાર્યક્રમો (મનરેગા, PM આવાસ યોજના) વિકાસલક્ષી વહીવટના ઉદાહરણો છે.</p>
+
+`,
+          },
+        ],
+      },
+      {
+        cat: "પંચાયતી રાજ અને સ્થાનિક સ્વરાજ્યની સંસ્થાઓ",
+        items: [
+          {
+            t: "73મો-74મો બંધારણીય સુધારો — પરિચય",
+            en: "73rd & 74th Amendment, 1992",
+            art: "1992, ભાગ-9 અને 9-A",
+            body: `
+
+<p>73મા સુધારાએ ગ્રામ્ય સ્થાનિક સ્વરાજ્ય (પંચાયતી રાજ) અને 74મા સુધારાએ શહેરી સ્થાનિક સ્વરાજ્યને બંધારણીય દરજ્જો આપ્યો.</p>
+<div class="table-scroll"><table>
+<tr><th>વિગત</th><th>73મો સુધારો (પંચાયત)</th><th>74મો સુધારો (નગરપાલિકા)</th></tr>
+<tr><td>ભાગ</td><td>ભાગ-9, અનુચ્છેદ 243-243O</td><td>ભાગ-9A, અનુચ્છેદ 243P-243ZG</td></tr>
+<tr><td>અનુસૂચિ</td><td>11મી અનુસૂચિ (29 વિષયો)</td><td>12મી અનુસૂચિ (18 વિષયો)</td></tr>
+<tr><td>અમલ</td><td>24 એપ્રિલ 1993 (ગુજરાતમાં અમલ: 1 એપ્રિલ 1963થી અગાઉથી જ ત્રિ-સ્તરીય માળખું અસ્તિત્વમાં હતું)</td><td>1 જૂન 1993</td></tr>
+<tr><td>માળખું</td><td>ત્રિ-સ્તરીય: ગ્રામ, તાલુકા, જિલ્લા પંચાયત</td><td>નગર પંચાયત, નગરપાલિકા, મહાનગરપાલિકા</td></tr>
+</table></div>
+<div class="note">GPSC ટીપ: ગુજરાત દેશના એ રાજ્યોમાંનું એક છે જ્યાં 73મા સુધારા પહેલાં જ (1963થી) ત્રિ-સ્તરીય પંચાયતી માળખું અમલમાં હતું — બલવંતરાય મહેતા સમિતિ (1957)ની ભલામણ મુજબ.</div>
+
+`,
+          },
+          {
+            t: "ગ્રામ પંચાયત — સંપૂર્ણ વિગત",
+            en: "Gram Panchayat",
+            art: "8–16 સભ્યો",
+            body: `
+
+<p>ગ્રામ પંચાયત એ ત્રિ-સ્તરીય પંચાયતી રાજનું પાયાનું સ્તર છે.</p>
+<ul>
+<li><strong>બંધારણીય સ્થાન:</strong> ભાગ-9, અનુચ્છેદ 243-B; 73મો સુધારો, 1992; 11મી અનુસૂચિ (29 વિષયો); ગુજરાતમાં અમલ 1 એપ્રિલ 1963</li>
+<li><strong>ધોરણ અને સભ્યો:</strong> સામાન્ય રીતે 500+ વસ્તી ધરાવતું ગામ; સભ્યસંખ્યા ઓછામાં ઓછા 8 થી મહત્તમ 16</li>
+<li><strong>રાજકીય વડા — સરપંચ:</strong> ચૂંટણી જનતા દ્વારા સીધી (Pratyaksh); રાજીનામું તાલુકા વિકાસ અધિકારી (TDO)ને આપે</li>
+<li><strong>ઉપસરપંચ:</strong> ચૂંટાયેલા સભ્યો પોતાનામાંથી બહુમતીથી ચૂંટે; રાજીનામું સરપંચને આપે</li>
+<li><strong>વહીવટી વડા:</strong> તલાટી-કમ-મંત્રી (વર્ગ-3 કર્મચારી) — વહીવટ, ટેક્સ ઉઘરાવવો, હિસાબ</li>
+<li><strong>કાર્યકાળ:</strong> 5 વર્ષ; ચૂંટણી પક્ષવિહીન (અપક્ષ ધોરણે); મધ્યવર્તી ભંગ થાય તો 6 મહિનામાં ચૂંટણી ફરજિયાત</li>
+<li><strong>ઉંમર અને અનામત:</strong> ચૂંટણી લડવાની ઉંમર 21 વર્ષ (મતદાન 18 વર્ષ); મહિલા અનામત 50% બેઠકો (ગુજરાતમાં)</li>
+<li><strong>સમિતિઓ:</strong> ગ્રામસભા (તમામ મતદારો સભ્ય, વર્ષમાં 4 વાર ફરજિયાત); સામાજિક ન્યાય સમિતિ (ફરજિયાત)</li>
+<li><strong>કાર્યો અને આવક:</strong> પીવાનું પાણી, રસ્તા, સ્ટ્રીટ લાઈટ, સફાઈ, જન્મ-મરણ નોંધણી; આવક — સ્થાનિક વેરા (મકાન/પાણી વેરો) અને સરકારી ગ્રાન્ટ</li>
+</ul>
+
+`,
+          },
+          {
+            t: "તાલુકા પંચાયત — સંપૂર્ણ વિગત",
+            en: "Taluka Panchayat",
+            art: "16–32 સભ્યો",
+            body: `
+
+<p>તાલુકા પંચાયત એ ત્રિ-સ્તરીય માળખાનું મધ્યમ સ્તર છે.</p>
+<ul>
+<li><strong>બંધારણીય સ્થાન:</strong> ભાગ-9, અનુચ્છેદ 243-B (સ્તર-2); 73મો સુધારો, 1992; 11મી અનુસૂચિ; ગુજરાતમાં અમલ 1 એપ્રિલ 1963</li>
+<li><strong>ધોરણ અને સભ્યો:</strong> સમગ્ર તાલુકાના ગ્રામ્ય વિસ્તારો આવરી લે; સભ્યસંખ્યા ઓછામાં ઓછા 16 થી મહત્તમ 32</li>
+<li><strong>રાજકીય વડા — તાલુકા પંચાયત પ્રમુખ:</strong> ચૂંટાયેલા સભ્યોમાંથી પરોક્ષ (Indirect) ચૂંટણી; રાજીનામું જિલ્લા પંચાયત પ્રમુખને આપે</li>
+<li><strong>ઉપપ્રમુખ:</strong> ચૂંટાયેલા સભ્યો પોતાનામાંથી પરોક્ષ રીતે ચૂંટે; રાજીનામું પ્રમુખને આપે</li>
+<li><strong>વહીવટી વડા:</strong> TDO — તાલુકા વિકાસ અધિકારી (વર્ગ-2); GPSC દ્વારા પસંદગી; ઠરાવોનો અમલ કરાવવો</li>
+<li><strong>કાર્યકાળ:</strong> પંચાયત 5 વર્ષ, પરંતુ પ્રમુખ/ઉપપ્રમુખ પદ ફક્ત 2.5 વર્ષ; ચૂંટણી રાજકીય પક્ષ આધારિત (ચિન્હ પર)</li>
+<li><strong>ઉંમર અને અનામત:</strong> ચૂંટણી લડવાની ઉંમર 21 વર્ષ; મહિલા અનામત 50% બેઠકો (ગુજરાતમાં)</li>
+<li><strong>સમિતિઓ:</strong> કારોબારી સમિતિ, સામાજિક ન્યાય સમિતિ; સામાન્ય સભા દર 3 મહિને ઓછામાં ઓછી એક વાર</li>
+<li><strong>કાર્યો અને આવક:</strong> તાલુકા પંચાયતનું બજેટ, પંચાયતો પર દેખરેખ અને આરોગ્ય; આવક — રાજ્ય સરકારની ગ્રાન્ટ અને ફંડ</li>
+</ul>
+
+`,
+          },
+          {
+            t: "જિલ્લા પંચાયત — સંપૂર્ણ વિગત",
+            en: "District Panchayat",
+            art: "32–68 સભ્યો",
+            body: `
+
+<p>જિલ્લા પંચાયત એ ત્રિ-સ્તરીય પંચાયતી રાજનું સર્વોચ્ચ સ્તર છે.</p>
+<ul>
+<li><strong>બંધારણીય સ્થાન:</strong> ભાગ-9, અનુચ્છેદ 243-B (સ્તર-3); 73મો સુધારો, 1992; 11મી અનુસૂચિ; ગુજરાતમાં અમલ 1 એપ્રિલ 1963</li>
+<li><strong>ધોરણ અને સભ્યો:</strong> સમગ્ર જિલ્લાના ગ્રામ્ય અને તાલુકા વિસ્તારો; સભ્યસંખ્યા ઓછામાં ઓછા 32 થી મહત્તમ 68</li>
+<li><strong>રાજકીય વડા — જિલ્લા પંચાયત પ્રમુખ:</strong> ચૂંટાયેલા સભ્યોમાંથી પરોક્ષ (Indirect) ચૂંટણી; રાજીનામું રાજ્યના વિકાસ કમિશનરને આપે</li>
+<li><strong>ઉપપ્રમુખ:</strong> ચૂંટાયેલા સભ્યો પોતાનામાંથી પરોક્ષ રીતે ચૂંટે; રાજીનામું પ્રમુખને આપે</li>
+<li><strong>વહીવટી વડા:</strong> DDO — જિલ્લા વિકાસ અધિકારી (IAS કે વર્ગ-1); આખા જિલ્લાની યોજનાઓનું અમલીકરણ અને સુપરવિઝન</li>
+<li><strong>કાર્યકાળ:</strong> પંચાયત 5 વર્ષ, પ્રમુખ/ઉપપ્રમુખ પદ ફક્ત 2.5 વર્ષ; ચૂંટણી રાજકીય પક્ષ આધારિત (ચિન્હ પર)</li>
+<li><strong>ઉંમર અને અનામત:</strong> ચૂંટણી લડવાની ઉંમર 21 વર્ષ; મહિલા અનામત 50% બેઠકો (ગુજરાતમાં)</li>
+<li><strong>સમિતિઓ:</strong> કારોબારી, સામાજિક ન્યાય, શિક્ષણ અને બાંધકામ સમિતિ; સામાન્ય સભા દર 3 મહિને ઓછામાં ઓછી એક વાર</li>
+<li><strong>કાર્યો અને આવક:</strong> સમગ્ર જિલ્લાનું બજેટ, માધ્યમિક શિક્ષણ, સિંચાઈ અને મોટા રસ્તા; આવક — મહેસૂલનો હિસ્સો અને સરકારી વિકાસ ભંડોળ</li>
+</ul>
+
+`,
+          },
+          {
+            t: "પંચાયતી રાજ — શોર્ટ ટ્રીક્સ અને માસ્ટર કી",
+            en: "Panchayati Raj Master Keys",
+            art: "Exam Cheat Sheet",
+            body: `
+
+<div class="note"><strong>પ્રમુખ પદ કાર્યકાળ:</strong> તાલુકા અને જિલ્લા પંચાયતના સભ્યો 5 વર્ષ માટે ચૂંટાય છે, પરંતુ તેમના પ્રમુખ અને ઉપપ્રમુખનો કાર્યકાળ માત્ર 2.5 વર્ષ (અઢી વર્ષ) હોય છે. 2.5 વર્ષ બાદ ફરી ચૂંટણી થાય છે.</div>
+<div class="note"><strong>મધ્યવર્તી ભંગનો નિયમ:</strong> જો કોઈ પંચાયત 5 વર્ષ પહેલા સુપરસીડ કે ભંગ થાય, તો નવી ચૂંટાયેલી પંચાયત માત્ર બાકી બચેલા સમય (Remaining Period) માટે જ કાર્યરત રહેશે, આખા 5 વર્ષ માટે નહિ.</div>
+<span class="sub">રાજીનામું ચેઈન (કોણ કોને રાજીનામું આપે)</span>
+<ul>
+<li>સભ્યો અને ઉપસરપંચ ➔ સરપંચને</li>
+<li>સરપંચ ➔ TDO (તાલુકા વિકાસ અધિકારી)ને</li>
+<li>તાલુકા પ્રમુખ ➔ જિલ્લા પ્રમુખને</li>
+<li>જિલ્લા પ્રમુખ ➔ વિકાસ કમિશનર (રાજ્ય સરકાર)ને રાજીનામું સોંપે છે</li>
+</ul>
+<div class="note"><strong>સમરસ ગ્રામ પંચાયત:</strong> ઓક્ટોબર 2001થી શરૂ થયેલી યોજના મુજબ, જો આખું ગામ ચૂંટણી વિના સર્વસંમતિથી બિનહરીફ (Unopposed) સરપંચ-સભ્યો નક્કી કરે, તો સરકાર પ્રોત્સાહક આર્થિક ગ્રાન્ટ આપે છે.</div>
+
+`,
+          },
+        ],
+      },
+      {
+        cat: "બંધારણીય અને બિન-બંધારણીય આયોગો/સંસ્થાઓ",
+        items: [
+          {
+            t: "ECI — ભારતનું ચૂંટણી પંચ",
+            en: "Election Commission of India",
+            art: "અનુચ્છેદ 324",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને સ્થાન:</strong> Election Commission of India — અનુચ્છેદ 324 (ભાગ-15)</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 મુખ્ય કમિશનર (CEC) + 2 અન્ય કમિશનર</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 6 વર્ષ કે 65 વર્ષ (જે વહેલું હોય તે)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાષ્ટ્રપતિ</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાષ્ટ્રપતિ (CEC ને સંસદ દ્વારા સુપ્રીમ કોર્ટના જજની જેમ જ હટાવી શકાય)</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: સુકુમાર સેન · વર્તમાન: રાજીવ કુમાર</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> રાષ્ટ્રપતિ, ઉપરાષ્ટ્રપતિ, સંસદ (લોકસભા/રાજ્યસભા) અને રાજ્યોની વિધાનસભાઓની સામાન્ય ચૂંટણીઓ યોજવી</li>
+</ul>
+`,
+          },
+          {
+            t: "UPSC — સંઘ લોકસેવા આયોગ",
+            en: "Union Public Service Commission",
+            art: "અનુચ્છેદ 315-323",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને સ્થાન:</strong> Union Public Service Commission — અનુચ્છેદ 315-323 (ભાગ-14)</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 અધ્યક્ષ + 9 થી 11 સભ્યો</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 6 વર્ષ કે 65 વર્ષ (જે વહેલું હોય તે)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાષ્ટ્રપતિ</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાષ્ટ્રપતિ (સુપ્રીમ કોર્ટની તપાસ અને ભલામણ બાદ જ)</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: સર રોસ બાર્કર · વર્તમાન: ડૉ. મનોજ સોની</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> કેન્દ્ર સરકારની ક્લાસ 1 અને 2 (IAS, IPS, IFS વગેરે)ની અખિલ ભારતીય સેવાઓની સીધી ભરતી માટેની પરીક્ષાઓ યોજવી</li>
+</ul>
+`,
+          },
+          {
+            t: "SPSC (GPSC) — રાજ્ય લોકસેવા આયોગ",
+            en: "State Public Service Commission",
+            art: "અનુચ્છેદ 315-323",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને સ્થાન:</strong> State Public Service Commission (ગુજરાત: GPSC) — અનુચ્છેદ 315-323 (ભાગ-14)</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 અધ્યક્ષ + 6 થી 8 સભ્યો (ગુજરાત નિયમ મુજબ)</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 6 વર્ષ કે 62 વર્ષ (જે વહેલું હોય તે)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાજ્યપાલ</li>
+<li><strong>હટાવવાની સત્તા:</strong> માત્ર રાષ્ટ્રપતિ (રાજ્યપાલ હટાવી શકતા નથી, SC ની તપાસ બાદ)</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: જે. ઈ. સાન · વર્તમાન: હસમુખ પટેલ (ઈન્ચાર્જ)</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> રાજ્ય સરકારની ક્લાસ 1, 2 અને ગેઝેટેડ ક્લાસ 3 ની નાગરિક સેવાઓ (GPSC)ની ભરતી પ્રક્રિયા અને પરીક્ષાઓનું આયોજન કરવું</li>
+</ul>
+`,
+          },
+          {
+            t: "નાણાં પંચ (Finance Commission)",
+            en: "Finance Commission",
+            art: "અનુચ્છેદ 280",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને સ્થાન:</strong> Finance Commission — અનુચ્છેદ 280 (ભાગ-12)</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 અધ્યક્ષ + 4 સભ્યો (દર 5 વર્ષે રચના થાય)</li>
+<li><strong>કાર્યકાળ:</strong> રાષ્ટ્રપતિના આદેશ મુજબ (પુનઃનિમણૂકને પાત્ર)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાષ્ટ્રપતિ</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાષ્ટ્રપતિ દ્વારા</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: કે. સી. નિયોગી · 16મું: અરવિંદ પનગઢિયા</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> કેન્દ્ર અને રાજ્ય સરકારો વચ્ચે શુદ્ધ કર (Tax)ની આવકની ન્યાયી વહેંચણી અને રાજ્યોને અપાતી ગ્રાન્ટ અંગે ભલામણો કરવી</li>
+</ul>
+`,
+          },
+          {
+            t: "CAG — નિયંત્રક અને મહાલેખા પરીક્ષક",
+            en: "Comptroller & Auditor General",
+            art: "અનુચ્છેદ 148-151",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને સ્થાન:</strong> Comptroller and Auditor General — અનુચ્છેદ 148-151 (ભાગ-5)</li>
+<li><strong>સભ્ય સંખ્યા:</strong> એક સભ્યની સંસ્થા (માત્ર CAG પોતે)</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 6 વર્ષ કે 65 વર્ષ (જે વહેલું હોય તે)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાષ્ટ્રપતિ</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાષ્ટ્રપતિ (સુપ્રીમ કોર્ટના જજની જેમ જ સંસદના બંને ગૃહોમાં વિશેષ બહુમતીથી)</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: વી. નરહરિ રાવ · વર્તમાન: ગિરીશ ચંદ્ર મુર્મુ</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> કેન્દ્ર અને તમામ રાજ્ય સરકારોના જાહેર નાણાં અને તમામ ખર્ચાઓનું ઓડિટ કરવું તથા તેના અહેવાલો રાષ્ટ્રપતિ/રાજ્યપાલને આપવા</li>
+</ul>
+`,
+          },
+          {
+            t: "AG — ભારતના મહાન્યાયવાદી",
+            en: "Attorney General of India",
+            art: "અનુચ્છેદ 76",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને સ્થાન:</strong> Attorney General of India — અનુચ્છેદ 76 (ભાગ-5)</li>
+<li><strong>સભ્ય સંખ્યા:</strong> એક જ વ્યક્તિ (દેશના સર્વોચ્ચ કાયદાકીય અધિકારી)</li>
+<li><strong>કાર્યકાળ:</strong> કોઈ ચોક્કસ કાર્યકાળ નથી (રાષ્ટ્રપતિની મરજી સુધી)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાષ્ટ્રપતિ (કેન્દ્ર સરકારની સલાહથી)</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાષ્ટ્રપતિ ગમે ત્યારે હટાવી શકે (સરકાર બદલાતા રાજીનામું આપે)</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: એમ. સી. સેતલવાડ · વર્તમાન: આર. વેંકટરામણી</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> ભારત સરકારના મુખ્ય કાનૂની સલાહકાર તરીકે કાર્ય કરવું અને દેશની કોઈપણ અદાલતમાં સરકાર પક્ષે હાજર રહી કેસ લડવો</li>
+</ul>
+`,
+          },
+          {
+            t: "NCSC — રાષ્ટ્રીય અનુસૂચિત જાતિ આયોગ",
+            en: "National Commission for SCs",
+            art: "અનુચ્છેદ 338",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને સ્થાન:</strong> National Commission for SCs — અનુચ્છેદ 338 (ભાગ-16)</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 અધ્યક્ષ + 1 ઉપાધ્યક્ષ + 3 સભ્યો</li>
+<li><strong>કાર્યકાળ:</strong> 3 વર્ષ</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાષ્ટ્રપતિ</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાષ્ટ્રપતિ દ્વારા</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: સૂરજ ભાન · વર્તમાન: કિશોર મકવાણા</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> દેશમાં અનુસૂચિત જાતિ (SC)ના લોકોના બંધારણીય અને કાનૂની હકોના રક્ષણની દેખરેખ અને અત્યાચાર સામે તપાસ કરવી</li>
+</ul>
+`,
+          },
+          {
+            t: "GST પરિષદ",
+            en: "GST Council",
+            art: "અનુચ્છેદ 279A",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને સ્થાન:</strong> Goods and Services Tax Council — અનુચ્છેદ 279A (ભાગ-12)</li>
+<li><strong>સભ્ય સંખ્યા:</strong> અધ્યક્ષ: કેન્દ્રીય નાણાં મંત્રી; સભ્યો: તમામ રાજ્યોના નાણાં મંત્રીઓ</li>
+<li><strong>કાર્યકાળ:</strong> હોદ્દાની રૂએ (જ્યાં સુધી મંત્રીપદ પર રહે)</li>
+<li><strong>સ્થાપના:</strong> 101મો બંધારણીય સુધારો, 2016 દ્વારા</li>
+<li><strong>હટવાની શરત:</strong> હોદ્દો ગુમાવતા આપોઆપ દૂર થાય</li>
+<li><strong>વર્તમાન અધ્યક્ષ:</strong> હોદ્દાની રૂએ: નિર્મલા સીતારમણ (કેન્દ્રીય નાણાં મંત્રી)</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> સમગ્ર દેશમાં GST ના દરો, મુક્તિ મર્યાદા, નિયમો અને ટેક્સ માળખામાં ફેરફાર કે સુધારા અંગે સર્વાનુમતે નિર્ણય લેવા</li>
+</ul>
+`,
+          },
+          {
+            t: "બંધારણીય સંસ્થાઓ vs વૈધાનિક સંસ્થાઓ — ભેદ",
+            en: "Constitutional vs Statutory Bodies",
+            art: "તફાવત કોષ્ટક",
+            body: `
+
+<div class="table-scroll"><table>
+<tr><th>મુદ્દો</th><th>બંધારણીય સંસ્થા</th><th>વૈધાનિક સંસ્થા</th></tr>
+<tr><td>સ્થાપનાનો સ્રોત</td><td>બંધારણમાં જ સીધો ઉલ્લેખ (ECI, UPSC, CAG, Finance Commission)</td><td>સંસદ/વિધાનસભાના સામાન્ય કાયદા દ્વારા (NHRC, CVC, CIC, NGT, Lokpal)</td></tr>
+<tr><td>ફેરફાર/નાબૂદી</td><td>ફક્ત બંધારણીય સુધારાથી શક્ય</td><td>સામાન્ય કાયદો બદલીને શક્ય</td></tr>
+<tr><td>દરજ્જો</td><td>વધુ સ્વતંત્ર અને સ્થાયી</td><td>પ્રમાણમાં ઓછો સ્વતંત્ર (કાયદો રદ થઈ શકે)</td></tr>
+</table></div>
+
+`,
+          },
+          {
+            t: "NHRC — રાષ્ટ્રીય માનવ અધિકાર આયોગ",
+            en: "National Human Rights Commission",
+            art: "માનવ અધિકાર એક્ટ, 1993",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને પીઠબળ:</strong> National Human Rights Commission — માનવ અધિકાર એક્ટ, 1993</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 અધ્યક્ષ + 5 સભ્યો (+ 7 હોદ્દાની રૂએ સભ્યો)</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 3 વર્ષ કે 70 વર્ષ (જે વહેલું હોય તે)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાષ્ટ્રપતિ (PM ની અધ્યક્ષતાવાળી 6 સભ્યોની સમિતિની ભલામણથી)</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાષ્ટ્રપતિ (સુપ્રીમ કોર્ટની તપાસ અને ભલામણ બાદ)</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: રંગનાથ મિશ્રા · વર્તમાન: અરુણ કુમાર મિશ્રા</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> દેશમાં માનવ અધિકારોનું રક્ષણ કરવું, જેલોની સ્થિતિ સુધારવી અને માનવ અધિકાર ભંગના કેસોની સ્વોટો (Suo-motu) તપાસ કરવી</li>
+</ul>
+`,
+          },
+          {
+            t: "SHRC — રાજ્ય માનવ અધિકાર આયોગ",
+            en: "State Human Rights Commission",
+            art: "માનવ અધિકાર એક્ટ, 1993",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને પીઠબળ:</strong> State Human Rights Commission — માનવ અધિકાર એક્ટ, 1993</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 અધ્યક્ષ + 2 સભ્યો</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 3 વર્ષ કે 70 વર્ષ (જે વહેલું હોય તે)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાજ્યપાલ (CM ની અધ્યક્ષતાવાળી સમિતિની ભલામણથી)</li>
+<li><strong>હટાવવાની સત્તા:</strong> માત્ર રાષ્ટ્રપતિ (રાજ્યપાલ હટાવી શકતા નથી, SC ની તપાસ બાદ)</li>
+<li><strong>ગુજરાત વર્તમાન વડા:</strong> જસ્ટિસ ઉપાધ્યાય (કાર્યવાહક)</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> રાજ્ય સ્તરે (સામાન્ય રીતે 7મી અનુસૂચિની રાજ્ય અને સંયુક્ત સૂચિ હેઠળના વિષયોમાં) માનવ અધિકાર ઉલ્લંઘનની તપાસ કરવી</li>
+</ul>
+`,
+          },
+          {
+            t: "NCW — રાષ્ટ્રીય મહિલા આયોગ",
+            en: "National Commission for Women",
+            art: "NCW એક્ટ, 1990",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને પીઠબળ:</strong> National Commission for Women — NCW એક્ટ, 1990 (સ્થાપના: 1992)</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 અધ્યક્ષ + 5 સભ્યો (+ 1 સચિવ)</li>
+<li><strong>કાર્યકાળ:</strong> 3 વર્ષ (કોઈ ઉંમર મર્યાદા નથી)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> કેન્દ્ર સરકાર</li>
+<li><strong>હટાવવાની સત્તા:</strong> કેન્દ્ર સરકાર (નાદાર બને, ગેરવર્તણૂક કરે કે સતત 3 બેઠકોમાં ગેરહાજર રહે)</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: જયંતી પટનાયક · વર્તમાન: રેખા શર્મા</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> મહિલાઓના બંધારણીય અને કાનૂની હકોની સુરક્ષાની સમીક્ષા કરવી અને મહિલા ઉત્કર્ષ સંબંધિત નીતિઓ માટે સરકારને ભલામણ કરવી</li>
+</ul>
+`,
+          },
+          {
+            t: "CIC — કેન્દ્રીય માહિતી આયોગ",
+            en: "Central Information Commission",
+            art: "RTI એક્ટ, 2005",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને પીઠબળ:</strong> Central Information Commission — RTI એક્ટ, 2005</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 મુખ્ય માહિતી કમિશનર + વધુમાં વધુ 10 કમિશનર્સ</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 3 વર્ષ કે 65 વર્ષ (કેન્દ્ર સરકારના નિયમ મુજબ)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાષ્ટ્રપતિ (PM, વિપક્ષ નેતા અને 1 કેબિનેટ મંત્રીની સમિતિ)</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાષ્ટ્રપતિ (સુપ્રીમ કોર્ટની તપાસ બાદ ગેરવર્તણૂકના આધારે)</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: વજાહત હબીબુલ્લાહ · વર્તમાન: હીરાલાલ સામરિયા</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> માહિતી અધિકાર (RTI) હેઠળ કેન્દ્ર સરકારના તમામ મંત્રાલયો અને જાહેર સાહસો સામેની ફરિયાદો અને દ્વિતીય અપીલ પર આખરી નિર્ણય આપવો</li>
+</ul>
+`,
+          },
+          {
+            t: "SIC — રાજ્ય માહિતી આયોગ (ગુજરાત)",
+            en: "State Information Commission",
+            art: "RTI એક્ટ, 2005",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને પીઠબળ:</strong> State Information Commission (ગુજરાત) — RTI એક્ટ, 2005</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 રાજ્ય મુખ્ય માહિતી કમિશનર + વધુમાં વધુ 10 કમિશનર્સ</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 3 વર્ષ કે 65 વર્ષ (કેન્દ્ર સરકારના નિયમ મુજબ)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાજ્યપાલ (CM, વિપક્ષ નેતા અને 1 કેબિનેટ મંત્રીની સમિતિ)</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાજ્યપાલ (સુપ્રીમ કોર્ટની તપાસ બાદ ગેરવર્તણૂકના આધારે)</li>
+<li><strong>ગુજરાત પ્રથમ અને વર્તમાન:</strong> પ્રથમ: વી. વી. રાવલ · વર્તમાન: અમૃત પટેલ</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> RTI એક્ટ હેઠળ ગુજરાત રાજ્ય સરકારના તમામ વિભાગો, કચેરીઓ સામેની ફરિયાદો સાંભળવી અને દંડ કરવો</li>
+</ul>
+`,
+          },
+          {
+            t: "CVC — કેન્દ્રીય સતર્કતા આયોગ",
+            en: "Central Vigilance Commission",
+            art: "CVC એક્ટ, 2003",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને પીઠબળ:</strong> Central Vigilance Commission — CVC એક્ટ, 2003 (સ્થાપના: 1964)</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 કેન્દ્રીય સતર્કતા કમિશનર + વધુમાં વધુ 2 સતર્કતા કમિશનર્સ</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 4 વર્ષ કે 65 વર્ષ (જે વહેલું હોય તે) — સૌથી વિશિષ્ટ કાર્યકાળ</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાષ્ટ્રપતિ (PM, ગૃહમંત્રી અને લોકસભાના વિપક્ષ નેતાની સમિતિ)</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાષ્ટ્રપતિ (સુપ્રીમ કોર્ટની તપાસ બાદ ગેરવર્તણૂક કે અસમર્થતા પર)</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: નીતુર શ્રીનિવાસ રાવ · વર્તમાન: પ્રવીણ કુમાર શ્રીવાસ્તવ</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> કેન્દ્ર સરકારના ભ્રષ્ટાચાર વિરોધી માળખા પર દેખરેખ રાખવી અને ભ્રષ્ટાચાર નિવારણ અધિનિયમ હેઠળ CBI ની તપાસનું સુપરવિઝન કરવું</li>
+</ul>
+`,
+          },
+          {
+            t: "લોકપાલ (કેન્દ્ર સ્તરે)",
+            en: "Lokpal",
+            art: "લોકપાલ એક્ટ, 2013",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને પીઠબળ:</strong> Lokpal — લોકપાલ અને લોકાયુક્ત એક્ટ, 2013</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 અધ્યક્ષ + વધુમાં વધુ 8 સભ્યો (50% ન્યાયિક ક્ષેત્રના)</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 5 વર્ષ કે 70 વર્ષ (જે વહેલું હોય તે)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાષ્ટ્રપતિ (PM, સ્પીકર, લોકસભા વિપક્ષ નેતા, CJI ની સમિતિ)</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાષ્ટ્રપતિ (સંસદના 100 સાંસદોની સહીવાળી અરજી અને SC ની તપાસ બાદ)</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: પિનાકી ચંદ્ર ઘોષ · વર્તમાન: અજય માણિકરાવ ખાનવિલકર</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> વડાપ્રધાન (અમુક અપવાદો સાથે), કેન્દ્રીય મંત્રીઓ, સાંસદો અને ક્લાસ-1 થી 4 સુધીના તમામ સરકારી કર્મચારીઓ સામે ભ્રષ્ટાચારની તપાસ કરવી</li>
+</ul>
+`,
+          },
+          {
+            t: "લોકાયુક્ત (ગુજરાત સ્તરે)",
+            en: "Lokayukta",
+            art: "ગુજરાત લોકાયુક્ત ધારો",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને પીઠબળ:</strong> Lokayukta (ગુજરાત) — ગુજરાત લોકાયુક્ત આયોગ ધારો</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 મુખ્ય લોકાયુક્ત (સામાન્ય રીતે હાઈકોર્ટના નિવૃત્ત ન્યાયાધીશ)</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 5 વર્ષ કે 70 વર્ષ (જે વહેલું હોય તે)</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> રાજ્યપાલ (હાઈકોર્ટના મુખ્ય જજ અને વિધાનસભાના વિપક્ષના નેતા સાથે ચર્ચા કરી)</li>
+<li><strong>હટાવવાની સત્તા:</strong> રાજ્યપાલ (ગુજરાત વિધાનસભામાં વિશેષ પ્રસ્તાવ પસાર થયા બાદ)</li>
+<li><strong>ગુજરાત પ્રથમ અને વર્તમાન:</strong> પ્રથમ: ડી. એચ. શુક્લા · વર્તમાન: જસ્ટિસ આર. એચ. શુક્લા</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> ગુજરાત રાજ્યના મુખ્યમંત્રી, મંત્રીઓ, ધારાસભ્યો અને તમામ રાજ્ય કક્ષાના સાર્વજનિક સેવકો સામે ભ્રષ્ટાચાર અને પદના દુરુપયોગની તપાસ કરવી</li>
+</ul>
+`,
+          },
+          {
+            t: "NGT — રાષ્ટ્રીય હરિત ન્યાયાધિકરણ",
+            en: "National Green Tribunal",
+            art: "NGT એક્ટ, 2010",
+            body: `
+<ul>
+<li><strong>પૂરું નામ અને પીઠબળ:</strong> National Green Tribunal — રાષ્ટ્રીય હરિત ટ્રિબ્યુનલ એક્ટ, 2010</li>
+<li><strong>સભ્ય સંખ્યા:</strong> 1 અધ્યક્ષ + 10 થી 20 ન્યાયિક અને વિષય નિષ્ણાત સભ્યો</li>
+<li><strong>કાર્યકાળ/ઉંમર:</strong> 5 વર્ષ (પુનઃનિમણૂકને પાત્ર નથી); ઉંમર પદ મુજબ 65/67</li>
+<li><strong>નિમણૂક કોણ કરે:</strong> કેન્દ્ર સરકાર (CJI ની સલાહથી)</li>
+<li><strong>હટાવવાની સત્તા:</strong> કેન્દ્ર સરકાર (સુપ્રીમ કોર્ટની તપાસ અને ભલામણ બાદ)</li>
+<li><strong>પ્રથમ અને વર્તમાન વડા:</strong> પ્રથમ: લોકેશ્વર સિંહ પંતા · વર્તમાન: જસ્ટિસ પ્રકાશ શ્રીવાસ્તવ</li>
+<li><strong>મુખ્ય કાર્ય/સત્તા:</strong> પર્યાવરણ પ્રદૂષણ, જંગલોનું સંરક્ષણ અને કુદરતી સંસાધનોને થયેલ નુકસાન અંગેના કેસોનો CPC-મુક્ત 6 મહિનામાં નિકાલ કરવો</li>
+</ul>
+`,
+          },
+          {
+            t: "આયોગો — શોર્ટ ટ્રીક્સ અને માસ્ટર કી",
+            en: "Commissions Cheat Sheet",
+            art: "Exam Master Key",
+            body: `
+
+<div class="note"><strong>નિમણૂક vs હટાવવાની અલ્ટીમેટ સત્તા:</strong> SPSC (GPSC) અને SHRC ના વડાઓની નિમણૂક ભલે રાજ્યપાલ કરે, પણ તેમને હટાવવાની સત્તા માત્ર રાષ્ટ્રપતિ પાસે જ છે. આ પ્રશ્ન વારંવાર પરીક્ષામાં છેતરે છે.</div>
+<div class="note"><strong>CVC અપવાદ:</strong> આખા લિસ્ટમાં માત્ર CVC (કેન્દ્રીય સતર્કતા આયોગ)નો કાર્યકાળ ખાસ 4 વર્ષ અથવા 65 વર્ષનો છે, જે સૌથી અલગ અને વિશિષ્ટ છે.</div>
+<div class="note"><strong>સુપ્રીમ કોર્ટ (SC)ની તપાસ:</strong> UPSC, SPSC, NHRC, SHRC, CIC, SIC, CVC ના અધ્યક્ષોને પદ પરથી હટાવતા પહેલા સુપ્રીમ કોર્ટ પાસે કાયદાકીય તપાસ અને રિપોર્ટ મેળવવો બંધારણીય રીતે ફરજિયાત છે.</div>
+<div class="note"><strong>પુનઃનિમણૂક પર પ્રતિબંધ:</strong> NGT (રાષ્ટ્રીય હરિત ન્યાયાધિકરણ) અને UPSC ના અધ્યક્ષ કે સભ્યો તેમનો કાર્યકાળ પૂરો કર્યા પછી તે જ પદ પર કે દેશમાં અન્ય કોઈ સરકારી હોદ્દા પર ફરીથી નિમણૂક મેળવી શકતા નથી.</div>
+
+`,
+          },
+        ],
+      },
+    ];
 
     /* ---------- Build DOM ---------- */
     const tocEl = document.getElementById("toc");
@@ -2115,7 +2673,7 @@
     /* ---------- Collapsible sidebar: full <-> mini, with localStorage memory ---------- */
     const collapseBtn = document.getElementById("collapseBtn");
     const miniSearchBtn = document.getElementById("miniSearchBtn");
-    const SIDEBAR_KEY = "currentAffairsSidebarMode";
+    const SIDEBAR_KEY = "publicAdminSidebarMode";
     const isMobile = () => window.innerWidth <= 900;
 
     function setSidebarMode(mode, persist) {
@@ -2578,13 +3136,13 @@
           icon: "📜",
           url: "/gujarat-exam-study-guides/indian-constitution-guide.html"
         },
-
+        
         {
           name: "જાહેર વહીવટ",
           icon: "🏛️",
           url: "/gujarat-exam-study-guides/public-administration-guide.html"
         },
-        
+
         {
           name: "Geography",
           icon: "🌍",
@@ -2631,7 +3189,7 @@
           name: "Current Affairs",
           icon: "📰",
           url: "/gujarat-exam-study-guides/current-affairs-guide.html"
-        }
+        },
 
       ];
 
